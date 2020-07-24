@@ -1,0 +1,7 @@
+files:
+  - source: docs/en/**/*.md
+    translation: /docs/%two_letters_code%/**/%original_file_name%
+    translation_replace:
+      docs/en: ''
+  - source: /app_strings/en.json
+    translation: /app_strings/%two_letters_code%.json
