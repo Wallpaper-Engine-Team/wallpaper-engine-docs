@@ -160,4 +160,7 @@ function flatten (items, res) {
     overflow auto // clear float
   .next
     float right
+    a
+      font-weight: bold
+      font-size: 1.2em
 </style>

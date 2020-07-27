@@ -11,8 +11,8 @@ module.exports = {
 	},
 	themeConfig: {
 		logo: '/img/wallpaperenginelogo.png',
-		nextLinks: false,
-		prevLinks: false,
+		nextLinks: true,
+		prevLinks: true,
 		locales: {
 			'/en/': {
 				searchPlaceholder: en.searchPlaceholder,
@@ -20,8 +20,8 @@ module.exports = {
 				label: en.language_name,
 				ariaLabel: en.language_name,
 				sidebar: {
-					'/en/scene/': getSceneSidebar('/en/', en.sidebar_intro),
-					'/en/web/': getWebSidebar('/en/', en.sidebar_intro),
+					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_first),
+					'/en/web/': getWebSidebar('/en/', en.sidebar_overview),
 					'/': []
 				},
 				nav: [
@@ -51,13 +51,23 @@ module.exports = {
 	]
 };
 
-function getSceneSidebar(locale, introGroup) {
+function getSceneSidebar(locale, overviewGroup, gettingStartedGroup) {
 	return [
 		{
-			title: introGroup,
+			title: overviewGroup,
 			collapsable: false,
 			children: [
-				locale + 'scene/intro/introduction',
+				locale + 'scene/',
+			]
+		},
+		{
+			title: gettingStartedGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted',
+				locale + 'scene/first/effects',
+				locale + 'scene/first/assets',
+				locale + 'scene/first/properties',
 			]
 		}
 	]
@@ -69,7 +79,7 @@ function getWebSidebar(locale, introGroup) {
 			title: introGroup,
 			collapsable: false,
 			children: [
-				locale + 'web/intro/introduction',
+				locale + 'web/',
 			]
 		}
 	]

@@ -6,5 +6,7 @@
 	"language_name": "English",
 	"navbar_scene": "Scene Guide",
 	"navbar_web": "Web Guide",
-	"sidebar_intro": "Introduction"
+	"sidebar_overview": "Overview",
+	"sidebar_first": "Creating Your First Wallpaper",
+	"sidebar_gettingstarted": "Getting Started"
 }
