@@ -1,0 +1,32 @@
+export default ({ router }) => {
+  if (typeof process === 'undefined' || process.env.VUE_ENV !== 'server') {
+    router.onReady(() => {
+      const { app } = router
+      app.$once('hook:mounted', () => {
+        // Fix bullshit Chrome anchor scroll issue on page load
+        setTimeout(() => {
+          const { hash } = document.location;
+          if (hash.length > 1) {
+            const id = hash.substring(1)
+            const element = document.getElementById(id)
+            if (element) element.scrollIntoView()
+          }
+        }, 500)
+    })});
+    router.afterEach(() => {
+      // Fix bullshit Firefox scroll to top issue
+      const { hash } = document.location;
+      if (!hash.length) {
+        setTimeout(() => {
+          document.body.scrollTop = 0;
+          document.body.parentNode.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }, 501);
+      } else {
+        const id = hash.substring(1)
+        const element = document.getElementById(id)
+        if (element) element.scrollIntoView()
+      }
+    });
+  }
+}
