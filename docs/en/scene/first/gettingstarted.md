@@ -4,9 +4,21 @@ Welcome to the quick-start guide for the Wallpaper Engine editor! This tutorial 
 
 The Wallpaper Engine editor is very powerful and caters to casual and advanced users alike. Once you have mastered the basics, you can move on to the more advanced features which are handled in other sections of the Wallpaper Engine documentation. If you ever get lost, feel free to reach out to us or the Wallpaper Engine community.
 
-## Before importing a background image
+## Importing your image
 
-Before importing an image, it's best practice to make sure your background image represents a real monitor resolution. Strictly speaking, this is not necessary and Wallpaper Engine will accept any image resolution, however, you will achieve the best performance if the wallpaper matches the resolution of your screen or at least the correct aspect ratio. You can find a list of *officially* supported resolutions in the Workshop filters list.
+Once you open the Wallpaper Engine editor, you are presented with the welcome screen of the editor. You can simply drag and drop the image you want to animate into the **Create Wallpaper** button to get started:
+
+![Square image compares to 16:9 aspect ratio](./new.png)
+
+If you would like to follow along this tutorial, you can use the example image we will be using in the following sections by downloading it from this link (1920 x 1080 resolution): 
+
+* [Click here to download the sample image](/img/tutorials/mountain.png)
+
+## A foreword on wallpaper resolutions
+
+Before jumping into animating your wallpaper, first a quick word on preparing any background images you want to animate:
+
+It's best practice to prepare your background image with a photo editor of your choice to **ensure that the wallpaper uses a resolution that exists on computer monitors**. Strictly speaking, this is not necessary and Wallpaper Engine will accept any image resolution, however, you will achieve the best performance if the wallpaper matches the resolution of your screen or at least the correct aspect ratio. 
 
 The most common resolutions are **1920x1080** ("Full HD") and **3840x2160** ("4K UHD"). If your wallpaper does not use a resolution from the supported resolution list, it will be marked as **Other Resolution** which may negatively affect its popularity.
 
@@ -47,14 +59,4 @@ To exemplify why it's bad to use wallpapers that do not have a real aspect ratio
 
 The downsides of this are an increased GPU usage, less control over what is actually visible on the screen and larger file sizes and VRAM usage.
 
-We generally recommend you scale down images to the nearest closer real resolution and then manually crop off excess areas. You can use free image editing tools like Microsoft Paint, Paint.NET, GIMP or paid alternatives such as Adobe Photoshop to do this.
-
-## Importing your image
-
-Once you open the Wallpaper Engine editor, you are presented with the welcome screen of the editor. You can simply drag and drop the image you want to animate into the **Create Wallpaper** button to get started:
-
-![Square image compares to 16:9 aspect ratio](./new.png)
-
-If you would like to follow along this tutorial, you can use the example image we will be using in the following sections by downloading it from this link (1920 x 1080 resolution): 
-
-* [Click here to download the sample image](/img/tutorials/mountain.png)
+We generally recommend you scale down images to the nearest closer real resolution and then manually crop off excess areas. You can use free image editing tools like Microsoft Paint, Paint.NET, GIMP or paid alternatives such as Adobe Photoshop to do this. Again, it's not necessary but we recommend preparing background images before importing them.

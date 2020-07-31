@@ -12,7 +12,7 @@ tags:
 
 In this tutorial, we will be working with an image with a lake, trees and a mountain ([Click here to download](/img/tutorials/mountain.png)) which we will use to showcase a few basic effects. 
 
-After your image has been imported, you will be presented with the main Wallpaper Engine editor window. In this section, we will explain what **effects** are and how to apply them. Image effects can be found on the right-hand side of the editor in the properties section (marked in blue in the following screenshot): 
+After your image has been imported, you will be presented with the main Wallpaper Engine editor window. In this section, we will explain what **effects** are and how to apply them. Image effects can be found on the right-hand side of the editor in the properties section (**marked in blue** in the following screenshot): 
 
 ![Effects can be found on the right-hand side of the editor](./overview.png)
 
@@ -24,14 +24,14 @@ We will start by animating the waterfront using the **Water Ripple** effect. On 
 
 You will immediately notice that the complete wallpaper gets a water effect applied to it which is the default behavior. In this case, we only want the water effect to be applied to the lake area of the image.
 
-We can do so by painting an *Opacity Mask*. Click on the **Paint** button in the *Opacity Mask* section after adding the effect. You can start by drawing a rough outline of the lake as in the video below. The water ripples should now be limited to the area of the lake.
+We can limit the effect to the water area of the image by painting an *Opacity Mask*. Click on the **Paint** button in the *Opacity Mask* section after adding the effect. You can start by drawing a rough outline of the lake as in the video below. The water ripples should now be limited to the area of the lake. By using the **Show Mask** option, you can view the areas you have painted the effect onto. View the following video to see these fundamental steps in action:
 
 <video width="100%" controls loop autoplay>
   <source src="/videos/opacity_mask.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-The first rough attempt will leave a lot of rough edges and the water ripples will seem unrealistically strong further away in the image. For this purpose, you can use the **Value** and **Size** sliders at the lower left corner when painting. By lowering the value, you can lower the perceived strength of the water ripples in the areas that you draw over. By setting it to 0, you can completely erase any areas that you have accidentally painted over.
+The first rough attempt will leave a lot of rough edges and the water ripples will seem unrealistically strong further away in the image. For this purpose, you can use the **Value** and **Size** sliders at the lower left corner when painting. By lowering the value, you can lower the perceived strength of the water ripples in the areas that you draw over. By setting it to 0, you can completely erase any areas that you have accidentally painted over. The mask will represent these changes in the **Value** by showing areas with lower values darker and higher values lighter.
 
 Try to erase any unwanted areas, for example any accidentally shoreline areas, by setting the strength to 0 and gradually reduce the strength of the water ripples in the distance. This will result in a much more realistic effect rather than painting the maximum value everywhere.
 
@@ -61,7 +61,7 @@ Watch the following video which shows the opacity mask that we drew and how we s
 
 ## Creating a cloud movement animation
 
-With Wallpaper Engine, you can always experiment with alternative ways of using effects. In this section we will animate the cloud movements using the **Water Flow** effect. Unlike the two previous effects, this effect does not have an *Opacity Mask* but rather a *Flow Map*. The main difference is that it will not create any visible effect until you actually paint it and while painting, the direction your mouse moves actually influences the direction of the effect.
+With Wallpaper Engine, you can always experiment with alternative ways of using effects. In this section we will animate the clouds using the **Water Flow** effect. Unlike the two previous effects, this effect does not have an *Opacity Mask* but rather a *Flow Map*. The main difference is that it will not create any visible effect until you actually paint it and while painting, the direction your mouse moves actually influences the direction of the effect. The flow map represents this with different colors, as each direction will paint a different color.
 
 Add the **Water Flow** effect to the background layer and start painting over the clouds from left to right. The clouds will start infinitely moving in the direction that your mouse took and will repeat this movement continuously. You may also notice that the cloud movement is a bit too fast with the default settings. Clouds move rather slowly, so try reducing the **Speed** property of the flow significantly to achieve a more realistic cloud movement. Just like before, you can remove the effect from any area of the image by setting the value to 0 and then painting over these specific areas of the image again.
 
