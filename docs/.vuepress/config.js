@@ -1,7 +1,7 @@
 const en = require('../../app_strings/en.json');
 
 module.exports = {
-	title: 'Wallpaper Engine - Troubleshooting & FAQ',
+	title: 'Wallpaper Engine - Designer Documentation',
 	locales: {
 		'/en/': {
 			lang: 'en',
@@ -68,6 +68,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup) {
 				locale + 'scene/first/effects',
 				locale + 'scene/first/assets',
 				locale + 'scene/first/properties',
+				locale + 'scene/first/publishing',
 			]
 		}
 	]
