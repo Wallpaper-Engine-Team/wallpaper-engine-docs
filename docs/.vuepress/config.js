@@ -20,7 +20,7 @@ module.exports = {
 				label: en.language_name,
 				ariaLabel: en.language_name,
 				sidebar: {
-					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_first),
+					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_parallax, en.sidebar_scenescript, en.sidebar_shaders),
 					'/en/web/': getWebSidebar('/en/', en.sidebar_overview),
 					'/': []
 				},
@@ -51,7 +51,7 @@ module.exports = {
 	]
 };
 
-function getSceneSidebar(locale, overviewGroup, gettingStartedGroup) {
+function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, audioGroup, particlesGroup, animationsGroup, parallaxGroup, scenescriptGroup, shadersGroup) {
 	return [
 		{
 			title: overviewGroup,
@@ -69,6 +69,62 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup) {
 				locale + 'scene/first/assets',
 				locale + 'scene/first/properties',
 				locale + 'scene/first/publishing',
+			]
+		},
+		{
+			title: effectsGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
+			title: assetsGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
+			title: audioGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
+			title: particlesGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
+			title: animationsGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
+			title: parallaxGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
+			title: scenescriptGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
+			title: shadersGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
 			]
 		}
 	]
