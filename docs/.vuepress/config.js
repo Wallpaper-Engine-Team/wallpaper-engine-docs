@@ -75,7 +75,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: effectsGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/first/gettingstarted'
+				locale + 'scene/effects/overview'
 			]
 		},
 		{

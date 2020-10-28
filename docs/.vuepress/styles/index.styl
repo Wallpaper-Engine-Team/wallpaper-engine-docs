@@ -24,3 +24,29 @@
     }
   }
 }
+
+.effect {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  &-box {
+    flex: 1 1 30%;
+    border: 1px solid $borderColor;
+    max-width: 30%;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    &.fake {
+      height: 0;
+      border-color: transparent;
+    }
+    &-image {
+      margin: 0 auto;
+      width: 200px;
+      height 200px;
+      background-size: cover;
+    }
+  }
+}
