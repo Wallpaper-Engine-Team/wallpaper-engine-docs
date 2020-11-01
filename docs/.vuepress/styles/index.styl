@@ -38,15 +38,31 @@
     max-width: 30%;
     margin: 0 0 10px 0;
     padding: 5px;
+    &:hover {
+      border-color: $accentColor;
+    }
+    > a {
+      color: $textColor;
+      text-decoration: none !important;
+    }
     &.fake {
       height: 0;
       border-color: transparent;
     }
     &-image {
       margin: 0 auto;
-      width: 200px;
+      max-width: 100%;
       height 200px;
       background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 }
+
+@media (max-width: $MQNarrow)
+  .effect {
+    &-box {
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+  }
