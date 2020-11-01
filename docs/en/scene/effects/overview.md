@@ -4,20 +4,26 @@ sidebarDepth: 2
 
 # Effects Overview
 
-## Adding Effects
+## Introduction to Effects
 
-Placeholder
+Effects can be applied to existing assets, mainly images that you have imported. Effects cannot exist on their own, they must always be added to an existing layer. To do so, select a layer you have added to your project (for example, a main background image) and then click on the **Add** button in the *Effects* area on the right-hand side.
+
+When hovering or select an effect in a list, an eye icon and a red X icon will appear. The eye icon will allow you to temporarily toggle an effect off and on while the X permanently removes the effect from the current layer. Double-clicking on an effect opens its effect properties where you can further configure and fine-tune the effect to your liking.
+
+![Effects can be found on the right-hand side](/img/effects/effects.png)
 
 ## List of Effects
 
-Placeholder, mention Steam Workshop
+The following effects are included with Wallpaper Engine by default. You can find more community-made effects by clicking on *Workshop* at the top of the editor and then *Browse Assets on Workshop*.
+
+Click on an effect to learn more about it. We recommend experiment with different effects for different purposes. For example, the *Shake* effect can be utilized to simulate breathing and the different *water* effects can often be used to simulate wind, clouds and smoke, be creative!
 
 ### Animation Effects
 
 <div class="effect-list">
 	<div class="effect-box">
 		<a href="/scene/effects/effect/sway.html">
-			<div class="effect-box-image" style="background-image: url('/img/wallpaperenginelogo.png')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Sway.gif')"></div>
 			<div>
 				<h4>Foliage Sway</h4>
 				<p>Animates the corners of the image and adds a wind motion. Useful to animate grass and bushes to sway in the wind.</p>
@@ -98,13 +104,13 @@ Placeholder, mention Steam Workshop
 			<div class="effect-box-image" style="background-image: url('/img/effects/Blur.png')"></div>
 			<div>
 				<h4>Blur</h4>
-				<p>Applies a coarse gaussian blur to the image.</p>
+				<p>Applies a coarse gaussian blur to the image. Significantly more performant than Blur Precise.</p>
 			</div>
 		</a>
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/blurprecise.html">
-			<div class="effect-box-image" style="background-image: url('/img/wallpaperenginelogo.png')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Blur_precise.gif')"></div>
 			<div>
 				<h4>Blur Precise</h4>
 				<p>Applies a precise gaussian blur to the image. Useful to achieve better results with outlines, god ray effects and similar.</p>
@@ -222,7 +228,7 @@ Placeholder, mention Steam Workshop
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/perspective.html">
-			<div class="effect-box-image" style="background-image: url('/img/wallpaperenginelogo.png')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Perspective.gif')"></div>
 			<div>
 				<h4>Perspective</h4>
 				<p>Adds a perspective warp to the image.</p>
@@ -231,7 +237,7 @@ Placeholder, mention Steam Workshop
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/skew.html">
-			<div class="effect-box-image" style="background-image: url('/img/wallpaperenginelogo.png')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Skew.gif')"></div>
 			<div>
 				<h4>Skew</h4>
 				<p>Shifts the image on each border.</p>
@@ -240,7 +246,7 @@ Placeholder, mention Steam Workshop
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/transform.html">
-			<div class="effect-box-image" style="background-image: url('/img/wallpaperenginelogo.png')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Transform.gif')"></div>
 			<div>
 				<h4>Transform</h4>
 				<p>Allows you to rotate, scale or offset the image.</p>
@@ -274,7 +280,7 @@ Placeholder, mention Steam Workshop
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/localcontrast.html">
-			<div class="effect-box-image" style="background-image: url('/img/wallpaperenginelogo.png')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Local_contrast.gif')"></div>
 			<div>
 				<h4>Local Contrast</h4>
 				<p>Enhances the contrast of the image.</p>
