@@ -9,7 +9,7 @@ The **Water Ripple** distorts the image to add a ripple effect. The effect can o
 
 ### Effect Settings
 
-* **Opacity map:** Determines which places the effect will be applied to.
+* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to.
 * **Animation speed:** How fast the ripple is animated.
 * **Ratio:** Increases the effect horizontally or vertically.
 * **Ripple scale:** The scale of the ripple details.

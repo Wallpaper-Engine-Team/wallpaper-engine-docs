@@ -9,7 +9,7 @@ The **Foliage Sway** effect can be used to simulate wind movements, especially f
 
 ## Effect settings
 
-* **Opacity mask:** A paintable mask to determine which area of the image is affected. By default the entire image will sway, so in most cases you want to paint the opacity mask.
+* **Opacity mask:** You can draw this mask to determine what areas of your image the effect is applied to.
 
 ### Modes
 

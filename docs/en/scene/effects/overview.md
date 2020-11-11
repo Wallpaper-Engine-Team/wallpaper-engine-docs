@@ -69,7 +69,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/waterripple.html">
-			<div class="effect-box-image" style="background-image: url('/img/effects/Water_ripple.gif')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Water_Ripples_Complete.gif')"></div>
 			<div>
 				<h4>Water Ripple</h4>
 				<p>Distorts the image to add a ripple effect. The effect can optionally be scrolled along a specified direction. </p>
@@ -78,7 +78,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/waterwaves.html">
-			<div class="effect-box-image" style="background-image: url('/img/effects/Water_waves.gif')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Water_Waves_Complete.gif')"></div>
 			<div>
 				<h4>Water Waves</h4>
 				<p>Applies an abstract water wave to the image. Can be used for cloth or hair animations as well. </p>
