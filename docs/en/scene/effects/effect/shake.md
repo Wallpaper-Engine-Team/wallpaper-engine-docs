@@ -14,7 +14,7 @@ The effect has two different modes, a standard one and an audio response mode. T
 * **Direction:** TODO ASK KRIS
 * **Noise:** TODO ASK KRIS WHAT THIS DOES; SEEMS TO DISABLE ANY MASK?!
 * **Shake Direction:** Allows you to pain the direction of the shake effect in a so-called *flow mask*. The shake will follow the direction of your cursor.
-* **Time offset:** Allows you to paint different areas of the image that will have a delay in the animation, where the *Amount* of the painted area represents the delay. This is useful if you want to use one shake effect on multiple characters or elements on the image. Without different time dleays, all elements would shake in sync which can often look odd, especially when you are animating multiple breathing characters.
+* **Time offset:** Allows you to paint different areas of the image that will have a delay in the animation, where the *Amount* of the painted area represents the delay. This is useful if you want to use one shake effect on multiple characters or elements on the image. Without different time delays, all elements would shake in sync which can often look odd, especially when you are animating multiple breathing characters.
 * **Opacity:** Allows you to draw certain areas of the image that will not be included in the effect (by setting the *Amount* to 0 while drawing) or where the effect is reduced (any *Amount* below 255).
 * **Bounds:** TODO ASK KRIS
 * **Strength:** How much distance the shake animation will cover.
