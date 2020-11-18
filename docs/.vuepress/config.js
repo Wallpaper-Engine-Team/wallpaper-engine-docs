@@ -21,7 +21,7 @@ module.exports = {
 				ariaLabel: en.language_name,
 				sidebar: {
 					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_parallax, en.sidebar_scenescript, en.sidebar_shaders),
-					'/en/web/': getWebSidebar('/en/', en.sidebar_overview),
+					'/en/web/': getWebSidebar('/en/', en.sidebar_web_overview, en.sidebar_web_first, en.sidebar_web_customization, en.sidebar_web_audio, en.sidebar_web_performance, en.sidebar_web_debug),
 					'/': []
 				},
 				nav: [
@@ -33,7 +33,6 @@ module.exports = {
 	},
 	plugins: [
 		['@vuepress/back-to-top', true],
-		['@vuepress/google-analytics', { ga: 'UA-145121163-4' }],
 		['vuepress-plugin-redirect', { locales: true } ],
 		['vuepress-plugin-smooth-scroll'],
 		['sitemap', { hostname: 'https://docs.wallpaperengine.io' } ],
@@ -131,13 +130,49 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 	]
 }
 
-function getWebSidebar(locale, introGroup) {
+function getWebSidebar(locale, introGroup, gettingStartedGroup, customizationGroup, audioGroup, performanceGroup, debugGroup) {
 	return [
 		{
 			title: introGroup,
 			collapsable: false,
 			children: [
 				locale + 'web/',
+			]
+		},
+		{
+			title: gettingStartedGroup,
+			collapsable: false,
+			children: [
+				locale + 'web/first/gettingstarted',
+			]
+		},
+		{
+			title: customizationGroup,
+			collapsable: false,
+			children: [
+				locale + 'web/customization/properties',
+				locale + 'web/customization/images'
+			]
+		},
+		{
+			title: audioGroup,
+			collapsable: false,
+			children: [
+				locale + 'web/audio/visualizer',
+			]
+		},
+		{
+			title: performanceGroup,
+			collapsable: false,
+			children: [
+				locale + 'web/performance/fps'
+			]
+		},
+		{
+			title: debugGroup,
+			collapsable: false,
+			children: [
+				locale + 'web/debug/debug'
 			]
 		}
 	]

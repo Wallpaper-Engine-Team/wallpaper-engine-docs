@@ -15,5 +15,11 @@
 	"sidebar_animations": "Animations",
 	"sidebar_parallax": "Parallax Effect",
 	"sidebar_scenescript": "Advanced: SceneScript",
-	"sidebar_shaders": "Very Advanced: Shader Programming"
+	"sidebar_shaders": "Very Advanced: Shader Programming",
+	"sidebar_web_overview": "Web-Based Wallpapers",
+	"sidebar_web_first": "Getting Started",
+	"sidebar_web_audio": "Audio Visualization",
+	"sidebar_web_customization": "User Customization",
+	"sidebar_web_performance": "Performance",
+	"sidebar_web_debug": "Debugging"
 }

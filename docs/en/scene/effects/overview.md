@@ -279,4 +279,13 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
+	<div class="effect-box">
+		<a href="/scene/effects/effect/shine.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Shine.gif')"></div>
+			<div>
+				<h4>Shine</h4>
+				<p>Creates a shimmering shine effect on bright areas of the image.</p>
+			</div>
+		</a>
+	</div>
 </div>
