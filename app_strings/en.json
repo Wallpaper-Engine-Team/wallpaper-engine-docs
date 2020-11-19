@@ -21,5 +21,6 @@
 	"sidebar_web_audio": "Audio Visualization",
 	"sidebar_web_customization": "User Customization",
 	"sidebar_web_performance": "Performance",
+	"sidebar_web_rgb": "RGB Hardware",
 	"sidebar_web_debug": "Debugging"
 }

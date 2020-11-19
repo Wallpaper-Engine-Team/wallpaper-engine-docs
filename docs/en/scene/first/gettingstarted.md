@@ -12,7 +12,7 @@ Once you open the Wallpaper Engine editor, you are presented with the welcome sc
 
 If you would like to follow along this tutorial, you can use the example image we will be using in the following sections by downloading it from this link (1920 x 1080 resolution): 
 
-* [Click here to download the sample image](/img/tutorials/mountain.png)
+<a href="/img/tutorials/mountain.png" download="mountain.png">Click here to download the sample image</a>
 
 ## A foreword on wallpaper resolutions
 
