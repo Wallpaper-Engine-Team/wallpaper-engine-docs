@@ -9,11 +9,12 @@ The `applyUserProperties` is triggered whenever a user changes a property that y
 ```js
 window.wallpaperPropertyListener = {
     applyUserProperties: function(properties) {
-        if (properties.yourproperty) {
+        if (properties.yourproperty) { // Don't forget to check if the property is included in the event
+            // Checkbox / boolean example, change this as needed for your property type
             if (properties.yourproperty.value == true) {
-                // Do something if your property is "true" (this is checkbox example)
+                // Do something if your property is true
             } else {
-                // Do something if your property is "false" (this is checkbox example)
+                // Do something if your property is false
             }
         }
     }

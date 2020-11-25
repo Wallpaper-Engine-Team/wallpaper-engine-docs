@@ -10,7 +10,7 @@
 	"sidebar_gettingstarted": "Creating Your First Wallpaper",
 	"sidebar_effects": "Effects",
 	"sidebar_assets": "Assets",
-	"sidebar_audio": "Audio Responsiveness",
+	"sidebar_audio": "Audio Visualization",
 	"sidebar_particles": "Particle Systems",
 	"sidebar_animations": "Animations",
 	"sidebar_parallax": "Parallax Effect",
@@ -21,6 +21,6 @@
 	"sidebar_web_audio": "Audio Visualization",
 	"sidebar_web_customization": "User Customization",
 	"sidebar_web_performance": "Performance",
-	"sidebar_web_rgb": "RGB Hardware",
+	"sidebar_web_rgb": "RGB Devices",
 	"sidebar_web_debug": "Debugging"
 }

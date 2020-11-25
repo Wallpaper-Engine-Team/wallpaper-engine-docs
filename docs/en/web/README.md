@@ -1,10 +1,9 @@
 # Web Wallpaper Reference Guide
 
-This section of the Wallpaper Engine designer documentation will guide you through the creation of wallpapers based on HTML, CSS and JavaScript. This website will not explain how to use these technologies and only addresses topics which are specific to Wallpaper Engine itself.
+This section of the Wallpaper Engine designer documentation will guide you through the creation of wallpapers based on HTML, CSS and JavaScript. This website will not explain how to use these technologies and only addresses topics which are specific to Wallpaper Engine itself. However, there are plenty of tutorials, guides and courses on the web and Wallpaper Engine is a great way to learn and improve on these web technologies.
 
 ::: tip
 If you want to create a wallpaper using the Wallpaper Engine editor, you should instead look at the [documentation for Scene wallpapers](/scene).
 :::
 
-Wallpaper Engine exposes its own interfaces that you can use to add additional features to your web-based wallpaper, such as user customization, audio visualizers, RGB effects for supported hardware, user-configurable FPS limits and more.
-
+Wallpaper Engine exposes its own interfaces that you can use to add additional features to your web-based wallpaper: User customization, audio visualizers, RGB effects for supported hardware, user-configurable FPS limits and more.
