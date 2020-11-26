@@ -8,7 +8,7 @@ tags:
   - lake
   - trees
 ---
-# #2 Adding your first effects
+# Adding your first effects
 
 In this tutorial, we will be working with an image with a lake, trees and a mountain ([Click here to download](/img/tutorials/mountain.png)) which we will use to showcase a few basic effects. 
 

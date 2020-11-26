@@ -17,7 +17,7 @@ window.wallpaperPropertyListener = {
                 // Do something if your property is false
             }
         }
-    }
+    },
 };
 ```
 

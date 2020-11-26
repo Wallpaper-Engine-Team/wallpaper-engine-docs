@@ -1,4 +1,4 @@
-# #3 Adding your first assets
+# Adding your first assets
 
 In the previous section, we introduced effects which we applied to the background image. The background image is an **asset** in Wallpaper Engine, which is an additional element in your wallpaper. Wallpaper Engine supports different types of assets, the most common ones are images, text layers, particle systems, sounds and even 3D models.
 

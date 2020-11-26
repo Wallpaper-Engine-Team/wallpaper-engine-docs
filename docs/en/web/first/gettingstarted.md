@@ -13,6 +13,6 @@ Once you have set up a project directory, simply drag and drop the main HTML fil
   Your browser does not support the video tag.
 </video>
 
-You will also notice that Wallpaper Engine creates a `project.json` file in the main directory of your web project. This file contains some project-specific configurations and you may want to edit it. For example, you can add [user properties](/web/customization/properties) to your `project.json` to allow users to customize and tweak your wallpaper.
+You will also notice that Wallpaper Engine creates a `project.json` file in the main directory of your web project. This file contains some project-specific configurations, such as a list of all of your [user properties](/web/customization/properties).
 
 You can publish your wallpaper by clicking on **Workshop** at the top of the editor menu and then **Share wallpaper on Workshop**. Going through this process again while using the same Wallpaper Engine project will cause an update to your existing wallpaper to be published to all users. 

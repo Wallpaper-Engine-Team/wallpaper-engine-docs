@@ -1,4 +1,4 @@
-# #1 Getting started with your first wallpaper
+# Getting started with your first wallpaper
 
 Welcome to the quick-start guide for the Wallpaper Engine editor! This tutorial series will lead you through the most important features of the Wallpaper Engine editor. After you are done with this tutorial, you will understand how to handle the Wallpaper Engine editor user interface, how to apply effects and add additional content to your wallpapers. You will also be able to add configurable options to your wallpaper so that users can customize and tweak your wallpaper even further.
 

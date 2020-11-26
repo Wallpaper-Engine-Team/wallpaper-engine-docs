@@ -8,7 +8,7 @@ tags:
   - customization
   - tweaking
 ---
-# #4 Adding user options
+# Adding user options
 
 Wallpaper Engine allows users to customize your wallpapers even further with the help of **user properties**. User properties allow you to give users of your wallpapers to further tweak and customize individual aspects of your wallpaper, including hiding objects from the wallpaper altogether.
 

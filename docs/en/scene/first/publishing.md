@@ -1,4 +1,4 @@
-# #5 Publishing a wallpaper
+# Publishing a wallpaper
 
 Once you feel like your wallpaper is ready, you can publish it on the Workshop, though this is entirely optional. You can initiate the upload process by clicking on **Workshop** at the top of the editor and then selecting **Prepare for publishing**. 
 
