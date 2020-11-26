@@ -20,7 +20,7 @@ module.exports = {
 				label: en.language_name,
 				ariaLabel: en.language_name,
 				sidebar: {
-					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_parallax, en.sidebar_scenescript, en.sidebar_shaders),
+					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_parallax, en.sidebar_rgb, en.sidebar_scenescript, en.sidebar_shaders),
 					'/en/web/': getWebSidebar('/en/', en.sidebar_web_overview, en.sidebar_web_first, en.sidebar_web_customization, en.sidebar_web_audio, en.sidebar_web_performance, en.sidebar_web_rgb, en.sidebar_web_debug),
 					'/': []
 				},
@@ -50,7 +50,7 @@ module.exports = {
 	]
 };
 
-function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, audioGroup, particlesGroup, animationsGroup, parallaxGroup, scenescriptGroup, shadersGroup) {
+function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, audioGroup, particlesGroup, animationsGroup, parallaxGroup, rgbGroup, scenescriptGroup, shadersGroup) {
 	return [
 		{
 			title: overviewGroup,
@@ -114,6 +114,13 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			]
 		},
 		{
+			title: rgbGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/first/gettingstarted'
+			]
+		},
+		{
 			title: scenescriptGroup,
 			collapsable: true,
 			children: [
@@ -151,7 +158,8 @@ function getWebSidebar(locale, introGroup, gettingStartedGroup, customizationGro
 			collapsable: false,
 			children: [
 				locale + 'web/customization/properties',
-				locale + 'web/customization/images'
+				locale + 'web/customization/displaycondition',
+				locale + 'web/customization/localization'
 			]
 		},
 		{

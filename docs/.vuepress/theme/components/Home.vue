@@ -23,15 +23,20 @@
         v-if="data.tagline !== null"
         class="description"
       >
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
+        {{ data.tagline || $description }}
       </p>
-
+      <p
+        v-if="data.tagline !== null"
+        class="description"
+      >
+        {{ data.actionDescription }}
+      </p>
       <p
         v-if="data.actionText && data.actionLink"
         class="action"
       >
         <NavLink
-          class="action-button"
+          class="action-button main-guide"
           :item="actionLink"
         />
       </p>
@@ -143,12 +148,17 @@ export default {
       background-color $accentColor
       padding 0.8rem 1.6rem
       border-radius 4px
+      text-align: center
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($accentColor, 10%)
       min-width: 320px
       &:hover
         background-color lighten($accentColor, 10%)
+      &.main-guide
+        min-width: 360px;
+        padding: 1.1rem 1.6rem;
+        font-size: 1.3rem;
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0

@@ -4,7 +4,7 @@ Wallpaper Engine provides a `wallpaperPropertyListener` on the global `window` o
 
 ### applyUserProperties
 
-The `applyUserProperties` is triggered whenever a user changes a property that you have added to your wallpaper or when the wallpaper is first loaded. The event only contains properties that have changed their value, so it's important to always check if a property is included like in the example below (`yourproperty` should be replaced with the actual ID of your property). 
+The `applyUserProperties` is triggered whenever a user changes a property that you have added to your wallpaper or when the wallpaper is first loaded. The event only contains properties that have changed their value, so it's important to always check if a property is included like in the example below (`yourproperty` should be replaced with the actual key of your property). Check out the [user property guide](/web/customization/properties) for more information.
 
 ```js
 window.wallpaperPropertyListener = {
