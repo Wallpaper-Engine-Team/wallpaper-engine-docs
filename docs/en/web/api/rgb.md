@@ -1,12 +1,29 @@
 # RGB Hardware Support
 
-Wallpaper Engine allows you to take control of supported RGB devices through its API and synchronize your wallpaper with LED hardware.
+Wallpaper Engine allows you to take control of supported RGB devices through its API and synchronize your wallpaper with LED hardware. Even if you do not own any or just a limited set of compatible hardware, you can simply utilize an emulator. Both Corsair's iCUE software and Razer offer ways to emulate devices that you do not own.
 
-TODO mention razer emulator and its issues (reinstalls of synapse and emulator, restarting wpe to take effect).
+<video width="100%" controls loop autoplay>
+  <source src="/videos/rgb_emulator.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## Hardware Emulator Setup (Optional)
+
+If you want to utilize an RGB hardware emulator to test how your RGB lights look on a wide range of devices, we recommend the Razer Chroma emulator.
+
+First, make sure you have the latest version of Razer Synapse 3 installed. It's also important to make sure you install **Chroma Connect** in the Razer Synapse settings:
+
+* [Download Razer Synapse 3](https://www.razer.com/synapse-3)
+
+Afterwards, head to the Razer developer portal and install the latest version of the Razer Chroma emulator (scroll down on the page to get the link):
+
+* [Razer Developer Portal](https://developer.razer.com/works-with-chroma/download/)
+
+Once you have installed Razer Synapse 3 and the latest Razer Emulator, restart Wallpaper Engine and make sure the LED Plugin is enabled in the application settings. Verify that the emulator works by using any of the standard wallpapers that are shipped alongside Wallpaper Engine (such as **Razer Bedroom**).
 
 ## Initializing the LED plugin
 
-Before any LED-related code is executed, you should first check if the led plugin has been loaded, until then any related logic should be skipped.
+Before any LED-related code is executed, you should first check if the LED plugin has been loaded, until then any related RGB logic should be skipped.
 
 ```js
 var wallpaperSettings = {
@@ -56,6 +73,7 @@ function getEncodedCanvasImageData(canvas) {
 
 // Only execute this logic if the LED plugin has actually been loaded
 if (wallpaperSettings.ledPlugin) {
+    const canvas = document.getElementById('RGBCanvas');
     var encodedImageData = getEncodedCanvasImageData(canvas);
     window.wpPlugins.led.setAllDevicesByImageData(encodedImageData, canvas.width, canvas.height);
 }
@@ -63,6 +81,17 @@ if (wallpaperSettings.ledPlugin) {
 
 This is currently the most efficient way to compress and send the bitmap. It's still important that you choose a canvas of appropriate size (100 x 20 pixels) to minimize the performance impact, you can efficiently downsample any given canvas by copying it to a smaller one first before generating the bitmap.
 
+The color data you send will automatically be converted by the hardware drivers and applied to all devices according to the configuration set by the hardware manufacturer. In the following example, a canvas with two rising audio bars (see the *audio visualizer* section of the documentation) split at the center of the canvas was used:
+
+<video width="100%" loop autoplay>
+  <source src="/videos/rgb_audio.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+In examples likes that, we consider it best practice to also include some sort of idle animation for RGB lights so that the LED hardware does not turn off while no audio is playing. However, these implementation details are absolutely up to your own preference.
+
 ## Additional Corsair iCUE functions
 
-https://wallpaper-engine.fandom.com/wiki/Web_Wallpaper_iCUE_Reference
+While not necessary for the vast majority of users, you can also access certain functions of the Corsair iCUE SDK directly using Wallpaper Engine. For most users, we recommend sticking to what is described in the guide above, but if you have something very specific in mind for Corsair iCUE-compatible hardware, you can add some additional features using `window.cue`. For more infos, please check out the following guide:
+
+* [Additional Corsair iCUE functions](/web/api/icue)
