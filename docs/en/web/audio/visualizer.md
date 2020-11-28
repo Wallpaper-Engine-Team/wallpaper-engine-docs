@@ -31,9 +31,7 @@ Array elements **64 until 127** contain the volume levels for the **right channe
 
 The lower array elements for each channel represent bass frequencies, so at array index 0, you will find the lowest bass sounds for the left channel and at array element 64, you will find the bass sounds for the right audio channel. The higher up you go in the array, the higher the audio frequencies will get, so array indices closest to 64 will contain treble audio volume levels for the left channel and array indices closest to array index 127 will contain the treble audio volume levels for the right channel.
 
-Each array will contain a floating point value from 0.00 to 1.00. 0.00 means that the specific frequency is currently not playing any sound and 1.00 means that the frequency is playing at its maximum volume.
-
-Due to the nature of JavaScript floating point values, it may be that values close to 1.00 may turn out higher than 1.00 (so you might get an unwanted value like `1.000000001` - seasoned JavaScript developers are well aware of this). For that reason, it may be a good idea to use `Math.min()` to clamp the audio levels to exactly 1.00 in cases where this might cause issues with the rendering of your wallpaper.
+Each array will generally contain a floating point value from 0.00 to 1.00. 0.00 means that the specific frequency is currently not playing any sound and 1.00 means that the frequency is playing at its maximum volume. However, due to the technical implementation, it can be that in very few cases, the numbers may be much greater than 1.0 For this reason, we recommend limiting the volume values to 1.00 with the help of `Math.min()`. See the sample project below for a concrete example.
 
 ## Audio visualization example
 
@@ -42,30 +40,7 @@ Due to the nature of JavaScript floating point values, it may be that values clo
   Your browser does not support the video tag.
 </video>
 
-In the following example, we are providing a very basic full implementation of the audio visualizer previewed above. You can easily copy-paste this into an .html file, import it into Wallpaper Engine and it should work straight away. We don't recommend placing all scripts, styles and HTML content into one file normally, however, for the sake of this tutorial, it's easiest to see it all in one place.
-
-The HTML and JavaScript example below contains detailed comments that should help you understand it. Let's have a closer look at some of the details, though:
-
-First, the CSS rules allow the canvas to fit on any resolution and any aspect ratio. You should always make sure that your wallpaper works on any type of screen resolution and aspect ratio, it's bad practice to only consider one resolution in your work and it usually only takes a few minor tweaks to ensure it works fine. In this example, we're resetting the default `margin` and `padding` on the body to 0 and hide any `overflow` (which shouldn't be necessary but it can be a good way to prevent scrollbars appearing in some edge cases). Next up, we set the canvas to be equal to the full width and height of the user's viewport. It's important to note that `<canvas>` elements use an internal resolution for rendering and have another resolution that is used for its size in HTML / CSS, so it's best to specifically set the canvas height and width to the window height and width, which we're doing in the `onload` function:
-
-```js
-audioCanvas.height = window.innerHeight;
-audioCanvas.width = window.innerWidth;
-```
-
-At the end of the `onload` function, we call the `wallpaperRegisterAudioListener` function which causes the `wallpaperAudioListener` to be executed whenever new audio data comes in. The function will draw the left audio channel in red and the right audio channel in blue (in reverse order for aesthetical purpose only). The key part of the code can be found here:
-
-```js
-for (var i = 0; i < halfCount; ++i) {
-    // Create an audio bar with its hight depending on the audio volume level of the current frequency
-    var height = audioCanvas.height * audioArray[i];
-    audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
-}
-```
-
-The height of the audio bars is determined by the volume level of the frequency that is currently being iterated over in the `for` loop. Let's assume the user has a 1920x1080 screen resolution. If the height of the window is 1080 and the volume level for the current frequency is 0.50 (which means the current frequency is at 50% of its maximum audio levels), the bar for this specific frequency will be drawn with a height of 540 pixels (1080 * 0.50). This logic is repeated for all audio frequencies, each time Wallpaper Engine supplies a new set of audio data.
-
-Of course this is a very basic example and you can change the type of visualization drastically, as more than just audio bars are possible with this. You can also try and add some interpolation between each calls to the `wallpaperAudioListener` function to smoothen the audio bar movement and make it less erratic, but in these cases you should consider adding an [FPS limit](/web/performance/fps) to your wallpaper.
+In the following example, we are providing a very basic full implementation of the audio visualizer previewed above. You can easily copy-paste this into an empty `.html` file, import it into Wallpaper Engine and it should work straight away. We don't recommend placing all scripts, styles and HTML content into one file normally, however, for the sake of this tutorial, it's easiest to see it all in one place.
 
 ```html
 <!DOCTYPE html>
@@ -89,7 +64,7 @@ Of course this is a very basic example and you can change the type of visualizat
         // Iterate over the first 64 array elements (0 - 63) for the left channel audio data
         for (var i = 0; i < halfCount; ++i) {
             // Create an audio bar with its hight depending on the audio volume level of the current frequency
-            var height = audioCanvas.height * audioArray[i];
+            var height = audioCanvas.height * Math.min(audioArray[i], 1);
             audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
         }
 
@@ -99,7 +74,7 @@ Of course this is a very basic example and you can change the type of visualizat
         for (var i = halfCount; i < audioArray.length; ++i) {
             // Create an audio bar with its hight depending on the audio volume level
             // Using audioArray[191 - i] here to inverse the right channel for aesthetics
-            var height = audioCanvas.height * audioArray[191 - i];
+            var height = audioCanvas.height * Math.min(audioArray[191 - i], 1);
             audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
         }
     }
@@ -127,3 +102,30 @@ Of course this is a very basic example and you can change the type of visualizat
     </body>
 </html>
 ```
+
+The HTML and JavaScript example above contains detailed comments that should help you understand it. Let's have a closer look at some of the details, though:
+
+First, the CSS rules in the `<style>` block allow the canvas to fit on any resolution and any aspect ratio. You should always make sure that your wallpaper works on any type of screen resolution and aspect ratio, it's bad practice to only consider one resolution in your work and it usually only takes a few minor tweaks to ensure it works fine for all users.
+
+In this example, we're resetting the default `margin` and `padding` on the body to 0 and hide any `overflow` (which shouldn't be necessary but it can be a good way to prevent scrollbars appearing in some edge cases). Next up, we set the canvas to be equal to the full width and height of the user's viewport. It's important to note that a `<canvas>` element uses an internal resolution for rendering and a secondary resolution for its size in HTML / CSS, so it's best to specifically set the canvas height and width to the window height and width with JavaScript, which we're doing in the `onload` function:
+
+```js
+audioCanvas.height = window.innerHeight;
+audioCanvas.width = window.innerWidth;
+```
+
+At the end of the `onload` function, we call the `wallpaperRegisterAudioListener` function which causes the `wallpaperAudioListener` to be executed whenever new audio data comes in. The function will draw the left audio channel in red and the right audio channel in blue (in reverse order for aesthetical purpose only). The key part of the code can be found here:
+
+```js
+for (var i = 0; i < halfCount; ++i) {
+    // Create an audio bar with its hight depending on the audio volume level of the current frequency
+    var height = audioCanvas.height * Math.min(audioArray[i], 1);
+    audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
+}
+```
+
+The height of the audio bars is determined by the volume level of the frequency that is currently being iterated over in the `for` loop. Let's assume the user has a 1920x1080 screen resolution. If the height of the window is 1080 and the volume level for the current frequency (stored in `audioArray[i]`) is 0.50, the bar for this specific frequency will be drawn with a height of 540 pixels (1080 * 0.50). This logic is repeated for all audio frequencies, each time Wallpaper Engine supplies a new set of audio data.
+
+You may have noticed that we have also wrapped the `audioArray[i]` into `Math.min(audioArray[i], 1);`. This is to ensure the audio levels are limited to 1.00 at their peak. Most values will never go above 1.00, but due to the nature of the implementation, in rare cases this might spike above 1.0 which can cause your wallpaper to render incorrectly.
+
+Of course this is a very basic example and you can change the type of visualization drastically, as you can create much more than just simple audio bars with this type of data. You can also try and add some interpolation between each calls to the `wallpaperAudioListener` function to smoothen the audio bar movement and make it less erratic, but in these cases you should consider adding an [FPS limit](/web/performance/fps) to your wallpaper.

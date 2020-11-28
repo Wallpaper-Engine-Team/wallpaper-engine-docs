@@ -3,9 +3,9 @@ home: true
 heroText: Wallpaper Engine
 tagline: Designer Documentation
 actionText: Wallpaper Engine Scene Editor Guide
-actionLink: /scene/
+actionLink: /scene/overview
 actionTextSecondary: Web Wallpaper Reference Guide
-actionLinkSecondary: /web/
+actionLinkSecondary: /web/overview
 features:
 - title: Scene Wallpapers
   details: Wallpapers based on images created with the Wallpaper Engine Editor. Recommended for beginners and advanced wallpaper creators alike.

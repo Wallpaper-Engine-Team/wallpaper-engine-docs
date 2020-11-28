@@ -56,7 +56,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: overviewGroup,
 			collapsable: false,
 			children: [
-				locale + 'scene/',
+				locale + 'scene/overview',
 			]
 		},
 		{
@@ -143,7 +143,7 @@ function getWebSidebar(locale, introGroup, gettingStartedGroup, customizationGro
 			title: introGroup,
 			collapsable: false,
 			children: [
-				locale + 'web/',
+				locale + 'web/overview',
 			]
 		},
 		{

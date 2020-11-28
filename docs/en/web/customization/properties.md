@@ -39,6 +39,9 @@ window.wallpaperPropertyListener = {
     },
 };
 ```
+::: danger Important
+Always make sure to initialize `window.wallpaperPropertyListener` as a global object outside of any events, otherwise it might miss some important property update events when the wallpaper is loaded.
+:::
 
 The key used to access the properties is automatically generated when you create a property. You can use the edit button on the right-hand side of the element to edit it before the property has been created. The key cannot contain any special characters and only allows for English and numeric characters. 
 
@@ -167,7 +170,13 @@ window.wallpaperPropertyListener = {
     },
 };
 ```
-Be sure to replace `properties.customimage` with the actual key of your file property.
+You can also assign the value to a CSS background image using `url('')`, in that case make sure to not forget the apostrophes inside:
+
+```js
+canvas.style.backgroundImage = "url('file:///" + properties.customimage.value + "')";
+```
+
+Be sure to replace `properties.customimage` with the actual key of your file property. 
 
 ### Directory property
 

@@ -6,13 +6,13 @@ For example, let's say you have added a clock to your wallpaper and you want to 
 
 To achieve this, first create the clock property and note down its key. In our example, let's assume property key is `showclock`. After the property exists, create a new property called *24H Clock*. On the property creation page, you will see the option to configure a *display condition*. This allows you to write a JavaScript-compatible `if` condition that decides when a property is visible to a user.
 
-In our case, we want to depend the visiblity on the value of `showclock`, so we set the display condition to depend on the `value` of that property being `true`:
+In our case, we want to depend the visibility on the value of `showclock`, so we set the display condition to depend on the `value` of that property being `true`:
 
 ```js
 showclock.value == true
 ```
 
-You can see the implementation and the result in action in the following video:
+This way, our *24H Clock* property will only be visible whenever the user has also enabled the *Show Clock* property. You can see the implementation and the result in action in the following video:
 
 <video width="80%" style="margin: 0 auto;display: block;" controls loop autoplay>
   <source src="/videos/web_display_condition.mp4" type="video/mp4">
