@@ -6,4 +6,4 @@ This section of the Wallpaper Engine designer documentation will guide you throu
 If you want to create a wallpaper using the Wallpaper Engine editor, you should instead look at the [documentation for Scene wallpapers](/scene).
 :::
 
-Wallpaper Engine exposes its own interfaces that you can use to add additional features to your web-based wallpaper: User customization, audio visualizers, RGB effects for supported hardware, user-configurable FPS limits and more.
+Wallpaper Engine exposes its own interfaces that you can use to add additional features to your web-based wallpaper: User customization, audio visualizers, RGB effects for supported hardware, user-configurable FPS limits and more. Video files can also be part of your web-based wallpaper, though only **.webm**, **.ogg** and **.ogv** video files are supported.
