@@ -57,6 +57,6 @@ To exemplify why it's bad to use wallpapers that do not have a real aspect ratio
 ![Square image compares to 16:9 aspect ratio](./aspectratio.jpg)
 *Red areas would be cut off if this square images was displayed on a 16:9 monitor.*
 
-The downsides of this are an increased GPU usage, less control over what is actually visible on the screen and larger file sizes and VRAM usage. This also applies to any image layers you use - they should all be as small as possible.
+The downsides of this are an increased graphics card usage, less control over what is actually visible on the screen and larger file sizes. This also applies to any image layers you use - they should all be as small as possible.
 
-We generally recommend you scale down images to the nearest closer real resolution and then manually crop off excess areas. You can use free image editing tools like Microsoft Paint, Paint.NET, GIMP or paid alternatives such as Adobe Photoshop to do this. Again, it's not necessary but we recommend preparing background images before importing them.
+We generally recommend you scale down images to the closest real resolution and then manually crop off excess areas. You can use free image editing tools like Microsoft Paint, Paint.NET, GIMP or paid alternatives such as Adobe Photoshop to do this. Again, it's not necessary but we recommend preparing background images before importing them.

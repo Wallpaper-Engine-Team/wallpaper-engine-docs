@@ -31,7 +31,7 @@ We can limit the effect to the water area of the image by painting an *Opacity M
   Your browser does not support the video tag.
 </video>
 
-The first rough attempt will leave a lot of rough edges and the water ripples will seem unrealistically strong further away in the image. For this purpose, you can use the **Value** and **Size** sliders at the lower left corner when painting. By lowering the value, you can lower the perceived strength of the water ripples in the areas that you draw over. By setting it to 0, you can completely erase any areas that you have accidentally painted over. The mask will represent these changes in the **Value** by showing areas with lower values darker and higher values lighter.
+The first attempt will leave a lot of rough edges and the water ripples will seem unrealistically strong further away in the image. For this purpose, you can use the **Value** and **Size** sliders at the lower left corner when painting. By lowering the value, you can lower the perceived strength of the water ripples in the areas that you draw over. By setting it to 0, you can completely erase any areas that you have accidentally painted over. The mask will represent these changes in the **Value** by showing areas with lower values darker and higher values lighter.
 
 Try to erase any unwanted areas, for example any accidentally shoreline areas, by setting the strength to 0 and gradually reduce the strength of the water ripples in the distance. This will result in a much more realistic effect rather than painting the maximum value everywhere.
 
