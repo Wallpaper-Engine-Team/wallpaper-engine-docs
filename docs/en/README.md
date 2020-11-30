@@ -3,7 +3,7 @@ home: true
 heroText: Wallpaper Engine
 tagline: Designer Documentation
 actionText: Wallpaper Engine Scene Editor Guide
-actionLink: /scene/overview
+actionLink: https://wallpaper-engine.fandom.com/wiki/New_Scene_Wallpaper
 actionTextSecondary: Web Wallpaper Reference Guide
 actionLinkSecondary: /web/overview
 features:

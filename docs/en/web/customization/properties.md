@@ -32,7 +32,7 @@ window.wallpaperPropertyListener = {
         if (properties.yourproperty) {
             // Do something with yourproperty
         }
-        if (properties.another_property) {
+        if (properties.anotherproperty) {
             // Do something with anotherproperty
         }
         // Add more properties here

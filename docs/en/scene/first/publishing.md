@@ -29,6 +29,6 @@ You can watch the following video to see the complete publishing process in acti
   Your browser does not support the video tag.
 </video>
 
-#### Publishing Updates
+## Publishing Updates
 
 In the future, you can push an update to your existing wallpaper by going through this process again. Wallpaper Engine will remember each project automatically publish an update to all your users rather than publishing a brand new wallpaper. Keep in mind that updates are received with a little bit of a delay, so don't be concerned if your users don't see the update immediately.

@@ -2,11 +2,11 @@
 
 This section of the Wallpaper Engine designer documentation will guide you through the creation of wallpapers based on image files. The Wallpaper Engine editor caters to casual and more advanced users and allows you to add various elements and effects to your wallpapers.
 
-#### Getting Started
+### Getting Started
 
 If you just want to get started with your first animated wallpaper, we recommend working your way through our [Getting Started Guide](/scene/first/gettingstarted). It will teach you all the fundamentals of the editor but it will leave out some of the more advanced features that you should check out once you have given the basics a try.
 
-#### What's next?
+### What's next?
 
 You can also create complex and interactive particle systems with its particle editor, timeline animations with its animation system, let parts of your wallpaper react to audio, use a parallax effect to make different layers of your wallpaper react to mouse movement.
 
