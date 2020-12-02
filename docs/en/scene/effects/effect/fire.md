@@ -16,10 +16,10 @@ The **Fire** effect allows you to animate existing flames on an image. You can u
 * **Alpha:** This allows you to adjust the opacity of the effect.
 * **Color start:** This color is blended with the albedo texture where the albedo texture is bright.
 * **Color end:** This color is blended with the albedo texture where the albedo texture is dark.
-* **Distortion:** How much refractiob/distoration will be applied.
+* **Distortion:** How much refraction / distortion will be applied.
 * **Feather:** This controls whether there is a smooth transition or hard fall off on the edge of the fire.
 * **Scale:** The size of the albedo and refraction textures.
 * **Smoothness:** How much the albedo texture will be smoothed.
 * **Speed:** How fast the fire moves.
-* **Threhold:** This allows you to adjust the edge of the fire. A higher value will reduce the amount of fire that will be added where you painted.
+* **Threshold:** This allows you to adjust the edge of the fire. A higher value will reduce the amount of fire that will be added where you painted.
 
