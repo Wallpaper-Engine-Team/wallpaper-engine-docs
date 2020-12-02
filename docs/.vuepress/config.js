@@ -138,7 +138,11 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: shadersGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/shader/overview',
+				locale + 'scene/shader/syntax',
+				locale + 'scene/shader/variables',
+				locale + 'scene/shader/headers',
+				locale + 'scene/shader/tutorials/desaturation'
 			]
 		}
 	]
