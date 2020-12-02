@@ -9,7 +9,7 @@ The **Fire** effect allows you to animate existing flames on an image. You can u
 
 ### Effect Settings
 
-* **Blend mode:** Controls how the fire is blended with the background image.
+* **Blend mode:** Controls how the fire blends with the background image.
 * **Refract:** This allows you to choose whether you also want to refract/distort the background image.
 * **Flow map:** This texture needs to be painted by you in order to add fire to the image. You need to draw into the direction the fire should move.
 * **Albedo:** This texture is used to blend color over the background image.

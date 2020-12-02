@@ -248,10 +248,10 @@ Click on an effect to learn more about it. We recommend experiment with differen
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/refraction.html">
-			<div class="effect-box-image" style="background-image: url('/img/effects/Refract.png')"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Refract.gif')"></div>
 			<div>
 				<h4>Refraction</h4>
-				<p>Distorts the image based on a normal map.</p>
+				<p>Distorts the image based on a normal map, especially suitable for simulating ice.</p>
 			</div>
 		</a>
 	</div>
