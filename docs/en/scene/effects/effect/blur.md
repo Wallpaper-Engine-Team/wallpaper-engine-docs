@@ -24,19 +24,19 @@ This is the default mode that does not come with any additional options. It appl
 
 #### Composite: Blend
 
-This will take the **Blend mode** into account. In additional to the blur, you can select a different blend mode which will alter the colors of the image. This mode will also add two additional shader options:
+This will take the **Blend mode** into account. In addition to the blur, you can select a different blend mode which will alter the colors of the image. This mode will also add two additional shader options:
 
 * **Alpha:** Determines the opacity of the blend effect, higher values mean the effect is less transparent and appears stronger.
-* **Offset:** Allows you to create an offset for the effect which will apply the blend effect with an offset on the X and Y axis. 
+* **Offset:** Allows you to create an offset for the effect which will apply the blend effect with an offset on the X and Y axis.
 
-TODO ASK KRIS IF THIS IS CORRECT
+::: tip
+Using the composite blend option in combination with the blend modes *add* or *linear dodge* will for example all you to add glow to images and text.
+:::
 
 #### Composite: Under
 
-TODO ASK KRIS WTF THIS DOES
+This mode will add the blurred image below the unblurred image. This can be useful to add a glowing outline to text or transparent images.
 
 #### Composite: Cutout
 
-TODO ASK KRIS WTF THIS DOES
-
-
+This will show the outline that you can generate with the composite mode *under* but it will completely erase the unblurred image. So using this, you can make glowing text that has been cut out, for example.
