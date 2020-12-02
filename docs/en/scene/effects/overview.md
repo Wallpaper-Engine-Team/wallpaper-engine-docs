@@ -161,7 +161,7 @@ Click on an effect to learn more about it. We recommend experiment with differen
 	</div>
 	<div class="effect-box">
 		<a href="/scene/effects/effect/fire.html">
-			<div class="effect-box-image" style="background-image: url('/img/effects/Fire.gif"></div>
+			<div class="effect-box-image" style="background-image: url('/img/effects/Fire.gif')"></div>
 			<div>
 				<h4>Fire</h4>
 				<p>Adds a fire effect to specific areas of the image.</p>
@@ -204,6 +204,25 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
+	<div class="effect-box">
+		<a href="/scene/effects/effect/vhs.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/VHS.gif')"></div>
+			<div>
+				<h4>VHS</h4>
+				<p>Adds distortion and colorization of an old video tape.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
+		<a href="/scene/effects/effect/xray.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Xray.gif')"></div>
+			<div>
+				<h4>X-Ray</h4>
+				<p>Blends between two images based on cursor position.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box fake"></div>
 </div>
 
 ### Distortion Effects
@@ -224,6 +243,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			<div>
 				<h4>Perspective</h4>
 				<p>Adds a perspective warp to the image.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
+		<a href="/scene/effects/effect/refraction.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Refract.png')"></div>
+			<div>
+				<h4>Refraction</h4>
+				<p>Distorts the image based on a normal map.</p>
 			</div>
 		</a>
 	</div>
