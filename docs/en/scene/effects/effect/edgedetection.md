@@ -9,7 +9,7 @@ The **Edge Detection** effect applies a filter to the image that separates edges
 
 ### Effect Settings
 
-* **Blend mode:** How the effect is blended with the background.
+* **Blend mode:** How the effect blends with the background.
 * **Alpha:** The opacity of this effect.
 * **Brightness:** How bright the colors of this effect are.
 * **Detection multiply:** This allows you to increase the brightness of detected edges.
