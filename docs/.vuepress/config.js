@@ -105,7 +105,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			children: [
 				locale + 'scene/timeline/introduction',
 				locale + 'scene/timeline/combined',
-				locale + 'scene/timeline/effect'
+				locale + 'scene/timeline/modes'
 			]
 		},
 		{

@@ -62,11 +62,11 @@ By default, Wallpaper Engine will smoothen animations by easing the speed of the
   Your browser does not support the video tag.
 </video>
 
-That's it, we now have a cloud that moves from left to right in a permanent loop. Simple changes that you could add at this point would be to move the cloud much further off the screen to delay its re-appearance, for example. You can also rewatch all steps and the result in the following video:
+That's it, we now have a cloud that moves from left to right in a permanent loop. Simple changes that you could add at this point would be to move the cloud much further off the screen to delay its re-appearance, for example. You can also rewatch all steps and the result in the following video.
 
 <video width="100%" controls>
   <source src="/videos/timeline_simple_movement.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-In the next section, we will discuss how to combine multiple properties into one animation.
+In the next section, we will discuss how to combine multiple properties into one animation to achieve more complex timeline effects.
