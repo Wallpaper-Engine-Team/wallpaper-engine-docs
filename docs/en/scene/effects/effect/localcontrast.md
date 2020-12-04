@@ -11,6 +11,6 @@ The **Local Contrast** effect can be used for high quality contrast enhancement.
 
 * **Opacity mask:** You can paint this mask to limit the effect only to specific parts of the image.
 * **Kernel size:** This controls the quality and size of the contrast enhancement.
-* **Greyscale:** Enabling this will make the contrast enhancement black and white only.
+* **Grayscale:** Enabling this will make the contrast enhancement black and white only.
 * **Scale:** The size of the kernel used to find areas for contrast enhancement.
 * **Strength:** How strong the contrast enhancement will be.

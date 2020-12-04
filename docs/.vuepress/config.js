@@ -103,7 +103,9 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: animationsGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/timeline/introduction'
+				locale + 'scene/timeline/introduction',
+				locale + 'scene/timeline/combined',
+				locale + 'scene/timeline/effect'
 			]
 		},
 		{
