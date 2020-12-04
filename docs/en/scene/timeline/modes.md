@@ -10,7 +10,7 @@ To get started, we have prepared a window scene with multiple layers, one of the
 
 Once you have set up the animation, set the strength to 0 while on the first frame to let the window start without any ice refraction at all. Then move to the timeline slider to the last frame of the animation and afterwards, increase the **Strength** to a higher value that you want to retain for the rest of the wallpaper runtime. In our case, we have selected a value of **0.3**. You can immediately see the line in the graph form the shape of an upwards curve (click on the *magnifying glass* icon to reset the view). If you click the *Play* button now in the timeline panel, you will see the animation runs from the beginning to the end and halts at the last frame forever.
 
-You can see all the steps of this section in the following video:
+You can see all the timeline-related steps of this section in the following video:
 
 <video width="100%" controls>
   <source src="/videos/timeline_effect_ice.mp4" type="video/mp4">
@@ -25,7 +25,7 @@ To get started, we select our *Snow* asset and scroll down to the **Count** prop
 
 Once the animation is set up, we decrease the starting amount of snow by setting the *Count* to something low like **0.2**. We then move the timeline slider to the last keyframe of the animation and set a high *Count* value such as 2. You can obviously do the exact opposite if you like and have the snow start strong at 2 and then decrease towards 0.2 the end of your animation - but this is all matter of taste.
 
-Your animation is now ready to play already, especially if you have set a very long runtime, it might be a bit boring to wait and see how it plays out, so you can always manually move the timeline slider to a specific point of your timeline and see how it looks at that specific point in time of your animation. Keep in mind that Wallpaper Engine will not abruptly spawn a larger number of particles but rather slowly increase the newly created particles, so there is always a bit of a delay for when changes to **Count** are visible, even inside the editor.
+Your animation is now ready to play already, especially if you have set a very long runtime, it might be too inconvenient to wait for minutes to see how it plays out, so you can always manually move the timeline slider to a specific point of your timeline and see how it looks at that specific point in time of your animation. Keep in mind that Wallpaper Engine will not abruptly spawn a larger number of particles but rather slowly increase the newly created particles, so there is always a bit of a delay until changes to **Count** (and many other properties of particle systems) are visible, even inside the editor.
 
 <video width="100%" controls>
   <source src="/videos/timeline_effect_count.mp4" type="video/mp4">
