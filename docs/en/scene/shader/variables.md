@@ -145,11 +145,11 @@ uniform sampler2D g_Texture0; // {"material": "texturekey", "label": "Texture na
 * **"combo" : "FLOWMASK"**: Defines a combo that will be set to 1 if the user has painted something or selected a texture and set to 0 if no texture is bound.
 
 :::  tip
-You can convert the flow color to a direction by doing
-```
+You can convert the flow color to a direction by performing the following conversion:
+```glsl
 vec2 flowMask = (flowColors.rg - vec2(0.498, 0.498)) * 2.0;
 ```
-This is necessary because the integer idle flow color is 127, 127.
+This is necessary because the integer idle flow color is `127, 127`.
 :::
 
 ## Shader User Variables

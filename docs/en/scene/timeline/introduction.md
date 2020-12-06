@@ -55,7 +55,9 @@ Once you have placed the keyframe at the end, you can already click on the *Play
   Your browser does not support the video tag.
 </video>
 
-By default, Wallpaper Engine will smoothen animations by easing the speed of the animation in and out. It uses **Bézier curves** for this: When you select one or more keyframes of a property (the boxes in the graph), you can also fine-tune the curves by grabbing the lines that appear around them. However, in this case, we want the cloud to move at a constant speed since clouds generally don't accelerate or slow down their movements. To ensure this, turn off the Bézier curves by selecting the keyframes of the *Origin x* line (the two red boxes) and then we click on the *Toggle Bézier interpolation* button three times until it is turned off (it has four modes: *both, left, right, none* - these are represented by the coloring of the button) and the graph turns from a curve into a straight line. This means the cloud now moves at a constant speed across the screen. See the following video for a showcase of this:
+By default, Wallpaper Engine will smoothen animations by easing the speed of the animation in and out. It uses **Bézier curves** for this: When you select one or more keyframes of a property (the boxes in the graph), you can also fine-tune the curves by grabbing the lines that appear around them.
+
+However, in this case, we want the cloud to move at a constant speed since clouds generally don't accelerate or slow down their movements. To ensure this, turn off the Bézier curves by selecting the keyframes of the *Origin x* line (the two red boxes) and then click on the *Toggle Bézier interpolation* button three times until it is turned off (it has four modes: *both, left, right, none* - these are represented by the coloring of the button) and the graph turns from a curve into a straight line. This means the cloud now moves at a constant speed across the screen. See the following video for a showcase of this:
 
 <video width="100%" controls>
   <source src="/videos/timeline_interpolation.mp4" type="video/mp4">
