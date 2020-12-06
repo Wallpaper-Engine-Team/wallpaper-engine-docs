@@ -1,4 +1,4 @@
-# Single and Mirrored Timeline Animations
+# Single & Mirrored Timeline Animations
 
 In this guide we will showcase examples of how using the **Mirror** and **Single** mode for timeline animations can be used to change the behavior of effects or particle systems over time. The examples showcased here can also be applied to any other property though, you can also create single or mirrored movement or scaling animations, for instance.
 

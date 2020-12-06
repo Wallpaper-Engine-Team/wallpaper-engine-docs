@@ -69,4 +69,4 @@ That's it, we now have a cloud that moves from left to right in a permanent loop
   Your browser does not support the video tag.
 </video>
 
-In the next section, we will discuss how to combine multiple properties into one animation to achieve more complex timeline effects.
+In the next section, we will discuss how to combine multiple properties into one animation to achieve more complex timeline effects and talk about how to utilize additional keyframes for more complex animations.

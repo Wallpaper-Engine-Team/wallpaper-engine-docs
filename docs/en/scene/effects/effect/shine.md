@@ -15,7 +15,6 @@ The **Shine** effect is similar to the [Godrays effect](/scene/effects/effect/go
 * **Blend mode:** This controls how the shine effect will be blended with the background image.
 * **Noise:** Enabling this option adds natural looking shimmer to the shine effect, it's highly recommended to keep this enabled in most cases to have the shine effect animated.
 * **Copy background:** Enabling this option is useful for transparent images. If you apply the shine effect to a transparent image or text, for example, they will blend incorrectly and you will get a poor result. Enable this option to improve blending over transparent pixels and fix that.
-
 * **Opacity mask:** You can paint this mask to limit casting of the rays into a certain area, like the sky or sun.
 * **Albedo:** This texture will be scrolled to generate the noise animation.
 * **Color:** This allows you to change the color of the rays.
