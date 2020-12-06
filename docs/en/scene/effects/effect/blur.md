@@ -18,6 +18,8 @@ If you just want to add a static blur to your image, you should rather do this i
 
 The effect has four different **Composite** modes:
 
+![Composite mode](/img/effects/blur_composite_blend.png)
+
 #### Composite: Normal
 
 This is the default mode that does not come with any additional options. It applies the blur according to the kernel size and scale that you have configured.
