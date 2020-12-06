@@ -180,7 +180,7 @@ uniform vec3 u_userNewColor; // {"material":"My new color","type":"color","defau
 * **"default":"1 1 1"**: This is the default color, in this case it's white.
 
 ### UV Picker
-```
+```glsl
 uniform vec2 u_userNewPosition; // {"material":"My new position","position":true,"default":"0.5 0.5"}
 ```
 * **u_userNewPosition**: This is the name of the variable. Make sure to rename it to anything that makes sense for you.
