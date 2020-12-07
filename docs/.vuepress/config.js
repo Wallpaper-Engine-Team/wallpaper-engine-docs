@@ -133,7 +133,8 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: performanceGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/performance/resolution',
+				locale + 'scene/performance/texture'
 			]
 		},
 		{
