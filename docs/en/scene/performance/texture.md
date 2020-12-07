@@ -14,7 +14,7 @@ The stats will then be displayed in the scene window with Active texture memory 
 
 ## Optimize Texture Format
 
-Graphics cards do not support rendering of common image formats like JPEG and PNG. In video memory, these images are decompressed. However, different compression methods called DXT 5 and DXT 1 can be displayed by a graphics card and will occupy a quarter of memory compared to the decompressed image.
+Graphics cards do not support rendering of common image formats like JPEG and PNG. In video memory, these images are decompressed. However, different compression methods called DXT 5 and DXT 1 can be displayed by a graphics card and will occupy a quarter or less of memory compared to the decompressed image.
 
 ::: tip
 The compressed formats DXT 5 and DXT 1 require an image to use a resolution that is a power of two. Wallpaper Engine will handle this for you and it will add invisible padding - but of course this increases the memory size again! So to optimize your images effectively, you should also resize them to fit into a power of two resolution. See the next paragraph for details.
@@ -32,9 +32,9 @@ Compressed textures need to have a resolution of a power of two to be displayed 
 
 In this example a normal 1920 x 1080 image was imported. It has to be padded to a resolution of 2048 x 2048, because that's the next power of two. As you can see, there are a ton of black pixels in the example, half of the memory used is practically wasted.
 
-![Texture Padding](/img/performance/Power_of_two_padding.jpg)
+![Texture Padding](/img/performance/Power_of_two_padding.png)
 
-You should consider reducing the height of the image to 1024, then Wallpaper Engine can create a 2048 x 1024 texture instead, that's only half the memory that was needed before. Of course this means that your actual image has a smaller resolution as well, so you need to decide if and how this trade-off works for you. You can simply scale the layer in Wallpaper Engine to correct for this reduction in size by 1.055 (which is 1080 / 1024):
+You should consider reducing the height of the image to 1024, then Wallpaper Engine can create a 2048 x 1024 texture instead, that's only half the memory that was needed before. Of course this means that your actual image has a smaller resolution as well, so you need to decide if and how this trade-off works for you. You can scale the layer in Wallpaper Engine to correct for this reduction in size by 1.055 (which is 1080 / 1024):
 
 ![Texture Padding](/img/performance/Fix_optimized_scale.png)
 
