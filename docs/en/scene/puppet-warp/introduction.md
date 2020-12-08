@@ -19,10 +19,10 @@ In this tutorial, we will create a simple puppet warp animation using a samurai 
 
 All puppet warp animations consist of multiple steps which you can see in the preview video above. We will discuss all steps performed in Wallpaper Engine in this tutorial in detail:
 
-1. Creating and importing a character cutout that is suitable for animations.
+1. Creating and importing a character cutout that is suitable for puppet warp.
 2. Establishing the geometry of the character.
 3. Creating the skeleton of the character.
-4. Creating the weights / sections of the character.
+4. Creating the limbs of the character.
 5. Animating the character.
 6. Placing the character in the scene.
 

@@ -26,7 +26,7 @@ You can choose the compression method when importing a new image:
 
 ### Further Optimize DXT5 and DXT1 Textures
 
-Compressed DXT5 and DXT1 textures need to have a resolution of a power of two *(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048 or 4096 etc.)* to be displayed by your computer. Wallpaper Engine will quietly take care of this in the background and add invisible pixels to fill in the missing pixels. However, the amount of memory required increases (though it will always be better than using an uncompressed image).
+Compressed DXT5 and DXT1 textures need to have a resolution of a power of two *(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192 etc.)* to be displayed by your computer. Wallpaper Engine will quietly take care of this in the background and add invisible pixels to fill in the missing pixels. However, the amount of memory required increases (though it will always be better than using an uncompressed image).
 
 In the following example a normal 1920 x 1080 image was imported as DXT5. It has to be padded to a resolution of 2048 x 2048, because that's the next power of two for 1920 and 1080. As you can see, there are a ton of black pixels in the example, half of the memory used is practically wasted.
 
