@@ -82,7 +82,8 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: assetsGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/assets/overview',
+				locale + 'scene/assets/sharing',
 			]
 		},
 		{

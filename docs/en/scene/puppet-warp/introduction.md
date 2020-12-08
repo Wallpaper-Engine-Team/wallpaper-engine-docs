@@ -36,6 +36,18 @@ The main character cutout we imported into Wallpaper Engine was the following im
 
 If you would like, you can take the character file and the [base image without the character](/img/puppet-warp/cyberpunkbg.png) and follow along with this tutorial.
 
-TODO
 
-👌👀👌👀👌👀👌👀 good shit go౦ԁ sHit👌 thats ✔ some good👌👌👌shit right👌👌👌there👌👌👌👌 right✔there ✔✔if i do ƽaү so my self 💯 i say so 💯 thats what im talking about right there right there (chorus: ʳᶦᵍʰᵗ ᵗʰᵉʳᵉ) mMMMMᎷМ💯 👌👌 👌НO0ОଠOOOOOОଠଠOoooᵒᵒᵒᵒᵒᵒᵒᵒ👌 👌👌 👌 💯 👌 👀 👀 👀 👌👌Good Shit
+## 2. Establishing the geometry of the character
+
+Once your character cutout is ready, import it into your Wallpaper Engine project and select it. Scroll down on the right-hand side until you reach the **Puppet warp animation** section and click on **Edit Puppet Warp**. Wallpaper Engine will now present you with the steps necessary to create an animation with puppet warping. The first step is to create the geometry of your character. By clicking on the **Create** button below **Geometry**, Wallpaper Engine will establish a mesh of your wallpaper. You can increase the number of subdivisons on the mesh using the **Subdivision** slider and you can add more or remove padding from the object if needed. You can also indicate if the object has any holes. For this tutorial, we leave all these settings as they are but you may want to experiment around with your specific object to see if changing any of the values increases the accuracy of the generated mesh. The *3D Perspective Extrusion* settings are also reserved for a more advanced tutorial.
+
+### Adding slices to the geometry
+
+While viewing the *Geometry* section, you clicking anywhere with your mouse will add additional slices. Be sure to not accidentally add any unintended slices, you can always select and remove them using the *Remove Selected Slices* button at the bottom. For our Samurai model, we add a few slices below the hat of the samurai character to help Wallpaper Engine understand that the hat is one consistent object, this will make it a bit easier to animate the head later.
+
+Watch the following video to see how we create the geometry for our object and add the additional geometry slices to the hat:
+
+<video width="100%" controls>
+  <source src="/videos/puppet_warp_geometry.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

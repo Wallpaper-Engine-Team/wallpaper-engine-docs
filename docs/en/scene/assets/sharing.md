@@ -1,16 +1,16 @@
 # Asset Creation & Sharing
 
-If you want to create an asset for others to re-use in their wallpapers, you first have to enable the asset creation options in the editor. These are hidden by default to avoid that they confuse new users when trying to publish a wallpaper.
+Asset creation and sharing is meant for advanced users to share wallpaper components with new users or for your own purposes. If you want to create an asset for others to re-use in their wallpapers, you first have to enable the asset creation options in the editor. These are hidden by default to avoid that they confuse new users when trying to publish a wallpaper.
 
 ## Enable Asset Creation
 
-You can enable asset creation and sharing in the **View** menu by clicking **Enable Asset Creation**.
+You can enable asset creation and sharing in the **View** menu by clicking **Enable Asset Creation**. This will enable a few extra buttons throughout the editor that allow you to create new effects and share elements from your wallpaper.
 
 ![Enable Asset Creation](/img/assets/Enable.png)
 
 ## Sharing Effect or Layer Assets
 
-There will now be a new share option right above the wallpaper share option in the Workshop menu. Use **Share Assets on Workshop** to upload your assets.
+There will now be a new share option right above the wallpaper share option in the *Workshop* menu. Use the **Share Assets on Workshop** to upload your assets.
 
 ![Sharing on Workshop](/img/assets/Share_on_workshop.png)
 
@@ -30,14 +30,14 @@ Besides layers and effects, you can also share individual scripts after enabling
 
 ![Share Script](/img/assets/Share_script.png)
 
-## Create New Effect
+## Creating New Effects
 
-Enabling asset sharing will also enable a new option in the effect menu in the bottom left. You can click on **New** to create a new shader effect and you will get started off with a basic passthrough shader that doesn't do anything special.
+Enabling asset sharing will also enable the option to create news effects in the **add effects** overview. You can click on thew **New** button to create a new shader effect and you will get started off with a basic shader that does not do anything other than passing through the original image. You can use this blank shader to get started on your own shader.
 
-Alternatively, you can also click on any existing effect and then use the **Duplicate** button. That allows you to create a copy of an existing effect and make changes to this - saving you a ton of work. If you want to make changes to an existing effect, this makes it a lot easier to create a variation of one.
+Alternatively, you can also click on any existing effect and then use the **Duplicate** button. That allows you to create a copy of an existing effect and make changes to it - saving you a ton of work and allowing you to tweak small details of existing effects. If you want to make changes to an existing effect, this makes it a lot easier to create a variation of one.
 
 ![Create Effect](/img/assets/Create_effect.png)
 
 ::: tip
-Check out [Shader tutorial desaturation](/scene/shader/tutorials/desaturation.md) to get started on a new effect!
+If you are interested in creating new effects, check out the [shader tutorial on desaturation](/scene/shader/tutorials/desaturation.md) to get started on a new effect and be sure to read the rest of the *Shader Programming* section of this documentation!
 :::
