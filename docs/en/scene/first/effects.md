@@ -35,7 +35,7 @@ The first attempt will leave a lot of rough edges and the water ripples will see
 
 Try to erase any unwanted areas, for example any accidentally shoreline areas, by setting the strength to 0 and gradually reduce the strength of the water ripples in the distance. This will result in a much more realistic effect rather than painting the maximum value everywhere.
 
-Watch the following video to get an idea of what this process looks like, you may need to give it a few iterations and adjust the values until it starts looking somewhat realistic. Especially at the points of the image that are furthest away and near shorlines, try using low values below 60. Readjust the size of the paint brush to paint fine details of the image accurately.
+Watch the following video to get an idea of what this process looks like, you may need to give it a few iterations and adjust the values until it starts looking somewhat realistic. Especially at the points of the image that are furthest away and near shorelines, try using low values below 60. Readjust the size of the paint brush to paint fine details of the image accurately.
 
 <video width="100%" controls>
   <source src="/videos/opacity_mask_fix.mp4" type="video/mp4">

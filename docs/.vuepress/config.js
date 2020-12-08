@@ -112,7 +112,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: puppetwarpGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/puppet-warp/introduction'
 			]
 		},
 		{

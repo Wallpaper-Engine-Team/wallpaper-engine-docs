@@ -16,6 +16,6 @@ If you would like to follow along this tutorial, you can use the example image w
 
 ## A foreword on wallpaper resolutions
 
-Before you get started with any image you import, first make sure that your main background image represents a real screen resolution. The example image we use for this guide is 1920x1080 which is the most commonly used resolution on computer screens.
+Before you get started with any image you import, first make sure that your main background image represents a real screen resolution. The example image we use for this guide is 1920 x 1080 which is the most commonly used resolution on computer screens.
 
 If you would like, you can read the [Project Resolution](/scene/performance/resolution) guide for a lengthier explanation before you get started with your first wallpaper and the rest of this guide.
