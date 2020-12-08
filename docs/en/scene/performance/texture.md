@@ -12,7 +12,7 @@ You can check the currently required texture memory in the editor by clicking on
 
 Graphics cards do not support rendering of common image formats like JPEG and PNG, so Wallpaper Engine has to convert them into a compatible format first. In video memory these images are decompressed which means they require significantly more memory than the original file size.
 
-By default, when importing a new image into an existing wallpaper, Wallpaper Engine will suggest to use no compression (*"RGBA8888"*). However, different compression methods called *DXT5* (*"Good Performance"*) and *DXT1* (*"High Performance"*) can be displayed by graphics cards and will occupy only a quarter of memory compared to a uncompressed image.
+By default, when importing a new image into an existing wallpaper, Wallpaper Engine will suggest to use no compression (*"RGBA8888"*). However, different compression methods called *DXT5* (*"Good Performance"*) and *DXT1* (*"High Performance"*) can be displayed by graphics cards and will occupy only a quarter of memory compared to an uncompressed image.
 
 The first background image is always imported without compression to provide the highest quality and simplify the process, but you can always re-import it later and then choose a different compression if you like.
 
