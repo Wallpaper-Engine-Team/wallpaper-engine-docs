@@ -47,7 +47,7 @@ In order to react to an animation event in a script, we have to make sure to att
 </video>
 
 
-We only care about animation events, so we'll start by removing the whole **update** function that is added by default. Then opening the **** menu, choosing **** and clicking on **** will add the animation event callback for us into the script, this is what we need to react to our **sword** event.
+We only care about animation events, so we'll start by removing the whole `update()` function that is added by default since we don't need it for our specific example. Once it is removed, we click on **Snippets** at the top, we then choose **Insert Function** and then select **animationEvent** from the list. This will add the animation event callback for us into the script, this is what we need to react to our **sword** event. Of course you can also just type the function, this is just a shortcut.
 
 The following code snippet will check the name of the animation event that was fired and then it will find the **sword_sfx** layer and call the **play** function on it. This means the sword sound will now be played once every time the **sword** event is fired.
 
