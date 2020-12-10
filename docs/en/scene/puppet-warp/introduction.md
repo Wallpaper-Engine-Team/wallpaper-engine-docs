@@ -43,7 +43,7 @@ Once your character cutout is ready, import it into your Wallpaper Engine projec
 
 ### Adding slices to the geometry
 
-While viewing the *Geometry* section, you clicking anywhere with your mouse will add additional slices. Be sure to not accidentally add any unintended slices, you can always select and remove them using the *Remove Selected Slices* button at the bottom. For our Samurai model, we add a few slices below the hat of the samurai character to help Wallpaper Engine understand that the hat is one consistent object, this will make it a bit easier to animate the head later.
+While viewing the *Geometry* section, you clicking anywhere with your mouse will add additional slices. These slices allow you to add additional lines to the geometry mesh to better differentiate between different parts of your character or object. Be sure to not accidentally add any unintended slices, you can always select and remove them using the *Remove Selected Slices* button at the bottom. For our Samurai model, we add a few slices below the hat of the samurai character to help Wallpaper Engine understand that the hat is one consistent object, this will make it a bit easier to animate the head later.
 
 Watch the following video to see how we create the geometry for our object and add the additional geometry slices to the hat:
 
@@ -59,11 +59,6 @@ After establishing the general geometry of the character, we now need to tell Wa
 In this section, you can define multiples bones and one or more **root bones** which will later be used as reference points in your animation. You can create bones by clicking on specific points on the character and Wallpaper Engine will draw a connection between the last and the current bone. If you first select a bone and then create a new bone, the connection will be created between these two points. The behavior of bones can also be further tweaked with advanced settings, but these features are reserved for more advanced tutorials.
 
 **Root bones** serve as a way to define the center of mass or a point that is nearly immovable. Typically you would set it in the center of a character or the feet. You should typically only use one root bone per character or object but if the image you are working with contains multiple separate objects or characters, you should create a root bone for each of them.
-
-<video width="100%" controls>
-  <source src="/videos/puppet_warp_geometry.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ### Adding bones to our samurai example
 

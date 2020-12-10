@@ -4,4 +4,4 @@ Wallpaper Engine features a custom scripting language called *SceneScript*. It's
 
 We are still working on converting all SceneScript references and guidelines for this new website, until then you can find all guides on our old Wiki:
 
-[SceneScript Documentation](https://wallpaper-engine.fandom.com/wiki/Category:SceneScript)
+* [SceneScript Documentation](https://wallpaper-engine.fandom.com/wiki/Category:SceneScript)

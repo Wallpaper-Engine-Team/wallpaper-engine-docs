@@ -1,6 +1,6 @@
-# Animation Events
+# SceneScript Events in Timeline Animations
 
-You can add **animation events** to any [timeline](/scene/timeline/introduction) or [puppet warp animation](/scene/puppet-warp/introduction) and use them to trigger sounds or effects in your wallpaper when an animation passes a certain frame. Before getting started, make sure you're also familiar with the basics of [SceneScript](/scene/scenescript/introduction.md), which will be used to handle all animation events.
+You can add **animation events** to any [timeline](/scene/timeline/introduction) or [puppet warp animation](/scene/puppet-warp/introduction) and use them to trigger effects, play sounds or perform any other custom SceneScript logic in your wallpaper when an animation passes a certain frame. Before getting started, make sure you're also familiar with the basics of [SceneScript](/scene/scenescript/introduction.md), which will be used to handle all animation events.
 
 ## Creating an Event
 
@@ -18,7 +18,7 @@ Enter a name for the event in the new dialog that opens, in our case we will nam
 
 Now click on **OK** to add the new event and close the dialog. You can also add multiple events at once by clicking the green **plus** button next to the new event options to add another event.
 
-You'll see a dot in the timeline on each frame that has any events now.
+You will see a dot in the timeline on each frame that has any events now.
 
 <video width="100%" controls>
   <source src="/videos/timeline_animationevents_add_event.mp4" type="video/mp4">
@@ -30,7 +30,7 @@ You'll see a dot in the timeline on each frame that has any events now.
 
 Our animation has an event now that will be fired on a given frame and we can use this to do anything that is supported by SceneScript, for example showing/hiding layers or effects, playing sounds or even starting/stopping other animations.
 
-We want to play a sound, so we'll import a new sound into the editor by dragging it into the window. By default sounds play in a loop, so we will immediately change the sound mode to **single** on the right side with the sound selected. We also want to easily reference this sound later, so will rename the layer into **sword_sfx**.
+We want to play a sound, so we'll import a new sound into the editor by dragging it into the window. By default sounds play in a loop, so we will immediately change the sound mode to **single** on the right side with the sound selected. We also want to easily reference this sound later, so in our case we rename the layer to **sword_sfx**.
 
 The sound should now be paused and waiting to be started from a script.
 
@@ -38,7 +38,6 @@ The sound should now be paused and waiting to be started from a script.
   <source src="/videos/timeline_animationevents_import_sound.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
 
 In order to react to an animation event in a script, we have to make sure to attach our script to the same layer on which the animation event is played, in our case the **Samurai** layer. We'll select this layer and attach a script by clicking on the **cog wheel** icon in the top right and choosing **Bind Script**.
 
