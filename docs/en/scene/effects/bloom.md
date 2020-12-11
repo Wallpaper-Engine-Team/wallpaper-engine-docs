@@ -22,6 +22,10 @@ The example image here has a high contrast and a lot of well defined light sourc
 
 You can enable the high-quality **HDR bloom** effect additionally to the normal bloom effect by checking the **Ultra post-processing (HDR)** checkbox below the bloom option. HDR bloom requires a lot more performance and should only be used if it has a great visual impact on your wallpaper. Keep in mind you have to set the option **Post-processing** to **Ultra** in your performance settings to see HDR on your final wallpaper, the editor ignores this option and always allows HDR.
 
+::: tip
+If you enable HDR bloom, all users who only have normal bloom enabled will only see normal bloom on your wallpaper. Make sure to test your wallpaper with both bloom settings in the editor!
+:::
+
 With HDR enabled, the wallpaper can become brighter than what your monitor is physically capable of displaying. HDR bloom can pick this **overbrightening** up and create an *emissive* glow effect only around parts of the image that are brighter than possible. You can control this brightness on every image, image effect or particle effect separately and control exactly which parts of the image will be glowing.
 
 A few additional options will appear with HDR bloom enabled:
