@@ -39,10 +39,6 @@ A few additional options will appear with HDR bloom enabled:
 
 Every layer will have a new option called **HDR brightness** appear in their properties when you have HDR bloom enabled. This brightness allows you to set the amount of over-brightening on a layer and it only affects the wallpaper when HDR is enabled for the user as well.
 
-::: warning
-In order for HDR bloom to work, Wallpaper Engine has to take care of some massive underlying differences in how images and effects are displayed. We decided to prioritize that the images you import will have accurate color reproduction on your wallpaper, but as a side effect, certain effects or transparent particles will look different. This is another reason why you should ensure that your wallpaper looks good in both modes!
-:::
-
 In this example we are enabling **HDR Bloom** and switch back to the layers menu. Here we increase the **HDR brightness** option for the top two rainbow layers to add a nice, high quality glow effect to them.
 
 <video width="100%" controls>
