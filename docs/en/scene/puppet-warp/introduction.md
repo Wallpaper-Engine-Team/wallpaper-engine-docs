@@ -52,6 +52,12 @@ Watch the following video to see how we create the geometry for our object and a
   Your browser does not support the video tag.
 </video>
 
+#### Checking for geometry mesh problems
+
+When creating slices, you should check that the additional slices do not introduce any severe issues in the mesh generation, see the image below for good and a bad example. If you notice any odd patterns in the mesh as in the bad example, try moving the slices around slightly to fix any issues with the mesh generation.
+
+![Geometry Mesh Problems](/img/puppet-warp/geometry_errors.jpg)
+
 ## 3. Creating the character bone skeleton
 
 After establishing the general geometry of the character, we now need to tell Wallpaper Engine where the character model has movable *joints* which are referred to as *bones* in the editor. Click on the **Create** button in the **Skeleton** section of the puppet warp overview to get started.
@@ -102,7 +108,7 @@ For our animation, we set the length to 5 seconds but these lengths are highly s
 
 Since we are working with a **Loop** mode animation, we will create a keyframe at the first and last frame of each bone just as we get started so that we can ensure that the animation always starts where it ends to prevent any sudden jumps to the first frame.
 
-You can skip this if you are not using **Loop** mode on the animation, otherwise you can quickly do this by not selecting any bones and then clicking on the **Load** button in the **Poses** section: Do this once while on the first frame and once again after moving the timeline slider to the last frame. Nothing will appear to happen at first, but once you select any of the bones, you should see keyframes at the first frame and keyframes at the last frame for each value. Using the **Load** button is simply a quick way to achieve this, you could also go through each bone individually and click on **Toggle Keyframe** at the last frame to achieve the same outcome.
+You can skip this if you are not using **Loop** mode on the animation, otherwise you can quickly do this by loading the default pose that is stored for every animation on the last frame. Move the timeline slider to the last frame, then simply click on the **Load** button in the **Poses** section. Nothing will appear to happen at first, but once you select any of the bones, you should see keyframes at the first frame and keyframes at the last frame for each value. Using the **Load** button is simply a quick way to achieve this, you could also go through each bone individually and click on **Toggle Keyframe** at the last frame to achieve the same outcome.
 
 You can see this setup process in the following video:
 
