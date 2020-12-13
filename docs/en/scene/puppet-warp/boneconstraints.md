@@ -10,7 +10,7 @@ Keep in min that the physics simulations can slightly change their behavior depe
 
 ## Bone Physics Examples
 
-We will us the Samurai example from the [Puppet Warp Character Sheet Guide](/scene/puppet-warp/charactersheet) to showcase two different types of implementations of bone physics. If you would like to test the examples from this guide, [click here to download the sample project.](/samples/samurai_tutorial.zip)
+We will us the Samurai example from the [Puppet Warp Character Sheet Guide](/scene/puppet-warp/charactersheet) to showcase two different types of implementations of bone physics. If you would like to check out the examples from this guide in detail, [click here to download the sample project.](/samples/samurai_tutorial.zip)
 
 ### Rope Physics
 
