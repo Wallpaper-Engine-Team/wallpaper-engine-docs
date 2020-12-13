@@ -116,9 +116,9 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			collapsable: true,
 			children: [
 				locale + 'scene/puppet-warp/introduction',
-				locale + 'scene/puppet-warp/boneconstraints',
 				locale + 'scene/puppet-warp/charactersheet',
 				locale + 'scene/puppet-warp/perspective',
+				locale + 'scene/puppet-warp/boneconstraints',
 				locale + 'scene/puppet-warp/interactive',
 			]
 		},

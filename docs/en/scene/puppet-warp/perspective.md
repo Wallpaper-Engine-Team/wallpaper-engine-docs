@@ -13,6 +13,10 @@ First, you need to enable **3D Perspective Extrusion** in the **Geometry** step 
 
 In order for the effects of a 3D extrusion to become visible, you will have to animate the **X** or **Y** axis of the *angles*. In our example, we only take the first bone with animations after the root bone and animate the **Y** axis of the angles up and down a few times during the animation, in order for the character to appear as if it is continuously turning left and right. Keep in mind that the order of bones matters, if you want the whole body of your character to turn, it's likely a good idea to add this to the first bone with animations.
 
+::: tip
+A bit counter-intuitively, animating the **Y** axis will make the movement appear left / right and animating the **X** axis will make the movement appear up / down due to how this effect works internally.
+:::
+
 We select the bone and hide all properties except the *Angles Y* option. The angle Y keyframe starts at a value of 0, then transitions to *-15* a few frames later, followed by transition to an angle of *+15 before circling back to an angle of *-15* again. The animation ends where it started at a value of 0. This already suffices in our example to create the perception of left and right movement. You can see this process and the final result in the following video:
 
 <video width="100%" controls>
