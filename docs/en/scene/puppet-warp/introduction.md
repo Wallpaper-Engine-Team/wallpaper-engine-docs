@@ -22,7 +22,7 @@ All puppet warp animations consist of multiple steps which you can see in the pr
 1. Creating and importing a character cutout that is suitable for puppet warp.
 2. Establishing the geometry of the character.
 3. Creating the skeleton of the character.
-4. Creating the limbs ("weights") of the character.
+4. Improving the limbs of the character by changing their "weights".
 5. Animating the character.
 6. Placing the character in the scene.
 
@@ -79,9 +79,9 @@ You can see the complete process in the following video:
   Your browser does not support the video tag.
 </video>
 
-## 4. Defining the limbs ("weights") of the character
+## 4. Improving the limbs of the character by changing their "weights"
 
-The next step is to define the limbs or regions of our character. Wallpaper Engine refers to this as *weights*. Once the skeleton has been configured, you can click on the **Edit** button in the **Weights** section of the puppet warp overview. Wallpaper Engine will try to figure out the different limbs and regions of your wallpaper, each being represented by an individual color which relates to a specific bone that was created in the previous step.
+The next step is to improve the movement of the limbs or regions of our character. Once the skeleton has been configured, you can click on the **Edit** button in the **Weights** section of the puppet warp overview. Wallpaper Engine will try to figure out the different limbs and regions of your wallpaper, each being represented by an individual color which relates to a specific bone that was created in the previous step. The "weights" define how much each bone influences each point of the character.
 
 You can click on a bone to select its color and then click on the **Paint Weights** button to paint over any issues with the areas that Wallpaper Engine generated for that specific bone. For example, in our case, Wallpaper Engine did not assign the complete hat of the samurai the same color but we want to make sure that the hat later moves as one coherent object. We select the bone in the hat area and start painting the complete hat in the color of the bone. You can see how the slices we added in the geometry step help here to sharply cut off the hat from the rest of the body.
 
