@@ -27,7 +27,7 @@ We then click on the **Edit Constraints** button on the right-hand side to open 
 
 * **Physics rotation:** Enabled - *We want the bone to be able to rotate as visible in the preview video above.*
 * **Rotational friction:** 12
-* **Rotational inerta:** 20
+* **Rotational inertia:** 20
 * **Physics translation:** Disabled - *We don't want the bone to move.*
 * **Gravity enabled:** Enabled - *We want gravity to pull the rope downwards.* 
 * **Tip mass:** 20
