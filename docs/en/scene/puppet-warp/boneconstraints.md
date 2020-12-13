@@ -59,7 +59,7 @@ Specifically, we are dealing with the four bones which are present along the cap
 The first three bones on the cape have been configured to use a **Spring simulation**, while the last bone on the left has been configured to use a **Rigid simulation**. This is not necessarily *the best* solution, but we felt that the outcome of this looked quite nice in this case and you can experiment with mixing bones with rigid and spring simulations and see how the behavior changes.
 
 ::: tip
-Keep in mind that changing multiple spring simulated bones will transfer their bouncy movement and can lead to erratic motions more easily.
+Keep in mind that chaining multiple spring simulated bones will transfer their bouncy movement and can lead to erratic motions more easily.
 :::
 
 #### Configuring the bones
