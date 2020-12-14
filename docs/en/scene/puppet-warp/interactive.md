@@ -6,7 +6,7 @@ You should have read and understood the [Puppet Warp Introduction Guide](/scene/
 
 ## Interactive bones
 
-In this guide, we will go into how to create an interactive wallpaper element that that users can drag and release.
+In this guide, we will go into how to create an interactive wallpaper element that users can drag and release.
 
 <video width="100%" controls loop>
   <source src="/videos/puppet_warp_interactive.mp4" type="video/mp4">
@@ -19,7 +19,7 @@ If you would like to follow along or see the full sample project, you can downlo
 
 ### Setting up the puppet warp.
 
-In order to achieve this, we need to utilize puppet warp in combination with SceneScript. We start by creating a puppet warp on our *jelly* object. The geometry does not require any special attention. For the bone setup, our basic example only includes two bones: One static root bone which represents the outer areas of our jelly object and another bone in the center of the jelly object that has been configured to use **Spring simulation** in the **Bone Constraints**:
+In order to achieve this, we need to utilize puppet warping in combination with SceneScript. We start by creating a puppet warp on our *jelly* object. The geometry does not require any special attention. For the bone setup, our basic example only includes two bones: One static root bone which represents the outer areas of our jelly object and another bone in the center of the jelly object that has been configured to use **Spring simulation** in the **Bone Constraints**:
 
 ![Puppet Warp - Interactive Bone Setup](/img/puppet-warp/puppet_warp_interactive_bones.png)
 
@@ -110,9 +110,13 @@ The main movement of the bone occurs in the `update()` function. The bone is con
 thisLayer.setBoneTransform(activeDragBone, thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta)));
 ```
 
-By using `thisLayer.setBoneTransform`, we can alter any bone on the current layer by accessing it through its index. The second parameter `thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta))` may look a bit scary and confusing at first glance, but it's really not that complex. Basically, it just means we take the position of the bone and then move it according to the mouse cursor position on the wallpaper with the `.translation()` function.
+By using `thisLayer.setBoneTransform`, we can alter any bone on the current layer by accessing it through its index. The second parameter `thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta))` may look a bit confusing at first glance, but it's really not that complex. Basically, it just means we take the position of the bone and then move it according to the mouse cursor position on the wallpaper with the `.translation()` function.
 
 When the mouse cursor is released, the bone will return to its original position, since the bone has been configured to use **Spring simulation** in the puppet warp. This means the bone will return to its original position automatically and without the need for extra code.
+
+::: tip
+You can use SceneScript to override all puppet warp animations reliably. Wallpaper Engine will execute all animations on all layers before it will execute any scripts on a frame before displaying a layer.
+:::
 
 Once you have applied this code snippet to the jelly layer, you can click on **Run Preview** at the top or apply the wallpaper and it should already be functional like in the preview video above. Keep in mind that this will only work for one
 
