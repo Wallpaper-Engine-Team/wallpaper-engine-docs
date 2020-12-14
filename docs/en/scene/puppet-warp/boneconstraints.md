@@ -34,7 +34,7 @@ We then click on the **Edit Constraints** button on the right-hand side to open 
 * **Gravity enabled:** Enabled - *We want gravity to pull the rope downwards.* 
 * **Tip mass:** 20
 * **Gravity direction:** 90 - *A value of 90 means the gravity is pulling downwards.*
-* **Tip forward angle:** 90 - *The tip angle determines how gravity and movement affects the bone, check the brown guide after changing this value to verify the direction.*
+* **Tip forward angle:** 90 - *The tip angle determines how gravity and movement affects the bone. After configuring this, check the brown guideline with the circle ending that comes off your bone after changing this value to verify the direction.*
 * **Limit rotation:** Enabled - *Set it to -180 and +180 to ensure prevent any excessive rotations.*
 
 You will also notice that the forward angle becomes visible in the bone preview, visualized by the brown line with the circle at the end, make sure it points in the correct direction (in this case: the direction of gravity).
