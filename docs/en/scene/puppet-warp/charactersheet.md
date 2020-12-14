@@ -1,12 +1,12 @@
 # Character Sheets
 
-An advanced way to approach puppet warping is to rely on character sheets. Character sheets require you to use a cut-up version of your character which separates your character into its different limbs / pieces. This allows for more complex and more accurate animations to be created. It is not necessary to achieve great results with puppet warp but it can help. **You can still follow along the other tutorials of the puppet warp section, even if you don't rely on character sheets.**
+A more advanced way to create puppet warp animations can be done with character sheets. Character sheets require you to use a cut-up version of your character which separates your character into its different limbs / pieces. This allows for more complex and more accurate animations to be created as parts can freely move and overlap without the image becoming distorted. It is not necessary to achieve good results with puppet warp but it can make a big difference dependening on what you want to do. **You can still follow along the other tutorials of the puppet warp section, even if you don't rely on character sheets.**
 
 You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
 
 ## Creating a character sheet
 
-Make sure to separate each individual body and clothing part into their own separate element and place them on a square image. Try to keep the image as small as possible and make sure it's an actual square image file as this saves performance and video memory.
+Make sure to separate each individual body and clothing part into their own separate element and put them onto the same image. Try to keep the resolution of the image as small as possible and try to keep the amount of transparent/invisible space on the image as small as possible. For example, don't line up all limbs in a row, but rather place them into a square.
 
 In our example, we use the samurai character from our previous puppet warping tutorials and cut it up into its own character sheet using a photo editing tool. Our character sheet looks as follows (you can use the following image file to follow along):
 
@@ -16,7 +16,7 @@ In our example, we use the samurai character from our previous puppet warping tu
 
 ### Character Geometry
 
-Just like with a puppet warp that is based on a non-cutup character, we have to go through all the same steps as in the introductory guide to puppet warping. First have to establish the geometry of the object. It should not be necessary to create slices here as explained in the introduction tutorial, as the slices are now redundant, as all parts of your character should be clearly separated:
+Just like with a puppet warp that is based on a non-cut-up character, we have to go through all the same steps as in the introductory guide to puppet warping. First we have to establish the geometry of the object. It should not be necessary to create slices here as explained in the introduction tutorial, as the slices are now redundant, as all parts of your character should be clearly separated:
 
 ![Character Sheet Geometry](/img/puppet-warp/puppet_sheet_geometry.png)
 
@@ -34,7 +34,7 @@ Painting the weights of the character should be much easier using a character sh
 
 ## Reassembling the character sheet into a pose
 
-Before you can start animating your character, you should reassemble your character sheet into the original pose that you cut it out from. You can do this by dragging all the bones into their respective position. Afterwards, click on **Save** in the **Poses** section and save your pose under a sensible name. You should now have a **Default** pose which is just your character sheet in its unedited form and another pose which represents the reassembled character.
+Before you can start animating your character, you should reassemble your character sheet into the original pose that you cut it out from. You can do this with the animation tools by dragging all the bones into their respective position. Afterwards, click on **Save** in the **Poses** section and save your pose under a sensible name. You should now have a **Default** pose which is just your character sheet in its unedited form and another pose, that you just created and which represents the reassembled character.
 
 <video width="100%" controls>
   <source src="/videos/puppet_warp_reassemble.mp4" type="video/mp4">
