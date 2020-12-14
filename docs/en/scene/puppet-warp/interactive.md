@@ -2,6 +2,8 @@
 
 Puppet Warping in combination with *SceneScript* can also be used to create interactive wallpaper elements. In this tutorial, we will discuss how to allow users to grab and drag around individual bones.
 
+You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
+
 ## Interactive bones
 
 In this guide, we will go into how to create an interactive wallpaper element that that users can drag and release.
@@ -36,10 +38,12 @@ Next up, we need to assign a *SceneScript* code snippet to the jelly image layer
 The main thing this code snippet does it to wait until the area of the bone is clicked and then use the mouse cursor position to move the bone to the mouse cursor position. The main line which achieves this is the following one:
 
 ```js
-		thisLayer.setBoneTransform(activeDragBone, thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta)));
+thisLayer.setBoneTransform(activeDragBone, thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta)));
 ```
 
-By using `thisLayer.setBoneTransform`, we can alter any bone on the current layer by accessing it through its index. When the mouse cursor is released, the bone will return to its original position, since the bone has been configured to use **Spring simulation** in the puppet warp. This means the bone will return to its original position automatically and without the need for extra code.
+By using `thisLayer.setBoneTransform`, we can alter any bone on the current layer by accessing it through its index. The second parameter `thisLayer.getBoneTransform(activeDragBone).translation(drag.add(dragDelta))` may look a bit scary and confusing at first glance, but it's really not that complex. Basically it just means we take the position of the bone and then move it according to the cursor position on the wallpaper with the `.translation()` function.
+
+When the mouse cursor is released, the bone will return to its original position, since the bone has been configured to use **Spring simulation** in the puppet warp. This means the bone will return to its original position automatically and without the need for extra code.
 
 For additional details, have a look at the full code snippet here:
 
