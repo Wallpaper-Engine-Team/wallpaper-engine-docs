@@ -20,7 +20,7 @@ module.exports = {
 				label: en.language_name,
 				ariaLabel: en.language_name,
 				sidebar: {
-					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_puppetwarp, en.sidebar_parallax, en.sidebar_rgb, en.sidebar_performance, en.sidebar_scenescript, en.sidebar_shaders),
+					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_properties, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_puppetwarp, en.sidebar_parallax, en.sidebar_rgb, en.sidebar_performance, en.sidebar_scenescript, en.sidebar_shaders),
 					'/en/web/': getWebSidebar('/en/', en.sidebar_web_overview, en.sidebar_web_first, en.sidebar_web_customization, en.sidebar_web_audio, en.sidebar_web_performance, en.sidebar_web_rgb, en.sidebar_web_debug),
 					'/': []
 				},
@@ -50,7 +50,7 @@ module.exports = {
 	]
 };
 
-function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, shadersGroup) {
+function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, propertiesGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, shadersGroup) {
 	return [
 		{
 			title: overviewGroup,
@@ -88,17 +88,24 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			]
 		},
 		{
+			title: propertiesGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/userproperties/overview',
+			]
+		},
+		{
 			title: audioGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/audiovisualizer/overview'
 			]
 		},
 		{
 			title: particlesGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/particles/introduction'
 			]
 		},
 		{
@@ -127,14 +134,14 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: parallaxGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/parallax/introduction'
 			]
 		},
 		{
 			title: rgbGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/placeholder'
+				locale + 'scene/rgb/introduction'
 			]
 		},
 		{

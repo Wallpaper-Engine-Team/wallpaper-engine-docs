@@ -25,7 +25,6 @@
       >
         {{ data.tagline || $description }}
       </p>
-      <p class="wip">This is our brand new documentation website: <b>To be released some time in December 2020!</b> For now, please see our old Wiki for tutorials on the Wallpaper Engine editor.</p>
       <p
         v-if="data.tagline !== null"
         class="description"

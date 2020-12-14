@@ -1,5 +1,5 @@
 {
-	"title": "Wallpaper Engine - Designer Documentation (WORK IN PROGRESS)",
+	"title": "Wallpaper Engine - Designer Documentation",
 	"description": "This website covers the design features that Wallpaper Engine offers to wallpaper creators",
 	"searchPlaceholder": "Keyword Search",
 	"selectText": "Languages",
@@ -10,6 +10,7 @@
 	"sidebar_gettingstarted": "Your First Wallpaper",
 	"sidebar_effects": "Effects",
 	"sidebar_assets": "Assets",
+	"sidebar_properties": "User Properties",
 	"sidebar_audio": "Audio Visualization",
 	"sidebar_particles": "Particle Systems",
 	"sidebar_animations": "Timeline Animations",

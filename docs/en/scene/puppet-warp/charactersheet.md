@@ -1,6 +1,6 @@
 # Character Sheets
 
-A more advanced way to create puppet warp animations can be done with character sheets. Character sheets require you to use a cut-up version of your character which separates your character into its different limbs / pieces. This allows for more complex and more accurate animations to be created as parts can freely move and overlap without the image becoming distorted. It is not necessary to achieve good results with puppet warp but it can make a big difference dependening on what you want to do. **You can still follow along the other tutorials of the puppet warp section, even if you don't rely on character sheets.**
+A more advanced way to create puppet warp animations can be done with character sheets. Character sheets require you to use a cut-up version of your character which separates your character into its different limbs / pieces. This allows for more complex and more accurate animations to be created as parts can freely move and overlap without the image becoming distorted. It is not necessary to achieve good results with puppet warp but it can make a big difference depending on what you want to do. **You can still follow along the other tutorials of the puppet warp section, even if you don't rely on character sheets.**
 
 You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
 
