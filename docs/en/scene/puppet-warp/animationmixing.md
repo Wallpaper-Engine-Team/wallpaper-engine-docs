@@ -25,4 +25,4 @@ Let's have a closer look at the sword animation. You can see how we have create 
   Your browser does not support the video tag.
 </video>
 
-We have repeated this progress with different animation rates for the cape and the head movement, resulting in the character movement appearing to be much more natural, as it is not repeating in the same manner over and over again in a short amount of time.
+We have repeated this process with different animation rates for the cape and the head movement, resulting in the character movement appearing to be much more natural, as it is not repeating in the same manner over and over again in a short amount of time.
