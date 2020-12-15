@@ -4,4 +4,4 @@ Wallpaper Engine features a particle systems editor that allows you to create co
 
 We are still working on our new particle systems tutorials. Until these are ready, please have a look at our old wiki for the existing documentation on particle systems:
 
-* [SceneScript Documentation](https://wallpaper-engine.fandom.com/wiki/Category:SceneScript)
+* [Particle Systems Documentation](https://wallpaper-engine.fandom.com/wiki/Particle_System)
