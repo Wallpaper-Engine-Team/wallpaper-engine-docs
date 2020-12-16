@@ -17,7 +17,7 @@ In order for the effects of a 3D extrusion to become visible, you will have to a
 Animating the **Y** axis will make the movement appear left / right and animating the **X** axis will make the movement appear up / down.
 :::
 
-We select the bone and hide all properties except the *Angles Y* option. The angle Y keyframe starts at a value of 0, then transitions to *-15* a few frames later, followed by transition to an angle of *+15 before circling back to an angle of *-15* again. The animation ends where it started at a value of 0. This already suffices in our example to create the perception of left and right movement. You can see this process and the final result in the following video:
+We select the bone and hide all properties except the *Angles Y* option. The angle Y keyframe starts at a value of 0, then transitions to *-15* a few frames later, followed by transition to an angle of **+15** before circling back to an angle of **-15** again. The animation ends where it started at a value of 0. This already suffices in our example to create the perception of left and right movement. You can see this process and the final result in the following video:
 
 <video width="100%" controls>
   <source src="/videos/puppet_warp_extrusion_animation.mp4" type="video/mp4">
