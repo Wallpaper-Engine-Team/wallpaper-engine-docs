@@ -34,7 +34,7 @@ When the option **Audio response** at the top of the effect settings is set to *
 By changing the **Audio response** option from **None** to any other option will cause the pulse effect to react to audio playing on the computer. In most cases, you want to set this value to **Center**, this will cause the pulse to appear for audio played on both the left or right audio channel. When set to **Left** or **Right**, the effect will only listen to either the left or right audio channel, which can be useful if you want to only light up an element when audio is played on a specific side.
 
 * **Audio amount:** The strength of the pulse effect in relation to the audio levels being played.
-* **Audio bounds:** TODO ASK KRIS
-* **Audio exponent:** TODO ASK KRIS
+* **Audio bounds:** Specify the minimum and maximum required audio response to react to.
+* **Audio exponent:** Exponential power of the audio response to bias the response towards lower or higher values.
 * **Frequency max:** The **highest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 1 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
 * **Frequency min:** The **lowest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 0 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).

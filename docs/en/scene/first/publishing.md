@@ -16,7 +16,7 @@ Wallpapers can be published with different levels of visibility: **Publicly**, *
 
 Wallpaper Engine allows you to generate a static preview image with a few clicks or you can import a preview image that you have prepared with another tool. Make sure to always make the preview images suitable for all ages, even if your wallpaper targets an adult audience!
 
-You can also use animated GIFs as a preview image, in that case we recommend a resolution of 256x256 pixels and you must limit the GIF to less than 1 MB, ideally 500 KB. See our FAQ website for a guide on how to create a GIF from your wallpaper:
+You can also use animated GIFs as a preview image. GIFs can be up to 256x256px but Wallpaper Engine will only ever request 128x128px preview images. If you want the best quality in the app, you should stick to 128x128px. The maximum allowed file size is 1 MB but we recommend keeping the size below 500 KB. See our FAQ website for a guide on how to create a GIF from your wallpaper:
 
 * [Exporting wallpapers as GIF](https://help.wallpaperengine.io/functionality/export.html)
 
