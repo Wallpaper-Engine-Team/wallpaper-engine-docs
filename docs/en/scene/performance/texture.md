@@ -8,6 +8,16 @@ You can check the currently required texture memory in the editor by clicking on
 
 ![Scene Stats](/img/performance/Stats.png)
 
+## Keep Texture Resolutions Low
+
+The first step in optimizing your project is to is to reduce the overall size of textures you import. You should make sure the background image itself is only as big as you really need it to be, typically it should be exactly the size of a common screen resolution such as 1920x1080 (Full HD) or 4096x2160 (4K UHD). See our [Project Resolution Guide](/performance/resolution) for more infos.
+
+Additionally, when using image layers, always make sure they are as small as needed. Wallpaper Engine will automatically suggest that you crop imported image layers to a resolution that is *as small as possible* for that layer. This will also automatically re-adjust the position of the layer to account for the space that was removed. We strongly recommend you make use of this functionality, especially on high-resolution wallpapers (4K UHD and larger), this can significantly reduce the VRAM usage:
+
+![Crop Imported Layers](/img/performance/Cropping.png)
+
+By default, Wallpaper Engine also adds a padding to each cropped image layer. This is to account for image effects that go beyond the object itself. The padding also uses a bit of VRAM, so if you know you will not use any effects that go beyond the initial size of the layer, you can also set it to 0 (or if you need more padding, increase it as needed).
+
 ## Optimize Texture Format
 
 Graphics cards do not support rendering of common image formats like JPEG and PNG, so Wallpaper Engine has to convert them into a compatible format first. In video memory these images are decompressed which means they require significantly more memory than the original file size.
