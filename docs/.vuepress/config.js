@@ -92,6 +92,8 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			collapsable: true,
 			children: [
 				locale + 'scene/userproperties/overview',
+				locale + 'scene/userproperties/color',
+				locale + 'scene/userproperties/combo',
 			]
 		},
 		{
@@ -134,7 +136,8 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: parallaxGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/parallax/introduction'
+				locale + 'scene/parallax/introduction',
+				locale + 'scene/parallax/oversized'
 			]
 		},
 		{
