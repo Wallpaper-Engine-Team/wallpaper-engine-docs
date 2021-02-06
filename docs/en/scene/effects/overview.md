@@ -23,6 +23,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
+		<a href="/scene/effects/effect/iris.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Iris.gif')"></div>
+			<div>
+				<h4>Iris Movement</h4>
+				<p>Adds motion to the eyes of a character and makes them look around realisitcally.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
 		<a href="/scene/effects/effect/pulse.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Pulse.gif')"></div>
 			<div>
