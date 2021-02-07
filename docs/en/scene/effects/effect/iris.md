@@ -31,7 +31,7 @@ First, we have to create the eye animation. Add an **Iris Movement** effect to y
 
 In the next step, we slightly adjust the settings of the effect. Enable the **Background** option for the layer and choose a **Background Color** that matches the eyes of your character.
 
-Since our character's eyes are not aligned perfectly horizontally, we change the **Scale** to **1.5** for the X axis and reduce it to **0.45** for the Y axis. You will need to adjust these values for your specific image, try setting lower values first and slightly increase them until the eye movement is strong enough to reach the corner of the without being excessive.
+Since our character's eyes are not aligned perfectly horizontally, we change the **Scale** to **1.5** for the X axis and reduce it to **0.45** for the Y axis. You will need to adjust these values for your specific image, try setting lower values first and slightly increase them until the eye movement is strong enough to reach the corner of the eye without being excessive.
 
 We also increase the **Speed** to **0.6** to increase the eye movement slightly in our example.
 
