@@ -20,7 +20,7 @@ The **Iris Movement** effect allows you to add motion to the eyes of a character
 
 ### Synchronized Eye and Head Movement
 
-You can use this effect for the eyes and the entire head in two separate steps to create a realistically looking animation of how your looks around randomly. First, create the iris animation on the eyes, then create a second animation on the entire head.
+You can use this effect for the eyes and the entire head in two separate steps to create a realistically looking animation of how your character looks around randomly. First, create the iris animation on the eyes, then create a second animation for the entire head.
 
 #### Eye Animation
 
