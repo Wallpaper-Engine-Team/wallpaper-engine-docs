@@ -15,7 +15,7 @@ In this guide, we will go into how to create an interactive wallpaper element th
 
 If you would like to follow along or see the full sample project, you can download it here:
 
-* [Click here to download the simple jelly project.](/samples/jelly_advanced.zip)
+* [Click here to download the simple jelly project.](/samples/jelly_simple.zip)
 
 ### Setting up the puppet warp.
 
