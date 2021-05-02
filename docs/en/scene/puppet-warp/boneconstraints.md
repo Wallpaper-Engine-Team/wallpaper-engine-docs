@@ -5,7 +5,7 @@ Wallpaper Engine also allows you to configure certain physics simulations for th
 **Scroll down to the bottom of this page to see a detailed explanation of all bone constraint options.**
 
 ::: warning
-Keep in min that the physics simulations can slightly change their behavior depending on the max FPS settings of your users. The Wallpaper Engine editor will always render at a high frame rate. You can apply your wallpaper to the desktop and set a low FPS limit of 10-15 in the Wallpaper Engine settings to see how the wallpaper performs under stricter FPS rules.
+Keep in mind that the physics simulations can slightly change their behavior depending on the max FPS settings of your users. The Wallpaper Engine editor will always render at a high frame rate. You can apply your wallpaper to the desktop and set a low FPS limit of 10-15 in the Wallpaper Engine settings to see how the wallpaper performs under stricter FPS rules.
 :::
 
 ## Bone Physics Examples
