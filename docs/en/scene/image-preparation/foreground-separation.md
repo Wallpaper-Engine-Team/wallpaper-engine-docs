@@ -2,9 +2,9 @@
 
 Foreground separation in Wallpaper Engine allows you to separate your image into multiple independent parts with relative ease and without the use of any third-party image editing tools. This can be especially useful when you have one or more characters or objects in the foreground of your base image and want to treat your foreground object as an independent layer. This can help with applying effects to a character and allows you to place assets in between your foreground object and your background image.
 
-## Foreground Separation Basics
+## Introduction to Foreground Separation
 
-In this guide, we will showcase how to separate a character from an image and turn it into its own layer. With foreground separation, we are able to turn our sample image into two layers: One layer for the character in the foreground of our image and another background layer for the scenery in the background of the image. In more complex scenarios, you can use foreground separation multiple times on the same base image, for example if you have multiple characters or objects on your image that you would like to turn into independent layers.
+In this guide, we will showcase how to separate a character from an image and turn it into its own layer. In the following example, we are able to use foreground separation to turn our sample image into two layers: One layer for the character in the foreground of our image and another background layer for the scenery in the background of the image. In more complex scenarios, you can use foreground separation multiple times on the same base image, for example if you have multiple characters or objects on your image that you would like to turn into independent layers.
 
 ![Foreground Separation](/img/foreground-separation/foreground_separation.gif)
 
@@ -21,7 +21,7 @@ In its most basic form, this separating foreground objects into distinct layers 
 
 Foreground separation can also be used as a starting point for a [puppet warp animation](/scene/puppet-warp/introduction).
 
-## Separating the character
+## How to use Foreground Separation
 
 In order to get started, import your image into the Wallpaper Engine editor, then right-click on it and hover over **Image Editing** and select **Foreground Separation**. You will now see the foreground separation window within the editor.
 
@@ -44,7 +44,7 @@ Using the controls in the **View** section, you can switch between viewing the *
 
 ### Additional Controls
 
-As mentioned in the previous section, it is helpful to frequently switch between these foreground-only and background-only view to ensure that the separation is aligning with your expectations, otherwise make sure to mark more areas as either background or foreground. You can also tweak the **Mask tolerance** and the **Smoothing** values to ensure the selection matches your character or object as closely as possible. Increasing the **mask tolerance** will expand the selected foreground areas slightly while decreasing it will make the selection more closely tied to the object.
+As mentioned in the previous section, it is helpful to frequently switch between these foreground-only and background-only view to ensure that the separation is aligning with your expectations, otherwise make sure to mark more areas as either background or foreground. You can also tweak the **Mask tolerance** and the **Smoothing** values to ensure the selection matches your character or object as closely as possible. Increasing the **Mask tolerance** will expand the selected foreground areas slightly while decreasing it will make the selection more closely tied to the object.
 
 Additionally, you can also lower or raise the **Quality** setting at the bottom of the options. This can significantly alter the current selection, so it can be useful to do this early on in your process. Keep in mind that raising the quality will significantly raise the time it needs for Wallpaper Engine to recalculate the mask.
 
