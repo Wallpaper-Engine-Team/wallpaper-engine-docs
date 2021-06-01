@@ -4,15 +4,11 @@ Foreground separation in Wallpaper Engine allows you to separate your image into
 
 ## Foreground Separation Basics
 
-In this guide, we will showcase how to separate a character from an image and turn it into its own layer. You can follow along with this example by importing the sample image we use in our tutorial or simply use your own image:
-
-* [Download sample image](/img/foreground-separation/foreground_tutorial.png)
-
-With foreground separation, we are able to turn the original image into two layers: One layer for the knight character in the foreground and another background layer for the rest of the image.
+In this guide, we will showcase how to separate a character from an image and turn it into its own layer. With foreground separation, we are able to turn our sample image into two layers: One layer for the character in the foreground of our image and another background layer for the scenery in the background of the image. In more complex scenarios, you can use foreground separation multiple times on the same base image, for example if you have multiple characters or objects on your image that you would like to turn into independent layers.
 
 ![Foreground Separation](/img/foreground-separation/foreground_separation.gif)
 
-As you can see, the character has been cut out by foreground separation and the background is left with a blurred area that is automatically filled in. While the blur might become visible under certain circumstances, it should be hardly noticeable under most circumstances as the colors are determined by the colors of the background image.
+As you can see, the character has been cut out through foreground separation. The background is left with a blurred area that is automatically filled in. While the blur might become visible under certain circumstances, it should be hardly noticeable in most cases, as the colors are determined by background image, allowing them to blend in well with the image.
 
 #### Benefits of foreground separation
 
