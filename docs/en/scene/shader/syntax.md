@@ -18,7 +18,7 @@ Wallpaper Engine uses a custom preprocessor to cull unused code and introspect a
 * **mix**: Mix is the GLSL name for lerp in HLSL and accepted for both in Wallpaper Engine. So you should use **mix** to make the shader fully compatible.
 * **frac**: frac is the HLSL name for fract in GLSL. So you should use **frac** to make the shader fully compatible.
 * **saturate**: saturate is the HLSL name for clamp(x, 0, 1) in GLSL.
-* **atan2**: atan2 is the HLSL name for atan in GLSL. So you should use **atan2 ** to make the shader fully compatible.
+* **atan2**: atan2 is the HLSL name for atan in GLSL. So you should use **atan2** to make the shader fully compatible.
 * **ddx**: ddx is the HLSL name for dFdx in GLSL. So you should use **ddx** to make the shader fully compatible.
 * **ddy**: ddy is the HLSL name for dFdy in GLSL. So you should use **ddy** to make the shader fully compatible.
 
