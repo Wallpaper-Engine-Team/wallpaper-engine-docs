@@ -1,6 +1,10 @@
 # Foreground Separation
 
+**BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
+
 Foreground separation in Wallpaper Engine allows you to separate your image into multiple independent parts with relative ease and without the use of any third-party image editing tools. This can be especially useful when you have one or more characters or objects in the foreground of your base image and want to treat your foreground object as an independent layer. This can help with applying effects to a character and allows you to place assets in between your foreground object and your background image.
+
+Foreground separation in Wallpaper Engine works well for most images but in some cases you may still want to manually tweak the final result or even fully rely on a third-party image editing tool.
 
 ## Introduction to Foreground Separation
 
@@ -28,7 +32,9 @@ In order to get started, import your image into the Wallpaper Engine editor, the
 The two main functionalities you need to get started are the **Mark Foreground** and **Mark Background** buttons on the left. Use them to mark different parts of the image as either your foreground character or object and to mark the background areas. Switch between marking parts of the background and foreground. Often just a single brush stroke suffices to mark whole areas as either foreground or background. The **Erase** functionality marks an area as essentially *neutral* and the app will decide whether or not it considers it part of the background or foreground.
 
 ::: danger Very important
-Do not try to accurately draw the complete foreground or background. Simply paint the rough areas of your character and the background. Wallpaper Engine will automatically attempt to detect the outline of your foreground object. To see this in practice, watch the video below.
+Do not try to accurately draw in tiny details unless absolutely necessary. Simply paint the rough areas of your character and the background. Wallpaper Engine will automatically attempt to detect the outline of your foreground object.
+
+To see this in practice, watch the video below.
 :::
 
 See the following video for an example of how to extract a character. Notice how the first big paint brushes already select the character outline relatively well even though the foreground paint brush was only applied in the center of the character. Certain areas such as the tip of the sword and the background areas in the middle of the character and on the right-hand side need to be specifically marked as part of the background.

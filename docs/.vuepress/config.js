@@ -124,7 +124,9 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: imagePreparationGroup,
 			collapsable: true,
 			children: [
+				locale + 'scene/image-preparation/external-editor',
 				locale + 'scene/image-preparation/foreground-separation',
+				locale + 'scene/image-preparation/character-sheet',
 			]
 		},
 		{
