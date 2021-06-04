@@ -55,3 +55,7 @@ As mentioned in the previous section, it is helpful to frequently switch between
 Additionally, you can also lower or raise the **Quality** setting at the bottom of the options. This can significantly alter the current selection, so it can be useful to do this early on in your process. Keep in mind that raising the quality will significantly raise the time it needs for Wallpaper Engine to recalculate the mask.
 
 If the frequent recalculations after your brush strokes become bothersome or take a long time on your system, you can also turn off the **Auto recalculate** feature in the lower left corner and instead trigger manual recalculations by manually pressing the **Recalculate** button in the lower left corner.
+
+Should you notice smaller issues with the foreground separation results, you can still make minor adjustments to the automatic foreground separation by connecting Wallpaper Engine with an external image editor and then manually editing the **Albedo** texture. See the following guide for more infos:
+
+* [External Image Editor Quick Access](/scene/image-preparation/external-editor)

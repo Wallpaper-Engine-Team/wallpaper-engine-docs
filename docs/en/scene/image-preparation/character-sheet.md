@@ -70,3 +70,7 @@ Since we are satisfied with our character sheet, we confirm by clicking on **OK*
   <source src="/videos/cs_summary.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+Should you notice smaller issues with the character sheet, keep in mind that you can still make minor adjustments to the character sheet by connecting Wallpaper Engine with an external image editor and then editing the **Albedo** texture, see the following guide for more infos:
+
+* [External Image Editor Quick Access](/scene/image-preparation/external-editor)
