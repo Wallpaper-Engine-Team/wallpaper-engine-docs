@@ -2,7 +2,7 @@
 
 **BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
 
-Wallpaper Engine allows you to create a character sheet which you can use for a high-quality [puppet warp animation](/scene/puppet-warp/introduction). As a prerequisite, you need a character that has been cut out and loaded into Wallpaper Engine as its own layer. You can use the [foreground separation](/scene/image-preparation/foreground-separation) feature of Wallpaper Engine to cut out a character from a base image or use a third-party image editing tool of your choice to manually create a character cut-out with a transparent area around your character.
+Wallpaper Engine allows you to create a character sheet which you can use to create a high-quality [puppet warp animation](/scene/puppet-warp/introduction). As a prerequisite, you need a character that has been cut out and loaded into Wallpaper Engine as its own layer. You can use the [foreground separation](/scene/image-preparation/foreground-separation) feature of Wallpaper Engine to cut out a character from a base image or use a third-party image editing tool of your choice to manually create a character cut-out with a transparent area around your character.
 
 ## Character Sheet Introduction
 
@@ -24,7 +24,7 @@ To get started, select the layer that holds your character cut-out in the editor
 
 ### The Foremost Limb
 
-The first thing you need to do is to create a new limb. Click on the **Add Limb** button to create the first limb which is part of your body. Notice how there is a **hierarchy** on the left. Each limb can be further subdivided into further limbs for more complex character sheets. **You should always start with the foremost limb and work your way down.** In our case, we want to start with the arm and sword of our character as it is the foremost element. We name our limb **Arm** and it will appear as the first child of the **Body**.
+The first thing you need to do is to create a new limb. Click on the **Add Limb** button to create the first limb which is part of your body. Notice how there is a **hierarchy** on the left. Each limb can be further subdivided into additional limbs for more complex character sheets. **You should always start with the foremost limb and work your way down.** In our case, we want to start with the arm and sword of our character as it is the foremost element. We name our limb **Arm** and it will appear as the first child of the **Body**.
 
 We start by painting the complete sword and arm as the foreground area and make sure that the rest of the body is properly selected as background. You will find two buttons towards the top of the sidebar: **Mark Foreground** and **Mark Background**. Start painting over the areas of your designated limb with the foreground brush. The area will appear with a light white color. It is not necessary to paint an absolutely perfect area, Wallpaper Engine will attempt to automatically detect the limb you are trying to paint. Use the background brush to specifically tell Wallpaper Engine which parts of the image are not part of your limb.
 
@@ -44,7 +44,7 @@ While painting the mask, make sure to regularly check the **Foreground** and **B
 
 ### Further Separating a Limb
 
-Once the arm and sword have been properly masked, we continue by actually further separating the arm from the sword, this will give us some additional flexibility in the puppet warp animation. To do this, make sure the **Arm** is selected in the hierarchy, then click on the **Add Limb** button to create a child limb of the arm. In our case, we will name it **Sword**. Just like before, we mark the sword and hand as **foreground**, while we mark the upper arm as **background**. Since the sword has already been separated from the main body, we don't need to be very precise with our painting, as the arm is now presented in its cut-out state and the main body is completely ignored:
+Once the arm and sword have been properly masked, we continue by further separating the arm from the sword, this will give us some additional flexibility in the puppet warp animation. To do this, make sure the **Arm** is selected in the hierarchy, then click on the **Add Limb** button to create a child limb of the arm. In our case, we will name it **Sword**. Just like before, we mark the sword and hand as **foreground**, while we mark the upper arm as **background**. Since the sword has already been separated from the main body, we don't need to be very precise with our painting, as the arm is now presented in its cut-out state and the main body is completely ignored:
 
 <video width="100%" controls>
   <source src="/videos/cs_sword.mp4" type="video/mp4">
