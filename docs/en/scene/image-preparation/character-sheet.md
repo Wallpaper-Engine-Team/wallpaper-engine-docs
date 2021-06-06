@@ -10,7 +10,7 @@ Character sheets cut up characters from an image into multiple independent parts
 
 ![Character Sheet](/img/character-sheet-creation/character_sheet_example.png)
 
-Most notably, the sword has been removed from the original character and the area it previously occupied is filled in with a color blur of the surrounding areas. For many animations, this blur will be hardly noticeable in later animations. Take a look our sample puppet warp animation we created with the previous character sheet and notice how the sword, shield and head all move quite strongly without causing any distortions or unwanted side effects on the surrounding body parts, which is the main advantage of using puppet warp animations with character sheets:
+Most notably, the sword has been removed from the original character and the area it previously occupied is filled in with a color blur of the surrounding areas. For many animations, this blur will be hardly noticeable in later animations. Take a look at our sample puppet warp animation we created with the previous character sheet and notice how the sword, shield and head all move quite strongly without causing any distortions or unwanted side effects on the surrounding body parts, which is the main advantage of using puppet warp animations with character sheets:
 
 <video width="100%" controls autoplay loop>
   <source src="/videos/character_sheet_puppet_warp.mp4" type="video/mp4">

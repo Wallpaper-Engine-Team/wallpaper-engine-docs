@@ -4,13 +4,19 @@ A more advanced way to create puppet warp animations can be done with character 
 
 You should have read and understood the [Puppet Warp Introduction Guide](/scene/puppet-warp/introduction) before attempting this tutorial.
 
-## Creating a character sheet
+## Creating a Character Sheet
 
 Make sure to separate each individual body and clothing part into their own separate element and put them onto the same image. Try to keep the resolution of the image as small as possible and try to keep the amount of transparent/invisible space on the image as small as possible. For example, don't line up all limbs in a row, but rather place them into a square.
 
 In our example, we use the samurai character from our previous puppet warping tutorials and cut it up into its own character sheet using a photo editing tool. Our character sheet looks as follows (you can use the following image file to follow along):
 
 ![Character Sheet Example](/img/puppet-warp/samurai_sheet.png)
+
+### Using Wallpaper Engine to create a Character Sheet
+
+Wallpaper Engine comes with a character sheet creation tool which you can use to create a character sheet with relative ease. See our character sheet creation tutorial here:
+
+* [Character Sheet Creation](/scene/image-preparation/character-sheet)
 
 ## Preparing the character sheet
 
