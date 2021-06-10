@@ -146,6 +146,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			collapsable: true,
 			children: [
 				locale + 'scene/lighting/introduction',
+				locale + 'scene/lighting/lights',
 			]
 		},
 		{

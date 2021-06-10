@@ -1,5 +1,7 @@
 # Real-Time Lighting & Reflections
 
+**BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
+
 Wallpaper Engine supports real-time lighting and reflections on 2D scenes. This requires you to enable either the **Lighting** or **Reflection** options in the material settings of an image layer. These two functionalities work well together but, as always, try to not enable both of them if you do not really need them to keep the performance impact as low as possible.
 
 ![Real-time lighting and reflections](/img/pbr/pbr_mouse.gif)
@@ -83,4 +85,28 @@ We then move on and paint areas that we want to highlight with a very high value
 
 ## Roughness Map
 
-We continue
+After having added the metallic map in the previous step, the result is already pretty good. We can further improve the look of the surfaces by also creating a **Roughness map**. The roughness map affects the scattering of the reflected light. You can use lower values in the range of 10 - 50 for metallic surfaces, something less reflective such as cloth and skin can be set to values from 200 and up. For the roughness map, we do **not** recommend using very low values around 0 or very high values around 255 as these tend to not look very realistic, though they might be useful in more abstract concepts.
+
+In our case, the roughness map looks rather similar to the metallic map but it lets us further emphasize certain parts of the image by tweaking the reflection further. See the following video of the mask we have drawn for our character as we show you the mask overlayed to the image layer, followed by the end result.
+
+<video width="100%" controls>
+  <source src="/videos/pbr_roughness.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## Reflection Map for Final Tweaks
+
+Additionally to the previous maps, you can also add a **Reflection map**. A reflection map is often really not necessary and you can leave it out altogether but it can be helpful in certain edge cases to tweak individual parts of the reflections. You can also reduce the overall reflections by lowering the **Reflectivity** slider below the list of masks.
+
+In our example, we noticed a slight glow at the top of the helmet decorations. We add a **Reflection map**, and as a very first step, we paint the whole map in white (at a value of 255) to ensure the reflections we have created previously stay as they are. We then set the value to 0 and paint the helmet decorations in black and save the reflection map. Looking at the helmet decorations now, the minor glow that was previously present has now disappeared entirely.
+
+<video width="100%" controls>
+  <source src="/videos/pbr_reflection.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## Next Steps
+
+If you have created a normal map and painted the other material maps as needed, the lighting on your wallpaper should already look pretty good. However, at this point, all the light in the scene is static, be sure to check out our guide on advanced lighting tips to learn about different ways you can make the lighting a bit more complex and interactive:
+
+* [Tips for Advanced Lighting](/scene/lighting/lights)
