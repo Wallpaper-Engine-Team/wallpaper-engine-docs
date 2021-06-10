@@ -87,7 +87,7 @@ We then move on and paint areas that we want to highlight with a very high value
 
 After having added the metallic map in the previous step, the result is already pretty good. We can further improve the look of the surfaces by also creating a **Roughness map**. The roughness map affects the scattering of the reflected light. You can use lower values in the range of 10 - 50 for metallic surfaces, something less reflective such as cloth and skin can be set to values from 200 and up. For the roughness map, we do **not** recommend using very low values around 0 or very high values around 255 as these tend to not look very realistic, though they might be useful in more abstract concepts.
 
-In our case, the roughness map looks rather similar to the metallic map but it lets us further emphasize certain parts of the image by tweaking the reflection further. See the following video of the mask we have drawn for our character as we show you the mask overlayed to the image layer, followed by the end result.
+In our case, the roughness map looks rather similar to the metallic map but it lets us further emphasize certain parts of the image by tweaking the reflection further. We started by painting the entire mask with a value of around 70 followed by values around 200 for the skin and cloth elements and values from around 10 - 50 for areas where we wanted to add a strong shine to the image, such as the helmet of our character and the sword. See the following video of the mask we have drawn for our character as we show you the mask overlayed to the image layer, followed by the end result.
 
 <video width="100%" controls>
   <source src="/videos/pbr_roughness.mp4" type="video/mp4">
