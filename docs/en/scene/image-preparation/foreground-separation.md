@@ -1,7 +1,5 @@
 # Foreground Separation
 
-**BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
-
 Foreground separation in Wallpaper Engine allows you to separate your image into multiple independent parts with relative ease and without the use of any third-party image editing tools. This can be especially useful when you have one or more characters or objects in the foreground of your base image and want to treat your foreground object as an independent layer. This can help with applying effects to a character and allows you to place assets in between your foreground object and your background image.
 
 Foreground separation in Wallpaper Engine works well for most images but in some cases you may still want to manually tweak the final result or even fully rely on a third-party image editing tool.

@@ -1,7 +1,5 @@
 # Real-Time Lighting & Reflections
 
-**BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
-
 Wallpaper Engine supports real-time lighting and reflections on 2D scenes. This requires you to enable either the **Lighting** or **Reflection** options in the material settings of an image layer. These two functionalities work well together but, as always, try to not enable both of them if you do not really need them to keep the performance impact as low as possible.
 
 ![Real-time lighting and reflections](/img/pbr/pbr_mouse.gif)
@@ -48,9 +46,9 @@ For now, we simply add two light sources to our scene and use the color picker t
   Your browser does not support the video tag.
 </video>
 
-### Adjusting Global Illumination
+### Adjusting Ambient Lighting
 
-You will also need to take global illumination into account that Wallpaper Engine adds to your scene. This global lighting that Wallpaper Engine adds to your scene can be configured in the **Scene options** on the left-hand side. Open the scene options and adjust the global illumination to your needs, we change the **Ambient Color** to a slightly whiter tone to make it a little brighter but you can choose any color you want here to give your whole scene a certain type of glow.
+You will also need to take ambient lighting into account that Wallpaper Engine adds to your scene. This ambient lighting that Wallpaper Engine adds to your scene can be configured in the **Scene options** on the left-hand side. Open the scene options and adjust the ambient illumination to your needs, we change the **Ambient Color** to a slightly whiter tone to make it a little brighter but you can choose any color you want here to give your whole scene a certain type of glow.
 
 **Another important thing to consider:** By default, Wallpaper Engine will have a gray background color behind and around your scene. Under normal circumstances, this does not matter, but with reflectivity and lighting enabled, the background color can influence the lighting of your scene in the editor and when users choose a wallpaper alignment option where the background color becomes visible.
 
@@ -59,7 +57,7 @@ Be sure to always adjust the **Background Color** option in the **Scene options*
 You can see these two steps in the following video:
 
 <video width="100%" controls>
-  <source src="/videos/pbr_global_illumination.mp4" type="video/mp4">
+  <source src="/videos/pbr_ambient_light.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

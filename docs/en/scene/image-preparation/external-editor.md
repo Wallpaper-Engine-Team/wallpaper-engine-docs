@@ -1,7 +1,5 @@
 # External Image Editor Quick Access
 
-**BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
-
 Wallpaper Engine allows you to configure your favorite external image editor to be used as a supplementing image editing tool that you can quickly access throughout the editor. You can configure an image editor of your choice in the Wallpaper Engine editor by navigating to the **Edit** menu at the top, then selecting **Editor Settings**. Next to **Custom Image Editor Path**, click on the **Select** button to select the **.exe** of your editor of choice.
 
 This feature works with all image editing programs we have tested and you can easily connect Wallpaper Engine with tools like Adobe Photoshop or free alternatives such as Paint.NET or GIMP.

@@ -1,7 +1,5 @@
 # Character Sheet Creation
 
-**BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
-
 Wallpaper Engine allows you to create a character sheet which you can use to create a high-quality [puppet warp animation](/scene/puppet-warp/introduction). As a prerequisite, you need a character that has been cut out and loaded into Wallpaper Engine as its own layer. You can use the [foreground separation](/scene/image-preparation/foreground-separation) feature of Wallpaper Engine to cut out a character from a base image or use a third-party image editing tool of your choice to manually create a character cut-out with a transparent area around your character.
 
 ## Character Sheet Introduction

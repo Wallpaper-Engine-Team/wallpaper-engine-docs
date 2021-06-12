@@ -1,7 +1,5 @@
 # Tips for Advanced Lighting
 
-**BETA FEATURE. This article is only live for testing purposes, this feature has not yet been released.**
-
 By default, light sources you place in the editor will emit a static light. In some cases, it can be useful to introduce movement or a pulsating flickering. In this guide, we introduce a few ways that you can improve your light using [Timeline Animations](/scene/timeline/introduction) and [SceneScript](/scene/scenescript/introduction).
 
 ::: danger Please note
@@ -22,13 +20,15 @@ One thing you might want to do is to introduce a flickering effect for your ligh
 
 ### Timeline Pulse Animation
 
-The easiest way you can create a pulsating light effect is to utilize timeline animations. The most simple animation would be something that moves from the starting value to another value and then back to the beginning for a basic pulsating light. If you have not worked with timeline animations already, we would recommend that you read the introductory tutorial on timeline animations first before you continue:
+The easiest way you can create a pulsating light effect is to utilize timeline animations on the **Intensity** property of the light source. We generally recommend animating the **Intensity** rather than the **Radius** of your light sources, as this will result in the most natural looking results. If you have not worked with timeline animations already, we would recommend that you read the introductory tutorial on timeline animations first before you continue:
 
 * [Timeline Animation Introduction](/scene/timeline/introduction)
 
-In the case of light, you can either change the **Intensity** or the **Radius** of a light. In our example, we will attach a timeline animation to the **Intensity** property of the light by first selecting the light source and then clicking on the cogwheel icon next to **Intensity**. From there, we select **Bind Timeline Animation** and create a new timeline animation with a duration of 4 seconds.
+The most simple pulse effect can be achieved by creating a timeline animation that takes the intensity from a value of 1.00 to 2.00 and then back to 1.00. However, in our example we want to achieve more of a flickering effect that mimics a fire source. 
 
-For our example, we want to mimic a flickering of a fire source. This can be best achieved by having seemingly random changes in intensity. We start the first frame of the timeline animation at an intensity value of exactly **1.00** and then proceed to create upwards and downwards movements with varying intensities from **0.1** to **2.0** every few frames of the animation. It's important that both the first and last frame of the timeline animation have a value of 1 so that the transition is smooth.
+To get started, we attach a timeline animation to the **Intensity** property of the light by first selecting the light source and then clicking on the cogwheel icon next to **Intensity**. From there, we select **Bind Timeline Animation** and create a new timeline animation with a duration of 4 seconds.
+
+To achieve something akin to a seemingly randomly flickering light, we want to change the value of the light **intensity** erratically up and down. We start the first frame of the timeline animation at an intensity value of exactly **1.00** and then proceed to create upwards and downwards movements with varying intensities from **0.1** to **2.0** every few frames of the animation. It's important that both the first and last frame of the timeline animation have a value of 1 so that the transition is smooth.
 
 Once the animation is done, we move the light source slightly off the visible area of the wallpaper to give the perception of a burning fire being off-screen.
 
@@ -60,9 +60,18 @@ Since SceneScript gives you absolute freedom in the way you program the logic fo
 
 ## Audio Responsive Light Sources
 
-With SceneScript, you can also make the light sources audio responsive by changing their intensity value depending on the current volume levels of the system audio.
+With SceneScript, you can also make the light sources audio responsive by changing their intensity value depending on the current volume levels of the system audio. The easiest way to achieve this is to use a code snippet that we have prepared for you.
 
-Select the light source and then clicking on the cogwheel icon next to **Intensity**. From there, we select **Bind Script**. Replace the default code with the following code snippet. Further explanations can be found below the snippet.
+Select the light source and then clicking on the cogwheel icon next to **Intensity**. From there, select **Bind Script**. Then navigate to **Snippets** at the top and hover over **Replace Script**. Then select **Audio Factor (number)**, the code will instantly be replaced with the audio script. Confirm with **OK**. When selecting the light source now, you will find a new blue box with audio-related properties now. For light sources, you will need to adjust them slightly to make them work well. Try using the following settings:
+
+* **Audio frequency:** 0 - *A value of 0 means that the script will look for beats / bass*
+* **Audio response:** 15 - *Introduces smoothing, higher values mean less smoothing*
+* **Min:** 0.2 - *Use this to configure the minimum intensity of your light, set it to 0 if your light should be off without sounds playing*
+* **Max:** 3 - *The maximum intensity that the light will reach when loud audio is played*
+
+
+::: details Click here to take a closer look at the code (Advanced)
+Select the light source and then clicking on the cogwheel icon next to **Intensity**. From there, select **Bind Script**. Replace the default code with the following code snippet. Further explanations can be found below the code snippet and in the code comments.
 
 ```js
 'use strict';
@@ -83,7 +92,7 @@ const VALUE_DELTA = MAX_VALUE - MIN_VALUE;
 /**
  * This creates a permanent link to the audio response data.
  */
-let audioBuffer = engine.registerAudioBuffers(FREQUENCY_RESOLUTION);
+let audioBuffer = engine.registerAudioBuffers(FREQUENCY_RESOLUTION); // Adds the system audio levels to the code
 var smoothValue = 0;
 var initialValue;
 
@@ -110,6 +119,7 @@ We have placed a few constant variables at the top of the snippet that you can t
 The `SMOOTHING` rate ensures that the light does not suddenly light up on every beat but rather that the intensity increases and decreases on a smooth curve. You can lower the smoothing value to increase the smoothing, higher values will do the opposite, they will make the light react faster to sounds. Values from 1 - 50 work well.
 
 `MIN_VALUE` and `MAX_VALUE` define the lowest and highest intensity ratings of your light. In our example above, the light will always have an intensity of at least 1, you could change this to 0, for example, if you want the light to turn off completely when no sound is being played.
+:::
 
 ## Light Movement
 
@@ -121,7 +131,7 @@ For our example, we want to create an overhead flying light that might look like
 
 Now, we select an timeline keyframe towards the middle of the animation and move the light upwards. If you play the animation now, you should see the light flying upwards and then back down.
 
-### Fading the light in and out
+### Fading the Light Source in and out
 
 Since the light is reflected even over large distances from our character, we can now see how the light suddenly teleports from left to right. To get around this, we need to add the **Intensity** property of the light to our existing animation. Click on the cogwheel icon next to **Intensity**, select **Bind Timeline Animation** and then add the animation to our existing animation on the **Origin** property.
 
