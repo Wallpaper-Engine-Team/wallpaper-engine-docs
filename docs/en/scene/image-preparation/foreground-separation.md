@@ -54,6 +54,14 @@ Additionally, you can also lower or raise the **Quality** setting at the bottom 
 
 If the frequent recalculations after your brush strokes become bothersome or take a long time on your system, you can also turn off the **Auto recalculate** feature in the lower left corner and instead trigger manual recalculations by manually pressing the **Recalculate** button in the lower left corner.
 
-Should you notice smaller issues with the foreground separation results, you can still make minor adjustments to the automatic foreground separation by connecting Wallpaper Engine with an external image editor and then manually editing the **Albedo** texture. See the following guide for more infos:
+#### Maximizing Accuracy
+
+If you are dealing with very fine outlines on a character or an object, it may be necessary to tweak the settings for maximum precision. You can maximize the accuracy of the foreground separation algorithm by tweaking the following settings:
+
+* **Mask tolerance:** 0
+* **Smoothing:** 0
+* **Quality level:** 2
+
+Should you still notice issues with the foreground separation results, you can still make minor adjustments to the automatic foreground separation by connecting Wallpaper Engine with an external image editor. Afterwards, you can manually edit the **Albedo** texture of your image layer. See the following guide for more infos:
 
 * [External Image Editor Quick Access](/scene/image-preparation/external-editor)

@@ -46,6 +46,8 @@ For now, we simply add two light sources to our scene and use the color picker t
   Your browser does not support the video tag.
 </video>
 
+Keep in mind that Wallpaper Engine limits the maximum number of lights per scene to **four light sources** for performance reasons. You should use individual light sources only as needed. Instead of lighting your scene with many individual lights, you should adjust the ambient lighting of your scene, see the next section for more information.
+
 ### Adjusting Ambient Lighting
 
 You will also need to take ambient lighting into account that Wallpaper Engine adds to your scene. This ambient lighting that Wallpaper Engine adds to your scene can be configured in the **Scene options** on the left-hand side. Open the scene options and adjust the ambient illumination to your needs, we change the **Ambient Color** to a slightly whiter tone to make it a little brighter but you can choose any color you want here to give your whole scene a certain type of glow.
