@@ -7,7 +7,7 @@ Wallpaper Engine allows you to make parts of your wallpaper configurable by your
 The following user property types are available in Wallpaper Engine. Click on any of them to view a detailed description on how they work:
 
 * [**Color**](/scene/userproperties/color) (`color`): A color picker
-* **Slider** (`slider`): A slider that allows users to select a number within a specified range
+* [**Slider**](/scene/userproperties/slider) (`slider`): A slider that allows users to select a number within a specified range
 * **Checkbox** (`bool`): A checkbox that is either off or on
 * [**Combo**](/scene/userproperties/combo) (`combo`): A dropdown selector where each element has a text and a hidden value
 * **Text** (`textinput`): A text input field

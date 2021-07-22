@@ -93,6 +93,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			children: [
 				locale + 'scene/userproperties/overview',
 				locale + 'scene/userproperties/color',
+				locale + 'scene/userproperties/slider',
 				locale + 'scene/userproperties/combo',
 			]
 		},
