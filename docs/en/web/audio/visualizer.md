@@ -8,16 +8,15 @@ Utilizing these volume levels allows you to build various types of audio visuali
 
 In order to get started with an audio visualizer, you have to register a listener function in JavaScript that will supply the audio volume levels to you. Wallpaper Engine provides the `window.wallpaperRegisterAudioListener` function for this purpose, it expects a callback function that you also need to create.
 
-You should call the `wallpaperRegisterAudioListener` function once within the `window.onload` event as shown in the sample below. In the example below, we're also creating an empty `wallpaperAudioListener(audioArray)` function that is handed as a callback parameter to the `wallpaperRegisterAudioListener`. The function will later contain your custom logic for the audio handling. The name for that funtion is up to you, but it must have parameter that takes the audio volume levels as an array.
+You should call the `wallpaperRegisterAudioListener` function once. Please note: Don't register the audio listener within the `window.onload` event (or any similar events), this is unreliable and can lead to Wallpaper Engine missing certain events. When in doubt, call this function at the end of your `body` tag.
+
+In the example below, we're also creating an empty `wallpaperAudioListener(audioArray)` function that is handed as a callback parameter to the `wallpaperRegisterAudioListener`. The function will later contain your custom logic for the audio handling. The name for that function is up to you, but it must have parameter that takes the audio volume levels as an array.
 
 ```js
 function wallpaperAudioListener(audioArray) {
     // Handle audio input here
 }
-
-window.onload = function() {
-    window.wallpaperRegisterAudioListener(wallpaperAudioListener);
-};
+window.wallpaperRegisterAudioListener(wallpaperAudioListener);
 ```
 
 The `wallpaperAudioListener` function will now be called when new audio samples arrive, which occurs roughly 30 times per second.
@@ -47,50 +46,6 @@ In the following example, we are providing a very basic full implementation of t
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <script>
-    let audioCanvas = null;
-    let audioCanvasCtx = null;
-    function wallpaperAudioListener(audioArray) {
-         // Clear the canvas and set it to black
-        audioCanvasCtx.fillStyle = 'rgb(0,0,0)';
-        audioCanvasCtx.fillRect(0, 0, audioCanvas.width, audioCanvas.height);
-
-        // Render bars along the full width of the canvas
-        var barWidth = Math.round(1.0 / 128.0 * audioCanvas.width);
-        var halfCount = audioArray.length / 2;
-
-        // Begin with the left channel in red
-        audioCanvasCtx.fillStyle = 'rgb(255,0,0)';
-        // Iterate over the first 64 array elements (0 - 63) for the left channel audio data
-        for (var i = 0; i < halfCount; ++i) {
-            // Create an audio bar with its hight depending on the audio volume level of the current frequency
-            var height = audioCanvas.height * Math.min(audioArray[i], 1);
-            audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
-        }
-
-        // Now draw the right channel in blue
-        audioCanvasCtx.fillStyle = 'rgb(0,0,255)';
-        // Iterate over the last 64 array elements (64 - 127) for the right channel audio data
-        for (var i = halfCount; i < audioArray.length; ++i) {
-            // Create an audio bar with its hight depending on the audio volume level
-            // Using audioArray[191 - i] here to inverse the right channel for aesthetics
-            var height = audioCanvas.height * Math.min(audioArray[191 - i], 1);
-            audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
-        }
-    }
-
-    window.onload = function() {
-        // Get the audio canvas once the page has loaded
-        audioCanvas = document.getElementById('AudioCanvas');
-        // Setting internal canvas resolution to user screen resolution
-        // (CSS canvas size differs from internal canvas size)
-        audioCanvas.height = window.innerHeight;
-        audioCanvas.width = window.innerWidth;
-        // Get the 2D context of the canvas to draw on it in wallpaperAudioListener
-        audioCanvasCtx = audioCanvas.getContext('2d');
-        window.wallpaperRegisterAudioListener(wallpaperAudioListener);
-    };
-    </script>
     <style>
         body { margin:0; padding:0; }
         html, body { width:100%; height:100%; overflow:hidden; }
@@ -99,22 +54,76 @@ In the following example, we are providing a very basic full implementation of t
     </head>
     <body>
         <canvas id="AudioCanvas"></canvas>
+        <script>
+        let audioCanvas = null;
+        let audioCanvasCtx = null;
+        function wallpaperAudioListener(audioArray) {
+            // Clear the canvas and set it to black
+            audioCanvasCtx.fillStyle = 'rgb(0,0,0)';
+            audioCanvasCtx.fillRect(0, 0, audioCanvas.width, audioCanvas.height);
+
+            // Render bars along the full width of the canvas
+            var barWidth = Math.round(1.0 / 128.0 * audioCanvas.width);
+            var halfCount = audioArray.length / 2;
+
+            // Begin with the left channel in red
+            audioCanvasCtx.fillStyle = 'rgb(255,0,0)';
+            // Iterate over the first 64 array elements (0 - 63) for the left channel audio data
+            for (var i = 0; i < halfCount; ++i) {
+                // Create an audio bar with its hight depending on the audio volume level of the current frequency
+                var height = audioCanvas.height * Math.min(audioArray[i], 1);
+                audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
+            }
+
+            // Now draw the right channel in blue
+            audioCanvasCtx.fillStyle = 'rgb(0,0,255)';
+            // Iterate over the last 64 array elements (64 - 127) for the right channel audio data
+            for (var i = halfCount; i < audioArray.length; ++i) {
+                // Create an audio bar with its hight depending on the audio volume level
+                // Using audioArray[191 - i] here to inverse the right channel for aesthetics
+                var height = audioCanvas.height * Math.min(audioArray[191 - i], 1);
+                audioCanvasCtx.fillRect(barWidth * i, audioCanvas.height - height, barWidth, height);
+            }
+        }
+
+        // Get the audio canvas once the page has loaded
+        audioCanvas = document.getElementById('AudioCanvas');
+        // Setting internal canvas resolution to user screen resolution
+        // (CSS canvas size differs from internal canvas size)
+        audioCanvas.height = window.innerHeight;
+        audioCanvas.width = window.innerWidth;
+        // Get the 2D context of the canvas to draw on it in wallpaperAudioListener
+        audioCanvasCtx = audioCanvas.getContext('2d');
+
+        // Register the audio listener provided by Wallpaper Engine.
+        window.wallpaperRegisterAudioListener(wallpaperAudioListener);
+        </script>
     </body>
 </html>
 ```
 
 The HTML and JavaScript example above contains detailed comments that should help you understand it. Let's have a closer look at some of the details, though:
 
+### Normalizing the browser styles
+
 First, the CSS rules in the `<style>` block allow the canvas to fit on any resolution and any aspect ratio. You should always make sure that your wallpaper works on any type of screen resolution and aspect ratio, it's bad practice to only consider one resolution in your work and it usually only takes a few minor tweaks to ensure it works fine for all users.
 
-In this example, we're resetting the default `margin` and `padding` on the body to 0 and hide any `overflow` (which shouldn't be necessary but it can be a good way to prevent scrollbars appearing in some edge cases). Next up, we set the canvas to be equal to the full width and height of the user's viewport. It's important to note that a `<canvas>` element uses an internal resolution for rendering and a secondary resolution for its size in HTML / CSS, so it's best to specifically set the canvas height and width to the window height and width with JavaScript, which we're doing in the `onload` function:
+In this example, we're resetting the default `margin` and `padding` on the body to 0 and hide any `overflow` (which shouldn't be necessary but it can be a good way to prevent scroll bars appearing in some edge cases). Next up, we set the canvas to be equal to the full width and height of the user's viewport.
+
+### JavaScript-based normalization and initialization 
+
+For our JavaScript code, it's important that we avoid the `window.onload` function and any similar window events, at least when it comes to the Wallpaper Engine specific code as it can lead to issues with the event system. Since we avoid the `onload` event call, it's very important that our JavaScript code is loaded after the HTML body has been rendered already, since our JavaScript directly accesses our canvas. Placing JavaScript at the inside-end of the `body` tag is perfectly valid, so we recommend this approach.
+
+If you have never worked with `canvas` elements, it's important to know that they use an internal resolution for rendering and a secondary resolution for its size in HTML / CSS, so it's best to specifically set the canvas height and width to the window height and width with JavaScript, which we're doing in the following two lines of our JavaScript code:
 
 ```js
 audioCanvas.height = window.innerHeight;
 audioCanvas.width = window.innerWidth;
 ```
 
-At the end of the `onload` function, we call the `wallpaperRegisterAudioListener` function which causes the `wallpaperAudioListener` to be executed whenever new audio data comes in. The function will draw the left audio channel in red and the right audio channel in blue (in reverse order for aesthetical purpose only). The key part of the code can be found here:
+At the very end of our JavaScript code sample, we call the `wallpaperRegisterAudioListener` function which causes the `wallpaperAudioListener` to be executed whenever new audio data comes in. As noted above, it's important that this call is not placed inside any `window` events such as `window.onload`, you should structure your HTML so that your JavaScript is loaded last and does not depend on `window` events.
+
+The function will draw the left audio channel in red and the right audio channel in blue (in reverse order for aesthetical purpose only). The key part of the code can be found here:
 
 ```js
 for (var i = 0; i < halfCount; ++i) {
@@ -129,3 +138,19 @@ The height of the audio bars is determined by the volume level of the frequency 
 You may have noticed that we have also wrapped the `audioArray[i]` into `Math.min(audioArray[i], 1);`. This is to ensure the audio levels are limited to 1.00 at their peak. Most values will never go above 1.00, but due to the nature of the implementation, in rare cases this might spike above 1.0 which can cause your wallpaper to render incorrectly.
 
 Of course this is a very basic example and you can change the type of visualization drastically, as you can create much more than just simple audio bars with this type of data. You can also try and add some interpolation between each calls to the `wallpaperAudioListener` function to smoothen the audio bar movement and make it less erratic, but in these cases you should consider adding an [FPS limit](/web/performance/fps) to your wallpaper.
+
+## Audio Visualizer Problem Solving
+
+To conserve performance, Wallpaper Engine will not send audio data to your wallpaper unless you actually load a `wallpaperAudioListener` in the code of your wallpaper. Wallpaper Engine will add the following line to the auto-generated `project.json` once it detects a properly registered audio listener in the editor preview:
+
+```json
+"supportsaudioprocessing" : true,
+```
+
+This should happen automatically after you import a JavaScript file that is loaded within your main HTML file, however, if you are editing your files on the go, you may need to specifically use the `Save` functionality in the editor to force Wallpaper Engine to update your `project.json`.
+
+As a last resort, you can also manually add that line to the `project.json`, though if your code is set up properly, this should not be necessary. You can access the `project.json` by clicking on **Edit** at the top of the editor and then selecting **Open in Explorer** to view your project files.
+
+If you continue to have issues with your visualizers, we recommend setting up a debugger connection for Wallpaper Engine as outlined in the following tutorial, this way you can debug the JavaScript code more effectively and check the incoming audio levels you receive:
+
+* [Web Wallpaper Debugging](/web/debug/debug.html)
