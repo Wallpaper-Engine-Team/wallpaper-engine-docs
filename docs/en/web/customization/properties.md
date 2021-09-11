@@ -39,6 +39,9 @@ window.wallpaperPropertyListener = {
     },
 };
 ```
+
+The event will also fire once when the wallpaper is loaded containing all user properties. It is important that you assign one `if` condition per user property as shown in the example above to ensure that the event works properly when a wallpaper is loaded and when a single property value is changed by the user.
+
 ::: danger Important
 Always make sure to initialize `window.wallpaperPropertyListener` as a global object outside of any events, otherwise it might miss some important property update events when the wallpaper is loaded.
 :::
