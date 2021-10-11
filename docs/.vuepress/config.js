@@ -92,6 +92,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			collapsable: true,
 			children: [
 				locale + 'scene/userproperties/overview',
+				locale + 'scene/userproperties/checkbox',
 				locale + 'scene/userproperties/color',
 				locale + 'scene/userproperties/slider',
 				locale + 'scene/userproperties/combo',

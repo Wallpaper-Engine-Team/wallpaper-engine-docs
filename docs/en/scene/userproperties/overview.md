@@ -8,7 +8,7 @@ The following user property types are available in Wallpaper Engine. Click on an
 
 * [**Color**](/scene/userproperties/color) (`color`): A color picker
 * [**Slider**](/scene/userproperties/slider) (`slider`): A slider that allows users to select a number within a specified range
-* **Checkbox** (`bool`): A checkbox that is either off or on
+* [**Checkbox**](/scene/userproperties/checkbox) (`bool`): A checkbox that is either on or off
 * [**Combo**](/scene/userproperties/combo) (`combo`): A dropdown selector where each element has a text and a hidden value
 * **Text** (`textinput`): A text input field
 
