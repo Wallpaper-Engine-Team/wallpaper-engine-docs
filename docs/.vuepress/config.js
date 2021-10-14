@@ -180,6 +180,8 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			collapsable: true,
 			children: [
 				locale + 'scene/scenescript/introduction',
+				locale + 'scene/scenescript/tutorials',
+				locale + 'scene/scenescript/reference',
 			]
 		},
 		{
