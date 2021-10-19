@@ -1,3 +1,7 @@
+---
+prev: ../../reference.md
+---
+
 # SceneScript Class ICursorEvent
 
 Provides information about the cursor position during [cursor events](/scene/scenescript/reference/event/cursor).

@@ -70,7 +70,9 @@ You can use this to check whether the script is currently running inside the edi
 
 ### registerAudioBuffers(resolution: Number): IAudioBuffers
 
-Call this from the global scope of a script to register your script with the audio responsive system in Wallpaper Engine and get access to the audio spectrum. The resolution is the number of samples per buffer. It must be 16, 32 or 64.
+Registers your script with the audio responsive system in Wallpaper Engine and get access to the current audio volume levels of the user. The `resolution` parameter is required and defines in how many parts the audio spectrum is subdivided. To conserve memory and performance, you should always stick to the lowest number that you actually need.
+
+Valid values for the `resolution` parameter are `16`, `32` and `64`. Returns an [IAudioBuffers](/scene/scenescript/reference/class/IAudioBuffers) object that you can store to retrieve the audio volume levels in each rendered frame.
 
 ### registerAsset(file: String): IAssetHandle
 

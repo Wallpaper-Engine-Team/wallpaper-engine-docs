@@ -28,9 +28,39 @@
 | [cursorUp](/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor is being released over an object.  |
 | [cursorClick](/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor has been pressed and released on the same object. |
 
-
-
-
 ## Classes
 
+| Class                | Description   |
+|----------------------|---------------|
+| [AnimationEvent](/scene/scenescript/reference/class/AnimationEvent) | This object describes an animation event that has been fired from a timeline or puppet warp animation. |
+| [CameraTransforms](/scene/scenescript/reference/class/CameraTransforms) | Objects of this class describe the camera orientation and position. |
+| [IAnimation](/scene/scenescript/reference/class/IAnimation) | This class represents a timeline property animation. |
+| [IAnimationLayer](/scene/scenescript/reference/class/IAnimationLayer) | This class represents a puppet warp animation layer. |
+| [IAudioBuffers](/scene/scenescript/reference/class/IAudioBuffers) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
+| [IConsole](/scene/scenescript/reference/class/IConsole) | You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log. |
+| [ICursorEvent](/scene/scenescript/reference/class/ICursorEvent) | Provides information about the cursor position during cursor events. |
+| [IEffect](/scene/scenescript/reference/class/IEffect) | Provides access to image effects used on image layers. |
+| [IEngine](/scene/scenescript/reference/class/IEngine) | Provides general information about the user device and the running wallpaper. |
+| [IImageLayer](/scene/scenescript/reference/class/IImageLayer) | This class provides access to functions specific to image layers.
+ |
+| [IInput](/scene/scenescript/reference/class/IInput) | Provides access to input related data, mainly the mouse cursor. |
+| [ILayer](/scene/scenescript/reference/class/ILayer) | Provides access to data related to a layer. |
+| [IMaterial](/scene/scenescript/reference/class/IMaterial) | Provides access to dynamic properties of materials / shader properties. |
+| [IParticleSystem](/scene/scenescript/reference/class/IParticleSystem) | Provides access to particle systems and lets you modify their playback state. |
+| [IParticleSystemInstance](/scene/scenescript/reference/class/IParticleSystemInstance) | Provides access to instance modifiers for particle systems. You can use this to adjust details of a particle system dynamically. |
+| [IScene](/scene/scenescript/reference/class/IScene) | Provides access to properties of the currently loaded scene. |
+| [ISoundLayer](/scene/scenescript/reference/class/ISoundLayer) | Provides access functions specific to sound layers. |
+| [ITextureAnimation](/scene/scenescript/reference/class/ITextureAnimation) | This class represents a texture animation. |
+| [IVideoTexture](/scene/scenescript/reference/class/IVideoTexture) | This class represents a video texture animation. |
+| [Mat4](/scene/scenescript/reference/class/Mat4) | Utility class used for creating a 4 dimensional identity matrix. |
+| [Shared](/scene/scenescript/reference/class/Shared) | Related to the global object `shared` which you may use to share data between multiple scripts. |
+| [Vec2](/scene/scenescript/reference/class/Vec2) | Utility class which holds a 2 dimensional value pair: `x` and `y`. |
+| [Vec3](/scene/scenescript/reference/class/Vec3) | Utility class which holds a 3 dimensional value pair: `x`, `y` and `z`. |
+
 ## Modules
+
+| Module                | Description   |
+|----------------------|---------------|
+| [WEColor](/scene/scenescript/reference/module/WEColor) | Module which provides utility functions related to color manipulation. |
+| [WEMath](/scene/scenescript/reference/module/WEMath) | Module which provides utility functions related to general mathematical functions. |
+| [WEVector](/scene/scenescript/reference/module/WEVector) | Module which provides utility functions related to working with vectors. |

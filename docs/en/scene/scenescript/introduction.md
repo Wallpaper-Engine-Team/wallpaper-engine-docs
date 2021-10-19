@@ -2,7 +2,7 @@
 
 Wallpaper Engine features a custom scripting language called *SceneScript*. SceneScript is based on ECMAScript specification - this makes it very similar to JavaScript. If you have programmed with JavaScript or a similar language before, you should feel right at home. The main difference between SceneScript and JavaScript is that all web-related functionalities are missing and have been replaced by wallpaper-related features.
 
-The SceneScript documentation will not teach you the basics of programming in detail. However, SceneScript is still a great way to get started with programming and everything you program in SceneScript carries over well into other programming languages. If you are ever unsure how to achieve certain things, try researching the web for JavaScript tutorials, as the core of SceneScript and JavaScript are exactly the same.
+The SceneScript documentation will not teach you the basics of programming in detail. However, SceneScript is still a great way to get started with programming - learning SceneScript carries over well into other programming languages that you might use outside of Wallpaper Engine. If you are ever unsure how to achieve certain things, try researching the web for JavaScript tutorials, as the core of SceneScript and JavaScript are exactly the same.
 
 Keep in mind that SceneScript is all about the freedom to create unique and custom wallpapers. The tutorials we offer here are just examples to help you get started, the possibilities that SceneScript offers are practically endless.
 

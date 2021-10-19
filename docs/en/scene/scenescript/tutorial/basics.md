@@ -14,7 +14,7 @@ The following guide is rather lengthy because we try to go step-by-step for a sl
 We invite beginners to just work alongside this guide and experiment around a little. Be sure to watch the videos we provide under each section if you get lost.
 :::
 
-## How to add a Script
+## How to add SceneScript
 
 When selecting any element in the editor, you will find its properties on the right-hand side. Notice how all properties have a cogwheel icon next to them, as highlighted by the red arrows in the following screenshot:
 

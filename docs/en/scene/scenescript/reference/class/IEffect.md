@@ -4,6 +4,8 @@ prev: ../../reference.md
 
 # SceneScript Class IEffect
 
+Class that provides access to image effects used on image layers.
+
 ## Properties
 
 ### visible: Boolean
