@@ -50,6 +50,7 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 | [IConsole](/scene/scenescript/reference/class/IConsole) | You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log. |
 | [ICursorEvent](/scene/scenescript/reference/class/ICursorEvent) | Provides information about the cursor position during cursor events. |
 | [IEffect](/scene/scenescript/reference/class/IEffect) | Provides access to image effects used on image layers. |
+| [IEffectLayer](/scene/scenescript/reference/class/IEffectLayer) | Base class for image and text layers. |
 | [IEngine](/scene/scenescript/reference/class/IEngine) | Provides general information about the user device and the running wallpaper. |
 | [IImageLayer](/scene/scenescript/reference/class/IImageLayer) | This class provides access to functions specific to image layers.
  |
