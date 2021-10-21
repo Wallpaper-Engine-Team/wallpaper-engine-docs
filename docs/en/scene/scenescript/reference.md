@@ -1,10 +1,12 @@
 # SceneScript Reference
 
-SceneScript is follows the ECMAScript 2018 specification, so you can utilize all functionalities from ECMAScript that you would also find in similar languages such as *JavaScript*. This page covers all additions that SceneScript adds to make working with wallpapers possible.
+SceneScript is follows the ECMAScript 2018 specification, so you can utilize all functionalities from ECMAScript that you would also find in similar languages such as *JavaScript*. This is very useful as you can make use of various helpful classes. For example, `Date` allows you to access the current date and time, `Math` allows you to access various mathematical utility functions.
+
+This page only covers all additions that SceneScript adds to make working with wallpapers possible.
 
 ## Globals
 
-
+SceneScript introduces a handful of globals which you can access at any point in your code.
 
 | Global        | Description   |
 |---------------|---------------|
@@ -17,6 +19,8 @@ SceneScript is follows the ECMAScript 2018 specification, so you can utilize all
 | [shared](/scene/scenescript/reference/class/Shared) | Empty by default, allows you to share data between multiple scripts. `Shared` class. |
 
 ## Events
+
+SceneScript uses an event system that allows you to run specific code whenever certain events take place. Most notably, the `update` event is most commonly used to execute SceneScript code at every frame that Wallpaper Engine calculates. The `init` event is good for running code once when the wallpaper is first loaded and the `applyUserProperties` event allows you to react to changes to user properties of your wallpaper. Additionally, there are a handful of `cursor` events which related to mouse movement and mouse input which you can incorporate into your wallpaper.
 
 | Event                | Description   |
 |----------------------|---------------|
@@ -33,6 +37,8 @@ SceneScript is follows the ECMAScript 2018 specification, so you can utilize all
 | [cursorClick](/scene/scenescript/reference/event/cursor) | This event function will be called when the cursor has been pressed and released on the same object. |
 
 ## Classes
+
+All components of Wallpaper Engine are provided with a fitting class so that you can access everything programmatically. The following list contains all relevant classes introduced by SceneScript:
 
 | Class                | Description   |
 |----------------------|---------------|
@@ -62,6 +68,8 @@ SceneScript is follows the ECMAScript 2018 specification, so you can utilize all
 | [Vec3](/scene/scenescript/reference/class/Vec3) | Utility class which holds a 3 dimensional value pair: `x`, `y` and `z`. |
 
 ## Modules
+
+Wallpaper Engine also provides some modules which can be used to access certain utility functions. These can be helpful to easily implement certain use-cases.
 
 | Module                | Description   |
 |----------------------|---------------|

@@ -1,7 +1,6 @@
 <template>
   <main class="page">
     <slot name="top" />
-
     <Content class="theme-default-content" />
     <PageEdit />
 

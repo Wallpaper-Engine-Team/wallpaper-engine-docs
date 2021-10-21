@@ -2,9 +2,11 @@
 prev: ../tutorials.md
 ---
 
-## The Basics of SceneScript
+# The Basics of SceneScript
 
 Almost every property of all Wallpaper Engine assets and effects can be controlled with SceneScript. In this introductory guide, we will showcase some basic capabilities of SceneScript to give you an idea of how to get started with SceneScript.
+
+[[toc]]
 
 We will be using a simple **Text Layer** in this guide. If you would like to follow along, simply add a **Text Layer** asset to your wallpaper.
 
@@ -20,7 +22,11 @@ When selecting any element in the editor, you will find its properties on the ri
 
 ![SceneScript in the User Interface](/img/scenescript/scenescript_ui.png)
 
-Whenever you see the cogwheel icon next to a property, it means you can bind SceneScript code to it by clicking on the icon and selecting **Bind SceneScript**. In our example, we will do this for the **Text** property of our **Text Layer**. This will present you with the SceneScript editor with the following auto-generated code snippet:
+Whenever you see the cogwheel icon next to a property, it means you can bind SceneScript code to it by clicking on the icon and selecting **Bind SceneScript**. In our example, we will do this for the **Text** property of our **Text Layer**. 
+
+## The SceneScript update() Function
+
+After clicking on **Bind SceneScript**, you will be presented with the SceneScript editor and the following auto-generated code snippet:
 
 ```js
 'use strict';
@@ -35,11 +41,16 @@ export function update(value) {
 }
 ```
 
-The `update` function is the core of most SceneScript activity. It is executed every time Wallpaper Engine renders a new frame for your wallpaper. This means, for example, that if a user has configured an FPS limit of 30, the function is executed 30 times per second.
+The `update` function that you can see is the core of most SceneScript activity. It is executed every time Wallpaper Engine renders a new frame for your wallpaper. This means, for example, that if a user has configured an FPS limit of 30, the function is executed 30 times per second. In the code snippet above, you can see that essentially nothing happens: `value` is passed to the function and it is returned without modifying it.
 
-As you can see, the function has one parameter named `value`. Wallpaper Engine will always supply the current value of the property in this parameter. The type of `value` depends on the property, in this case, it is a `String` since we are working on the **Text** property.
+The `update` function can be separated into three parts:
 
-In the code snippet above, you can see that essentially nothing happens: `value` is passed to the function and it is returned without modifying it.
+1. You get the current value of the user property in the parameter named `value`.
+2. You run your code and potentially modify `value` with your custom logic.
+3. The new `value` is returned.
+
+The type of `value` depends on the property, in this case, it is a `String` since we are working on the **Text** property.
+
 
 ### Modifying a Value with SceneScript
 
@@ -224,7 +235,7 @@ Usually it suffices to debug the behavior of your SceneScript code in the editor
 `C:\Program Files (x86)\Steam\steamapps\common\wallpaper_engine\log.txt`
 :::
 
-### More About SceneScript
+## More About SceneScript
 
 If you have worked your way through this page, you should have a good understanding of the fundamentals of SceneScript. Be sure to take a look at the [SceneScript Reference](/scene/scenescript/reference) to get an overview of all classes, globals, events and modules that SceneScript offers.
 
