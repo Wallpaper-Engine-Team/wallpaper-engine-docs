@@ -20,7 +20,7 @@ The size of the wallpaper project defined in the editor. Only for 2D scenes.
 
 ### userProperties: Object
 
-Access to the user properties currently selected by the user. Color properties are converted to Vec3 automatically.
+Access to the user properties and the values currently selected by the user. Color properties are converted to Vec3 automatically.
 
 ### timeOfDay: Number
 
@@ -28,7 +28,7 @@ The time of day in the range [0, 1] representing the 24h clock.
 
 ### frametime: Number
 
-Time it took to update the last frame.
+Time it took to update the last frame. This property is useful as it allows you to create create animations with a normalized speed. If create any sort of animation with SceneScript, it will have a different speed for users with a different FPS limit unless you first normalize it with `engine.frametime`.
 
 ### runtime: Number
 

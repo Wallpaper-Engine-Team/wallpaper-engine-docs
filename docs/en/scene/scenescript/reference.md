@@ -1,6 +1,10 @@
 # SceneScript Reference
 
+SceneScript is follows the ECMAScript 2018 specification, so you can utilize all functionalities from ECMAScript that you would also find in similar languages such as *JavaScript*. This page covers all additions that SceneScript adds to make working with wallpapers possible.
+
 ## Globals
+
+
 
 | Global        | Description   |
 |---------------|---------------|
