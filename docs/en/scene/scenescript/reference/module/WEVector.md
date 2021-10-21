@@ -14,7 +14,7 @@ import * as WEVector from 'WEVector';
 
 ### angleVector2(angle: Number): Vec2
 
-## Creates a 2D directional vector from an angle in degrees.
+Creates a 2D directional vector from an angle in degrees.
 
 ### vectorAngle2(direction: Vec2): Number
 

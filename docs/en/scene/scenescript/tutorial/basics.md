@@ -84,7 +84,7 @@ You can see these steps in the following video:
 
 ## Dynamic SceneScript Content
 
-The previous example we showed is a little basic and using SceneScript for a static text change does not really make sense. Let's introduce some dynamic text content.
+The previous example we showed is a little basic and using SceneScript for a static text change does not really make sense since we could just set the value directly in the editor. Let's introduce some dynamic text content.
 
 As explained initially, SceneScript is based on *ECMAScript* like many other languages, notably *JavaScript*. This means, we can access the current computer date and time through the `Date` class. This allows us to change the text of the text layer dynamically and, for example, build a working clock just like you could in JavaScript.
 
@@ -188,7 +188,7 @@ export function update(value) {
 	return value;
 }
 ```
-If you have not used sine waves since high school (which is not unlikely), this might seem terribly confusing. But essentially this means that our `y` value will now *smoothly* move up and down from 400 to 600.
+This might seem confusing at first glance, but essentially this means that our `y` value will now *smoothly* move up and down from 400 to 600, since `Math.sin(engine.runtime) * 100` will continuously create values from **-100** to **+100**.
 
 Check out the following video to see this section and its result in action:
 

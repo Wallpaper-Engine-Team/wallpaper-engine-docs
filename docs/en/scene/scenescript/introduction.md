@@ -8,7 +8,7 @@ Keep in mind that SceneScript is all about the freedom to create unique and cust
 
 ## What can SceneScript do in Wallpaper Engine?
 
-SceneScript allows you to program specific behavior for individual properties of your wallpaper components. This allows you to create dynamic behavior of your wallpaper and also gives you the ability to process various system resources: audio playback, the current time of day, mouse clicks and more. In some cases, it might be easier to use [Timeline Animations](/scene/timeline/introduction) instead, especially for simple animations / movements of objects that repeat infinitely.
+SceneScript allows you to program specific behavior for individual properties of your wallpaper components. This allows you to create dynamic behavior of your wallpaper, including audio visualizers, interacting with the current time of day, mouse clicks and more. In some cases, it might be easier to use [Timeline Animations](/scene/timeline/introduction) instead, especially for simple animations / movements of objects that repeat infinitely.
 
 ## Getting Started with SceneScript
 

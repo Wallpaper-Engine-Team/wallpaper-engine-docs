@@ -35,7 +35,7 @@ Time it took to update the last frame. This property is useful as it allows you 
 Total time in seconds that the wallpaper has been running.
 
 ::: danger Please Note
-The runtime has a rollover to retain floating point precision. That means you should not use this value to set up a timer or event for the future, instead you should for example use `frametime` to decrease your time value until it hits 0. 
+The runtime has a rollover to retain floating point precision. If you want to create a timer, consider using `setTimeout();` instead.
 :::
 
 ## Functions
@@ -76,7 +76,7 @@ Valid values for the `resolution` parameter are `16`, `32` and `64`. Returns an 
 
 ### registerAsset(file: String): IAssetHandle
 
-Use this to mark an asset as being used by your wallpaper even when it's currently not used on any layer. This is important for releasing a wallpaper to the Workshop, only used or marked assets will be included in the scene archive that is generated.
+If you create any layers dynamically with SceneScript, use function this to mark an asset as being used by your wallpaper. This is important for releasing a wallpaper to the Workshop, as only used or marked assets will be included in the scene archive that is generated.
 
 ### setTimeout(callback: Function, delay?: Number): Function
 

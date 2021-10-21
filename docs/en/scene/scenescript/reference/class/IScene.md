@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class IScene
 
-Ỳou can access this interface through the global object `thisScene` anywhere in your SceneScript code to access properties and functions related to the currently loaded scene.
+You can access this interface through the global object `thisScene` anywhere in your SceneScript code to access properties and functions related to the currently loaded scene.
 
 [[toc]]
 
