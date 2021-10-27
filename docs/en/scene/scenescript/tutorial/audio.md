@@ -4,7 +4,7 @@ prev: ../tutorials.md
 
 # Processing Audio Data with SceneScript
 
-With SceneScript, you can access the audio levels on the current end-user device. Wallpaper Engine collects the audio levels of certain audio frequencies and makes them available to you for further processing. In this tutorial, we will explain the basics of retrieving these audio levels and we will implement an example where we change the size of an element in the editor with the beat of music that is being played of the end user system.
+With SceneScript, you can access the audio levels on the current end-user device. Wallpaper Engine collects the audio levels of certain audio frequencies and makes them available to you for further processing. In this tutorial, we will explain the basics of retrieving these audio levels and we will implement an example where we change the size of an element in the editor to follow the beat of music that a user is playing.
 
 ::: tip
 You can quickly access the finalized solution presented at the bottom of this page in the editor without having to copy-paste any code from this page.
@@ -19,7 +19,7 @@ To get started, you first need to initialize the audio responsive system from Wa
 ```js{3}
 'use strict';
 
-const AUDIO_BUFFER = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
+const audioBuffer = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
 
 /**
  * @param {Vec3} value - for property 'scale'
@@ -37,29 +37,29 @@ The parameter of `registerAudioBuffers` determines the number of frequency bands
 * `engine.AUDIO_RESOLUTION_32` - 32 frequencies
 * `engine.AUDIO_RESOLUTION_64` - 64 frequencies
 
-In our example, we registered 16 frequencies.
+In our example, we registered 16 frequencies since we only care about the bass frequencies as part of this tutorial, so a more finely-divided audio band is unnecessary.
 
 ## Basic Audio Responsive Example
 
 Let's start with a very basic audio responsive example. We have an image layer that we placed in the center of our scene and we want to make it resize dynamically with the beat of music. To achieve this, we click on the cogwheel icon next to the **Scale** property and select **Bind SceneScript**. We can now modify the **Scale** with SceneScript.
 
-We now need to extend the example above by retrieving some audio volume levels from the `AUDIO_BUFFER` that we created. The audio buffer object allows us to access `AUDIO_BUFFER.average` to retrieve the average audio levels of the left and right audio channel. You can also only retrieve the left audio channel by accessing `AUDIO_BUFFER.left` and the right audio channel by accessing `AUDIO_BUFFER.right`.
+We now need to extend the example above by retrieving some audio volume levels from the `audioBuffer` that we created. The audio buffer object allows us to access `audioBuffer.average` to retrieve the average audio levels of the left and right audio channel. You can also only retrieve the left audio channel by accessing `audioBuffer.left` and the right audio channel by accessing `audioBuffer.right`.
 
-In the final step, we need to choose which audio frequency we want to access. In Wallpaper Engine, you most commonly want to work with low frequencies that represent the bass and the beat of music. That means, you can access the bass frequencies by accessing the first element via `AUDIO_BUFFER.average[0]`. In our case, `[0]` represents the low bass frequencies, while `15` represents high treble frequencies. We go with `[0]` because we want our element to resize along the beat of our music.
+In the final step, we need to choose which audio frequency we want to access. In Wallpaper Engine, you most commonly want to work with low frequencies that represent the bass and the beat of music. That means, you can access the bass frequencies by accessing the first element via `audioBuffer.average[0]`. In our case, `[0]` represents the low bass frequencies, while `15` represents high treble frequencies. We go with `[0]` because we want our element to resize along the beat of our music.
 
 ```js
 'use strict';
 
-const AUDIO_BUFFER = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
+const audioBuffer = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
 
 /**
  * @param {Vec3} value - for property 'scale'
  * @return {Vec3} - update current property value
  */
 export function update(value) {
-	value.x = AUDIO_BUFFER.average[0];
-	value.y = AUDIO_BUFFER.average[0];
-	value.z = AUDIO_BUFFER.average[0];
+	value.x = audioBuffer.average[0];
+	value.y = audioBuffer.average[0];
+	value.z = audioBuffer.average[0];
 
 	return value;
 }
@@ -93,7 +93,7 @@ First, set the **Scale** property to a desired value in the editor. In our examp
 After that, we extend our SceneScript code further by introducing the `init` function. The `init` function is called once when the wallpaper is loaded and allows us to store the default value of `Scale` that you configured in the editor in a variable. We then use this default value to add the audio volume on top:
 
 ```js
-	value.x = defaultScale.x + AUDIO_BUFFER.average[0];
+	value.x = defaultScale.x + audioBuffer.average[0];
 ```
 
 If no audio is playing, the scale will now be the same as your default value and everything louder than that will have the audio volume additionally on top of that. The full script looks like this now, notice how we store the default value in the variable `defaultScale` in the `init` function:
@@ -101,7 +101,7 @@ If no audio is playing, the scale will now be the same as your default value and
 ```js
 'use strict';
 
-const AUDIO_BUFFER = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
+const audioBuffer = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
 let defaultScale;
 
 /**
@@ -109,9 +109,9 @@ let defaultScale;
  * @return {Vec3} - update current property value
  */
 export function update(value) {
-	value.x = defaultScale.x + AUDIO_BUFFER.average[0];
-	value.y = defaultScale.y + AUDIO_BUFFER.average[0];
-	value.z = defaultScale.z + AUDIO_BUFFER.average[0];
+	value.x = defaultScale.x + audioBuffer.average[0];
+	value.y = defaultScale.y + audioBuffer.average[0];
+	value.z = defaultScale.z + audioBuffer.average[0];
 
 	return value;
 }
@@ -132,13 +132,15 @@ You can quickly add the `init` function in the SceneScript editor by clicking on
 
 ## Restricting the Maximum Audio Response
 
-At this point, the animation will have a minimum size but it may still reach very large levels. It's important to note that the audio buffers normally do not reach values greater than `1.00`, however, in some cases this may happen. For this reason, we recommend always limiting the values you are working with. You can conveniently do this with the `Math.max()` function which easily allows you to limit a number to exceed a specific value. In our case, we extend our code by wrapping `AUDIO_BUFFER.average[0]` in `Math.max()` with a maximum value of `1.00`:
+At this point, the animation will have a minimum size but it may still reach very large levels. It's important to note that the audio buffers normally do not reach values greater than `1.00`, however, in some cases this may happen. For this reason, we recommend always limiting the values you are working with. You can conveniently do this with the `Math.min()` function which easily allows you to limit a number to exceed a specific value. In our case, we extend our code by wrapping `audioBuffer.average[0]` in `Math.min()` with a maximum value of `1.00`:
 
 ```js
-	value.x = defaultScale.x + Math.max(AUDIO_BUFFER.average[0], 1.00);
-	value.y = defaultScale.y + Math.max(AUDIO_BUFFER.average[0], 1.00);
-	value.z = defaultScale.z + Math.max(AUDIO_BUFFER.average[0], 1.00);
+	value.x = defaultScale.x + Math.min(audioBuffer.average[0], 1.00);
+	value.y = defaultScale.y + Math.min(audioBuffer.average[0], 1.00);
+	value.z = defaultScale.z + Math.min(audioBuffer.average[0], 1.00);
 ```
+
+If you do more complex processing with the audio data, you should first work with the unrestricted original audio data and only at the last step limit its value. Take how we do it in the next section of this page, where we only apply `Math.min()` at the last step of our processing.
 
 ## Smoothing the Audio Response
 
@@ -166,7 +168,7 @@ The final code now looks as follows:
 ```js{4,7,15,18,21}
 'use strict';
 
-const AUDIO_BUFFER = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
+const audioBuffer = engine.registerAudioBuffers(engine.AUDIO_RESOLUTION_16);
 const SMOOTHING_RATE = 15;
 
 let defaultScale;
@@ -178,7 +180,7 @@ let smoothAudioVolume = 0;
  */
  export function update(value) {
 	// Calculate difference in audio volume between last frame and now
-	let volumeDifference = AUDIO_BUFFER.average[0] - smoothAudioVolume;
+	let volumeDifference = audioBuffer.average[0] - smoothAudioVolume;
 
 	// Add difference between previous and current frame, include frametime to account for FPS
 	smoothAudioVolume += volumeDifference * SMOOTHING_RATE * engine.frametime;

@@ -9,5 +9,6 @@ If you have never worked with SceneScript before, we recommend that you check ou
 | Tutorial                | Description   |
 |----------------------|---------------|
 | [Modifying Colors with SceneScript](/scene/scenescript/tutorial/colors) | Learn how to modify colors with SceneScript. |
+| [Processing Audio Data with SceneScript](/scene/scenescript/tutorial/audio) | Learn how to process audio data with SceneScript. |
 
 **More tutorials coming soon, we are currently finalizing this section!**
