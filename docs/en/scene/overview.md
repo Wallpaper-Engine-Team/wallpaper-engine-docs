@@ -16,6 +16,4 @@ And if you're a game developer or aspire to be one, you can even take a look at 
 
 ## Video Support
 
-If you have an .mp4 video file that you would like to share with others, you can simply drag and drop it into the **Create Wallpaper** button in the editor. Since the publishing process is the same for all wallpaper types, you can [read the guide on publishing](/scene/first/publishing) for more information on how to share your wallpaper with others. 
-
-Keep in mind that editing video files is not possible with Wallpaper Engine, it's only possible to use them as-is as the underlying technologies are not compatible with each other.
+If you have an .mp4 video file that you would like to share with others, you can simply drag and drop it into the **Create Wallpaper** button in the editor. Since the publishing process is the same for all wallpaper types, you can [read the guide on publishing](/scene/first/publishing) for more information on how to share your wallpaper with others.

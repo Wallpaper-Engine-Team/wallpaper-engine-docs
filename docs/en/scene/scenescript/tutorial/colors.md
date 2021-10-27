@@ -1,3 +1,7 @@
+---
+prev: ../tutorials.md
+---
+
 # Modifying Colors with SceneScript
 
 In this guide, we explain how you can use SceneScript to modify the colors of an object. We also explain how to utilize the `WEColor` module to easily shift through colors instead of having to manually deal with **RGB** values. As always, this is just an example implementation, you can modify the colors in much more complex ways and create your own custom behavior.
