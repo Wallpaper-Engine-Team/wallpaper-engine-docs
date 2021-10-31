@@ -157,7 +157,8 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			collapsable: true,
 			children: [
 				locale + 'scene/parallax/introduction',
-				locale + 'scene/parallax/oversized'
+				locale + 'scene/parallax/oversized',
+				locale + 'scene/parallax/depthparallax'
 			]
 		},
 		{
