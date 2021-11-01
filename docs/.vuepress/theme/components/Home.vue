@@ -5,11 +5,7 @@
   >
     <header class="hero">
       <div class="hero-holder">
-        <img :src="$withBase('/img/wpe_logo_cog.png')" class="cogwheel">
-        <img
-          :src="$withBase('/img/wpe_logo_screen.png')"
-          alt="Wallpaper Engine"
-        >
+        <img :src="$withBase('/img/Wallpaper_Engine_Logo_Animated.gif')" class="cogwheel">
       </div>
 
       <h1
@@ -128,12 +124,6 @@ export default {
       width: 320px
       display block
       margin 3rem auto 1.5rem
-    .cogwheel
-      animation: wpAnimSpin 4s linear infinite
-      position: absolute
-      width: 173px
-      left: 75px
-      bottom: 45px
     h1
       font-size 3rem
     h1, .description, .action

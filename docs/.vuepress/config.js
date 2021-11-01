@@ -10,7 +10,7 @@ module.exports = {
 		},
 	},
 	themeConfig: {
-		logo: '/img/wallpaperenginelogo.png',
+		logo: '/img/wallpaper_engine_logo_small.png',
 		nextLinks: true,
 		prevLinks: true,
 		locales: {
