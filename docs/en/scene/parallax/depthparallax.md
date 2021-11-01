@@ -9,9 +9,9 @@ The **Depth Parallax** effect in Wallpaper Engine allows you to create a perceiv
 
 ## Installing the Depth Map Generator DLC
 
-In order to make the most out of the Depth Parallax effect, you must first install the free Depth Parallax DLC. This is necessary to generate a high-quality *depth map* that this effect uses. Wallpaper Engine will ask you to install the DLC if you are trying to use it in the editor for the first time. Alternatively, you can also directly install it through the Steam website:
+In order to make the most out of the Depth Parallax effect, you must first install the free Editor Extensions DLC. This is necessary to generate a high-quality *depth map* that this effect uses. Wallpaper Engine will ask you to install the DLC if you are trying to use it in the editor for the first time. Alternatively, you can also directly install it through the Steam website:
 
-* [Free Depth Parallax DLC](https://store.steampowered.com/app/1790230/)
+* [Free Editor Extensions DLC](https://store.steampowered.com/app/1790230/)
 
 The DLC downloads a complex **neural network** which handles the generation of the depth map. **The neural network requires multiple gigabytes of disk space**, which is why we decided to make this feature an optional DLC to keep the base size of Wallpaper Engine as small as possible.
 
@@ -34,7 +34,7 @@ You can see the full process up until here in the following video:
 
 Once you have configured the general parallax settings for your wallpaper, select your image layer and click on the **Add** button on the right-hand side in the **Effects** list. Navigate to the **Depth Parallax** effect and apply it to your layer.
 
-After you have added the effect, it will be non-functional until you generate a **depth map**. You will need to install the **Free Depth Parallax DLC** for this, Wallpaper Engine will ask you to install the DLC if it is not installed. Alternatively, you can also import a custom depth map that you generated outside of Wallpaper Engine. Click on the **Generate** button to open the *depth map generator*.
+After you have added the effect, it will be non-functional until you generate a **depth map**. You will need to install the **Free Editor Extensions DLC** for this, Wallpaper Engine will ask you to install the DLC if it is not installed. Alternatively, you can also import a custom depth map that you generated outside of Wallpaper Engine. Click on the **Generate** button to open the *depth map generator*.
 
 The depth map generator will analyze the depth of the image and will generate a depth map which essentially describes how far away individual parts of your image are, this can then be used to create a 3D perspective out of your 2D image. Depending on the resolution of your image and the performance of your computer, generating the depth map can take a few minutes since the underlying process is rather complex.
 
