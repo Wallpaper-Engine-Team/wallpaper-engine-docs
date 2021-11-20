@@ -2,10 +2,10 @@
 
 [[toc]]
 
-Custom shaders in Wallpaper Engine need to run on DirectX 11 (HLSL 4.0) and OpenGL (ES 3.0) to support Windows and mobile platforms. Your custom shader code will automatically be modified a bit before hitting the compiler to facilitate this, but some advanced functions may not be converted and will completely fail on one platform. Since wallpapers are created on the PC and then converted to mobile platforms from there, you will immediately see DirectX 11 shader compile issues and be able to address them easily, but compilation issues occurring only on OpenGL ES cannot be seen until the wallpaper is being run on a mobile platform. So this article will focus on guidelines on how to write code compatible with the mobile version of Wallpaper Engine.
+Custom shaders in Wallpaper Engine need to run on DirectX 11 (HLSL 4.0) and OpenGL ES (GLSL 3.00 ES) to support Windows and mobile platforms. Your custom shader code will automatically be modified a bit before hitting the compiler to facilitate this, but some advanced functions may not be converted and will completely fail on one platform. Since wallpapers are created on the PC and then converted to mobile platforms from there, you will immediately see DirectX 11 shader compile issues and be able to address them easily, but compilation issues occurring only on OpenGL ES cannot be seen until the wallpaper is being run on a mobile platform. So this article will focus on guidelines on how to write code compatible with the mobile version of Wallpaper Engine.
 
 ::: tip
-If a shader cannot be compiled on the mobile version of Wallpaper Engine, the effect it is used on will be removed automatically and the wallpaper will continue to work without it.
+If a shader cannot be compiled on the mobile version of Wallpaper Engine, the effect that is using it will be removed automatically and the wallpaper will continue to work without it.
 :::
 
 ## Language Compatibility
@@ -63,13 +63,13 @@ Since DirectX 11 allows for implicit casts between types, a lot of existing shad
 
 This means on the other hand that you cannot use native integers in your code. If you really need to use integers and you will take care to avoid implicit conversions for GLSL compatibility, you can add the following macro to the top of your file and Wallpaper Engine will not perform this conversion on your shader:
 
-**#define WEMOBILE_DISABLE_INTEGER_CONVERSION 1**
+**#define WEMOBILE_DISABLE_INTEGER_CONVERSION**
 
 Integers are often not required where you would use them in other languages, like loops, and you can just use floats to make your code easily cross-compatible and avoid forgetting about explicit type conversions.
 
 ## Shader Variables
 
-The keywords **attribute**, **varying** and **uniform** are used for their respective purposes. In DirectX 11 these variables are converted into buffers internally while in OpenGL ES **in** and **out** will substitute them as required. //variables.md
+The keywords **attribute**, **varying** and **uniform** are used for their respective purposes. In DirectX 11 these variables are converted into buffers internally while in OpenGL ES **in** and **out** will substitute them as required. //shader/variables.md
 
 ## Environment Detection
 
@@ -85,7 +85,7 @@ You can write separate code for either platform by checking for the macros **HLS
 
 An Android phone is required to test whether your shader will compile for OpenGL ES / GLSL. While Wallpaper Engine supports OpenGL 3.2 on the desktop internally, it is almost completely useless to verify compatibility on Android phones, because available desktop OpenGL drivers are not nearly as strict and cannot be configured to operate under the same rules as OpenGL ES.
 
-If you have an Android phone and you notice that your custom effect does not work, you can extract the compilation error and code it produced. First enable the option **Write Errors to Log** in the general settings of the mobile app and then open your wallpaper at least once. Now return to the general settings and click on **Save Error Log** to export the error log and investigate the compilation error.
+If you have an Android phone and you notice that your custom effect does not work, you can extract the compilation error and final code it tried to compile. First enable the option **Write Errors to Log** in the general settings of the mobile app and then open your wallpaper at least once. Now return to the general settings and click on **Save Error Log** to export the error log and investigate the compilation error. Remember to turn off logging once you are done to avoid any penalties during load time due to long shader code being logged.
 
 ## Fixing Existing Wallpapers / Effects
 
