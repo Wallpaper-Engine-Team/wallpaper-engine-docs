@@ -63,10 +63,10 @@ These parameters exist for 8 samplers, 0 until 7, just replace the 0 in the midd
 ### Audio
 * **g_AudioSpectrum16Left[16]** (`float array`): Audio samples in positive range (not normalized). Left channel. From low frequencies at 0 to high frequencies until the end of the array.
 * **g_AudioSpectrum16Right[16]** (`float array`): Audio samples in positive range (not normalized). Right channel. From low frequencies at 0 to high frequencies until the end of the array.
-* **g_AudioSpectrum16Left[32]** (`float array`): Audio samples in positive range (not normalized). Left channel. From low frequencies at 0 to high frequencies until the end of the array.
-* **g_AudioSpectrum16Right[32]** (`float array`): Audio samples in positive range (not normalized). Right channel. From low frequencies at 0 to high frequencies until the end of the array.
-* **g_AudioSpectrum16Left[64]** (`float array`): Audio samples in positive range (not normalized). Left channel. From low frequencies at 0 to high frequencies until the end of the array.
-* **g_AudioSpectrum16Right[64]** (`float array`): Audio samples in positive range (not normalized). Right channel. From low frequencies at 0 to high frequencies until the end of the array.
+* **g_AudioSpectrum32Left[32]** (`float array`): Audio samples in positive range (not normalized). Left channel. From low frequencies at 0 to high frequencies until the end of the array.
+* **g_AudioSpectrum32Right[32]** (`float array`): Audio samples in positive range (not normalized). Right channel. From low frequencies at 0 to high frequencies until the end of the array.
+* **g_AudioSpectrum64Left[64]** (`float array`): Audio samples in positive range (not normalized). Left channel. From low frequencies at 0 to high frequencies until the end of the array.
+* **g_AudioSpectrum64Right[64]** (`float array`): Audio samples in positive range (not normalized). Right channel. From low frequencies at 0 to high frequencies until the end of the array.
 
 ### Light
 * **g_LightAmbientColor** (`vec3`): Constant lighting selected in editor for 3D scenes.
