@@ -1,4 +1,4 @@
-# Custom Shaders on Mobile Devices
+# Shaders on Mobile Devices
 
 [[toc]]
 

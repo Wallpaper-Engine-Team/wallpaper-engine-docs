@@ -193,6 +193,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/shader/syntax',
 				locale + 'scene/shader/variables',
 				locale + 'scene/shader/headers',
+				locale + 'scene/shader/mobile',
 				locale + 'scene/shader/tutorials/desaturation'
 			]
 		}
