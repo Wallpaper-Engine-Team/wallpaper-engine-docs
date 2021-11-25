@@ -41,7 +41,7 @@ If you need to convert between types, HLSL uses casting while GLSL requires usin
 |-|-|-|
 |**texSample2D()**|sampler.Sample()|texture()|
 |**texSample2DLod()**|sampler.SampleLevel()|textureLod()|
-|**mul(x, y)**|mul(x, y)|(y * x)|
+|**mul(x, y)**|mul(x, y)|((y) * (x))|
 |**frac()**|frac()|fract()|
 |**atan2()**|atan2()|atan()|
 |**mix()**|lerp()|mix()|
