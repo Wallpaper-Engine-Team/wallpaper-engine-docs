@@ -52,7 +52,7 @@ If you need to convert between types, HLSL uses casting while GLSL requires usin
 |**saturate(x)**|clamp(x, 0.0, 1.0)|saturate(x)|
 
 ::: warning
-If you notice anything you need that we are missing here, please get in touch with us //faq.contact.md instead of writing your own substitute intrinsic function or alias.
+If you notice anything you need that we are missing here, please get in touch with us [here](https://help.wallpaperengine.io/debug/contact.html) instead of writing your own substitute intrinsic function or alias.
 
 Should you write your own function, your shader may **stop working in the future** when we add an official alias to the list due to duplicate symbols.
 :::
@@ -89,6 +89,6 @@ If you have an Android phone and you notice that your custom effect does not wor
 
 ## Fixing Existing Wallpapers / Effects
 
-If you released a custom effect in the Workshop before and fixed it for mobile compatibility now, it will not be possible to integrate it into everyone's submitted wallpapers through Steam. You can contact us //faq.contact.md and we can add a fixed version of the effect to the program, then it can automatically identify your effect in existing wallpapers and replace it with the new code.
+If you released a custom effect in the Workshop before and fixed it for mobile compatibility now, it will not be possible to integrate it into everyone's submitted wallpapers through Steam. You can contact us [here](https://help.wallpaperengine.io/debug/contact.html) and we can add a fixed version of the effect to the program, then it can automatically identify your effect in existing wallpapers and replace it with the new code.
 
 This is only possible for effects that have been submitted to the Workshop before and in situations where you didn't radically alter the effect over time, since we will only ship one version and it will take precendence over any version packed into a wallpaper.
