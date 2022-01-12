@@ -28,4 +28,8 @@ Stop emission and clear all existing particles immediately.
 
 ### isPlaying(): Boolean
 
-Check if any particles are still being emitted or simulated. 
+Check if any particles are still being emitted or simulated.
+
+### emitParticles(count: Number?): void
+
+Emit the provided number of particles instantly, disregarding whether the system is stopped or paused.
