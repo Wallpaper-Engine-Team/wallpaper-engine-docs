@@ -26,10 +26,6 @@ Pause emission of new particles.
 
 Stop emission and clear all existing particles immediately.
 
-### emitParticles(count: Number?): void
-
-Emit x number of particles instantly, disregarding whether the system is stopped or paused.
-
 ### isPlaying(): Boolean
 
 Check if any particles are still being emitted or simulated.
