@@ -1,12 +1,12 @@
 # Time of Day Changes with SceneScript
 
-In this tutorial we will explain how SceneScript enables you to change your wallpaper image depending on the time of day. Our example is rather specific, but you can access the current time of day via SceneScript via [**engine.timeOfDay**](/en/scene/scenescript/reference/class/IEngine.html#timeofday-number) for your own ideas and custom logic of any type.
+In this tutorial we will explain how SceneScript enables you to change parts of your wallpaper depending on the current time of day. Our example is rather specific, but you can access the current time of day via SceneScript via [**engine.timeOfDay**](/en/scene/scenescript/reference/class/IEngine.html#timeofday-number) for your own ideas and custom logic of any type.
 
 Alternatively, you can also use the *ECMAScript* `Date` class to access the current hours, minutes seconds and more date-related data just like you would in other languages such as *JavaScript*.
 
 ## Change Background Image Depending on Time of Day
 
-In this section we will explore how to utilize the [Blend effect](/scene/effects/effect/blend.html) to change the entire background image depending on the current time of day. We strongly recommend that you utilize the *Blend* effect for this instead of using multiple image layers to reduce VRAM usage, especially when using effects on the image layer.
+We will explore how to utilize the [Blend effect](/scene/effects/effect/blend.html) to change the entire background image multiple times during a day depending on the current time. We strongly recommend that you utilize the *Blend* effect for this type of effect instead of using multiple image layers to reduce VRAM usage. This can significantly improve performance, especially when using effects on the image layer.
 
 <video width="100%" controls autoplay loop>
   <source src="/videos/timeofday.mp4" type="video/mp4">
@@ -25,24 +25,26 @@ Select the blend effect that you have added to your midnight layer. First, make 
 
 ### Number of Textures
 
-After configuring the blend mode, set the **Number of textures** option to each additional time of day you have in addition to your starting image. In our case, we have **three** additional images in addition to the base image which represents night-time, so we set the value to **3**:
+After configuring the blend mode, set the **Number of textures** option to each additional image you want to display throughout the day in addition to your starting image. In our case, we have **three** additional images in addition to the base image which represents night-time, so we set the value to **3**:
 
 1. Dawn
 2. Mid-day
 3. Dusk
 
-The quickest way to load the additional textures is by dragging and dropping them into the blend texture box. See the following video to see the steps until here:
+The quickest way to load the additional textures is by dragging and dropping them into the blend texture box. Make sure the images are in the correct order, from the beginning of the day until the end of the day.
+
+ See the following video to see the steps until here:
 
 <video width="75%" style="margin:0 auto;display:block;" controls autoplay loop>
   <source src="/videos/blend_textures.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-You should now see the last blend texture as your wallpaper texture, since the last blend texture is overlapping all other textures.
+You should now see the last blend texture as your wallpaper texture, since the last blend texture is overlapping all other textures right now.
 
 ### SceneScript Logic for Blend Amount
 
-This is where SceneScript comes in handy. We now need to alter the **Blend amount** options at the bottom of the *Blend effect* options using SceneScript, so that the textures starts appearing at a specific time of day. We can achieve this with SceneScript by starting all blend amounts at a value of 0, followed by smoothly increasing the value to 1 when a specific time of day has been reached.
+This is where SceneScript comes in handy. We now need to alter the **Blend amount** options at the bottom of the *Blend effect* properties list using SceneScript, so that each texture starts appearing at a specific time of day. We can achieve this with SceneScript by starting all blend amounts at a value of 0, followed by smoothly increasing the value to 1 when a specific time of day has been reached.
 
 Click on the cogwheel icon next to the first **Blend Amount** value and select **Bind Script**. Now replace the existing sample script with the following code snippet:
 
@@ -75,7 +77,11 @@ This snippet makes use of two Wallpaper Engine SceneScript features:
 * [**engine.timeOfDay**](/en/scene/scenescript/reference/class/IEngine.html#timeofday-number) which represents the current day with values from 0.00 - 1.00 instead of seconds, where 0.00 is 00:00:00 and 1.00 is 23:59:59.
 * [**WEMath.smoothStep()**](/en/scene/scenescript/reference/module/WEMath.html#smoothstep-min-number-max-number-value-number-number) is a function which smoothly calculates a value between two values which we use to smoothly blend over from one texture to the next.
 
-Add this script to all **Blend amount** values for each blend amount texture. Make sure to always reconfigure the `START_HOUR` and `END_HOUR` values so that they match with the previous and next blend amount. In our example, we have set the following values but you can tweak these values to fit your taste:
+Add this script to all **Blend amount** values for each blend amount texture. Make sure to always reconfigure the `START_HOUR` and `END_HOUR` values to control at what time of day each blend texture appears.
+
+Double-check that you are not leaving any gaps by accident, your values should cover the entire day without gaps. The only exception is around midnight, since the base image is visible by default at exactly midnight.
+
+In our example, we have set the following values but you should adjust them to your liking:
 
 **Blend amount:**
 ```js
@@ -95,6 +101,6 @@ const START_HOUR = 18;
 const END_HOUR = 22;
 ```
 
-If your day and night cycle contains a different amount of blend textures, you need to distribute hourly texture changes appropriately.
+If your day and night cycle contains a different number of blend textures, you need to distribute hourly texture changes appropriately.
 
 In our example, the night-time base texture is visible before 7:00 in the morning and becomes visible again at 22:00 in the evening after the last blend texture fades out again. You cannot configure the midnight texture, it will be visible whenever all blend textures are invisible.
