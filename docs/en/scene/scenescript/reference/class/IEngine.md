@@ -24,7 +24,7 @@ Access to the user properties and the values currently selected by the user. Col
 
 ### timeOfDay: Number
 
-The time of day in the range [0, 1] representing the 24h clock.
+The time of day in the range [0.00, 1.00] representing the 24h clock. This means that 00:00:00 is represented as 0.00 and 23:59:59 is represented by a value of 1.00.
 
 ### frametime: Number
 
