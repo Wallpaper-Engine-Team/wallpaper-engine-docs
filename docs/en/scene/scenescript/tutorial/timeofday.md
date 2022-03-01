@@ -55,20 +55,18 @@ import * as WEMath from 'WEMath';
 
 const START_HOUR = 7;
 const END_HOUR = 11;
+const BLEND_DURATION = 0.004;
 
 export function update(value) {
-	return Math.min(
-		WEMath.smoothStep(
-			(START_HOUR - 0.004) / 24,
-			START_HOUR / 24,
-			engine.timeOfDay
-		),
-		1 - WEMath.smoothStep(
-			(END_HOUR - 0.004) / 24,
-			END_HOUR / 24,
-			engine.timeOfDay
-		)
-	);
+	return WEMath.smoothStep(
+      (START_HOUR - BLEND_DURATION) / 24,
+      START_HOUR / 24,
+      engine.timeOfDay
+    ) * WEMath.smoothStep(
+      END_HOUR / 24,
+      (END_HOUR - BLEND_DURATION) / 24,
+      engine.timeOfDay
+    );
 }
 ```
 
@@ -79,7 +77,9 @@ This snippet makes use of two Wallpaper Engine SceneScript features:
 
 Add this script to all **Blend amount** values for each blend amount texture. Make sure to always reconfigure the `START_HOUR` and `END_HOUR` values to control at what time of day each blend texture appears.
 
-Double-check that you are not leaving any gaps by accident, your values should cover the entire day without gaps. The only exception is around midnight, since the base image is visible by default at exactly midnight.
+The default value of `0.004` for the `BLEND_DURATION` constant results in a smooth transition that lasts exactly 14.4 seconds between the two adjacent blend layers, you can slightly adjust this value to your liking but make sure to use the same value for all layers. Increasing the value by `0.001` increases the blend time by 3.6 seconds.
+
+Double-check that you are not leaving any gaps between blend layers by accident, your values should cover the entire day without skipping any hour of the day. The only exception is around midnight, since the base image is always visible by default at exactly midnight.
 
 In our example, we have set the following values but you should adjust them to your liking:
 
