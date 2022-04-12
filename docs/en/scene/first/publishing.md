@@ -8,15 +8,19 @@ Publishing your wallpaper will not keep a backup of your project files. Make sur
 
 You will be presented with a publishing form where you can create a **title** and a **description** of your wallpaper. Additionally, you should select the appropriate **genre** for your wallpaper and you are required to select an **age rating** that fits the content of your wallpaper.
 
-Wallpapers can be published with different levels of visibility: **Publicly**, **Friends-only** or **Private**, select the visibility level that you are comfortable with - you can always change the later.
+Wallpapers can be published with different levels of visibility: **Publicly**, **Friends-only**, **Unlisted** or **Private**, select the visibility level that you are comfortable with - you can always change the later.
 
 ::: tip
- **Private** uploads are a convenient way to back up your wallpapers without sharing them with anyone else.
+ **Private** uploads are a convenient way to back up your wallpapers without sharing them with anyone else, while **Unlisted** wallpapers can be accessed by anyone with the link to the wallpaper.
 :::
+
+## Preview Images
 
 Wallpaper Engine allows you to generate a static preview image with a few clicks or you can import a preview image that you have prepared with another tool. Make sure to always make the preview images suitable for all ages, even if your wallpaper targets an adult audience!
 
-You can also use animated GIFs as a preview image. GIFs can be up to 256x256px but Wallpaper Engine will only ever request 128x128px preview images. If you want the best quality in the app, you should stick to 128x128px. The maximum allowed file size is 1 MB but we recommend keeping the size below 500 KB. See our FAQ website for a guide on how to create a GIF from your wallpaper:
+### Animated Preview Images
+
+You can also use animated GIFs as a preview image. GIFs can be up to 256x256px but Wallpaper Engine will only ever request 128x128px preview images from the servers. If you want the best quality in the app, you should stick to 128x128px. The maximum allowed file size is 1 MB but we recommend keeping the size below 500 KB. See our FAQ website for a guide on how to create a GIF from your wallpaper:
 
 * [Exporting wallpapers as GIF](https://help.wallpaperengine.io/functionality/export.html)
 
