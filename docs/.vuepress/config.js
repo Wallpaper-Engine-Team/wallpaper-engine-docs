@@ -97,6 +97,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/userproperties/checkbox',
 				locale + 'scene/userproperties/combo',
 				locale + 'scene/userproperties/text',
+				locale + 'scene/userproperties/texture',
 			]
 		},
 		{
