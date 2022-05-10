@@ -40,7 +40,7 @@ Painting the weights of the character should be much easier using a character sh
 
 ## Reassembling the character sheet into a pose
 
-Before you can start animating your character, you should reassemble your character sheet into the original pose that you cut it out from. You can do this with the animation tools by dragging all the bones into their respective position. Afterwards, click on **Save** in the **Poses** section and save your pose under a sensible name. You should now have a **Default** pose which is just your character sheet in its unedited form and another pose, that you just created and which represents the reassembled character.
+Before you can start animating your character, you need to reassemble your character sheet into the original pose that you cut it out from. To do this, open up the puppet warp steps overview, towards the bottom of the list, you will find a button called **Reference Pose** in the **Optional** section. Drag all parts of your character back to their original position to reassemble your character model to its original state. Use the **Confirm** button to save your reference pose. This pose will be used as a starting point for your animations, which is why it is important to create it before actually animating your character.
 
 <video width="100%" controls>
   <source src="/videos/puppet_warp_reassemble.mp4" type="video/mp4">
