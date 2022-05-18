@@ -51,7 +51,20 @@ In our example, we grab the root bone of our character and drag it lower, this w
   Your browser does not support the video tag.
 </video>
 
-### Adjusting orientation controllers
+### Animations using Target Controllers
+
+Our previous jumping animation example is a bit oversimplified to quickly showcase the limb movements of inverse kinematics. Generally, you do not animate the bones directly, but rather utilize the **target controllers** that appear in the animation overview.
+
+**Target controllers appear as square-shaped** rather than round points, so you can differentiate them easily. Target controllers affect the position of the entire limb they belong to, they allow you to easily animate an entire limb according to the inverse kinematic configuration for that limb. You can also overstretch the target controller and it will automatically align the limb as if you physically pulled on it.
+
+See a simple example of this in the following video and note how only the square-shaped target controller is animated and not the bones of the arm themselves:
+
+<video width="100%" controls loop>
+  <source src="/videos/ik_target_controllers.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Adjusting Orientation Controllers
 
 You may have noticed that Wallpaper Engine will show you additional points leading to the center of your limbs with inverse kinematics. These so-called orientation controllers decide what direction a limb will twist. You can reposition them to adjust at which point a limb will twist in the corresponding direction. You can do this before starting your animations but you can also move them during the animation itself. Watch the following video to get an idea of how orientation controllers change the behavior of the inverse kinematics animation:
 
