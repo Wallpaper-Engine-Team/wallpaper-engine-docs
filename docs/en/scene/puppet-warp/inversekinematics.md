@@ -1,4 +1,4 @@
-# Realistic Limb Animations with Inverse Kinematics
+# Limb Animations with Inverse Kinematics
 
 Wallpaper Engine supports inverse kinematics animations for puppet warp models. This approach allows you to define sensible movement ranges for a character's joints and Wallpaper Engine will dynamically animate the movement of entire limbs.
 

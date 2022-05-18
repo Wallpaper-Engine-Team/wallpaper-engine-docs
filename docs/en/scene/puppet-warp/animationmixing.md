@@ -4,7 +4,7 @@ You can apply multiple animations to your puppet warp characters and objects. Th
 
 For example, you may have a general idle stance for your character and want them to move their arm every 30 seconds. Rather than building one massive animation that contains all these bits and pieces, you can just use multiple smaller animations and Wallpaper Engine will merge them into one for you.
 
-Let's have a look at the samurai model that we have used across our advanced puppet warp tutorials. For this model, we have created four animations:
+For the samurai model that we have used across our advanced puppet warp tutorials, we created the following 4 animations:
 
 * A general idle animation
 * An animation for the cape
