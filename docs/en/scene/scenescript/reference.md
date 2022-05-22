@@ -46,9 +46,9 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 | [CameraTransforms](/en/scene/scenescript/reference/class/CameraTransforms.html) | Objects of this class describe the camera orientation and position. |
 | [IAnimation](/en/scene/scenescript/reference/class/IAnimation.html) | This class represents a timeline property animation. |
 | [IAnimationLayer](/en/scene/scenescript/reference/class/IAnimationLayer.html) | This class represents a puppet warp animation layer. |
-| [IAudioBuffers](/en/scene/scenescript/reference/class/IAudioBuffers.html) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
+| [AudioBuffers](/en/scene/scenescript/reference/class/AudioBuffers.html) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
 | [IConsole](/en/scene/scenescript/reference/class/IConsole.html) | You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log. |
-| [ICursorEvent](/en/scene/scenescript/reference/class/ICursorEvent.html) | Provides information about the cursor position during cursor events. |
+| [CursorEvent](/en/scene/scenescript/reference/class/CursorEvent.html) | Provides information about the cursor position during cursor events. |
 | [IEffect](/en/scene/scenescript/reference/class/IEffect.html) | Provides access to image effects used on image layers. |
 | [IEffectLayer](/en/scene/scenescript/reference/class/IEffectLayer.html) | Base class for image and text layers. |
 | [IEngine](/en/scene/scenescript/reference/class/IEngine.html) | Provides general information about the user device and the running wallpaper. |

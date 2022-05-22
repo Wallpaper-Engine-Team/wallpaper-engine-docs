@@ -32,7 +32,7 @@ Take the following code snippet as an example, you will simply have to replace `
 const SOUND_LAYER_NAME = 'PLACEHOLDER';
 
 /**
- * @param {ICursorEvent} event
+ * @param {CursorEvent} event
  */
 export function cursorClick(event) {
 	thisScene.getLayer(SOUND_LAYER_NAME).play();
@@ -58,7 +58,7 @@ To do this, we first call `thisLayer.getAnimation()`. Here, it's important that 
 'use strict';
 
 /**
- * @param {ICursorEvent} event
+ * @param {CursorEvent} event
  */
 export function cursorClick(event) {
 	thisLayer.getAnimation("LogoShake").play();

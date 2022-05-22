@@ -69,7 +69,7 @@ export function update(value) {
 }
  
 /**
- * @param {ICursorEvent} event
+ * @param {CursorEvent} event
  */
 export function cursorDown(event) {
 	var bonePos = thisLayer.getBoneTransform(1).translation();
@@ -84,7 +84,7 @@ export function cursorDown(event) {
 }
  
 /**
- * @param {ICursorEvent} event
+ * @param {CursorEvent} event
  */
 export function cursorUp(event) {
 	// Release the drag animation in the next update() call

@@ -38,6 +38,10 @@ Gets the texture animation if the albedo texture of this image layer is a sprite
 
 Gets the video texture if the albedo texture of this image layer is a video file.
 
+### playSingleAnimation(animation: String|Object): IAnimationLayer
+
+Create a new animation layer by animation name or JSON config. Only play the animation once, then remove it automatically.
+
 ### getAnimationLayerCount(): Number
 
 Get the number of animation layers currently used on this layer.

@@ -42,15 +42,15 @@ The runtime has a rollover to retain floating point precision. If you want to cr
 
 ### AUDIO\_RESOLUTION\_16: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [IAudioBuffers](/scene/scenescript/reference/class/IAudioBuffers) object with **16** frequency bands.
+Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object with **16** frequency bands.
 
 ### AUDIO\_RESOLUTION\_32: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [IAudioBuffers](/scene/scenescript/reference/class/IAudioBuffers) object with **32** frequency bands.
+Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object with **32** frequency bands.
 
 ### AUDIO\_RESOLUTION\_64: Number
 
-Use this as a parameter in `registerAudioBuffers()` to create an [IAudioBuffers](/scene/scenescript/reference/class/IAudioBuffers) object with **64** frequency bands.
+Use this as a parameter in `registerAudioBuffers()` to create an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object with **64** frequency bands.
 
 ## Functions
 
@@ -82,13 +82,13 @@ Returns true if the screen uses a landscape resolution.
 
 You can use this to check whether the script is currently running inside the editor or not.
 
-### registerAudioBuffers(resolution: Number): IAudioBuffers
+### registerAudioBuffers(resolution: Number): AudioBuffers
 
 Registers your script with the audio responsive system in Wallpaper Engine and get access to the current audio volume levels of the user. The `resolution` parameter is required and defines in how many parts the audio spectrum is subdivided. To conserve memory and performance, you should always stick to the lowest number that you actually need.
 
 Valid values for the `resolution` parameter are `engine.AUDIO_RESOLUTION_16`, `engine.AUDIO_RESOLUTION_32` and `engine.AUDIO_RESOLUTION_64` which divide the audio spectrum into 16, 32 and 64 sections respectively.
 
-Returns an [IAudioBuffers](/scene/scenescript/reference/class/IAudioBuffers) object that you can store to retrieve the audio volume levels in each rendered frame.
+Returns an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) object that you can store to retrieve the audio volume levels in each rendered frame.
 
 ### registerAsset(file: String): IAssetHandle
 
