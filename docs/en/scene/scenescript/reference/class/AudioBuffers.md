@@ -2,7 +2,7 @@
 prev: ../../reference.md
 ---
 
-# SceneScript Class IAudioBuffers
+# SceneScript Class AudioBuffers
 
 Provides access to the left and right audio spectrum values and their combined average. The `left`, `right` and `average` arrays always have the same size as defined in the `resolution` parameter of [engine.registerAudioBuffers(resolution: Number)](/scene/scenescript/reference/class/IEngine). Their contents will be updated for every frame automatically, so you can continuously read the audio levels from this object.
 

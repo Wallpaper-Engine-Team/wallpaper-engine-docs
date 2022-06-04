@@ -60,4 +60,8 @@ Get the current frame of the animation layer.
 
 ### setFrame(frame: Number)
 
-Set the animation layer to the specified frame. 
+Set the animation layer to the specified frame.
+
+### addEndedCallback(callback: Function)
+
+Add a callback to be fired every time the animation layer reaches the end.

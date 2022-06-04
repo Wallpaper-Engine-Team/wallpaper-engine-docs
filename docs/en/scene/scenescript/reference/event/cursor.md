@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Cursor Events
 
-SceneScript offers multiple cursor events that allows you to interact with mouse movements and mouse clicks. The parameter for all cursor events is an [ICursorEvent](/scene/scenescript/reference/class/ICursorEvent) object with additional event data.
+SceneScript offers multiple cursor events that allows you to interact with mouse movements and mouse clicks. The parameter for all cursor events is an [CursorEvent](/scene/scenescript/reference/class/CursorEvent) object with additional event data.
 
 All mouse cursor events will only work on objects marked as **Solid** in the layer settings. 
 
@@ -15,7 +15,7 @@ All mouse cursor events will only work on objects marked as **Solid** in the lay
 This event function will be called when the cursor enters the bounds of the object.
 
 ```js
-export function cursorEnter(event: ICursorEvent) {
+export function cursorEnter(event: CursorEvent) {
 
 }
 ```
@@ -25,7 +25,7 @@ export function cursorEnter(event: ICursorEvent) {
 This event function will be called when the cursor leaves the bounds of the object.
 
 ```js
-export function cursorLeave(event: ICursorEvent) {
+export function cursorLeave(event: CursorEvent) {
 
 }
 ```
@@ -35,7 +35,7 @@ export function cursorLeave(event: ICursorEvent) {
 This event function will be called when the cursor has been moved.
 
 ```js
-export function cursorMove(event: ICursorEvent) {
+export function cursorMove(event: CursorEvent) {
 
 }
 ```
@@ -45,7 +45,7 @@ export function cursorMove(event: ICursorEvent) {
 This event function will be called when the cursor is being pressed down on an object.
 
 ```js
-export function cursorDown(event: ICursorEvent) {
+export function cursorDown(event: CursorEvent) {
 
 }
 ```
@@ -55,7 +55,7 @@ export function cursorDown(event: ICursorEvent) {
 This event function will be called when the cursor is being released over an object.
 
 ```js
-export function cursorUp(event: ICursorEvent) {
+export function cursorUp(event: CursorEvent) {
 
 }
 ```
@@ -65,7 +65,7 @@ export function cursorUp(event: ICursorEvent) {
 This event function will be called when the cursor has been pressed and released on the same object. The event is triggered after the `cursorUp` and `cursorDown` event have been executed.
 
 ```js
-export function cursorClick(event: ICursorEvent) {
+export function cursorClick(event: CursorEvent) {
 
 }
 ```
