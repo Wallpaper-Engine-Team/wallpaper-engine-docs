@@ -20,7 +20,7 @@ Add any additional bones that may be necessary for your character, such as a hea
 
 ### Enabling Inverse Kinematics
 
-Inverse kinematics is only enabled for the last bone of each respective limb. For example, for an arm, you would select the last hand bone and for a leg, you would select the bone that represents the foot. Select these last bones and click on **Edit Constraints** on the right-hand side. From the **Simulation preset** option, select **Inverse kinematics arm / leg**. You may further tweak this by changing the **Mode** option to **Advanced**, though in many cases it should be fine to just use the simple version. You can further adjust this at a later time.
+Inverse kinematics is typically only enabled for the last bone of each respective limb. For example, for an arm, you would select the last hand bone and for a leg, you would select the bone that represents the foot. Select these last bones and click on **Edit Constraints** on the right-hand side. From the **Simulation preset** option, select **Inverse kinematics arm / leg**. You may further tweak this by changing the **Mode** option to **Advanced**, though in many cases it should be fine to just use the simple version. You can further adjust this at a later time.
 
 Watch the skeleton setup in the following video:
 
@@ -44,7 +44,7 @@ In the puppet warp skeleton settings, select the inverse kinematics bones of you
 
 Now that we have finished our basic puppet warp setup, we can create an animation for our character model. Create a new animation and configure a desired animation length. Since we will showcase a looped animation, we also enable the **Wrap loop frames** option. This allows us to create complex animations and Wallpaper Engine will always let all parts of the animation finish where they started for a smooth animation loop.
 
-In our example, we grab the root bone of our character and drag it lower, this will cause our character to animate the legs and arms into a squatting position. We then move the timeline slider to the center of the animation timeline. Again, we do not move the slider to the end because we enabled the **Wrap loop frames** option, so Wallpaper Engine will finish the rest of the animation for us and we do not need to define the end position again. We now move the root bone of our character upwards and this will automatically move all inverse kinematics limbs in a *sensible* way. We can now play our simple jump animation, watch the full process in this video:
+In our example, we grab the root bone of our character and drag it lower, this will cause our character to animate the legs and arms into a squatting position. We then move the timeline slider to the center of the animation timeline. Again, we do not move the slider to the end because we enabled the **Wrap loop frames** option, so Wallpaper Engine will finish the rest of the animation for us and we do not need to define the end position again. We now move the root bone of our character upwards and this will automatically move all inverse kinematics limbs according to their configuration. You will notice that the legs remain stationary until they are overstretched and only leave the ground once the entire chain of bones is stretched out fully. This results in a realistic jump motion that involves all limbs, you can watch the full process and the end result in this video:
 
 <video width="100%" controls loop>
   <source src="/videos/ik_simple_animation.mp4" type="video/mp4">

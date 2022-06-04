@@ -68,6 +68,24 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
+		<a href="/en/scene/effects/effect/swing.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Swing.gif')"></div>
+			<div>
+				<h4>Swing</h4>
+				<p>Swings part of the image back and forth. Can be used for signs, roof lights, flags or other swinging objects.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
+		<a href="/en/scene/effects/effect/twirl.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Twirl.gif')"></div>
+			<div>
+				<h4>Twirl</h4>
+				<p>Applies a spiral animation to the image. Can be useful for wheels, galaxies or any other spinning object.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
 		<a href="/en/scene/effects/effect/waterflow.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Water_flow.gif')"></div>
 			<div>

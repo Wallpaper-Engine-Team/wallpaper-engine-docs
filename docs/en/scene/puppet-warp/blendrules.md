@@ -1,8 +1,8 @@
 # Blend Rules for Bones
 
-Blend rules are an advanced feature of puppet warp animations. They allow you to solve a few specific animation cases where you want to attach a bone to another object. An example might be that a character holds an object in their left hand and then throws it over to the right hand. In that case, you would now want the object to follow all movements of the hand it is in automatically. Blend rules allow you to do this as you can essentially change the parent bone for an object.
+Blend rules are an advanced feature of puppet warp animations. They allow you to solve a few specific animation cases where you want to attach a bone to another object. An example might be that a character holds an object in their left hand and then throws it over to the right hand. In that case, you would now want the object to follow all movements of the hand it is in automatically. Blend rules allow you to do this as you can essentially change the parent bone for an object during an animation.
 
-We will showcase blend rules with the following example animation. **Notice how the sword remains attached to the rock until the knights pulls on it.** After the sword is pulled, it continues to follow the hand movement as the knight is holding it. This was achieved through a blend rule that changed the parent bone of the sword from the rock to the hand of the knight.
+We will showcase blend rules with the following example animation. **Notice how the sword remains attached to the rock until the knight pulls on it.** After the sword is pulled, it continues to follow the hand movement as the knight is holding it. This was achieved through a blend rule that changed the parent bone of the sword from the rock to the hand of the knight.
 
 <video width="100%" controls>
   <source src="/videos/blend_rule_animation.mp4" type="video/mp4">
