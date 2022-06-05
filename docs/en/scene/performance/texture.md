@@ -10,7 +10,7 @@ You can check the currently required texture memory in the editor by clicking on
 
 ## Keep Texture Resolutions Low
 
-The first step in optimizing your project is to reduce the overall size of textures you import. You should make sure the background image itself is only as big as you really need it to be, typically it should be exactly the size of a common screen resolution such as 1920x1080 (Full HD) or 4096x2160 (4K UHD). See our [Project Resolution Guide](/performance/resolution) for more infos.
+The first step in optimizing your project is to reduce the overall size of textures you import. You should make sure the background image itself is only as big as you really need it to be, typically it should be exactly the size of a common screen resolution such as 1920x1080 (Full HD) or 3840x2160 (4K UHD). See our [Project Resolution Guide](/performance/resolution) for more infos.
 
 Additionally, when using image layers, always make sure they are as small as needed. Wallpaper Engine will automatically suggest that you crop imported image layers to a resolution that is *as small as possible* for that layer. This will also automatically re-adjust the position of the layer to account for the space that was removed. We strongly recommend you make use of this functionality, especially on high-resolution wallpapers (4K UHD and larger), this can significantly reduce the VRAM usage:
 
