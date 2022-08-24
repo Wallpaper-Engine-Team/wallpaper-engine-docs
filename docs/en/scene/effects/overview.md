@@ -147,6 +147,49 @@ Click on an effect to learn more about it. We recommend experiment with differen
 	</div>
 </div>
 
+### Interactive Effects
+
+
+<div class="effect-list">
+	<div class="effect-box">
+		<a href="/en/scene/effects/effect/cursorripple.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Cursor_Ripple.gif')"></div>
+			<div>
+				<h4>Cursor Ripple</h4>
+				<p>Creates a ripple effect when the mouse cursor moves over it.</p>
+			</div>
+		</a>
+	</div>
+		<div class="effect-box">
+		<a href="/en/scene/effects/effect/advancedfluidsimulation.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Advanced_Fluid_Simulation.gif')"></div>
+			<div>
+				<h4>Advanced Fluid Simulation</h4>
+				<p>Creates a realistic fluid / smoke / fire simulation that can react to mouse movement of the user.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
+		<a href="/en/scene/effects/effect/depthparallax.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Depth_Parallax.gif')"></div>
+			<div>
+				<h4>Depth Parallax</h4>
+				<p>Creates a depth effect that reacts to the mouse movement of the user.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
+		<a href="/en/scene/effects/effect/xray.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Xray.gif')"></div>
+			<div>
+				<h4>X-Ray</h4>
+				<p>Blends between two images based on the position of the mouse cursor.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box fake"></div>
+</div>
+
 ### Colorization Effects
 
 <div class="effect-list">
@@ -240,30 +283,13 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
-	<div class="effect-box">
-		<a href="/en/scene/effects/effect/xray.html">
-			<div class="effect-box-image" style="background-image: url('/img/effects/Xray.gif')"></div>
-			<div>
-				<h4>X-Ray</h4>
-				<p>Blends between two images based on cursor position.</p>
-			</div>
-		</a>
-	</div>
+	<div class="effect-box fake"></div>
 	<div class="effect-box fake"></div>
 </div>
 
 ### Distortion Effects
 
 <div class="effect-list">
-	<div class="effect-box">
-		<a href="/en/scene/effects/effect/depthparallax.html">
-			<div class="effect-box-image" style="background-image: url('/img/effects/Depth_Parallax.gif')"></div>
-			<div>
-				<h4>Depth Parallax</h4>
-				<p>Creates a depth effect that reacts to the mouse movement of the user.</p>
-			</div>
-		</a>
-	</div>
 	<div class="effect-box">
 		<a href="/en/scene/effects/effect/fisheye.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Fisheye.png')"></div>
