@@ -202,6 +202,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
+		<div class="effect-box">
+		<a href="/en/scene/effects/effect/chromaticaberration.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Chromatic_Aberration.gif')"></div>
+			<div>
+				<h4>Chromatic Aberration</h4>
+				<p>Creates a colored distortion in a configured direction.</p>
+			</div>
+		</a>
+	</div>
 	<div class="effect-box">
 		<a href="/en/scene/effects/effect/clouds.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Clouds.gif')"></div>
@@ -283,7 +292,6 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
-	<div class="effect-box fake"></div>
 	<div class="effect-box fake"></div>
 </div>
 
