@@ -7,6 +7,10 @@ The **VHS** effect can add an old-school retro effect to your image. It consists
 
 ![VHS](/img/effects/VHS.gif)
 
+::: warning Please note
+If you only want to utilize the chromatic aberration of this effect, we recommend using the [Chromatic Aberration effect](/scene/effects/effect/chromaticaberration.html) directly as it offers more customization options and better performance.
+:::
+
 ### Effect Settings
 
 * **Opacity mask:** This option allows you to limit the effect to a certain part of the image.
