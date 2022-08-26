@@ -35,6 +35,11 @@ SceneScript uses an event system that allows you to run specific code whenever c
 | [cursorDown](/en/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor is being pressed down on an object. |
 | [cursorUp](/en/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor is being released over an object.  |
 | [cursorClick](/en/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor has been pressed and released on the same object. |
+| [mediaStatusChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the media integration is turned on or off by the user. |
+| [mediaPlaybackChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the users starts, stops or pauses media. |
+| [mediaPropertiesChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the properties of the currently playing media change. |
+| [mediaThumbnailChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the thumbnail of the currently playing media changes. |
+| [mediaTimelineChanged](/en/scene/scenescript/reference/event/media.html) | `Optional`: this event function will be called when the current time of the playing media changes and is only provided by certain applications. |
 
 ## Classes
 
@@ -43,12 +48,12 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 | Class                | Description   |
 |----------------------|---------------|
 | [AnimationEvent](/en/scene/scenescript/reference/class/AnimationEvent.html) | This object describes an animation event that has been fired from a timeline or puppet warp animation. |
+| [AudioBuffers](/en/scene/scenescript/reference/class/AudioBuffers.html) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
 | [CameraTransforms](/en/scene/scenescript/reference/class/CameraTransforms.html) | Objects of this class describe the camera orientation and position. |
+| [CursorEvent](/en/scene/scenescript/reference/class/CursorEvent.html) | Provides information about the cursor position during cursor events. |
 | [IAnimation](/en/scene/scenescript/reference/class/IAnimation.html) | This class represents a timeline property animation. |
 | [IAnimationLayer](/en/scene/scenescript/reference/class/IAnimationLayer.html) | This class represents a puppet warp animation layer. |
-| [AudioBuffers](/en/scene/scenescript/reference/class/AudioBuffers.html) | Provides access to the left and right audio spectrum values and their combined average for audio visualization purposes. |
 | [IConsole](/en/scene/scenescript/reference/class/IConsole.html) | You can access this interface anywhere in your SceneScript code through the global `console` object to interact with the console log. |
-| [CursorEvent](/en/scene/scenescript/reference/class/CursorEvent.html) | Provides information about the cursor position during cursor events. |
 | [IEffect](/en/scene/scenescript/reference/class/IEffect.html) | Provides access to image effects used on image layers. |
 | [IEffectLayer](/en/scene/scenescript/reference/class/IEffectLayer.html) | Base class for image and text layers. |
 | [IEngine](/en/scene/scenescript/reference/class/IEngine.html) | Provides general information about the user device and the running wallpaper. |
@@ -63,6 +68,11 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 | [ITextureAnimation](/en/scene/scenescript/reference/class/ITextureAnimation.html) | This class represents a texture animation. |
 | [IVideoTexture](/en/scene/scenescript/reference/class/IVideoTexture.html) | This class represents a video texture animation. |
 | [Mat4](/en/scene/scenescript/reference/class/Mat4.html) | Utility class used for creating a 4 dimensional identity matrix. |
+| [MediaPlaybackEvent](/en/scene/scenescript/reference/class/MediaPlaybackEvent.html) | Media integration event, fired when the user starts, stops or pauses media. |
+| [MediaPropertiesEvent](/en/scene/scenescript/reference/class/MediaPropertiesEvent.html) | Media integration event, fired when the properties of the current media session are changing. |
+| [MediaStatusEvent](/en/scene/scenescript/reference/class/MediaStatusEvent.html) | Media integration event, fired when the user turns the media integration on or off. |
+| [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.html) | Media integration event, fired when the thumbnail pertaining to the current media changes. |
+| [MediaTimelineEvent](/en/scene/scenescript/reference/class/MediaTimelineEvent.html) | Optional media integration event, fired irregularly when the current time of the media session changes. |
 | [Shared](/en/scene/scenescript/reference/class/Shared.html) | Related to the global object `shared` which you may use to share data between multiple scripts. |
 | [Vec2](/en/scene/scenescript/reference/class/Vec2.html) | Utility class which holds a 2 dimensional value pair: `x` and `y`. |
 | [Vec3](/en/scene/scenescript/reference/class/Vec3.html) | Utility class which holds a 3 dimensional value pair: `x`, `y` and `z`. |
