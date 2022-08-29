@@ -23,3 +23,11 @@ Secondary color of the thumbnail image as normalized RGB vector.
 ### tertiaryColor: Vec3
 
 Tertiary color of the thumbnail image as normalized RGB vector.
+
+### textColor: Vec3
+
+Text color guaranteed to have sufficient contrast with primary color. May be secondary or tertiary color when possible.
+
+### highContrastColor: Vec3
+
+Black or white, depending on what has higher contrast with the primary color.
