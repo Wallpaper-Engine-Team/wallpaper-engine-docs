@@ -7,7 +7,7 @@ prev: ../../reference.md
 SceneScript offers multiple media integration events that allow you to access information about currently playing music or videos on the system. This will only be available for media players that integrate with the global Windows media system. Some media players require this feature to be turned on first.
 
 ::: danger Please note
-The available data points can greatly differ between applications. Do not build your wallpaper in a way that it would break without certain data points not being available.
+Some media data is not available in certain audio players. Always build your wallpapers in a way that they do not break when the feature is disabled or if certain data points are unavailable.
 :::
 
 [[toc]]
