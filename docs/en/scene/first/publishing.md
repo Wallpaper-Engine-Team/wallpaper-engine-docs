@@ -8,11 +8,7 @@ Publishing your wallpaper will not keep a backup of your project files. Make sur
 
 You will be presented with a publishing form where you can create a **title** and a **description** of your wallpaper. Additionally, you should select the appropriate **genre** for your wallpaper and you are required to select an **age rating** that fits the content of your wallpaper.
 
-Wallpapers can be published with different levels of visibility: **Publicly**, **Friends-only**, **Unlisted** or **Private**, select the visibility level that you are comfortable with - you can always change the later.
-
-::: tip
- **Private** uploads are a convenient way to back up your wallpapers without sharing them with anyone else, while **Unlisted** wallpapers can be accessed by anyone with the link to the wallpaper.
-:::
+Wallpapers can be published with different levels of visibility: **Publicly**, **Friends-only** or **Private**. If you do not see the option to publish wallpapers publicly, your account may be restricted in some way.
 
 ## Preview Images
 
@@ -20,9 +16,13 @@ Wallpaper Engine allows you to generate a static preview image with a few clicks
 
 ### Animated Preview Images
 
-You can also use animated GIFs as a preview image. GIFs can be up to 256x256px but Wallpaper Engine will only ever request 128x128px preview images from the servers. If you want the best quality in the app, you should stick to 128x128px. The maximum allowed file size is 1 MB but we recommend keeping the size below 500 KB. See our FAQ website for a guide on how to create a GIF from your wallpaper:
+You can also use animated GIFs as a preview image. GIFs can be up to 256x256px but Wallpaper Engine will only ever request 128x128px preview images from the servers. If you want the best quality in the app, you should stick to 128x128px. The maximum allowed file size is 1 MB but we recommend keeping the size below 500 KB.
 
-* [Exporting wallpapers as GIF](https://help.wallpaperengine.io/functionality/export.html)
+### Built-in GIF recorder
+
+After clicking on the **Take snapshot** button, press **G** to switch to the GIF recording mode. You can press the **F** key to cycle through the different GIF recording quality modes where you can choose between resolution, frames per second and length of the GIF. You can see the current settings in the upper left corner of the preview creation mode. These limitations are mainly in place to ensure the GIF file meets the file size restrictions for preview images.
+
+## Uploading the wallpaper
 
 Once you have filled out the wallpaper details, you can upload your wallpaper by clicking on the **Publish** button.
 

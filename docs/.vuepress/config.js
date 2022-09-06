@@ -104,7 +104,9 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: audioGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/audiovisualizer/overview'
+				locale + 'scene/audiovisualizer/overview',
+				locale + 'scene/audiovisualizer/albumcover',
+				locale + 'scene/audiovisualizer/mediainformation'
 			]
 		},
 		{
