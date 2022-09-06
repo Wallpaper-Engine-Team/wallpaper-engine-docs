@@ -235,6 +235,7 @@ function getWebSidebar(locale, introGroup, gettingStartedGroup, customizationGro
 			collapsable: false,
 			children: [
 				locale + 'web/audio/visualizer',
+				locale + 'web/audio/media',
 			]
 		},
 		{
