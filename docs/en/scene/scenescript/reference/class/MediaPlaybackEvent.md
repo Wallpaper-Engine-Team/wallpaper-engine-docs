@@ -17,15 +17,3 @@ The current state of the media session. This can be one of three values:
 * `MediaPlaybackEvent.PLAYBACK_PLAYING` - Media is actively playing on the system.
 * `MediaPlaybackEvent.PLAYBACK_PAUSED` - Media was previously playing, but playback was (temporarily) paused by the user.
 * `MediaPlaybackEvent.PLAYBACK_STOPPED` - Media playback is completely stopped.
-
-### primaryColor: Vec3
-
-Primary color of the album cover.
-
-### secondaryColor: Vec3
-
-Secondary color of the album cover.
-
-### tertiaryColor: Vec3
-
-Tertiary color of the album cover.

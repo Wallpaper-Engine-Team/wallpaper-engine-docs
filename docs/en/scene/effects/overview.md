@@ -202,6 +202,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
+	<div class="effect-box">
+		<a href="/en/scene/effects/effect/blendgradient.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Blend_Gradient.gif')"></div>
+			<div>
+				<h4>Blend Gradient</h4>
+				<p>Blends two images or image layers together using a gradient mask.</p>
+			</div>
+		</a>
+	</div>
 		<div class="effect-box">
 		<a href="/en/scene/effects/effect/chromaticaberration.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Chromatic_Aberration.gif')"></div>
@@ -292,7 +301,6 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
-	<div class="effect-box fake"></div>
 </div>
 
 ### Distortion Effects

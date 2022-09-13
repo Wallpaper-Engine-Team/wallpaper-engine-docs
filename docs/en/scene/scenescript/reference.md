@@ -39,7 +39,7 @@ SceneScript uses an event system that allows you to run specific code whenever c
 | [mediaPlaybackChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the users starts, stops or pauses media. |
 | [mediaPropertiesChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the properties of the currently playing media change. |
 | [mediaThumbnailChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the thumbnail of the currently playing media changes. |
-| [mediaTimelineChanged](/en/scene/scenescript/reference/event/media.html) | `Optional`: this event function will be called when the current time of the playing media changes and is only provided by certain applications. |
+| [mediaTimelineChanged](/en/scene/scenescript/reference/event/media.html) | This event function will be called when the current time of the playing media changes and is only provided by certain applications. |
 
 ## Classes
 
