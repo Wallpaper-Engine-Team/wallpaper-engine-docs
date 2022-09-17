@@ -1,8 +1,8 @@
 # Media Integration
 
-Wallpaper Engine allows you to access information about currently playing music and videos from certain applications like Spotify or Tidal. Any application that provides track information through Windows' global media session will work. This feature may have to be enabled in the application playing the content first.
+Wallpaper Engine allows you to access information about currently playing music and videos from certain media players, including streaming platforms like Spotify or Tidal. Any application that provides track information through Windows' global media session will work. This feature may have to be enabled in the application playing the content first.
 
-You can typically access a low resolution album cover image, the titel and artist of the currently playing content. Some applications may provide additional information, like play time/duration.
+You can typically access a low resolution album cover image, the title and artist of the currently playing content. Some applications may provide additional information, like play time/duration.
 
 ## Available media integration listeners
 
@@ -45,7 +45,7 @@ Optional album artist of the currently playing media.
 Optional comma separated list of genres describing the currently playing media.
 
 **contentType**: String
-The type of media, can either be music, video or image.
+The type of media, can either be `music`, `video` or `image`.
 
 ```js
 function wallpaperMediaPropertiesListener(event) {
