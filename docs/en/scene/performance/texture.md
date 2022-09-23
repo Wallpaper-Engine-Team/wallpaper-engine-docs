@@ -34,6 +34,15 @@ You can choose the compression method when importing a new image:
 
 ![Import Texture Compression](/img/performance/Import_compression.png)
 
+### Optimizing an Existing Layer
+
+If you want to apply DXT5 compression to an existing layer, you can do so easily. Select your layer and scroll down to the **Advanced Texture Settings** button on the right-hand side. Click on the button, then next to the **Albedo** texture, click on the cogwheel icon and select **Texture Properties**. Now look for the **Format** option and change it to **DXT5**. Accordingly, you should see a reduction in the **Video memory** statistic above. See a video of this process here:
+
+<video width="100%" controls autoplay loop>
+  <source src="/videos/texture_format_change.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ### Further Optimize DXT5 and DXT1 Textures
 
 Compressed DXT5 and DXT1 textures need to have a resolution of a power of two *(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192 etc.)* to be displayed by your computer. Wallpaper Engine will quietly take care of this in the background and add invisible pixels to fill in the missing pixels. However, the amount of memory required increases (though it will always be better than using an uncompressed image).
