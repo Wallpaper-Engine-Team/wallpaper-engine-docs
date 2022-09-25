@@ -17,9 +17,9 @@ We recommend limiting the resolution of the album cover integration to 256x256 p
 
 ## Creating a Placeholder
 
-Users of your wallpapers will always be playing media content at all times, making it important to ensure that the space in which the album cover is placed has some sort of placeholder while no audio playback is active.
+Users of your wallpapers will not always be playing media content at all times, making it important to ensure that the space in which the album cover is placed has some sort of placeholder while no audio playback is active.
 
-If no audio is playing and you simply want a solid color (or to hide the album cover entirely), you should use a **Solid Placeholder** layer, as it offers the best performance for this use-case. To add a **Solid Placeholder** layer, clicking on **Add Asset** on the left-hand side, followed by selecting the **Solid Placeholder** type from the list towards the bottom. Select a preferred size and default color for the album cover layer.
+If no audio is playing and you simply want a solid color (or to hide the album cover entirely), you should use a **Solid Placeholder** layer, as it offers the best performance for this use-case. To add a **Solid Placeholder** layer, click on **Add Asset** on the left-hand side, followed by selecting the **Solid Placeholder** type from the list towards the bottom. Select a preferred size and default color for the album cover layer.
 
 If you want to show a placeholder image instead, you can simply import it into the editor and proceed without having to use the **Solid Placeholder** layer. In our example, we will showcase this feature using a 256x256px placeholder image that we have prepared. It is mainly important that your image is square and ideally has the exact resolution that you later want to use for your album covers.
 
@@ -44,9 +44,8 @@ Now that you have configured the *Albedo texture*, you need to create a short ti
 Select the blend effect and navigate towards the bottom of its property list. Next to the **Blend amount** value, click on the cogwheel icon and select **Bind Timeline Animation**. You will now see the animation options, you will need to make some changes here:
 
 * **Mode:** Set this option to **Single**, since we only want the transition to play once when needed.
-* **Seconds:** This is the duration that the duration it will take to transition between the album covers, set it to your liking, for example, 2 seconds.
+* **Seconds:** This is the duration that it will take to transition between the album covers, set it to your liking, for example, 2 seconds.
 * **Frames:** You can leave this value at `60`.
-* **Name:** Set a simple English name, you will need this later. We will call it `album_transition`.
 * **Start paused:** Make sure this option is **enabled**.
 
 Once this is done, you will see the timeline of the **Blend amount** value at the bottom. Grab the timeline selector and move it all the way to the last frame. Afterwards, drag the **Blend amount** value down to `0.00` on the right. You should now see a smooth curve in the timeline animation, see the following video as an example:
@@ -71,8 +70,8 @@ export function mediaThumbnailChanged(event) {
 }
 ```
 
-Essentially, this will always play the animation that you have just created when a new thumbnail is found. The timeline animation that you created will now start to transition between the old album cover to the new album cover.
+This will start playing the timeline animation that you have just created when a new thumbnail is available. The animation will smoothly transition between the old album cover to the new album cover.
 
 ## Additional Media Features
 
-This guide provided a basic example of how to utilize the album cover feature. We do suggest that you always try to cater to users who might not be playing music by hiding these elements and ensuring the wallpaper works even without music playing. For some more advanced tutorials, see the
+This guide provided a basic example of how to utilize the album cover feature. We suggest that you also consider users who might not be playing music by hiding these elements and ensuring the wallpaper works even without music playing. For some more advanced tutorials, see the
