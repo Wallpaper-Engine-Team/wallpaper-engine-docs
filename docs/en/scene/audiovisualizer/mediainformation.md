@@ -51,7 +51,6 @@ var mediaData = "";
  * @return {String} - update current property value
  */
 export function update(value) {
-	
 	return mediaData;
 }
 
@@ -75,7 +74,6 @@ var mediaData = "";
  * @return {String} - update current property value
  */
 export function update(value) {
-	
 	return mediaData;
 }
 
@@ -99,7 +97,6 @@ var mediaData = "";
  * @return {String} - update current property value
  */
 export function update(value) {
-	
 	return mediaData;
 }
 
