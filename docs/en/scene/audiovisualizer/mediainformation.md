@@ -6,15 +6,15 @@ This guide builds on top of the [Album Cover Integration](/en/scene/audiovisuali
 
 In this section, we will discuss how to add certain song information to your wallpaper. Please note that some data may not be available if it is not transmitted by the respective media player or if the audio file does not include certain pieces of information. For example, there is no guarantee that a song file includes an album title.
 
-### Creating the Text Element
+### Creating a Text Element
 
 To get started, we need to create text layers for each element that we want to show. Click on **Add asset** on the left-hand side and add a new **Text layer** to your wallpaper.
 
-One thing that you need to keep in mind with text layers with dynamic content is that they could potentially become very long. This is why it is important that you properly configure the text layer:
+One thing that you need to keep in mind with text layers with dynamic content is that they could potentially become very long. This is why it is important that you properly configure the text layer for media information:
 
 1. Adjust the **Point size** value to change the size of the text layer. Do not change the **Scale** of the text layer, it will reduce the quality of the text unnecessarily.
 2. Set the **Horizontal alignment** to *left* and adjust the position of the text to account for this change.
-3. Enable the **Max width** option and re-adjust the maximum width using the purple dotted line that appears in the editor. This is especially important when working with dynamic text such as song titles, as they can be very long.
+3. Enable the **Max width** option and adjust the maximum width using the purple dotted line that appears in the editor. This is especially important when working with dynamic text such as song titles, as they can be very long.
 4. Enable the **Max rows** option and set the limit to *1* (or another value of choice).
 5. Lastly, you might want to enable the **Overflow ellipsis** option. This will cut off text that is too long and replace the end with three dots "..." to make it clear that the text was cut off.
 
@@ -116,7 +116,7 @@ Once you have copied the code to each respective text layer and use the **Run Pr
 
 ## Utilizing Album Cover Colors via SceneScript
 
-You can also access certain album cover colors through the [mediaThumbnailChanged](/en/scene/scenescript/reference/event/media.html) event, specifically the [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.md) class that is provided as a function parameter.
+You can also access album cover colors through the [mediaThumbnailChanged](/en/scene/scenescript/reference/event/media.html) event, specifically the [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.md) class that is provided as a function parameter.
 
 **In this example, we will showcase how to change the background color of the entire wallpaper to match the album cover.**
 
@@ -151,22 +151,24 @@ export function update() {
  * @param {MediaThumbnailEvent} event
  */
 export function mediaThumbnailChanged(event) {
-	color = event.textColor;
+	color = event.primaryColor;
 }
 ```
-The code basically just assigns `event.textColor` to the color of the property. The `textColor` value is one of many color values that Wallpaper Engine provides in the [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.md), see the **MediaThumbnailEvent** page for a full list of color values you can use. The `textColor` value will always contain a value that makes text easy to read on top of the `primaryColor` value. There is no right or wrong here, you should experiment around with how you can utilize the different colors best, though it's good practice to ensure that text remains readable under all conditions.
+The code assigns `event.primaryColor` to the color of the property. The `primaryColor` value is one of many color values that Wallpaper Engine provides in the [MediaThumbnailEvent](/en/scene/scenescript/reference/class/MediaThumbnailEvent.md), see the **MediaThumbnailEvent** page for a full list of color values you can use. It's important to note that the `textColor` value will always contain a value that makes text easy to read on top of the `primaryColor` value. If you add text on top of a dynamically colored background such as here, you can use the `textColor` property for the text to ensure that it will always be easy to read.
 
 ### Adding a simple color transition
 
-You can also extend the previous code sample with a simple color transition animation. In that case, you can use the following code snippet where the new and old color are continuously transitioned to one another during the `update()` function:
+You can also extend the previous code sample with a simple color transition animation. Use the following code snippet where the new and old color are continuously transitioned to one another during the `update()` function:
 
 ```js
 'use strict';
 
+// Adjust this constant to change the duration of the transition
+const DURATION = 1;
+
 let newColor = new Vec3(0, 0, 0);
 let oldColor = new Vec3(0, 0, 0);
-let timer = 1;
-
+let timer = DURATION;
 
 /**
  * @param {Vec3} value - for property 'clearcolor'
@@ -174,8 +176,8 @@ let timer = 1;
  */
 export function update() {
 	var color = newColor;
-	if (timer < 1) {
-		color = newColor.subtract(oldColor).multiply(timer).add(oldColor);
+	if (timer < DURATION) {
+		color = newColor.subtract(oldColor).multiply(timer / DURATION).add(oldColor);
 		timer += engine.frametime;
 	}
 	return color;
@@ -187,7 +189,7 @@ export function update() {
 export function mediaThumbnailChanged(event) {
 	timer = 0;
 	oldColor = newColor;
-	newColor = event.textColor;
+	newColor = event.primaryColor;
 }
 ```
 
@@ -198,26 +200,15 @@ If a user is not actively playing any audio, it might make sense to hide the alb
 ```js
 'use strict';
 
-var isStopped = true;
-
-/**
- * @param {Boolean} value - for property 'visible'
- * @return {Boolean} - update current property value
- */
-export function update() {
-	
-	return !isStopped;
-}
-
 /**
  * @param {MediaPlaybackEvent} event
  */
 export function mediaPlaybackChanged(event) {
-	isStopped = event.state == MediaPlaybackEvent.PLAYBACK_STOPPED;
+	thisLayer.visible = event.state !== MediaPlaybackEvent.PLAYBACK_STOPPED;
 }
 ```
 
-This snippet will ensure that when a user stops media playback or has never started any media playback, the element will be hidden. Do note that Wallpaper Engine differentiates between playback being stopped and paused: If a user just temporarily pauses media playback, the element will remain visible.
+This snippet will ensure that when a user stops media playback or has never started any media playback, the element will be hidden. Note that Wallpaper Engine differentiates between playback being stopped and paused: If a user just temporarily pauses media playback, the element will remain visible.
 
 ## More Media Data
 
