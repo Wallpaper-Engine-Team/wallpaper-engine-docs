@@ -34,7 +34,7 @@ The **Alpha writing** option for texture channels is mainly relevant if you add 
 
 ### Creating Additional Channels
 
-You can create multiple texture channels for more complex texture animations and you can configure the order in which all channels are drawn. However, keep in mind that this feature is not intended to control lots frames of a single animated texture like a GIF.
+You can create multiple texture channels for more complex texture animations and you can configure the order in which all channels are drawn. However, keep in mind that this feature is not intended to control a large number of frames like a GIF.
 
 ## Texture Channel Animations
 
