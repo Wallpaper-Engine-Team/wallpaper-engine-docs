@@ -27,7 +27,20 @@ Foreground separation can also be used as a starting point for a [puppet warp an
 
 In order to get started, import your image into the Wallpaper Engine editor, then right-click on it and hover over **Image Editing** and select **Foreground Separation**. You will now see the foreground separation window within the editor.
 
-The two main functionalities you need to get started are the **Mark Foreground** and **Mark Background** buttons on the left. Use them to mark different parts of the image as either your foreground character or object and to mark the background areas. Switch between marking parts of the background and foreground. Often just a single brush stroke suffices to mark whole areas as either foreground or background. The **Erase** functionality marks an area as essentially *neutral* and the app will decide whether or not it considers it part of the background or foreground.
+## Paint Modes
+
+There are two modes that you can use to define the outlines of your character. The first option we want to showcase is the **Paint Brush** mode. Both modes are viable tools to achieve foreground separation, be sure to read the following section and then decide on which mode to try.
+
+Get started by enabling **Paint Brush Mode** by clicking the brush symbol in the foreground separation window as shown in the following video:
+
+<video width="100%" controls autoplay loop>
+  <source src="/videos/foreground_separation_mode.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Paint Brush Mode
+
+When using the paint brush functionality, the two core functions are the **Mark Foreground** and **Mark Background** buttons on the left. Use them to mark different parts of the image as either your foreground character or the background areas that are not part of your character. Switch between marking parts of the background and foreground. Often just a single brush stroke suffices to mark whole areas as either foreground or background. The **Erase** functionality marks an area as essentially *neutral* and the app will decide whether or not it considers it part of the background or foreground.
 
 ::: danger Very important
 Do not try to accurately draw in tiny details unless absolutely necessary. Simply paint the rough areas of your character and the background. Wallpaper Engine will automatically attempt to detect the outline of your foreground object.
@@ -45,6 +58,25 @@ See the following video for an example of how to extract a character. Notice how
 </video>
 
 Using the controls in the **View** section, you can switch between viewing the **foreground** and **background** independently. Before finalizing the character separation, you should switch between the foreground and background view and make sure that both layers match your expectations as you cannot return to the foreground separation process without starting from scratch.
+
+### Polygon Mode
+
+As an alternative to the aforementioned *Paint Brush Mode*, you can also use the polygon drawing functionality to create the outlines of your character. You can enable it by clicking on the **Polygon** icon on the left-hand side.
+
+With **Polygon Mode**, you can set points around your character to define its rough outline. Make sure to draw a full circle around your character, this means the last point you set needs to be connected to the first point that you created to complete a full loop around your character. Just like with **Paint Brush Mode**, you do not need to be completely accurate with your drawings, though **Polygon Mode** allows for more precision and might be a better choice in some cases.
+
+In order to get started, set a point anywhere at the outline of your character, then run points along the line of your character. You can delete points by clicking the middle mouse button on a point that you want to delete. You can insert new points by clicking on an already existing lines and you can move existing points around to adjust their position.
+
+The following video shows the same image as in the previous section being extracted by using **Polygon Mode**:
+
+<video width="100%" controls>
+  <source src="/videos/foreground_separation_polygon.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+::: tip Tip
+You can also draw multiple independent polygon circles if your character consists of multiple independent parts.
+:::
 
 ### Additional Controls
 

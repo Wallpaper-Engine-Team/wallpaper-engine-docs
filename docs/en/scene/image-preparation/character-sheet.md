@@ -40,6 +40,12 @@ While painting the mask, make sure to regularly check the **Foreground** and **B
   Your browser does not support the video tag.
 </video>
 
+::: tip Tip
+In this tutorial, we are showcasing the **Paint Brush Mode** for the character sheet creation. You can also use **Polygon Mode** to draw the outlines of your character's limbs. To learn more about the two paint modes, see the relevant section in the foreground separation tutorial where we showcase both options:
+
+* [Foreground Separation](/scene/image-preparation/foreground-separation)
+:::
+
 ### Further Separating a Limb
 
 Once the arm and sword have been properly masked, we continue by further separating the arm from the sword, this will give us some additional flexibility in the puppet warp animation. To do this, make sure the **Arm** is selected in the hierarchy, then click on the **Add Limb** button to create a child limb of the arm. In our case, we will name it **Sword**. Just like before, we mark the sword and hand as **foreground**, while we mark the upper arm as **background**. Since the sword has already been separated from the main body, we don't need to be very precise with our painting, as the arm is now presented in its cut-out state and the main body is completely ignored:
