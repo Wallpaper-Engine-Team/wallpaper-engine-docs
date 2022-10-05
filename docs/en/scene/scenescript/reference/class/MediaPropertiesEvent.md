@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class MediaPropertiesEvent
 
-This object describes a media properties event that will be fired when the currently playing media session in Windows changes. The available members depend on the application firing the event. Typically only title, artist and contentType will be available, all other data points may be unavailable. Your wallpaper should only support these optionally and it should not break if any of the data points is not supplied.
+This object describes a media properties event that will be fired when the currently playing media session in Windows changes. The available members depend on the application firing the event. Typically only title, artist and contentType will be available, all other data points may be unavailable. Your wallpaper should only support these optionally and it should not break if any of the data points are not supplied.
 
 ## Properties
 
