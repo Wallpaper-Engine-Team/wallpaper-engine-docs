@@ -63,7 +63,7 @@ Using the controls in the **View** section, you can switch between viewing the *
 
 As an alternative to the aforementioned *Paint Brush Mode*, you can also use the polygon drawing functionality to create the outlines of your character. You can enable it by clicking on the **Polygon** icon on the left-hand side.
 
-With **Polygon Mode**, you can set points around your character to define its rough outline. Make sure to draw a full circle around your character, this means the last point you set needs to be connected to the first point that you created to complete a full loop around your character. Just like with **Paint Brush Mode**, you do not need to be completely accurate with your drawings, though **Polygon Mode** allows for more precision and might be a better choice in some cases.
+With **Polygon Mode**, you can set points around your character to define its rough outline. Make sure to draw a full circle around your character, this means the last point you set needs to be connected to the first point that you created to complete a full loop around your character. Unlike the **Paint Brush Mode**, you should follow the outline of your character closely to get a good result.
 
 In order to get started, set a point anywhere at the outline of your character, then run points along the line of your character. You can delete points by clicking the middle mouse button on a point that you want to delete. You can insert new points by clicking on an already existing lines and you can move existing points around to adjust their position.
 
@@ -75,12 +75,12 @@ The following video shows the same image as in the previous section being extrac
 </video>
 
 ::: tip Tip
-You can also draw multiple independent polygon circles if your character consists of multiple independent parts.
+You can also draw multiple independent polygons if your character consists of multiple independent parts.
 :::
 
 ### Additional Controls
 
-As mentioned in the previous section, it is helpful to frequently switch between these foreground-only and background-only view to ensure that the separation is aligning with your expectations, otherwise make sure to mark more areas as either background or foreground. You can also tweak the **Mask tolerance** and the **Smoothing** values to ensure the selection matches your character or object as closely as possible. Increasing the **Mask tolerance** will expand the selected foreground areas slightly while decreasing it will make the selection more closely tied to the object.
+As mentioned in the previous section, it is helpful to frequently switch between the foreground-only and background-only view to ensure that the separation is aligning with your expectations, otherwise make sure to mark more areas as either background or foreground. You can also tweak the **Mask tolerance** and the **Smoothing** values to ensure the selection matches your character or object as closely as possible. Increasing the **Mask tolerance** will expand the selected foreground areas slightly while decreasing it will make the selection more closely tied to the object.
 
 Additionally, you can also lower or raise the **Quality** setting at the bottom of the options. This can significantly alter the current selection, so it can be useful to do this early on in your process. Keep in mind that raising the quality will significantly raise the time it needs for Wallpaper Engine to recalculate the mask.
 
