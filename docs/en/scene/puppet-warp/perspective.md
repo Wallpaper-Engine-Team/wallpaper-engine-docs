@@ -6,15 +6,17 @@ You should have read and understood the [Puppet Warp Introduction Guide](/scene/
 
 ## Puppet Warp Geometry Setup
 
-Navigate to the **Geometry** step in your puppet warp and make sure you are satisfied with the parameters you have set up there. Changing the number of subdivisions and the padding option in the **Geometry** settings may require you to re-do some of the following steps, so it is important you first complete this set up before you continue with the 3D perspective extrusion functionality.
+Navigate to the **Geometry** step in your puppet warp and make sure you are satisfied with the parameters you have set up there. Changing the number of subdivisions and the padding option in the **Geometry** settings may require you to re-do some of the following steps, so it is important you finalize these options before you continue with the 3D perspective extrusion feature.
 
-Once you are satisfied with the geometry setup, enable the **3D Perspective Extrusion** in the **Geometry** step of the puppet warp.
+It may be tempting to use a high subdivision value to have more fine-grained control over the mesh later, but this can make depth painting more difficult and reduces overall performance of the wallpaper. Alternatively, try using a subdivision value of 0 or 1, then click on the mesh to place subdivision slice points in places where you want to extrude later. This will give you better control over the mesh and keep things simpler, with less geometry to take care of.
+
+Once you are satisfied with the basic geometry setup, enable the **3D Perspective Extrusion** in the **Geometry** step of the puppet warp.
 
 ## Painting the Depth Map
 
-Click on the **Paint Depth** button to bring up the depth painting options on the left-hand side. Select one of the paint options (**Raise**, **Lower**, **Flatten**, **Smooth**) to raise or lower the perceived depth at any given location that you are painting the depth mask. You do not need to be very accurate for a good result, but if you need perfect accuracy, it might be best if you export the depth map, edit it in a third-party image editor and then import it back into Wallpaper Engine.
+Click on the **Paint Depth** button to bring up the depth painting options on the left-hand side. Select one of the paint options (**Raise**, **Lower**, **Flatten**, **Smooth**) to raise or lower the perceived depth at any given location that you are painting the depth mask. You do not need to be very accurate for a good result, but if you need perfect accuracy, you can export the depth map, edit it in a third-party image editor and then import it back into Wallpaper Engine.
 
-While painting the depth mask, make sure to adjust the **Extrusion Preview** value to rotate your character or object. This will allow you to get an idea of what type of perceived 3D depth your object will have in your later animation. Keep in mind that the value of the **Extrusion Preview** does not change anything about your puppet warp, it is merely a preview functionality that is later discarded.
+While painting the depth mask, make sure to adjust the **Extrusion Preview** value to rotate your character or object. This will allow you to get an idea of what type of perceived 3D depth your object will have in your animation later. Keep in mind that the value of the **Extrusion Preview** does not change anything about your puppet warp, it is merely a preview functionality that is later discarded.
 
 Once you have finalized the depth mask, you can fine-tune the **Extrusion Scale** option to increase or decrease the perceived depth of the 3D effect. The **Culling** option is only relevant if you intend to rotate the object on its back. If you set this option to **Normal**, the backside of the layer will be transparent, while setting it to **No cull** will mirror the texture to the backside as well. In the vast majority of cases, you can ignore this option, it is only relevant if you rotate your object by more than 180° during your animation.
 
