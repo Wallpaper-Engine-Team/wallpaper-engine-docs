@@ -36,6 +36,10 @@ The **Alpha writing** option for texture channels is mainly relevant if you add 
 
 You can create multiple texture channels for more complex texture animations and you can configure the order in which all channels are drawn. However, keep in mind that this feature is not intended to control a large number of frames like a GIF.
 
+::: warning Limits
+Depending on the texture resolution of your model and the combined changes of all texture channels, you may end up hitting the limit for texture channel data. Should you get an error when trying to finish texture channel editing, you either have to remove channels or change them, so that their affected area becomes smaller.
+:::
+
 ## Texture Channel Animations
 
 Once you have set up your texture channels, you can continue to the **Animation** section of your puppet warp. In our case, we create a new 4 second looped animation for the texture channel, though you can also incorporate texture channel animations into any existing animation.
