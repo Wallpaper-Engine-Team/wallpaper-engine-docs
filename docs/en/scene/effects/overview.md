@@ -145,6 +145,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
+		<div class="effect-box">
+		<a href="/en/scene/effects/effect/radialblur.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Radial_Blur.gif')"></div>
+			<div>
+				<h4>Radial Blur</h4>
+				<p>Applies a circular blur on the image by accumulating the picture over time around a pre-defined point. </p>
+			</div>
+		</a>
+	</div>
 </div>
 
 ### Interactive Effects
