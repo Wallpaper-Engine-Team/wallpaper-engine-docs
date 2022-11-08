@@ -7,13 +7,16 @@ The **Blend** effect allows you to blend multiple images or even animated image 
 
 ![Blend](/img/effects/Blend.gif)
 
+::: tip
+You can drag and drop an image layer into the **Blend texture** to dynamically use another image layer as a blend texture.
+:::
+
 ### Effect Settings
 
 * **Blend mode:** This determines how the images will be blended together. The default option is *multiply* which will multiply the colors, if you want to, for example, fully blend over to a different image, you would set this option to *normal*.
 * **Number of textures:** This allows you to choose between how many textures you want to blend in this effect, you can choose up to 6 textures to be blended at once.
 * **Blend texture 1 - 6:** These are the different input textures that you want to overlay over the current image. You can import a different, static texture here or even drag & drop another image layer into these options. That way you can blend different animated layers together.
 * **Blend amount 1 - 6:** This allows you to control how strongly each individual blend texture will be blended on top of the previous texture.
-
 * **Opacity mask:** The opacity mask will determine which region of the image is affected by the blend effect at all. By default the entire image will be blended.
 
 #### Blend Transform
