@@ -17,6 +17,7 @@ The **Twirl** effect allows you to create a spiral animation around a point in y
 * **Angle:** Only visible when **Elliptical** option is enabled. Changes the **angle** of the ellipsis, can also be configured through editor controls.
 * **Center:** The point around which the effect applies the spiral effect.
 * **Feather:** Strength in which the effect is smoothed into surrounding areas of the image.
+* **Time offset:** Adds a small delayed start to the effect, this can be useful if you are using the effect multiple times throughout your wallpaper and want to ensure they are not synchronized.
 * **Ratio:** Only visible when **Elliptical** option is enabled. Changes the **width** of the ellipsis, can also be configured through editor controls.
 * **Size:** Changes the overall area of the effect.
 * **Speed:** The speed of the effect motion.

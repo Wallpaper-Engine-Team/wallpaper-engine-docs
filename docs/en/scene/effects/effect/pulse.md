@@ -26,7 +26,7 @@ When the option **Audio response** at the top of the effect settings is set to *
 * **Power:** Exponent for the pulse animation.
 * **Pulse amount:** A multiplier for the pulse output value.
 * **Pulse bounds:** This maps how much time the pulse is bright and dark. For example, set to 0.8, 1 for a short pulse.
-* **Pulse phase:** The time offset of this effect.
+* **Time offset:** Adds a small delayed start to the effect, this can be useful if you are using the effect multiple times throughout your wallpaper and want to ensure they are not synchronized.
 * **Pulse speed:** The speed of the pulse animation.
 
 #### Audio response mode

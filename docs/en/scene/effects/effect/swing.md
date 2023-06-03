@@ -14,6 +14,7 @@ The **Swing** effect allows you to swing part of an image back and forth. You ca
 * **Amount:** The overall strength of the effect.
 * **Center:** The point around which the effect swings.
 * **Feather:** Strength in which the effect is smoothed into surrounding areas of the image.
+* **Time offset:** Adds a small delayed start to the effect, this can be useful if you are using the effect multiple times throughout your wallpaper and want to ensure they are not synchronized.
 * **p0:** Top-left corner of the effect area.
 * **p1:** Top-right corner of the effect area.
 * **Size:** The distance from **p0** and **p1**.
