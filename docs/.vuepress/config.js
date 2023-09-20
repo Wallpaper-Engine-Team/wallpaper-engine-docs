@@ -197,6 +197,8 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			collapsable: true,
 			children: [
 				locale + 'scene/models/introduction',
+				locale + 'scene/models/animation',
+				locale + 'scene/models/attachment',
 			]
 		},
 		{
