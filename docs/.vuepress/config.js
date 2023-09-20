@@ -20,7 +20,7 @@ module.exports = {
 				label: en.language_name,
 				ariaLabel: en.language_name,
 				sidebar: {
-					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_properties, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_puppetwarp, en.sidebar_parallax, en.sidebar_rgb, en.sidebar_performance, en.sidebar_scenescript, en.sidebar_shaders, en.sidebar_imagepreparation, en.sidebar_lightingandreflections),
+					'/en/scene/': getSceneSidebar('/en/', en.sidebar_overview, en.sidebar_gettingstarted, en.sidebar_effects, en.sidebar_assets, en.sidebar_properties, en.sidebar_audio, en.sidebar_particles, en.sidebar_animations, en.sidebar_puppetwarp, en.sidebar_parallax, en.sidebar_rgb, en.sidebar_performance, en.sidebar_scenescript, en.sidebar_shaders, en.sidebar_imagepreparation, en.sidebar_lightingandreflections, en.sidebar_models),
 					'/en/web/': getWebSidebar('/en/', en.sidebar_web_overview, en.sidebar_web_first, en.sidebar_web_customization, en.sidebar_web_audio, en.sidebar_web_performance, en.sidebar_web_rgb, en.sidebar_web_debug),
 					'/': []
 				},
@@ -50,7 +50,7 @@ module.exports = {
 	]
 };
 
-function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, propertiesGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, shadersGroup, imagePreparationGroup, lightingGroup) {
+function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGroup, assetsGroup, propertiesGroup, audioGroup, particlesGroup, animationsGroup, puppetwarpGroup, parallaxGroup, rgbGroup, performanceGroup, scenescriptGroup, shadersGroup, imagePreparationGroup, lightingGroup, modelGroup) {
 	return [
 		{
 			title: overviewGroup,
@@ -148,6 +148,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/puppet-warp/inversekinematics',
 				locale + 'scene/puppet-warp/blendrules',
 				locale + 'scene/puppet-warp/texturechannels',
+				locale + 'scene/puppet-warp/attachments',
 			]
 		},
 		{
@@ -189,6 +190,13 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/scenescript/introduction',
 				locale + 'scene/scenescript/tutorials',
 				locale + 'scene/scenescript/reference',
+			]
+		},
+		{
+			title: modelGroup,
+			collapsable: true,
+			children: [
+				locale + 'scene/models/introduction',
 			]
 		},
 		{
