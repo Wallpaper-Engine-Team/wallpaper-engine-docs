@@ -1,4 +1,4 @@
-# 3D Model Support
+# Getting started with 3D Models
 
 Wallpaper Engine supports importing 3D models including animations and textures. 3D models should be imported as `.fbx` files, though for very basic models without animations, you can also use the more basic `.obj` file format.
 
@@ -31,7 +31,7 @@ Here, you will find various options related to lighting, reflection and renderin
 * **Toon shading:** Changes the model rendering to toon shading (also known as *Cel-shading*) which is useful for cartoon-like characters. **Tip:** Try using it in combination with **Rim lighting**. 
 * **Tint mask in albedo alpha:** When enabled, the alpha channel of the main albedo texture determines the areas of the texture that are tinted using the tint color option below.
 
-Additionally, you can import various maps which allow you to implement physically-based rendering to your model:
+Additionally, you can import various maps which allow you to implement a form of physically-based rendering (*PBR*) to your model:
 
 * **Albedo:** The main texture of your model.
 * **Normal map:** Allows you to import and normal map for your model.
@@ -42,6 +42,10 @@ Additionally, you can import various maps which allow you to implement physicall
 
 ## Next Steps
 
-If your model does not come with any bones and animations, the setup is completed at this point and you can use the model as part of your wallpaper scene. If you do have animations, we recommend that you continue with the animation tutorial in order to learn how to import and organize animations within Wallpaper Engine:
+If your model does not come with any bones and animations, the setup is completed at this point and you can use the model as part of your wallpaper scene. Consider adding lights to your wallpaper, see the advanced lighting guide for more information:
 
-* [**Model Animation Setup**](/en/scene/models/animation)
+* [**Tips for Advanced Lighting**](/en/scene/lighting/lights.html)
+
+If your model does have animations, we recommend that you continue with the animation tutorial in order to learn how to import and organize animations within Wallpaper Engine:
+
+* [**Model Animation Setup**](/en/scene/models/animation.html)
