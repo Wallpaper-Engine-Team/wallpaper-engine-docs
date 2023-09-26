@@ -28,7 +28,7 @@ Watch the entire process as a video here:
   Your browser does not support the video tag.
 </video>
 
-## Binding Points to Attachments
+## Binding Point Properties to Attachments
 
 Some assets and effects allow you to bind specific points to puppet warp attachments. We will showcase this with the [**Advanced Fluid Simulation**](/en/scene/effects/effect/advancedfluidsimulation.html) effect.
 
