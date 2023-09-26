@@ -58,6 +58,7 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 | [IEffectLayer](/en/scene/scenescript/reference/class/IEffectLayer.html) | Base class for image and text layers. |
 | [IEngine](/en/scene/scenescript/reference/class/IEngine.html) | Provides general information about the user device and the running wallpaper. |
 | [IImageLayer](/en/scene/scenescript/reference/class/IImageLayer.html) | This class provides access to functions specific to image layers. |
+| [IModelLayer](/en/scene/scenescript/reference/class/IModelLayer.html) | This class provides access to functions specific to model layers. |
 | [IInput](/en/scene/scenescript/reference/class/IInput.html) | Provides access to input related data, mainly the mouse cursor. |
 | [ILayer](/en/scene/scenescript/reference/class/ILayer.html) | Provides access to data related to a layer. |
 | [IMaterial](/en/scene/scenescript/reference/class/IMaterial.html) | Provides access to dynamic properties of materials / shader properties. |
