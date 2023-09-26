@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class IAnimationLayer
 
-This class represents a puppet warp animation layer.
+This class represents a puppet warp or 3D model animation layer.
 
 ## Properties
 
