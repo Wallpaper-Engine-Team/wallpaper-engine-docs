@@ -27,9 +27,9 @@ Model sizes are not standardized. Wallpaper Engine tries to account for this and
 
 Make sure that `-z` is configured as the forward axis and `+y` as the up axis in your model file. This is the default Blender setting for FBX but you should still be aware of this technical detail. If the axes are misconfigured, you can import your models into Blender and select the output axes when exporting as FBX.
 
-## Import your FBX file
+## Importing your model file
 
-Once your model is ready, make sure its texture file is placed are placed in the same directory. If you have a normal map, also place it in the directory of your model during the import process. During the import model dialog, you can manually load the texture and normal map file if they are not detected automatically.
+Once your model is ready, make sure its texture files are placed in the same directory. If you have a normal map, also place it in the directory of your model during the import process. During the import model dialog, you can manually load the texture and normal map file if they are not detected automatically.
 
 ## Advanced Texture Settings
 
