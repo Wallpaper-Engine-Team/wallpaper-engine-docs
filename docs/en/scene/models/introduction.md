@@ -31,6 +31,8 @@ Make sure that `-z` is configured as the forward axis and `+y` as the up axis in
 
 Once your model is ready, make sure its texture files are placed in the same directory. If you have a normal map, also place it in the directory of your model during the import process. During the import model dialog, you can manually load the texture and normal map file if they are not detected automatically.
 
+If you want to start a new 3D wallpaper, simply drop the model file into the **New Project** dialog. For existing projects, click on **Add Asset** on the left-hand side of the editor and select **Model** from the list.
+
 ## Advanced Texture Settings
 
 Once your model is imported, you can further configure various rendering details by selecting it and clicking on the **Advanced Texture Settings** button on the right-hand side.
