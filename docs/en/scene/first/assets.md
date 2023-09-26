@@ -42,7 +42,7 @@ Keep in mind that since the clock relies on **SceneScript**, the clock will not 
 
 ## Asset Hierarchy
 
-Wallpaper Engine also allows you to create a hierarchy within your asset list. This allows you to attach assets to another parent asset. If the parent asset is moved, rotated or scaled, so will all its children. This can help to organize your wallpaper assets into groups that are tied together, though you should only use it when objects are firmly tied to each other.
+Wallpaper Engine also allows you to create a hierarchy within your asset list. This allows you to attach assets to another parent asset. If the parent asset is moved, rotated or scaled, so will all its children.
 
 To create a hierarchy, simply drag and drop an asset onto another asset in the list and move to the right as shown in this video:
 
@@ -53,4 +53,4 @@ To create a hierarchy, simply drag and drop an asset onto another asset in the l
 
 As you can see in the video, when attaching the circling stars to the clock, they start moving, rotating and scaling along with the clock.
 
-We will not be utilizing this feature as part of this beginner tutorial but you may find it useful to organize your wallpaper better. It is especially useful in more advanced use-cases, for example if you want multiple assets to move in union as part of a *timeline animation* or a custom-coded *SceneScript* animation.
+We will not be utilizing this feature as part of this beginner tutorial. It is especially useful in more advanced use-cases, for example if you want multiple assets to move in union as part of a *timeline animation* or a custom-coded *SceneScript* animation.

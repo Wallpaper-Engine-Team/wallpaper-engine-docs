@@ -34,7 +34,7 @@ Some assets and effects allow you to bind specific points to puppet warp attachm
 
 First, we create two attachment points along the sword that we have also used in our previous example (see the previous section for a more detailed step-by-step guide on how to create attachment points). We give them clearly identifiable names: *Sword Start* and *Sword End*.
 
-Next, we create an Adjustable Composition Layer. This is only relevant for **Advanced Fluid Simulation** effect and can be skipped for other assets and effects. The Adjustable Composition Layer needs to span the area that the animation will be visible in, in our case we'll create an 850x850 pixel square and place it roughly in the area that the sword is visible in.
+Next, we create an Adjustable Composition Layer. This is only relevant for image effects and can be skipped for other assets, like particles. The Adjustable Composition Layer needs to span the area that the animation will be visible in, in our case we'll create an 850x850 pixel square and place it roughly in the area that the sword is visible in.
 
 We now select the Adjustable Composition Layer and add the **Advanced Fluid Simulation** effect to it. We want to showcase the **Line emitter** functionality here, so we first set the **Line emitter count** to `1` and change the **Point emitter count** to `0`. We now scroll down to the settings of the line emitter. You will find their two points there: `p0` and `p1` which are the start and end point of the line emitter.
 
