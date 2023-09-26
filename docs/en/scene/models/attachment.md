@@ -1,6 +1,6 @@
 # Model Attachments
 
-Wallpaper Engine allows you to create model attachment points that you can use to attach other assets to specific bones your model. Attachments will follow your model along any animations or movements.
+Wallpaper Engine allows you to create model attachment points that you can use to attach other assets to specific bones of your model. Attachments will follow your model along any animations or movements.
 
 ## Creating an Attachment Point
 

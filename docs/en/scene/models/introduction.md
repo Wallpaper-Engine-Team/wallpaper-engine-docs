@@ -10,16 +10,28 @@ If you create a new wallpaper by first importing a 3D model, the wallpaper will 
 
 ## Importing and Configuring 3D models
 
-Before you get started with your model, you should be aware of some pitfalls:
+Before getting starting, you should be aware of some details regarding the model setup.
 
-1. Model sizes are not standardized. Models may appear extremely large or extremely tiny after importing them. Simply adjust the scale after importing. **Tip:** You can hold SHIFT while resizing a model with the editor controls to make the resizing more fine-tuned.
-2. Make sure that `-z` is configured as the forward axis and `+y` as the up axis in your model file. This is the default Blender setting for FBX but you should still be aware of this technical detail. If the axes are misconfigured, you can import your models into Blender and select the output axes when exporting as FBX.
+### Model sizes
 
-### Import your FBX file
+Model sizes are not standardized. Wallpaper Engine tries to account for this and normalize sizes by adjusting the scale during the import of new models. However, sizes may still need to be tweaked after importing. Use the **Scale** gizmo (symbol shows four diagonal arrows) in the editor to resize your model as shown in the following video:
+
+<video width="100%" controls>
+  <source src="/videos/model_resize.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+**Tip:** You can hold SHIFT while resizing a model with the editor controls to make the resizing more fine-tuned.
+
+### Axis Configuration
+
+Make sure that `-z` is configured as the forward axis and `+y` as the up axis in your model file. This is the default Blender setting for FBX but you should still be aware of this technical detail. If the axes are misconfigured, you can import your models into Blender and select the output axes when exporting as FBX.
+
+## Import your FBX file
 
 Once your model is ready, make sure its texture file is placed are placed in the same directory. If you have a normal map, also place it in the directory of your model during the import process. During the import model dialog, you can manually load the texture and normal map file if they are not detected automatically.
 
-### Advanced Texture Settings
+## Advanced Texture Settings
 
 Once your model is imported, you can further configure various rendering details by selecting it and clicking on the **Advanced Texture Settings** button on the right-hand side.
 
@@ -36,7 +48,7 @@ Additionally, you can import various maps which allow you to implement a form of
 * **Albedo:** The main texture of your model.
 * **Normal map:** Allows you to import and normal map for your model.
 * **Metallic map:** Marks certain area as metallic and increases their reflective properties.
-* **Roughness map:** The roughness map affects the scattering of the reflected light, essentially it defines how blurry the reflection is.
+* **Roughness map:** The roughness map affects the scattering of the reflected light, essentially it defines the blur of the reflection.
 * **Reflection map:** Allows you to create a map to decrease the reflection in some areas of the texture if needed.
 * **Emissive map:** Areas marked in the emissive map will appear to emit light and glow in dark scenarios. Keep in mind that emissive maps are not real light sources.
 
