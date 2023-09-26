@@ -4,7 +4,7 @@ Wallpaper Engine supports importing 3D models including animations and textures.
 
 ## 2D Scene or 3D Scene?
 
-It is important to note that Wallpaper Engine differentiates between 2D and 3D scenes. While both scene types do support 3D models, 2D scenes disable perspective rendering by default and the handling of the editor is also much more focused on 2D objects. In 3D wallpapers, you can also move camera objects freely in a 3D space while 2D scenes are limited to a top-down perspective. You will also have different assets available to you the asset list. Before you get started, you should essentially decide whether the focus of your wallpaper is on animating 2D or 3D elements, though both can be done in either mode.
+It is important to note that Wallpaper Engine differentiates between 2D and 3D scenes. While both scene types do support 3D models, 2D scenes disable perspective rendering by default and the handling of the editor is also much more focused on 2D objects. In 3D wallpapers, you can move camera objects freely in a 3D space while 2D scenes are limited to a flat perspective. You will also have different assets available to you the asset list. Before you get started, you should essentially decide whether the focus of your wallpaper is on animating 2D or 3D elements, though both can be done in either mode.
 
 If you create a new wallpaper by first importing a 3D model, the wallpaper will be created as a 3D scene. Alternatively, you can use the **Use Template** button in the *new wallpaper* screen to manually choose whether or not your scene will be created as 2D or 3D scene. You can add 3D models to your 2D wallpapers by clicking on **Add Asset** on the left-hand side of the editor and selecting **Model** from the list.
 
@@ -25,7 +25,7 @@ Model sizes are not standardized. Wallpaper Engine tries to account for this and
 
 ### Axis Configuration
 
-Make sure that `-z` is configured as the forward axis and `+y` as the up axis in your model file. This is the default Blender setting for FBX but you should still be aware of this technical detail. If the axes are misconfigured, you can import your models into Blender and select the output axes when exporting as FBX.
+Make sure that `-z` is configured as the forward axis and `+y` as the up axis in your model file. This is the default Blender setting for FBX but you should still be aware of this technical detail. If the axes are misconfigured, you can import your models into Blender and select the correct output axes when exporting as FBX.
 
 ## Importing your model file
 
@@ -48,7 +48,7 @@ Here, you will find various options related to lighting, reflection and renderin
 Additionally, you can import various maps which allow you to implement a form of physically-based rendering (*PBR*) to your model:
 
 * **Albedo:** The main texture of your model.
-* **Normal map:** Allows you to import and normal map for your model.
+* **Normal map:** Allows you to import and normal map for your model. **Tip:** Use the advanced texture options to flip the red or green channel of the normal map, which may be necessary if your normal map was designed for a different engine or modeling tool.
 * **Metallic map:** Marks certain area as metallic and increases their reflective properties.
 * **Roughness map:** The roughness map affects the scattering of the reflected light, essentially it defines the blur of the reflection.
 * **Reflection map:** Allows you to create a map to decrease the reflection in some areas of the texture if needed.

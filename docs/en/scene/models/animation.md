@@ -7,7 +7,7 @@ If your model file includes bones and animations, Wallpaper Engine will display 
 Many model files will have all their animations merged into one long animation. Wallpaper Engine offers a way to separate animations into many individual clips that you can utilize in your wallpaper. If this is not the case for your model, you can skip this section. To get started, click on **Configure Model**.
 
 ::: tip
-In some cases, animations may even be spread out into individual FBX files. In this case, start your project with one model file. To import more versions of the same model with different animations, use the **Add FBX File** button in the **Animation** tab of the model editor.
+In some cases, animations may even be spread out into individual FBX files. In this case, start your project with one model file. To import more versions of the same model with different animations, use the **Add FBX File** button in the **Animation** tab of the model editor. Any additional FBX files imported for a model are expected to include the same bone hierarchy to be compatible.
 :::
 
 In the **Animation tab** of the model editor, navigate to the **Animations** section. Select the animation that you want to split into clips and click on **Add Clip**. In our case, we have a model of a dog and we want to extract the first animation clip, which shows a walking animation. We recommend adding names for each clip so that you can discern your individual animations more easily later on.
@@ -25,7 +25,7 @@ Repeat this process for all animations you want to extract into individual clips
 If you have a movement animation, you may want your character to actually move within the 3D space in line with the animation. To achieve this, scroll down in the **Clip options** and select the appropriate **Motion root bone**. Typically, the root bone is not a visible element of the model itself but rather represents its foundation. After selecting the bone, you should start seeing your model move in the preview area on the right-hand side.
 
 ::: danger
-If you intend to let your character move around entirely through root motion, make sure the animation is *perfectly aligned*, otherwise your characters may slowly drift away from the screen if the wallpaper is used for hours. When in doubt, you should reset the model position via SceneScript or a timeline animation for example.
+If you intend to let your character move around entirely through root motion, keep in mind that it may drift over time if the wallpaper is used for hours. Depending on your specific situation, it may be necessary to re-align the model via SceneScript at some point.
 :::
 
 In the editor, you can now add the animation by clicking on **Add** in the **Skeletal animation** section.

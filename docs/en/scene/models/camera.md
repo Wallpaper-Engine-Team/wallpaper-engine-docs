@@ -3,7 +3,7 @@
 By default, Wallpaper Engine will use the last position that you have used in the editor to determine the perspective that users of your 3D scene will see. We strongly recommend adding at least one camera asset to your scene so that you can position the user perspective reliably.
 
 ::: tip
-While you can add multiple cameras to your scene, Wallpaper Engine will only use the bottom-most visible camera in the asset list. To switch between specific angles, you can simply utilize the **camera path** functionality as described below, you should not add multiple camera for this use-case.
+While you can add multiple cameras to your scene, Wallpaper Engine will only use the bottom-most visible camera in the asset list. To switch between specific angles automatically, you can simply utilize the **camera path** functionality as described below, you should not add multiple camera for this use-case.
 
 **For advanced use-cases,** you can change through multiple cameras either by using user properties that toggle the visibility of individual cameras or by changing the `visible` property via **SceneScript**.
 :::
@@ -14,7 +14,7 @@ To add a camera, click on **Add Asset** on the left-hand side and select **Camer
 
 The easiest way to position a camera in your 3D scene is by using the **Edit Camera POV** functionality. This will switch the editor view to the perspective of the camera. To move and look around the 3D space, hold the left or right mouse button and move your mouse around the scene. You can then move through the 3D space with the `WASD` keys. Hold the middle mouse button to spin the camera.
 
-Each camera also comes with a **FOV** (*"Field of View"*) option that essentially allows you configure the zoom level of the camera.
+Each camera also comes with a **FOV** (*"Field of View"*) option that allows you configure the zoom level of the camera.
 
 ### Path Setup
 
@@ -52,3 +52,7 @@ You may have noticed that cameras paths do not use the standard approach of orie
 * **Up:** Defines the spin of the camera. This is directional vector that depends on the direction that the camera is facing, so it's hard to type sensible numbers by hand. **Tip:** Hold the middle mouse button while controlling the camera perspective to spin the camera.
 
 This solves various problems with interpolated camera paths, as the camera would otherwise move in non-sensible ways. Sometimes it may be useful to manually override these values if you want to make very precise camera paths, which is why it may be good to know what these values represent.
+
+::: tip
+To spin a camera smoothly around a fixed point using a camera path, you can configure the **Center** property manually and lock it to the position of the point you want to spin around. This allows you to create a smooth pivoting camera motion.
+:::
