@@ -52,7 +52,7 @@ Additionally, you can import various maps which allow you to implement a form of
 * **Metallic map:** Marks certain area as metallic and increases their reflective properties.
 * **Roughness map:** The roughness map affects the scattering of the reflected light, essentially it defines the blur of the reflection.
 * **Reflection map:** Allows you to create a map to decrease the reflection in some areas of the texture if needed.
-* **Emissive map:** Areas marked in the emissive map will appear to emit light and glow in dark scenarios. Keep in mind that emissive maps are not real light sources.
+* **Emissive map:** Areas marked in the emissive map will appear to emit light and glow in dark scenarios. Keep in mind that emissive maps are not real light sources. **Please note:** Emissive maps in Wallpaper Engine only use the red color channel. To ensure your emissive map works properly, convert it to shades of red or white. You can customize the emissive color in the app.
 
 ## Next Steps
 
