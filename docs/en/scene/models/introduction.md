@@ -23,6 +23,18 @@ Model sizes are not standardized. Wallpaper Engine tries to account for this and
 
 **Tip:** You can hold SHIFT while resizing a model with the editor controls to make the resizing more fine-tuned.
 
+### Controlling objects in 3D Spaces
+
+Especially when working in 3D wallpapers, you should be aware of the editor gizmos that you can select in the upper left corner: **Translate**, **Rotate** and **Scale**. In 3D scenes, you can also switch between **world space** and **local space** by clicking the *planet icon* and the *home icon* respectively.
+
+*World space* means that the editor controls adjust the absolute position and rotation of an object in the 3D space while *local space* means that the changes you make are relative to its own orientation. If that sounds confusing, just take a look at the following example, where you can see how the world space option ignores the **angle** of the object:
+
+<video width="100%" controls>
+  <source src="/videos/local_world_space_controls.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ### Axis Configuration
 
 Make sure that `-z` is configured as the forward axis and `+y` as the up axis in your model file. This is the default Blender setting for FBX but you should still be aware of this technical detail. If the axes are misconfigured, you can import your models into Blender and select the correct output axes when exporting as FBX.
