@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class IModelLayer
 
-This class provides access to functions specific to model layers.
+This class provides access to functions specific to 3D model layers.
 
 ## Properties
 
@@ -14,7 +14,7 @@ Controls the perspective rendering option.
 
 ### rootmotion: Boolean
 
-If the model is playing an animation that supports root motion, you can disable and enable movement from root motion with this property. It's enablled by default.
+If the model is playing an animation that supports root motion, you can disable and enable movement from root motion with this property. It's enabled by default.
 
 ## Functions
 
