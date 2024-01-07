@@ -54,6 +54,10 @@ Changes the parent of the layer. Pass undefined for the parent to remove the par
 
 Returns the current parent layer or undefined if the layer is not parented.
 
+### getChildren(): [ILayer]
+
+Returns an array with all children of this layer.
+
 ### getAttachmentIndex(name: String): Number
 
 Get index of an attachment by name.
