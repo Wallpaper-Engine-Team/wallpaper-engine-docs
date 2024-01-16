@@ -80,6 +80,18 @@ Computes dot product with vector value.
 
 Returns reflection vector along normal. Make sure that normal is normalized.
 
+### mix(other: Vec2, amount: Number): Vec2
+
+Interpolate between this vector and another vector of the same dimension. You can set the interpolation using the `amount` parameter, it accepts values between 0.00 and 1.00 where 1.00 represents the other vector. By setting it to 0.5, for example, you will interpolate halfway between this and the other vector.
+
+### min(value: Vec2): Vec2
+
+Return the smaller value per component of two vectors.
+
+### max(value: Vec2): Vec2;
+
+Return the larger value per component of two vectors.
+
 ### perpendicular(): Vec2
 
 Returns perpendicular copy of the vector.
