@@ -34,9 +34,9 @@ The parallax scale for the X and Y axis.
 
 ## Functions
 
-### getAnimation(name?: String): IAnimation
+### getAnimation(name: String): IAnimation
 
-Get an animation object by name. Leave empty to get the animation object bound to the current property.
+Get an animation object by name.
 
 ### rotateObjectSpace(angles: Vec3)
 

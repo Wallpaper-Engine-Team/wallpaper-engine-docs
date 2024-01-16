@@ -34,7 +34,7 @@ Time it took to update the last frame. This property is useful as it allows you 
 
 Total time in seconds that the wallpaper has been running.
 
-::: danger Please Note
+::: warning Please Note
 The runtime has a rollover to retain floating point precision. If you want to create a timer, consider using `setTimeout();` instead.
 :::
 
@@ -93,6 +93,22 @@ Returns an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) objec
 ### registerAsset(file: String): IAssetHandle
 
 If you create any layers dynamically with SceneScript, use function this to mark an asset as being used by your wallpaper. This is important for releasing a wallpaper to the Workshop, as only used or marked assets will be included in the scene archive that is generated.
+
+::: warning Please note
+Make sure to only use hard-coded strings for the `file` parameter. Using dynamic or concatenated strings will break the wallpaper on Android. For example:
+
+**OK:**
+
+```js
+engine.registerAsset('/somepath/somefile.abc');
+```
+
+**NOT OK:**
+
+```js
+engine.registerAsset('/somepath/' + 'somefile.abc')
+```
+:::
 
 ### setTimeout(callback: Function, delay?: Number): Function
 
