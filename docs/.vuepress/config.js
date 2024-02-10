@@ -199,6 +199,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/models/introduction',
 				locale + 'scene/models/animation',
 				locale + 'scene/models/camera',
+				locale + 'scene/models/fog',
 				locale + 'scene/models/attachment',
 				locale + 'scene/models/simulation',
 			]

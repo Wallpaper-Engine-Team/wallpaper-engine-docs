@@ -19,13 +19,19 @@ Properties will be shown on the right-hand side when a wallpaper is selected:
 
 You can always view, edit and even create new properties by opening your project in the Wallpaper Engine editor, navigating to the **Edit** menu at the top and selecting **Change Project settings**.
 
-## Creating sub-properties with display conditions
+## Group Property Type
+
+There is one special property type: The **Group** property. Adding this property will add all **following** properties to a group, allowing users to selectively hide them from the options list. The group property only features a label which you can use as a group name.
+
+To end a property group, you need to create another group property. If you have user properties which are not supposed to be part of a property group, place them before the first group in the property list.
+
+## Conditionally hiding certain properties with display conditions
 In some cases, you may want to show additional properties only under certain conditions. For example, you may have a clock in your wallpaper and you want to give users the ability to hide the clock and change between a 24 hour and 12 hour format. In this case, you might create two checkbox properties:
 
 * *Show Clock*
 * *Use 24h format*
 
-Since the *"Use 24h format"* user property does not make sense on its own, it's best that you hide it if the clock is disabled. This can significantly reduce clutter in your wallpaper settings, making it easier for users to configure your wallpaper.
+Since the *"Use 24h format"* user property does not make sense on its own, it is best that you hide it if the clock is disabled. This can significantly reduce clutter in your wallpaper settings, making it easier for users to configure your wallpaper.
 
 To implement this, first create the *Show Clock* checkbox property (or whatever user property name makes sense in your wallpaper). Take note of the *Key* that Wallpaper Engine automatically generates below your user property name. In the case of *"Show Clock"*, the key would be `show_clock`.
 

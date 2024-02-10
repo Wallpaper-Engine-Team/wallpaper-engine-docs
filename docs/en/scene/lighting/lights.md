@@ -58,6 +58,12 @@ In short, the directional light is best used when you want to shine a line evenl
   Your browser does not support the video tag.
 </video>
 
+## Texture Projections
+
+**Spot lights** have the ability to project a texture instead of a single solid color of light. This allows you to use images, layers and even video files as a projected texture to create more complex lighting scenarios.
+
+
+
 ## Light Animations
 
 One thing you might want to do is to animate your light, one example being a flickering animation for your light. This can be achieved either using SceneScript or Timeline animations.
