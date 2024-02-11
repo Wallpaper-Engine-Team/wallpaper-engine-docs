@@ -61,6 +61,7 @@ All components of Wallpaper Engine are provided with a fitting class so that you
 | [IModelLayer](/en/scene/scenescript/reference/class/IModelLayer.html) | This class provides access to functions specific to 3D model layers. |
 | [IInput](/en/scene/scenescript/reference/class/IInput.html) | Provides access to input related data, mainly the mouse cursor. |
 | [ILayer](/en/scene/scenescript/reference/class/ILayer.html) | Provides access to data related to a layer. |
+| [ILocalStorage](/en/scene/scenescript/reference/class/ILocalStorage.html) | Provides access to the local storage functionality. |
 | [IMaterial](/en/scene/scenescript/reference/class/IMaterial.html) | Provides access to dynamic properties of materials / shader properties. |
 | [IParticleSystem](/en/scene/scenescript/reference/class/IParticleSystem.html) | Provides access to particle systems and lets you modify their playback state. |
 | [IParticleSystemInstance](/en/scene/scenescript/reference/class/IParticleSystemInstance.html) | Provides access to instance modifiers for particle systems. You can use this to adjust details of a particle system dynamically. |
