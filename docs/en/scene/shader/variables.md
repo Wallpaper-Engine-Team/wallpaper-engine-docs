@@ -35,10 +35,14 @@ A number of global variables exist that are predefined by Wallpaper Engine. All 
 * **g_Frametime** (`float`): Current frametime in seconds.
 * **g_Screen** (`vec3`): The screen dimensions in 3-dimensional vector (width, height, width / height).
 * **g_PointerPosition** (`vec2`): Normalized cursor position in [0, 1] screenspace.
+* **g_PointerPositionLast** (`vec2`): Normalized cursor position in [0, 1] screenspace from the previous frame.
 * **g_TexelSize** (`vec2`): X and Y size of a screen pixel i.e. on a 1080p monitor this is (`vec2`)(1/1920, 1/1080).
 * **g_TexelSizeHalf** (`vec2`): Half X and Y size of a screen pixel i.e. on a 1080p monitor this is (`vec2`)(0.5/1920, 0.5/1080).
+* **g_Screen** (`vec3`): Screen pixel size for with in X and height in Y, aspext ratio (width/height) in Z.
 * **g_Alpha** (`float`): Generic alpha multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
 * **g_Color** (`vec3`): Generic color multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
+* **g_Color4** (`vec4`): Generic color and alpha multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
+* **g_ParallaxPosition** (`vec2`): Normalized parallax offset of current layer.
 
 
 ### View
@@ -54,6 +58,11 @@ A number of global variables exist that are predefined by Wallpaper Engine. All 
 * **g_ViewProjectionMatrix** (`mat4x4`): Premultiplied view projection matrix.
 * **g_ModelViewProjectionMatrix** (`mat4x4`): Premultiplied model view projection matrix.
 * **g_ModelViewProjectionMatrixInverse** (`mat4x4`): Premultiplied inverse of model view projection matrix.
+* **g_EffectModelMatrix** (`mat4x4`): Outer layer model matrix, even valid during effect shader rendering.
+* **g_EffectModelViewProjectionMatrix** (`mat4x4`): Outer layer model view projection matrix, even valid during effect shader rendering.
+* **g_EffectModelViewProjectionMatrixInverse** (`mat4x4`): Inverse of g_EffectModelViewProjectionMatrix.
+* **g_EffectTextureProjectionMatrix** (`mat4x4`): Outer layer model view projection matrix, scaled into UV range, even valid during effect shader rendering.
+* **g_EffectTextureProjectionMatrixInverse** (`mat4x4`): Inverse of g_EffectTextureProjectionMatrix.
 
 ### Texture
 * **g_Texture0Resolution** (`vec4`): Contains information about the texture bound to sampler 0. XY are the physical size in pixels of the texture, while ZW are the ''mapped'' size (for textures padded with black to the next power of two, the mapped size is smaller than the actual size).
