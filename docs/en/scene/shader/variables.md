@@ -38,7 +38,7 @@ A number of global variables exist that are predefined by Wallpaper Engine. All 
 * **g_PointerPositionLast** (`vec2`): Normalized cursor position in [0, 1] screenspace from the previous frame.
 * **g_TexelSize** (`vec2`): X and Y size of a screen pixel i.e. on a 1080p monitor this is (`vec2`)(1/1920, 1/1080).
 * **g_TexelSizeHalf** (`vec2`): Half X and Y size of a screen pixel i.e. on a 1080p monitor this is (`vec2`)(0.5/1920, 0.5/1080).
-* **g_Screen** (`vec3`): Screen pixel size for with in X and height in Y, aspext ratio (width/height) in Z.
+* **g_Screen** (`vec3`): Screen pixel size for width in X and height in Y, aspect ratio (width/height) in Z.
 * **g_Alpha** (`float`): Generic alpha multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
 * **g_Color** (`vec3`): Generic color multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
 * **g_Color4** (`vec4`): Generic color and alpha multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
