@@ -1,10 +1,10 @@
 # Local Storage in SceneScript
 
-SceneScript allows you to store up to 100 KB of data per wallpaper. This can be useful if you want to track certain data points across system restarts or just wallpaper changes. Since SceneScript has no ability to send data anywhere, this data can solely be used for local processing and visualization purposes.
+SceneScript allows you to store up to 100 KB of data per wallpaper. This can be useful if you want to track certain data points across system restarts or just wallpaper changes.
 
 ## Persisting Data with Local Storage
 
-Local storage is handled via the [ILocalStorage](/en/scene/scenescript/reference/class/ILocalStorage.html) class. You can access this feature via the `localstorage` global variable which is available anywhere in SceneScript.
+Local storage is handled via the [ILocalStorage](/en/scene/scenescript/reference/class/ILocalStorage.html) class. You can access this feature via the `localStorage` global variable which is available anywhere in SceneScript.
 
 ### Storage Location: Global or Per Screen?
 
@@ -12,7 +12,7 @@ First, you need to decide if your data is related to the specific screen that th
 
 In our example, we want to store the high score of a game-themed wallpaper. The high score is valid across all screens, so we want to store it globally using the `LOCATION_GLOBAL` constant.
 
-An opposite example would be if we wanted to keep track of the position of some wallpaper element on the screen. In this case, we would instead store this value per-screen using `LOCATION_SCREEN`. This is also the default state, so if you do not make a decision, wallpaper settings will be stored per screen.
+An opposite example would be if we wanted to keep track of the position of some wallpaper element on the screen. In this case, we would instead store this value per-screen using `LOCATION_SCREEN`. This is also the default state, so if you do not specify this option, wallpaper settings will be stored per screen.
 
 ### Storing Data
 
