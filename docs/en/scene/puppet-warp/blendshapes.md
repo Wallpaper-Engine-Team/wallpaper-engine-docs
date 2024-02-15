@@ -13,7 +13,9 @@ You should have read and understood the [Puppet Warp Introduction Guide](/scene/
 
 The overall idea of blend shapes is that you define an alternate arrangement of the geometry that you can transition to in your animation. For example, you could adjust the geometry of the face of a character so that the eyes appear closed.
 
-To get started, navigate to the **Geometry** settings of your puppet warp. In the **Edit Blend Shapes** section, click on the **Add** button to create a new blend shape. Each point in the geometry will now become moveable, adjust all the points that are relevant to your shape animation to their final position. In the following video, we exemplify this by moving the geometry above the eye downwards, making the eye appear closed:
+To get started, navigate to the **Geometry** settings of your puppet warp. You first need to click on the **Lock Geometry for Vertex Editing** button if you have not done so already, since blend shapes would break if you made further edits to the geometry. Use the **Edit Topology** button to fine-tune the automatically generated geometry if needed.
+
+In the **Edit Blend Shapes** section, click on the **Add** button to create a new blend shape. Each point in the geometry will now become moveable, adjust all the points that are relevant to your shape animation to their final position. In the following video, we exemplify this by moving the geometry above the eye downwards, making the eye appear closed:
 
 <video width="100%" controls loop>
   <source src="/videos/puppet_warp_blend_shapes_setup.mp4" type="video/mp4">

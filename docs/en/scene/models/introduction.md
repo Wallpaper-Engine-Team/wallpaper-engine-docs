@@ -60,7 +60,7 @@ Here, you will find various options related to lighting, reflection and renderin
 Additionally, you can import various maps which allow you to implement a form of physically-based rendering (*PBR*) to your model:
 
 * **Albedo:** The main texture of your model.
-* **Normal map:** Allows you to import and normal map for your model. **Tip:** Use the advanced texture options to flip the red or green channel of the normal map, which may be necessary if your normal map was designed for a different engine or modeling tool.
+* **Normal map:** Allows you to import and normal map for your model. **Tip:** Use the advanced texture options to flip the red (X axis) or green (Y axis) channel of the normal map, which may be necessary if your normal map was designed for a different engine or modeling tool.
 * **Metallic map:** Marks certain area as metallic and increases their reflective properties.
 * **Roughness map:** The roughness map affects the scattering of the reflected light, essentially it defines the blur of the reflection.
 * **Reflection map:** Allows you to create a map to decrease the reflection in some areas of the texture if needed.
