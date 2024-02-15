@@ -29,9 +29,9 @@ Additionally, you can change the following settings:
 * **Distance:** The length of the hair.
 * **Occlusion:** The amount of shadow the hair casts on the model.
 
-## Foliage Shader
+## Vegetation Shader
 
-The foliage shader can be used to animate trees and bushes, though you may be able to utilize it for other materials that swivel in the gusts of wind. In this section, we will showcase how to apply the foliage shader on a tree model and how to fine-tune it to get a good result.
+The vegetation shader can be used to animate trees and bushes, though you may be able to utilize it for other materials that swivel in the gusts of wind. In this section, we will showcase how to apply the vegetation shader on a tree model and how to fine-tune it to get a good result.
 
 <video width="100%" controls loop autoplay>
   <source src="/videos/shader_foliage.mp4" type="video/mp4">
@@ -40,15 +40,15 @@ The foliage shader can be used to animate trees and bushes, though you may be ab
 
 To get started, import your tree model and ensure that the tree bark and the tree leaves are using different materials, since the rigid part of the tree should not be affected by this shader. As a first step, click on the material that represents the leaves of the tree and scroll all the way to the bottom of the properties list. Look for the **Blending** option and set it to **Alpha to coverage**. This will ensure the transparent parts between the tree leaves will be properly rendered.
 
-If the geometry of the leaves on your model is single sided, which is the recommended way to model foliage, you also need to change the **Culling** option to **No cull**. If your model has visible polygons from both sides, you do not need to do this, but this may result in shadows looking poor.
+If the geometry of the leaves on your model is single sided, which is the recommended way to model vegetation, you also need to change the **Culling** option to **No cull**. If your model has visible polygons from both sides, you do not need to do this, but this may result in shadows looking poor.
 
 Next, you may want to enable the **Double-sided lighting** option if you are using lighting. This will ensure that light will shine through the individual tree leaves, causing them to be visibly brighten from both sides even if light is coming from the opposite side.
 
 Depending on your texture, you may need to configure the **Leaves UV direction** and the corresponding **Leaves UV mapping** option if the texture has a different UV mapping that you need to account for. The UV direction changes the magnitude of the animation based on the direction of the texture, you want the highest magnitude for the tip of the leaves. The UV mapping parameters allow you to use images that don't cover the entire available space on the texture.
 
-At this point, you should have a basic tree with visible leaves. The foliage shader comes with various settings, some of which you need to adjust to fit your model. See the **Debug Mode** section below for further information.
+At this point, you should have a basic tree with visible leaves. The vegetation shader comes with various settings, some of which you need to adjust to fit your model. See the **Debug Mode** section below for further information.
 
-You usually want to use the same values for both the trunk and the leaves material, so their animations are in sync. The only differences are, that you should set the **Strength leaves** option to **0** on the trunk material and disable the **Double-sided lighting** option to signify that this part of the tree only uses the trunk movement and lighting.
+You usually want to use the same values for both the trunk and the leaves material, ensuring their animations are in sync. Simply make sure to set the **Strength leaves** option to **0** on the trunk material and disable the **Double-sided lighting** on the tree trunk.
 
 * **Crunch:** Allows you to fine-tune the distortion of the leaves moving in the wind.
 * **Tree height:** Configures the height of the tree, should be done in debug mode (read below).
