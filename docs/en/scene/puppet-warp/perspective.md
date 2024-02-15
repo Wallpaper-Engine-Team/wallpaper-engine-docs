@@ -16,11 +16,15 @@ Once you are satisfied with the basic geometry setup, enable the **3D Perspectiv
 
 Click on the **Paint Depth** button to bring up the depth painting options on the left-hand side. Select one of the paint options (**Raise**, **Lower**, **Flatten**, **Smooth**) to raise or lower the perceived depth at any given location that you are painting the depth mask. You do not need to be very accurate for a good result, but if you need perfect accuracy, you can export the depth map, edit it in a third-party image editor and then import it back into Wallpaper Engine.
 
-While painting the depth mask, make sure to adjust the **Extrusion Preview** value to rotate your character or object. This will allow you to get an idea of what type of perceived 3D depth your object will have in your animation later. Keep in mind that the value of the **Extrusion Preview** does not change anything about your puppet warp, it is merely a preview functionality that is later discarded.
+While painting the depth mask, hold the left **Alt** key and click and drag with the mouse to rotate and pan the model. This will allow you to get an idea of what type of perceived 3D depth your object will have in your animation later.
 
 Once you have finalized the depth mask, you can fine-tune the **Extrusion Scale** option to increase or decrease the perceived depth of the 3D effect. The **Culling** option is only relevant if you intend to rotate the object on its back. If you set this option to **Normal**, the backside of the layer will be transparent, while setting it to **No cull** will mirror the texture to the backside as well. In the vast majority of cases, you can ignore this option, it is only relevant if you rotate your object by more than 180° during your animation.
 
-You can see an exemplary video of this process here, where we paint a depth map for our character while reviewing the outcome using the **Extrusion Preview** functionality:
+::: tip
+By clicking **Lock Geometry for Vertex Editing**, you will even be able to change the depth of each vertex individually in the upcoming **Deformation** menu.
+:::
+
+You can see an exemplary video of this process here, where we paint a depth map for our character:
 
 <video width="100%" controls>
   <source src="/videos/puppet_warp_extrusion_painting.mp4" type="video/mp4">
