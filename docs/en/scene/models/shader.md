@@ -33,7 +33,7 @@ Additionally, you can change the following settings:
 
 The vegetation shader can be used to animate trees and bushes, though you may be able to utilize it for other materials that swivel in the gusts of wind. In this section, we will showcase how to apply the vegetation shader on a tree model and how to fine-tune it to get a good result.
 
-<video width="100%" controls loop autoplay>
+<video width="80%" style="margin: 0 auto;display: block;" controls loop autoplay>
   <source src="/videos/shader_foliage.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
