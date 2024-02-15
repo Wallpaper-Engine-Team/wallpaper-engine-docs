@@ -48,6 +48,8 @@ Depending on your texture, you may need to configure the **Leaves UV direction**
 
 At this point, you should have a basic tree with visible leaves. The foliage shader comes with various settings, some of which you need to adjust to fit your model. See the **Debug Mode** section below for further information.
 
+You usually want to use the same values for both the trunk and the leaves material, so their animations are in sync. The only different is, that you should set the **Strength leaves** option to **0** on the trunk material to signify that this part of the tree only uses the trunk movement.
+
 * **Crunch:** Allows you to fine-tune the distortion of the leaves moving in the wind.
 * **Tree height:** Configures the height of the tree, should be done in debug mode (read below).
 * **Phase:** Configures a time offset for the animation. If you have multiple trees, you can make them animate out of sync by setting different values here.
