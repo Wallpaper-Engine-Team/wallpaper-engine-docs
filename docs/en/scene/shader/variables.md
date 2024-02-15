@@ -31,7 +31,7 @@ A number of global variables exist that are predefined by Wallpaper Engine. All 
 
 ### General
 * **g_Time** (`float`): Time the program has been running in seconds.
-* **g_Daytime** (`float`): Current time of day where 0 is 0:00 and 1.0 is 23:59 o'clock.
+* **g_Daytime** (`float`): Current time of day where `0.0` is 0:00:00 and `1.0` is roughly 23:59:59.
 * **g_Frametime** (`float`): Current frametime in seconds.
 * **g_Screen** (`vec3`): The screen dimensions in 3-dimensional vector (width, height, width / height).
 * **g_PointerPosition** (`vec2`): Normalized cursor position in [0, 1] screenspace.

@@ -23,6 +23,8 @@ You can always view, edit and even create new properties by opening your project
 
 There is one special property type: The **Group** property. Adding this property will add all **following** properties to a group, allowing users to selectively hide them from the options list. The group property only features a label which you can use as a group name.
 
+![User Properties](/img/tutorials/property_groups.gif)
+
 To end a property group, you need to create another group property. If you have user properties which are not supposed to be part of a property group, place them before the first group in the property list.
 
 ## Conditionally hiding certain properties with display conditions

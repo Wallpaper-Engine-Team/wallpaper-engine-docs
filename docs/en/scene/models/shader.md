@@ -1,6 +1,33 @@
 # 3D Model Shaders
 
-Wallpaper Engine comes with a handful of pre-created shaders that you can use on your model textures.
+Wallpaper Engine comes with a handful of pre-created shaders that can be applied to selected materials of models.
+
+[[toc]]
+
+## Fur Shader
+
+The fur shader allows you to selectively add volumetric hair to your model's texture.
+
+<video width="100%" controls loop autoplay>
+  <source src="/videos/shader_fur.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Before getting started in Wallpaper Engine, make sure that the texture of your model comes with an alpha channel which represents where the fur is supposed to be rendered. This is important as you typically do not want the fur shader to appear in all spots at the same time or with the same intensity. Take a look at the following implementation for the model shown in the preview above. The alpha channel is shown separately here, this would be imported individually:
+
+![Fur Alpha & Texture](/videos/shader_fur_alpha.gif)
+
+Keep in mind that not all image editors allow you to draw the alpha channel independently and your image might seem broken in certain image viewers, rest assured Wallpaper Engine will interpret the image file correctly.
+
+To get started with the fur shader in Wallpaper Engine, select your model and click on the **Advanced Texture Settings** button for the material that you want to apply it on. Set the shader to **Fur** at the top, then look for the **Blending** option at the bottom of the material options and set it to **Alpha to coverage**. 
+
+You can now define the fur rendering quality at the top of the material options. If your model is only ever viewed from far away, there is no need to increase this option. Try to find the correct balance between actual visible improvements and the performance impact the increased quality incurs.
+
+Additionally, you can change the following settings:
+
+* **Detail:** Higher values result in finer hair.
+* **Distance:** The length of the hair.
+* **Occlusion:** The amount of shadows the hair casts on the model.
 
 ## Foliage Shader
 
@@ -40,32 +67,6 @@ What we want to achieve is to evenly distribute the colors representing the heig
   <source src="/videos/shader_foliage_debug.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
-
-## Fur Shader
-
-The fur shader allows you to add volumetric hair to your model.
-
-<video width="100%" controls loop autoplay>
-  <source src="/videos/shader_fur.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-Before getting started in Wallpaper Engine, make sure that the texture of your model comes with an alpha channel which represents where the fur of the model is visible as shown in the following example. This is important as you typically do not want the fur shader to appear in all spots at the same time or with the same intensity. Take a look at the following implementation for the model shown in the preview above:
-
-![Fur Alpha & Texture](/videos/shader_fur_alpha.gif)
-
-Keep in mind that not all image editors allow you to draw the alpha channel independently and your image might seem broken in certain image viewers, rest assured Wallpaper Engine will interpret the image file correctly.
-
-To get started with the fur shader in Wallpaper Engine, select your model and click on the **Advanced Texture Settings** button for the material that you want to apply it on. Set the shader to **Fur** at the top, then look for the **Blending** option at the bottom of the material options and set it to **Alpha to coverage**. 
-
-You can now define the fur rendering quality at the top of the material options. If your model is only ever viewed from far away, there is no need to increase this option. Try to find the correct balance between actual visible improvements and the performance impact the increased quality incurs.
-
-Additionally, you can change the following settings:
-
-* **Detail:** Higher values result in finer hair.
-* **Distance:** The length of the hair.
-* **Occlusion:** The amount of shadows the hair casts on the model.
 
 ## Chroma Shader
 

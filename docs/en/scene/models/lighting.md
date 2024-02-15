@@ -1,19 +1,21 @@
-# 3D Lighting
+# 3D Advanced Lighting
 
-While lights can largely be used in a 2D context in Wallpaper Engine, certain features are reserved to interactions with 3D models. If you are creating a purely 2D wallpaper or if you want to get a basic introduction to lights in Wallpaper Engine, see the 2D lighting tutorial:
+While lights can also be used in a 2D context in Wallpaper Engine, certain features are reserved to interactions with 3D models. If you are creating a purely 2D wallpaper or if you want to get a basic introduction to lights in Wallpaper Engine, see the 2D lighting tutorial:
 
 * [Real-Time Lighting & Reflections](/scene/lighting/introduction.md)
 
 ## 3D Shadow Casting
 
-3D shadows can be used per model and per light source. Shadows are supported by point lights, spot lights and directional lights.
+3D shadows can be configured per model and per light source. Shadows are supported by point lights, spot lights and directional lights.
 
 <video width="100%" controls loop autoplay>
   <source src="/videos/light_3d_shadows.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-To enable shadows, enable the **Cast shadow** option on each light source which is supposed to cast shadows. By default, all models have shadows enabled, but you can enable or disable shadows in each model by toggling the **Cast shadow** option on models. To ensure your wallpaper's performance is as high as possible, always think twice about enabling shadows on light sources and models. By disabling shadows on objects where they do not have a significant impact, you help to keep system usage low for your users.
+To enable shadows, enable the **Cast shadow** option on each light source which is supposed to cast shadows. By default, all models have shadows enabled, but you can enable or disable shadows in each model by toggling the **Cast shadow** option.
+
+To ensure your wallpaper is as performant as possible, always think twice about enabling shadows on light sources and models. By disabling shadows on objects where they do not have a significant impact, you help to keep system usage low for your users.
 
 ## Volumetric Lighting
 
