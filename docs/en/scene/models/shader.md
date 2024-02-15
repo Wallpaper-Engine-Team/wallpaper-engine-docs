@@ -31,7 +31,7 @@ Additionally, you can change the following settings:
 
 ## Foliage Shader
 
-The foliage shader can be used to animate leaves of trees and bushes, though you may be able to utilize it for other materials that swivel in the gusts of wind. In this section, we will showcase how to apply the foliage shader on a tree model and how to fine-tune it to get a good result.
+The foliage shader can be used to animate trees and bushes, though you may be able to utilize it for other materials that swivel in the gusts of wind. In this section, we will showcase how to apply the foliage shader on a tree model and how to fine-tune it to get a good result.
 
 <video width="100%" controls loop autoplay>
   <source src="/videos/shader_foliage.mp4" type="video/mp4">
@@ -48,7 +48,7 @@ Depending on your texture, you may need to configure the **Leaves UV direction**
 
 At this point, you should have a basic tree with visible leaves. The foliage shader comes with various settings, some of which you need to adjust to fit your model. See the **Debug Mode** section below for further information.
 
-You usually want to use the same values for both the trunk and the leaves material, so their animations are in sync. The only different is, that you should set the **Strength leaves** option to **0** on the trunk material to signify that this part of the tree only uses the trunk movement.
+You usually want to use the same values for both the trunk and the leaves material, so their animations are in sync. The only differences are, that you should set the **Strength leaves** option to **0** on the trunk material and disable the **Double-sided lighting** option to signify that this part of the tree only uses the trunk movement and lighting.
 
 * **Crunch:** Allows you to fine-tune the distortion of the leaves moving in the wind.
 * **Tree height:** Configures the height of the tree, should be done in debug mode (read below).
