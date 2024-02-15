@@ -27,13 +27,12 @@ You can declare a combo as a checkbox or as a combo box with an arbitrary number
 
 ## Shader Constants
 
-A number of global variables exist that are predefined by Wallpaper Engine. All you need to do to use them is declare them at the top of the shader. You can use the **Snippets --> Add Constant** menu to declare them easily.
+A number of global variables exist that are predefined by Wallpaper Engine. All you need to do to use them is declare them at the top of the shader. In the built-in shader editor, can access all constants via the **Snippets** menu item followed by **Add Constant** to declare them easily.
 
 ### General
 * **g_Time** (`float`): Time the program has been running in seconds.
 * **g_Daytime** (`float`): Current time of day where `0.0` is 0:00:00 and `1.0` is roughly 23:59:59.
 * **g_Frametime** (`float`): Current frametime in seconds.
-* **g_Screen** (`vec3`): The screen dimensions in 3-dimensional vector (width, height, width / height).
 * **g_PointerPosition** (`vec2`): Normalized cursor position in [0, 1] screenspace.
 * **g_PointerPositionLast** (`vec2`): Normalized cursor position in [0, 1] screenspace from the previous frame.
 * **g_TexelSize** (`vec2`): X and Y size of a screen pixel i.e. on a 1080p monitor this is (`vec2`)(1/1920, 1/1080).
