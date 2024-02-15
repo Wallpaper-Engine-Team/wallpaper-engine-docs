@@ -24,7 +24,7 @@ In the **Edit Blend Shapes** section, click on the **Add** button to create a ne
 
 ## Creating an Expression
 
-In the next step, you need to create an **Expression**. Expressions are collection of multiple blend shapes. If you only have one blend shape, simply set it to a value of `1.0`. If you have multiple blend shapes, set all blend shapes to 0, except for the ones which you want to have part of a later specific animation. You can also set intermittent values such as 0.5, if you want a certain blend shape only to appear partially in an animation.
+In the next step, you need to create an **Expression**. Expressions are a collection of multiple blend shapes. If you only have one blend shape, simply set it to a value of `1.0`. If you have multiple blend shapes, mix them together in a way that you want to control them later during a specific animation. You can also set intermittent values such as 0.5, if you want a certain blend shape only to appear partially during an expression.
 
 <video width="100%" controls loop>
   <source src="/videos/puppet_warp_blend_shapes_expression.mp4" type="video/mp4">

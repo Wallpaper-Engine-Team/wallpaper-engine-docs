@@ -58,7 +58,7 @@ In short, the directional light is best used when you want to shine a line evenl
   Your browser does not support the video tag.
 </video>
 
-## Texture Projections
+## Texture Projection
 
 **Spot lights** have the ability to project a texture instead of a single solid color of light. This allows you to use **images**, **video files** and even **layers including all effects** as a projected texture to create more complex lighting scenarios.
 
@@ -66,7 +66,7 @@ To project a texture, first set your light type to **Spot Light**, then enable t
 
 ### Example: Layer as Texture Projection
 
-In the following example, we will showcase how to combine layers and effects to quickly create an advanced lighting scenario. While this example was created in a 3D wallpaper, you can perform all these steps in a 2D wallpaper as well, simply hide the projected layer *below* all your other layers.
+In the following example, we will showcase how to combine layers and effects to quickly create an advanced lighting scenario. While this example was created in a 3D wallpaper, you can perform all these steps in a 2D wallpaper as well, simply turn the projected layer invisible.
 
 To get started, we create a new **Text layer** and change its text to multiple `_` characters to form a straight line: `_________` and set the padding to `0`. Alternatively, you an also import a new image as a layer with your own pattern that you want to further animated with Wallpaper Engine, the text layer is just an example showcase on how versatile you can approach this type of animation.
 

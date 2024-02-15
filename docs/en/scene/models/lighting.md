@@ -1,6 +1,6 @@
 # 3D Advanced Lighting
 
-While lights can also be used in a 2D context in Wallpaper Engine, certain features are reserved to interactions with 3D models. If you are creating a purely 2D wallpaper or if you want to get a basic introduction to lights in Wallpaper Engine, see the 2D lighting tutorial:
+While lights can also be used in a 2D context in Wallpaper Engine, certain features are reserved to interactions with 3D models. If you are creating a 2D wallpaper or if you want to get a basic introduction to lights in Wallpaper Engine, see the 2D lighting tutorial:
 
 * [Real-Time Lighting & Reflections](/scene/lighting/introduction.md)
 
@@ -27,5 +27,7 @@ To ensure your wallpaper is as performant as possible, always think twice about 
 Wallpaper Engine allows you to create volumetric lighting in combination with 3D models. To enable it, select your light and make sure the light type is set to **Point light** or **Spot light**. Afterwards, scroll to the bottom of the light settings and enable the **Cast volumetrics** option.
 
 In many cases, volumetric lighting works very well in combination with **Bloom** and **Ultra HDR**. Before tweaking the volumetric lighting visuals, we recommend turning these options on in the **Scene options** tab on the left-hand side, next to the **Layers** tab. For more information, take a look at the **Bloom Effects Tutorial.
+
+Note that volumetric lighting is very expensive and should only be used sparingly.
 
 * [Bloom Effects](/scene/effects/bloom.html)
