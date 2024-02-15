@@ -49,7 +49,7 @@ It is worth noting that the geometry setup offers some advanced settings which a
 
 You can experiment around with it if you like, but generally you can skip this step if you are happy with the mesh that was generated. It is mainly relevant if you want to be extra precise, for example when creating [blend shape animations](/en/scene/puppet-warp/blendshapes).
 
-The *3D Perspective Extrusion* feature is also reserved for another tutorial that you can find in the puppet warp section.
+The *3D Perspective Extrusion* feature is also reserved for another tutorial that you can find in the puppet warp section. When the geometry is locked, you can use the advanced method of perspective extrusion in the **Deformation** menu.
 
 ## 3. Creating the character bone skeleton
 
