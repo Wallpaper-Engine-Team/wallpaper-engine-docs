@@ -63,7 +63,23 @@ Will pre-simulate the particle system for a certain amount of time when it is cr
 
 ### Worldspace
 
-If this is enabled, the particles will ignore the position, scale and rotation of the particle system after they have been created. This can be useful if you want to attach a particle to another or something else - the particles that were spawned are not going to be dragged along with the object they were created from.
+If this is enabled, the particles will ignore the position, scale and rotation of the particle system after they have been created. This can be useful if you want to attach a particle system to another object - the particles that were spawned are not going to be dragged along with the object they were created from.
+
+### Perspective rendering
+
+Perspective rendering is relevant in 3D contexts. For 3D-based wallpapers, this option is always on. In 2D scenes, you can optionally turn it on in case you are working with 3D models.
+
+### Sprite sheet - Animation mode
+
+Changing this mode either spawns a random frame of your sprite sheet or plays the sprite sheet in sequence.
+
+### Sprite sheet - No frame blending
+
+Disables the smooth blending between frames.
+
+### Sprite sheet - Sequence multiplier
+
+This determines the speed at which the sprite sheet sequence is played.
 
 ## Viewport Settings
 
