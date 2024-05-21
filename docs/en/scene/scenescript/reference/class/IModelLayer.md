@@ -18,9 +18,9 @@ If the model is playing an animation that supports root motion, you can disable 
 
 ## Functions
 
-### playSingleAnimation(animation: String|Object): IAnimationLayer
+### playSingleAnimation(animation: String|Object, config?: Object): IAnimationLayer
 
-Create a new animation layer by animation name or JSON config. Only play the animation once, then remove it automatically.
+Create a new animation layer by animation name or JSON config. Only play the animation once, then remove it automatically. See IAnimationLayer for config options.
 
 ### getAnimationLayerCount(): Number
 
