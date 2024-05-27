@@ -265,6 +265,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
+		<div class="effect-box">
+		<a href="/en/scene/effects/effect/lightshafts.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Light_Shafts.gif')"></div>
+			<div>
+				<h4>Light Shafts</h4>
+				<p>Adds lights shafts in a custom shape and color to your image.</p>
+			</div>
+		</a>
+	</div>
 	<div class="effect-box">
 		<a href="/en/scene/effects/effect/nitro.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Nitro.gif')"></div>

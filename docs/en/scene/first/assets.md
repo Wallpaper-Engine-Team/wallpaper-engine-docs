@@ -2,7 +2,7 @@
 
 In the previous section, we introduced effects which we applied to the background image. The background image is an **asset** in Wallpaper Engine, which is an additional element in your wallpaper. Wallpaper Engine supports different types of assets, the most common ones are images, text layers, particle systems, sounds and even 3D models.
 
-In this section of the tutorial, we will show you how to add and customize assets to your wallpapers. We will continue working on the wallpaper that we have worked on in the previous section. Start by clicking on the **Add Asset** button on the left-hand side of the screen. This will open an overview of all assets installed by default. Click on **Light Shafts** and select **Light Shafts 1** and confirm by clicking on **OK** as shown in the video below.
+In this section of the tutorial, we will show you how to add and customize assets to your wallpapers. We will continue working on the wallpaper that we have worked on in the previous section. Start by clicking on the **Add Asset** button on the left-hand side of the screen. This will open an overview of all assets installed by default. Click on **Light Shafts** and select **Light Shafts 1 (old)** and confirm by clicking on **OK** as shown in the video below.
 
 <video width="100%" controls>
   <source src="/videos/asset_adding.mp4" type="video/mp4">
