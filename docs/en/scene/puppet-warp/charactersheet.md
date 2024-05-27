@@ -38,7 +38,24 @@ Painting the weights of the character should be much easier using a character sh
 
 ![Character Sheet Weights](/img/puppet-warp/puppet_sheet_weights.png)
 
-## Reassembling the character sheet into a pose
+#### Blending across weight islands
+
+The downside of this implementation is that now you may notice that certain limbs might even feel too separated from its neighboring limbs. This can result in very sharp transitions between limbs. See the the following video which showcases harsh separation between limbs in the part labelled **OLD**:
+
+<video width="70%" style="margin:0 auto;display:block;" controls autoplay loop>
+  <source src="/videos/puppet_sheet_island_comparison.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+In the part of the video labelled **NEW**, we have reconnected the relevant limbs by painting the weights from one limb onto the connected area of the other limb and vice-versa. This may sound a little confusing at first, but take a look at the red arrows showing the connected areas of the body:
+
+![Character Sheet Weights Connected](/img/puppet-warp/puppet_sheet_islands.png)
+
+You can see how we painted the yellow color of the character's chest onto the connected parts of both arms. And in return, we have painted the color of the arms onto the chest in the areas where they connect.
+
+This mainly makes sense for body parts and clothing which would naturally stretch during movements so you do not have to do this for every limb.
+
+## Reassembling the character sheet into a reference pose
 
 Before you can start animating your character, you need to reassemble your character sheet into the original pose that you cut it out from. To do this, open up the puppet warp steps overview, towards the bottom of the list, you will find a button called **Reference Pose** in the **Optional** section. Drag all parts of your character back to their original position to reassemble your character model to its original state. Use the **Confirm** button to save your reference pose. This pose will be used as a starting point for your animations, which is why it is important to create it before actually animating your character.
 
