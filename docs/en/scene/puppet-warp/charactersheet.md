@@ -40,7 +40,7 @@ Painting the weights of the character should be much easier using a character sh
 
 #### Blending across weight islands
 
-The downside of this implementation is that now you may notice that certain limbs might even feel too separated from its neighboring limbs. This can result in very sharp transitions between limbs. See the the following video which showcases harsh separation between limbs in the part labelled **OLD**:
+The downside of this implementation is that now you may notice that certain limbs might even feel too separated from their neighboring limbs. This can result in very sharp transitions between them. To exemplify this, see the following video which showcases a harsh separation between limbs in the part labelled **OLD**:
 
 <video width="70%" style="margin:0 auto;display:block;" controls autoplay loop>
   <source src="/videos/puppet_sheet_island_comparison.mp4" type="video/mp4">
