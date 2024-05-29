@@ -150,6 +150,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/puppet-warp/blendrules',
 				locale + 'scene/puppet-warp/texturechannels',
 				locale + 'scene/puppet-warp/attachments',
+				locale + 'scene/puppet-warp/extending',
 			]
 		},
 		{

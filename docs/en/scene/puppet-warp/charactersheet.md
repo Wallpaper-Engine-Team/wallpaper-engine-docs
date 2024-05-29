@@ -67,3 +67,7 @@ Before you can start animating your character, you need to reassemble your chara
 ## Animating the character
 
 You can now animate the character just like in the introductory tutorial. However, the animations can be much more accurate as you have much more control over each individual body part since they now essentially act as separate layers on your model. Be sure to check out the following sections of the *Puppet Warp* chapter so some advanced animation examples we have created with this character sheet.
+
+## Editing character sheets later on
+
+While we strongly recommend that you finalize the character sheet before you start the animation process, you can still extend the character sheet later on. Take a look at the [Extending an existing Puppet Warp](/scene/puppet-warp/extending) to learn more about this feature.
