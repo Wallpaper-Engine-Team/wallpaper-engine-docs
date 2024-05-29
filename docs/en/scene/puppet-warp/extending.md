@@ -22,9 +22,9 @@ Once you have updated your character sheet, select your puppet warp image layer 
 
 You now need to go through the puppet warp steps once again.
 
-The geometry is updated automatically, unless you enabled the locked vertex geometry mode. In that case, the geometry will not be auto generated for the new parts, you will have to manually define the geometry in the geometry menu
+The geometry is updated automatically, unless you enabled the locked vertex geometry mode. In that case, the geometry will not be auto-generated for the new parts, you will have to manually define the geometry in the geometry menu
 
-Aside from the geometry, make sure to create new bones in the **Skeleton** of your puppet and possibly paint new weights in the third step of the process. Your new puppet warp elements are now ready to be used as part of your animations.
+Aside from the geometry, make sure to create new bones in the **Skeleton** of your puppet and possibly paint new weights in the third step of the puppet warp setup process. Your new puppet warp elements are now ready to be used as part of your animations.
 
 ::: warning
 Please note that this feature may not work for very old puppet warp projects from Wallpaper Engine 1.7 and prior.
