@@ -57,7 +57,17 @@ This mainly makes sense for body parts and clothing which would naturally stretc
 
 ## Reassembling the character sheet into a reference pose
 
-Before you can start animating your character, you need to reassemble your character sheet into the original pose that you cut it out from. To do this, open up the puppet warp steps overview, towards the bottom of the list, you will find a button called **Reference Pose** in the **Optional** section. Drag all parts of your character back to their original position to reassemble your character model to its original state. Use the **Confirm** button to save your reference pose. This pose will be used as a starting point for your animations, which is why it is important to create it before actually animating your character.
+Before you can start animating your character, you need to reassemble your character sheet into the original pose that you cut it out from. To do this, open up the puppet warp steps overview, towards the bottom of the list, you will find a button called **Reference Pose** in the **Optional** section.
+
+Drag all parts of your character back to their original position to reassemble your character model to its original state. Use the **Confirm** button to save your reference pose.
+
+This pose will be used as a starting point for your animations, which is why it is important to create it before actually animating your character.
+
+### Utilizing a reference overlay for easier reassembly
+
+In the **Reference Pose** settings, you can also import a **reference overlay**. This is essentially just an image of your character in assembled state, before it was turned into a character sheet.
+
+After importing the image, make sure to enable the **Visible** option for your overlay and adjust the **Opacity** of the overlay to improve the visibility. You can now use the overlay as a reference on how to reassemble your character in a pixel-perfect manner.
 
 <video width="100%" controls>
   <source src="/videos/puppet_warp_reassemble.mp4" type="video/mp4">
