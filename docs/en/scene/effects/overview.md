@@ -40,6 +40,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			</div>
 		</a>
 	</div>
+		<div class="effect-box">
+		<a href="/en/scene/effects/effect/cloudmotion.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Cloud_Motion.gif')"></div>
+			<div>
+				<h4>Cloud Motion</h4>
+				<p>Adds simple cloud motion to selected parts of an image.</p>
+			</div>
+		</a>
+	</div>
 	<div class="effect-box">
 		<a href="/en/scene/effects/effect/scroll.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Scroll.gif')"></div>
@@ -158,7 +167,6 @@ Click on an effect to learn more about it. We recommend experiment with differen
 
 ### Interactive Effects
 
-
 <div class="effect-list">
 	<div class="effect-box">
 		<a href="/en/scene/effects/effect/cursorripple.html">
@@ -257,6 +265,24 @@ Click on an effect to learn more about it. We recommend experiment with differen
 		</a>
 	</div>
 	<div class="effect-box">
+		<a href="/en/scene/effects/effect/glitter.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Glitter.gif')"></div>
+			<div>
+				<h4>Glitter</h4>
+				<p>Adds random glittering highlights to your image.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
+		<a href="/en/scene/effects/effect/shimmer.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Shimmer.gif')"></div>
+			<div>
+				<h4>Shimmer</h4>
+				<p>Adds a moving light shimmer to your image.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
 		<a href="/en/scene/effects/effect/fire.html">
 			<div class="effect-box-image" style="background-image: url('/img/effects/Fire.gif')"></div>
 			<div>
@@ -316,6 +342,15 @@ Click on an effect to learn more about it. We recommend experiment with differen
 			<div>
 				<h4>VHS</h4>
 				<p>Adds distortion and colorization of an old video tape.</p>
+			</div>
+		</a>
+	</div>
+	<div class="effect-box">
+		<a href="/en/scene/effects/effect/watercaustics.html">
+			<div class="effect-box-image" style="background-image: url('/img/effects/Water_Caustics.gif')"></div>
+			<div>
+				<h4>Water Caustics</h4>
+				<p>Adds customizable water caustics to your image, also supports custom perspectives.</p>
 			</div>
 		</a>
 	</div>
