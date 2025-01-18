@@ -48,6 +48,10 @@ Will use x and y from value and set z to 0.
 
 ## Functions
 
+### equals(other: Vec3): Boolean
+
+Checks if one vector is equal (with epsilon) to another vector.
+
 ### length(): Number
 
 Returns length of the vector.
@@ -103,6 +107,26 @@ Return the larger value per component of two vectors.
 ### cross(value: Vec3): Vec3
 
 Returns cross product between this and value as a new object.
+
+### abs(): Vec3
+
+Returns absolute values for each vector component.
+
+### sign(): Vec3
+
+Returns sign of each vector component.
+
+### round(): Vec3
+
+Rounds each vector component.
+
+### floor(): Vec3
+
+Returns floor value of each vector component.
+
+### ceil(): Vec3
+
+Returns ceil value of each vector component.
 
 ### toString(): String
 

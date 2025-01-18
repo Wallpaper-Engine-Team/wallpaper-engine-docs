@@ -40,6 +40,10 @@ Will use x and y from value and set members respectively.
 
 ## Functions
 
+### equals(other: Vec2): Boolean
+
+Checks if one vector is equal (with epsilon) to another vector.
+
 ### length(): Number
 
 Returns length of the vector.
@@ -95,6 +99,26 @@ Return the larger value per component of two vectors.
 ### perpendicular(): Vec2
 
 Returns perpendicular copy of the vector.
+
+### abs(): Vec2
+
+Returns absolute values for each vector component.
+
+### sign(): Vec2
+
+Returns sign of each vector component.
+
+### round(): Vec2
+
+Rounds each vector component.
+
+### floor(): Vec2
+
+Returns floor value of each vector component.
+
+### ceil(): Vec2
+
+Returns ceil value of each vector component.
 
 ### toString(): String
 
