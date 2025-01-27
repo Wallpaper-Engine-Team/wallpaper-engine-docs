@@ -3,7 +3,7 @@ prev: ../overview.md
 ---
 # Glitter Effect
 
-The **Glitter** effect enables you to add light dots to your image which appear and disappear quickly.
+The **Glitter** effect enables you to add spots of light to your image which appear for a brief moment of time.
 
 ![Glitter](/img/effects/Glitter.gif)
 
