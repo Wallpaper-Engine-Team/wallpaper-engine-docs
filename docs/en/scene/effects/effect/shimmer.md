@@ -3,7 +3,7 @@ prev: ../overview.md
 ---
 # Shimmer Effect
 
-The **Shimmer** effect allows you to run a line of light across your image in a certain direction.
+The **Shimmer** effect allows you to run a recurring line of light across your image in a certain direction.
 
 ![Shimmer](/img/effects/Shimmer.gif)
 

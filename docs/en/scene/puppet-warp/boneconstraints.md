@@ -12,11 +12,11 @@ Keep in mind that the physics simulations can slightly change their behavior dep
 
 We will use the Samurai example from the [Puppet Warp Character Sheet Guide](/scene/puppet-warp/charactersheet) to showcase two different types of implementations of bone physics. If you would like to check out the examples from this guide in detail, [click here to download the sample project.](/samples/samurai_tutorial.zip)
 
-### Rope Physics
+### Simple Rope Physics
 
 In our first example, we will add physics simulation to the rope attached to the sword of the samurai character that we have used in the other puppet warp guides:
 
-<video width="100%" controls autoplay loop>
+<video width="100%" controls loop>
   <source src="/videos/puppet_warp_rope_gravity.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -42,6 +42,30 @@ You will also notice that the forward angle becomes visible in the bone preview,
 ![Puppet Warp - Rope Bone with Gravity enabled](/img/puppet-warp/puppet_warp_gravity_bone_active.png)
 
 This is all that it takes to enable the physics for the rope bone. You do not actually need to animate the bone itself, but rather you should animate a parent bone (in this case the hand) and the bone will dynamically follow along and simulate the physics. You may need to tweak the values from above for your example, it's not possible to provide you with values that will work in all cases but you can use the values from above as a baseline and then tweak them to your specific use-case.
+
+### Rope Physics with Inverse Kinematics
+
+An alternative approach to rope physics was added with Wallpaper Engine 2.6. It allows you to use inverse kinematics to achieve rope physics with ease.
+
+<video width="100%" controls loop>
+  <source src="/videos/puppet_warp_rope_gravity.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+To get started, set up a model with a rope that you want to animate. Select the last bone of the rope and click on **Edit Constraints**. From there, you have two options to proceed:
+
+**For a basic setup:** Select the **"IK rope 4 elements"** option from the list offered in the **Simple** tab. Make sure your rope consists of exactly 4 bones plus your endpoint, as the rope physics will be applied to the previous 4 bones. There is nothing further you need to do, the physics animation will now already work. The rope will seamlessly integrate into the surrounding animation.
+
+**For a more customized setup:** Switch over to the **Advanced** tab. Set the **Simulation mode** to **Inverse kinematics simulation**. You can also define the number of rope elements. By default, just like in the previous basic setup, this is set to 4 bones but you can tweak this number to fit your puppet warp skeleton. Set the **IK behavior** to **Rope simulation**.
+
+By default, the rope endpoint itself is fixed, meaning it will not move as part of the physics simulation. In our the example, we want to make the rope endpoint a loose object that is dangling off of a rope. To do this, we enable the **Free endpoint** option.
+
+Additionally, there are further options you can choose to configure:
+
+**Gravity:** Enables a downwards drag on your rope element.
+**Stretch enabled:** Allows for the rope to act like a rubber band when moved away from the endpoint. Can only be used when **Free endpoint** is set to **disabled**.
+**Mass:** The mass of the endpoint, higher mass causes slower acceleration.
+**Friction:** Higher values of friction cause the object to slow down faster.
 
 ### Cape / Cloth Physics
 

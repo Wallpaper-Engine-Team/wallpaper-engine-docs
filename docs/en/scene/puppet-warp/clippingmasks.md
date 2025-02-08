@@ -1,0 +1,3 @@
+# Clipping Masks
+
+## Validity
