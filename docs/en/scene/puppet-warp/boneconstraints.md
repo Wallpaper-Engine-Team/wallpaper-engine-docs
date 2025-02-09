@@ -43,29 +43,46 @@ You will also notice that the forward angle becomes visible in the bone preview,
 
 This is all that it takes to enable the physics for the rope bone. You do not actually need to animate the bone itself, but rather you should animate a parent bone (in this case the hand) and the bone will dynamically follow along and simulate the physics. You may need to tweak the values from above for your example, it's not possible to provide you with values that will work in all cases but you can use the values from above as a baseline and then tweak them to your specific use-case.
 
-### Rope Physics with Inverse Kinematics
+### Rope Physics with a kinematic chain
 
-An alternative approach to rope physics was added with Wallpaper Engine 2.6. It allows you to use inverse kinematics to achieve rope physics with ease.
+An alternative approach to rope physics was added with Wallpaper Engine 2.6. It allows you to use kinematics to achieve rope physics with ease. For this approach, a rope consists of multiple bones and you simply mark the last rope element as the rope - all previous rope bones will automatically be included in the simulation. This type of physics also offers advanced capabilities such as a wind and gravity simulation.
 
 <video width="100%" controls loop>
-  <source src="/videos/puppet_warp_rope_gravity.mp4" type="video/mp4">
+  <source src="/videos/puppet_warp_rope_physics_kinematics.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-To get started, set up a model with a rope that you want to animate. Select the last bone of the rope and click on **Edit Constraints**. From there, you have two options to proceed:
+To get started, set up a model with a rope that you want to animate. In the following picture, you can see our sample setup where we have 4 rope bones and a final rope endpoint bone. To continue with the rope physics setup, **select only the last bone** of the rope and click on **Edit Constraints**. It is important to leave the other rope bones in their default state.
 
-**For a basic setup:** Select the **"IK rope 4 elements"** option from the list offered in the **Simple** tab. Make sure your rope consists of exactly 4 bones plus your endpoint, as the rope physics will be applied to the previous 4 bones. There is nothing further you need to do, the physics animation will now already work. The rope will seamlessly integrate into the surrounding animation.
+![Puppet Warp - Kinematic Rope Bones](/img/puppet-warp/puppet_warp_rope_bone_kinematics.jpg)
 
-**For a more customized setup:** Switch over to the **Advanced** tab. Set the **Simulation mode** to **Inverse kinematics simulation**. You can also define the number of rope elements. By default, just like in the previous basic setup, this is set to 4 bones but you can tweak this number to fit your puppet warp skeleton. Set the **IK behavior** to **Rope simulation**.
+**For a basic setup:** Select the **"Rope with 4 elements"** option from the list offered in the **Simple** tab. Make sure your rope consists of exactly 4 bones plus your endpoint, as the rope physics will be applied to the previous 4 bones. There is nothing further you need to do, the physics animation will now already work. The rope will seamlessly integrate into the surrounding animation though this approach only works if the endpoint is fixed and controlled by your animation.
 
-By default, the rope endpoint itself is fixed, meaning it will not move as part of the physics simulation. In our the example, we want to make the rope endpoint a loose object that is dangling off of a rope. To do this, we enable the **Free endpoint** option.
+**For a more customized setup:** Since we want a loose endpoint, we switch over to the **Advanced** tab. Set the **Simulation mode** to **Kinematic Chain**. You can also define the number of rope elements. By default, just like in the previous basic setup, this is set to 4 bones. However, if your rope is significantly longer or shorter, you can tweak this number to fit the number of bones that you assigned to the rope. Next, make sure the the **Behavior** option is set to **Rope simulation**.
 
-Additionally, there are further options you can choose to configure:
+By default, the rope endpoint itself is fixed, meaning it will not move as part of the physics simulation. In our the example, we want to make the rope endpoint a loose object that is dangling off of a rope. To do this, we disable the **"Stretch enabled"** option and instead enable the **Free endpoint** option.
 
-**Gravity:** Enables a downwards drag on your rope element.
-**Stretch enabled:** Allows for the rope to act like a rubber band when moved away from the endpoint. Can only be used when **Free endpoint** is set to **disabled**.
-**Mass:** The mass of the endpoint, higher mass causes slower acceleration.
-**Friction:** Higher values of friction cause the object to slow down faster.
+Here is an overview of all options you can choose to tweak to fit your setup:
+
+* **Gravity enabled:** Enables a downwards drag on your rope element. Can be configured in the overall wallpaper settings.
+* **Stretch enabled:** Allows for the rope to act like a rubber band when moved away from the endpoint. Can only be used when **Free endpoint** is set to **disabled**.
+* **Free endpoint:** When enabled, the last rope element is dangling around freely instead of being fixed as part of your animation.
+* **Mass:** The mass of the endpoint, higher mass causes slower acceleration.
+* **Friction:** Higher values of friction cause the object to slow down faster.
+
+After the setup, notice the purple highlighting between your rope bones and the last configured rope endpoint bone. From here on out, you can continue with your animation as you normally would.
+
+#### Optional: Rope Physics Wind
+
+Additionally, rope physics in a kinematic chain also support a wind simulation which can be enabled in the general wallpaper settings on the left-hand side. You are able to configure the **wind direction**, the **wind depth** (back-and-forth movement on the z-axis) and the **wind speed**.
+
+Do note that wind physics only become enabled once a puppet warp animation has been created and enabled for your model. **Only if you have not configured any other animation for your puppet yet:** For testing purposes, we you can create an empty animation and name it **Wind Test** and assign it as an active animation for our puppet warp. After testing the wind settings, you should delete this animation again. If you want to only have a wind animation of an otherwise static object, you can leave this empty animation in place.
+
+<video width="100%" controls>
+  <source src="/videos/puppet_warp_rope_physics_wind.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ### Cape / Cloth Physics
 
