@@ -1,12 +1,12 @@
 # Clipping Masks
 
-Clipping masks are a useful tool to restrict the visibility of certain parts of an a puppet warp model until it moves over predefined areas. This can be used to implement some unique effects and is especially useful for creating the appearance of animated shadows or shading on an object.
+Clipping masks are a useful tool to restrict the visibility of certain parts of a puppet warp model until it moves over predefined areas. This can be used to implement some unique effects and is especially useful for creating the appearance of animated shadows or shading on an object.
 
-If you want to achieve this type of self-shadowing effect, your image ideally does not include have shadows itself. Rather, you would create the shadows yourself.
+If you want to achieve this type of self-shadowing effect, your image ideally does not include shadows itself. Rather, you would create the shadows with separate elements and overlay them in Wallpaper Engine at runtime.
 
 ## Basic Principle of Clipping Masks
 
-Clipping masks are predestined to be used in combination with [character sheets](/scene/puppet-warp/charactersheet). To get started with a clipping mask, create a puppet warp character sheet. Make sure to lock the geometry in the **Geometry** settings of the puppet warp setup. Afterwards, set up the skeleton and weights of the puppet. Next, click on the **Clipping Masks** button at the bottom of the **Optional** puppet warp settings.
+Clipping masks can be used in combination with puppet warp [character sheets](/scene/puppet-warp/charactersheet). To get started with a clipping mask, create a puppet warp image layer. Make sure to lock the geometry in the **Geometry** settings of the puppet warp setup. Afterwards, set up the skeleton and weights of the puppet. Next, click on the **Clipping Masks** button at the bottom of the **Optional** puppet warp settings.
 
 You will find all limbs in the list on the right-hand side. Select the limb which represents the part of the puppet that you want to be hidden by default. In our showcase example, we want the purple ball to only be visible when it moves over the red rectangle. We select the limb representing the purple ball and click on **Assign Clipping Mask**. Follow the pop-up that appears and create a new clipping mask.
 
@@ -48,7 +48,7 @@ Before we can start with the animation itself, we have to prepare a character sh
 
 Import the character sheet with your shadow limbs and create a new puppet warp animation. Just like in the **Basic Principle of Clipping Masks** section above, lock the geometry and create the puppet skeleton. Treat the shadow like another limb and assign it to the same parent bone as the limb it represents. Alternatively, you could also create a new root bone for your shadow and handle it separately from all the other limbs.
 
-When creating a **Reference Pose** for your character sheet, place any shadow limbs exactly where you want them to be during your animation. Usually, this would be slightly offset from the limb they represent.
+When creating a **Reference Pose** for your character sheet, place any shadow limbs exactly where you want them to be during your animation. Usually, this would be slightly offset from the limb they represent. If the shadow limb is not using a separate bone, you can offset its geometry with the **Geometry Deformation** editor to move it below the limb you want to create a shadow for.
 
 ### Puppet Warp Shadow Animation
 
