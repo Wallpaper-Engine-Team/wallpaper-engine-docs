@@ -42,7 +42,7 @@ Before you get started, this example mostly makes sense on characters and object
 
 ### Preparing the Character Sheet
 
-Before we can start with the animation itself, we have to prepare a character sheet which features the shadows we want to cast. In our example, we first duplicate the arm of our dummy model with the image editor of our choice and then reduce it to a black shape. Next, we add a slight gaussian blur to the shadow limb to make it appear softer (like a real shadow would be). However, depending on the art style of your image, a blur might not be necessary. We also reduce the opacity of the shadow arm to around 20% - 30% since the shadow itself should not appear like a solid black object. Repeat this process for all individual shadows that you want to animate in your wallpaper.
+Before we can start with the animation itself, we have to prepare a [character sheet](/en/scene/effects/effect/charactersheets.html) which features the shadows we want to cast. In our example, we first duplicate the arm of our dummy model with the image editor of our choice and then reduce it to a black shape. Next, we add a slight gaussian blur to the shadow limb to make it appear softer (like a real shadow would be). However, depending on the art style of your image, a blur might not be necessary. We also reduce the opacity of the shadow arm to around 20% - 30% since the shadow itself should not appear like a solid black object. Repeat this process for all individual shadows that you want to animate in your wallpaper.
 
 ### Puppet Warp Setup
 
