@@ -46,17 +46,47 @@ Before we can start with the animation itself, we have to prepare a character sh
 
 ### Puppet Warp Setup
 
-Import the character sheet with your shadow limbs and create a new puppet warp animation. Just like in the **Basic Principle of Clipping Masks** section above, lock the geometry and create the puppet skeleton. Treat the shadow like another limb and assign it to the same parent bone as the limb it represents. Alternatively, you could also create a new root bone for your shadow and handle it separately from all the other limbs.
+Import the character sheet with your shadow limbs and create a new puppet warp animation. Just like in the **Basic Principle of Clipping Masks** section above, lock the geometry and create the puppet skeleton. When setting up the bone structure of your skeleton, ignore the shadow and do not assign any bones to it.
 
-When creating a **Reference Pose** for your character sheet, place any shadow limbs exactly where you want them to be during your animation. Usually, this would be slightly offset from the limb they represent. If the shadow limb is not using a separate bone, you can offset its geometry with the **Geometry Deformation** editor to move it below the limb you want to create a shadow for.
+![Puppet Warp - Clipping Mask Shadow Bones](/img/puppet-warp/puppet_warp_clipping_mask_shadow_bones.png)
+
+Any shadow limbs do not have any bones themselves. Instead, we move on to the **Weights** configuration for our puppet. The goal is to mimic the original weight layout on the shadow limb to match the original limb. In our case, we select the three bones of our arm and paint the shadow in exactly the same color layout as the original limb. Also make sure to use the **Smooth All Weights** functionality while selecting all vertices of the shadow limb to further smoothen the shadow:
+
+<video width="100%" controls>
+  <source src="/videos/puppet_warp_clipping_mask_shadow_weights.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+In the next step, we go back to the **Geometry** settings of our puppet. We first lock the geometry (if you have not done so already). We then continue with the deformation editing tool by clicking on **Edit Deformation**. First, double-click on your shadow element to select it in its entirety. Then, place the shadow slightly below the original limb by dragging and dropping it there.
+
+In the next step, we want to move the shadow on the z-axis, behind the limb. To do this, hold the *ALT* key to change the perspective of your camera until all vertices (rectangular dots) turn blue. Once the vertices are shown in a blue color, you can drag them along the z-axis towards the back of your limb. You can now fine-tune the position of the shadow, there is no "right or wrong" position, it is largely subjective and can also be adjusted at a later time.
+
+<video width="100%" controls>
+  <source src="/videos/puppet_warp_clipping_mask_shadow_placement.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Now that the shadow is in place, we need to ensure one more thing before we can continue. The depth order of your limbs must be sorted in a sensible way. This mainly means that the limb which casts a shadow onto another one must be in front of it. This can be quickly adjusted back in the puppet warp weight settings. First, enable the **Show depth order** option at the top of the weights menu, then select the first bone of your limb and use the **Move Limb to Front** option until it is in front of all limbs it is supposed to cast a shadow on. Green limbs are marked in front, red limbs are behind the object.
+
+<video width="100%" controls>
+  <source src="/videos/puppet_warp_clipping_mask_shadow_placement.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Drawing the Clipping Mask
+
+Next, select the **Clipping Masks** menu in the optional section of the puppet warp configuration. From there, click on the shadow and select **Assign Clipping Mask**. Now draw a clipping mask over all elements that you want the shadow to appear on. In our example, we chose the upper body and the head of our dummy character. Confirm the clipping mask, the shadow should now turn invisible as long as it is not moved over any elements which are inside your clipping mask.
+
+<video width="100%" controls>
+  <source src="/videos/puppet_warp_clipping_mask_shadow_drawing.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Puppet Warp Shadow Animation
 
-Now that your puppet is ready to be animated, simply mimic the animation of the limb that your shadow represents. In our example, we first move the arm of our character. In the next step, we create a similar animation for the shadow. The user will now perceive this as a shadow that is casting from the arm onto the body of our character.
-
-See the full process in this video:
+In the final step, there is not actually anything unusual you need to do. The shadow will automatically mimic the motion of the limb that you have copied the weight colors from. You can always go back to the deformation editor in the **Geometry** settings of your puppet and readjust the position of your shadow relative to the limb that it represents.
 
 <video width="100%" controls>
-  <source src="/videos/puppet_warp_clipping_mask_basics_animation.mp4" type="video/mp4">
+  <source src="/videos/puppet_warp_clipping_mask_shadow_animation.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
