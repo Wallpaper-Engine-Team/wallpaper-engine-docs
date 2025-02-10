@@ -148,6 +148,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/puppet-warp/blendshapes',
 				locale + 'scene/puppet-warp/interactive',
 				locale + 'scene/puppet-warp/inversekinematics',
+				locale + 'scene/puppet-warp/clippingmasks',
 				locale + 'scene/puppet-warp/blendrules',
 				locale + 'scene/puppet-warp/texturechannels',
 				locale + 'scene/puppet-warp/attachments',

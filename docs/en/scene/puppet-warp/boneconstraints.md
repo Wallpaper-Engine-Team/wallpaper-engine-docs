@@ -56,15 +56,17 @@ To get started, set up a model with a rope that you want to animate. In the foll
 
 ![Puppet Warp - Kinematic Rope Bones](/img/puppet-warp/puppet_warp_rope_bone_kinematics.jpg)
 
-**For a basic setup:** Select the **"Rope with 4 elements"** option from the list offered in the **Simple** tab. Make sure your rope consists of exactly 4 bones plus your endpoint, as the rope physics will be applied to the previous 4 bones. There is nothing further you need to do, the physics animation will now already work. The rope will seamlessly integrate into the surrounding animation though this approach only works if the endpoint is fixed and controlled by your animation.
+**For a basic setup:** Select the **"Rope with 4 elements"** option from the list offered in the **Simple** tab. Make sure your rope consists of exactly 4 bones plus your endpoint, as the rope physics will be applied to the previous 4 bones. There is nothing further you need to do, the physics animation will now already work. The rope will seamlessly integrate into the surrounding animation. This simple setup works if the endpoint is fixed and controlled by your animation.
 
-**For a more customized setup:** Since we want a loose endpoint, we switch over to the **Advanced** tab. Set the **Simulation mode** to **Kinematic Chain**. You can also define the number of rope elements. By default, just like in the previous basic setup, this is set to 4 bones. However, if your rope is significantly longer or shorter, you can tweak this number to fit the number of bones that you assigned to the rope. Next, make sure the the **Behavior** option is set to **Rope simulation**.
+If you are creating a rope that is attached on two ends, consider adding a [**Blend Rule**](/en/scene/effects/effect/blendrules.html) to the last rope bone to attach it to another bone. If you do not use a blend rule in this type of setup, you need to manually animate the endpoint position of your rope. After creating the blend rule, do not forget to raise it to a value of `1.0` in your animation as explained in the **Blend Rule** tutorial.
+
+**For a more customized setup:** Since we want a loose endpoint for our example, we switch over to the **Advanced** tab. Set the **Simulation mode** to **Kinematic Chain**. You can also define the number of rope elements. By default, just like in the previous basic setup, this is set to 4 bones. However, if your rope is significantly longer or shorter, you can tweak this number to fit the number of bones that you assigned to the rope. Next, make sure the the **Behavior** option is set to **Rope simulation**.
 
 By default, the rope endpoint itself is fixed, meaning it will not move as part of the physics simulation. In our the example, we want to make the rope endpoint a loose object that is dangling off of a rope. To do this, we disable the **"Stretch enabled"** option and instead enable the **Free endpoint** option.
 
 Here is an overview of all options you can choose to tweak to fit your setup:
 
-* **Gravity enabled:** Enables a downwards drag on your rope element. Can be configured in the overall wallpaper settings.
+* **Gravity enabled:** Enables a downwards force on your rope element. Can be configured in the overall wallpaper settings.
 * **Stretch enabled:** Allows for the rope to act like a rubber band when moved away from the endpoint. Can only be used when **Free endpoint** is set to **disabled**.
 * **Free endpoint:** When enabled, the last rope element is dangling around freely instead of being fixed as part of your animation.
 * **Mass:** The mass of the endpoint, higher mass causes slower acceleration.
@@ -105,7 +107,7 @@ Keep in mind that chaining multiple spring simulated bones will transfer their b
 
 #### Configuring the bones
 
-All bones have been kept at their default settings for the most part. We have enabled **Limit rotation** and configured it to *-20* for the minimum value and *+20* for the maximum value to ensure the cape movements are not too excessive. The second bone of the cape (on the right) also has **Gravity** enabled at its default settings to simulate a bit of a downwards draft. Gravity has been left disabled for the other elements as it looks better if all the motion comes from the animations of the samurai. You could experiment around with this further and set the **Gravity direction** to **180** (meaning to the left) as you may be able to simulate a strong sidewards wind with that, for example.
+All bones have been kept at their default settings for the most part. We have enabled **Limit rotation** and configured it to *-20* for the minimum value and *+20* for the maximum value to ensure the cape movements are not too excessive. The second bone of the cape (on the right) also has **Gravity** enabled at its default settings to simulate a downwards force. Gravity has been left disabled for the other elements as it looks better if all the motion comes from the animations of the samurai. You could experiment around with this further and set the **Gravity direction** to **180** (meaning to the left) as you may be able to simulate a strong sidewards wind with that, for example.
 
 #### Configuring the forward angles
 

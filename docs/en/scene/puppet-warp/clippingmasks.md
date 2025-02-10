@@ -84,7 +84,7 @@ Next, select the **Clipping Masks** menu in the optional section of the puppet w
 
 ### Puppet Warp Shadow Animation
 
-In the final step, there is not actually anything unusual you need to do. The shadow will automatically mimic the motion of the limb that you have copied the weight colors from. You can always go back to the deformation editor in the **Geometry** settings of your puppet and readjust the position of your shadow relative to the limb that it represents.
+For any animations you create, the shadow will automatically mimic the motion of the limb that you have copied the weight colors from. You can always go back to the deformation editor in the **Geometry** settings of your puppet and readjust the position of your shadow relative to the limb that it represents.
 
 <video width="100%" controls>
   <source src="/videos/puppet_warp_clipping_mask_shadow_animation.mp4" type="video/mp4">
