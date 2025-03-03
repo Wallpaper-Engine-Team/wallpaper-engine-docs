@@ -2,7 +2,7 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - General
+# Particle Component - General
 
 The **General** component of a particle system defines how the particle is rendered to the screen and which texture is used. It consists of three sections:
 

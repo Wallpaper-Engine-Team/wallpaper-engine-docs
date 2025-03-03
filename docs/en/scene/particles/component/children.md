@@ -2,6 +2,6 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - Children
+# Particle Component - Children
 
 Sorry, this guide is still on our TODO list!

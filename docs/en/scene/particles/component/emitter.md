@@ -2,7 +2,7 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - Emitters
+# Particle Component - Emitters
 
 The emitter of a particle system determines the way in which new particles are created. Your particle system needs at least one emitter to function.
 

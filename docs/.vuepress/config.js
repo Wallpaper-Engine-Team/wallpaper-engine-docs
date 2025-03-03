@@ -114,7 +114,14 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 			title: particlesGroup,
 			collapsable: true,
 			children: [
-				locale + 'scene/particles/introduction'
+				locale + 'scene/particles/introduction',
+				locale + 'scene/particles/component/general',
+				locale + 'scene/particles/component/renderer',
+				locale + 'scene/particles/component/emitter',
+				locale + 'scene/particles/component/initializer',
+				locale + 'scene/particles/component/operator',
+				locale + 'scene/particles/component/children',
+				locale + 'scene/particles/component/control_point',
 			]
 		},
 		{

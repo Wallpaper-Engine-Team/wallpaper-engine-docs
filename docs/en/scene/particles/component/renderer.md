@@ -2,7 +2,7 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - Renderers
+# Particle Component - Renderers
 
 Your particle system needs at least one renderer to function. There are four different types of renderers available:
 

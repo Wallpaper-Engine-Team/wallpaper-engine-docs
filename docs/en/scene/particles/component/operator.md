@@ -2,6 +2,6 @@
 prev: ../introduction.md
 ---
 
-# Particle Systems - Operators
+# Particle Component - Operators
 
 Sorry, this guide is still on our TODO list!
