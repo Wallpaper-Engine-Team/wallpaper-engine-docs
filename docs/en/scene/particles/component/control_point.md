@@ -28,12 +28,8 @@ Once a control point is assigned, a dragable gizmo will become visible in the ed
 There are multiple particle system components that allow you to utilize control points. You will find control points in the following particle system components:
 
 #### Initializers
-* **Map sequence around control point:** Spawns particles around a control point.
-* **Map sequence between control points:** Spawns particles between two control points.
+* **Position around control point:** Spawns particles around a control point.
+* **Position between control points:** Spawns particles between two control points.
 
 #### Operators
 * **Control Point Force:** Acts upon articles with a force, allowing you to push or pull particles when they come near the control point. When the control point is bound to the mouse cursor, allows you to push particles away.
-
-#### Child Particle Systems
-
-Child particle systems can be configured to spawn at a specific control point. Enable the **Set control points** option and assign a control point.
