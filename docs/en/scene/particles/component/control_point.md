@@ -33,3 +33,4 @@ There are multiple particle system components that allow you to utilize control 
 
 #### Operators
 * **Control Point Force:** Acts upon articles with a force, allowing you to push or pull particles when they come near the control point. When the control point is bound to the mouse cursor, allows you to push particles away.
+* **Vortex**: Creates a vortex movement which you can lock to a control point to position the vortex independently from the rest of the particle system.

@@ -18,7 +18,7 @@ Each particle system consists of different components that control certain chara
 | Component            | Description   |
 |----------------------|---------------|
 | 1. [General](/en/scene/particles/component/general.html) | Defines how the particle is rendered to the screen, which texture is used and how many particles are spawning. |
-| 2. [Renderers](/en/scene/particles/component/renderer.html) | Lets you define special renderers for your particles. For example, you may choose a special renderer which stretches your particles depending on their velocity. |
+| 2. [Renderers](/en/scene/particles/component/renderer.html) | Lets you choose a renderer for your particles which defines how the particle textures are rendered. |
 | 3. [Emitters](/en/scene/particles/component/emitter.html) | Defines when and how new particles are created. |
 | 4. [Initializers](/en/scene/particles/component/initializer.html) | Defines properties of your particles at the time of your creation, for example their size, speed and color. |
 | 5. [Operators](/en/scene/particles/component/operator.html) | Operators apply changes to properties of particles over time. Uses the **Initializer** values as a starting point. |
