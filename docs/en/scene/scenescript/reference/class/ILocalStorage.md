@@ -4,7 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Class ILocalStorage
 
-You can access this interface through the global object `localstorage` anywhere in your SceneScript code to interact with the local data storage. This allows you to store values (up to 100 KB per wallpaper) per screen or per machine. This data is cleared when a user makes use of the **Reset** functionality in the wallpaper settings.
+You can access this interface through the global object `localStorage` anywhere in your SceneScript code to interact with the local data storage. This allows you to store values (up to 100 KB per wallpaper) per screen or per machine. This data is cleared when a user makes use of the **Reset** functionality in the wallpaper settings.
 
 By default, local storage stores data per screen using the `LOCATION_SCREEN` constant. This is the same behavior as user properties.
 
