@@ -10,6 +10,24 @@ The **General** component of a particle system defines how the particle is rende
 
 ## Material Settings
 
+### Cutout
+
+Cuts off all alpha channel values outside of the defined range based on the provided **cutout start** and **cutout end** values and then sets a target opacity.
+
+* **Cutout start:** The new start range of the transparency.
+* **Cutout end:** The new end value of the opacity. Must be higher than **Cutout start value**.
+* **Cutout opacity:** The desired target opacity for the particles which is applied after the range has been readjusted.
+
+To further exemplify: Initially, the full opacity range is always between `0.0` and `1.0`. By setting the **cutout start** to `0.2` and the **cutout end** to `0.8`, all alpha values outside of this range are discarded. In the next step, all values inside the defined range are re-arranged to the full range of `0.0` to `1.0`. Finally, the **cutout opacity** is applied to fine-tune the desired output opacity of the particles.
+
+### Lighting
+
+Enables real-time lighting using [light sources](/en/scene/lighting/introduction.html) for the particle system.
+
+#### Double-sided lighting
+
+When enabled, both sides of the particle will render the lights. Should be left disabled unless particles are rotated to show their backside.
+
 ### Refract
 
 When enabled, you can add an additional normal map which Wallpaper Engine uses to add a refraction effect to your particles.
@@ -68,6 +86,18 @@ If this is enabled, the particles will ignore the position, scale and rotation o
 ### Perspective rendering
 
 Perspective rendering is relevant in 3D contexts. For 3D-based wallpapers, this option is always on. In 2D scenes, you can optionally turn it on in case you are working with 3D models.
+
+### Disable color overrides
+
+### Disable count overrides
+
+### Disable lifetime overrides
+
+### Disable size overrides
+
+### Disable speed overrides
+
+
 
 ### Sprite sheet - Animation mode
 

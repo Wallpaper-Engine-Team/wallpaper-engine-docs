@@ -34,6 +34,18 @@ Defines how the color of the particles. Values are determined randomly between t
 * **Max:** The secondary color.
 * **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
+## HSV color random
+
+Allows you to apply colors to your particles based on HSV, essentially allowing you to select the hue, saturation and brightness (value) to your particles, allowing for a different range of colors than the standard `Color random` initializer.
+
+* **Hue min:** The starting range of the hue color space.
+* **Hue max:** The end range of the hue color space.
+* **Hue steps:** The number of different hues used in the particle system.
+* **Saturation min:** The minimum saturation (values from `0.00` to `1.00`).
+* **Saturation max:** The maximum saturation (values from `0.00` to `1.00`).
+* **Value min:** The minimum brightness of the particles (values from `0.00` to `1.00`).
+* **Value max:** The maximum brightness of the particles (values from `0.00` to `1.00`).
+
 ## Alpha random
 
 Defines how the opacity of the particles. Values are determined randomly between the **Min** and **Max** value.
@@ -49,6 +61,14 @@ Defines the starting speed of the individual particles. Values are determined ra
 * **Min:** The minimum speed in the given direction.
 * **Max:** The maximum speed in the given direction.
 * **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+
+## Inherit control point velocity
+
+Allows you to apply the movement speed and direction of a control point to newly spawned particles. Control points can be moved by attaching them to the mouse cursor, timeline animations or via SceneScript.
+
+* **Speed min:** 
+* **Speed max:** 
+* **Control point:** The control point to which this initializer is bound to. Values `0` - `7`.
 
 ## Turbulent velocity random
 

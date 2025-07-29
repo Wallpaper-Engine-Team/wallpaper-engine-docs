@@ -31,6 +31,7 @@ This renderer will stretch your particles depending on their velocity.
 
 * **Length:** The length is multiplied with speed and determines the ideal length of the particle.
 * **Max Length:** The maximum length a particle can reach at very high velocities.
+* **Min Length:** 
 
 <video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
   <source src="/videos/particle_renderer_sprite_trail.mp4" type="video/mp4">
@@ -42,6 +43,9 @@ This renderer will stretch your particles depending on their velocity.
 This renderer draws a line between each particle that is spawned.
 
 * **Subdivision:** The number of subdivisions in each line. Higher numbers makes corners smoother at the cost of system performance.
+* **UV scale:** 
+* **UV smoothing:**
+* **UV scrolling:** 
 
 <video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
   <source src="/videos/particle_renderer_rope.mp4" type="video/mp4">
