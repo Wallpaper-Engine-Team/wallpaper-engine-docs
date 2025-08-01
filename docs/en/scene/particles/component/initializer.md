@@ -46,6 +46,15 @@ Allows you to apply colors to your particles based on HSV, essentially allowing 
 * **Value min:** The minimum brightness of the particles (values from `0.00` to `1.00`).
 * **Value max:** The maximum brightness of the particles (values from `0.00` to `1.00`).
 
+## Color list
+
+Allows you to define up to ten colors which are randomly applied to particles at the time of their creation.
+
+* **Colors:** The number of colors you want to define.
+* **Hue noise:** Introduces randomness to the hue of particles (values from `0.00` to `1.00`).
+* **Saturation noise:** Introduces randomness to the saturation of particles (values from `0.00` to `1.00`).
+* **Value noise:** Introduces randomness to the absolute color value of particles (values from `0.00` to `1.00`).
+
 ## Alpha random
 
 Defines how the opacity of the particles. Values are determined randomly between the **Min** and **Max** value.
@@ -66,8 +75,8 @@ Defines the starting speed of the individual particles. Values are determined ra
 
 Allows you to apply the movement speed and direction of a control point to newly spawned particles. Control points can be moved by attaching them to the mouse cursor, timeline animations or via SceneScript.
 
-* **Speed min:** 
-* **Speed max:** 
+* **Speed min:** The minimum speed with which particles spawn.
+* **Speed max:** The maximum speed with which particles spawn.
 * **Control point:** The control point to which this initializer is bound to. Values `0` - `7`.
 
 ## Turbulent velocity random
@@ -75,7 +84,7 @@ Allows you to apply the movement speed and direction of a control point to newly
 An advanced initializer for particle speeds. Can be used whenever you want to create the appearance of random gusts of wind, for example in a smoke stream. In your **Emitter**, set the **Distance Min** and **Distance Max** values both to `0`, otherwise this initializer might not render in a sensible way.
 
 * **Scale:** Changes the range of the turbulence. A value of `1.00` means the turbulence moves in all directions, `0.00` means it only moves into the **Forward** direction in a perfect line and a value of `2.00` means that it can wind over itself.
-* **Timescale:** The speed of the turbulent noise. Try sticking to low values like `0.1` for smoke-like effects.
+* **Noise speed:** The speed of the turbulent noise. Try sticking to low values like `0.1` for smoke-like effects.
 * **Offset:** Introduces a directional offset to the **Forward** value.
 * **Speed min:** The minimum speed with which particles spawn.
 * **Speed max:** The maximum speed with which particles spawn.
@@ -102,6 +111,23 @@ Defines how the starting rotation of the particles. Values are determined random
 * **Max:** The maximum rotation.
 * **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
+## Position offset random
+
+Offsets the position in organic, fractal patterns can alternate between smooth to rough and chaotic. For best results, lower maximum emitter distance to near zero.
+
+* **Directions:** The directional axes in which the pattern progresses.
+* **Sign:** This setting allows you to force positive or negative values for the spawn location of your particles for the given axis. Valid values are:
+
+* `0`: Default, both positive and negative values are possible.
+* `1`: Only positive values are possible.
+* `-1`: Only negative values are possible.
+
+For example: By setting `X` to `-1`, all `X` values will be negative, meaning the particles will spawn to the left of the particle system only.
+* **Distance:** The maximum distance particles are offset from the origin.
+* **Octaves:** The number of layers that the underlying algorithm is applied. Experiment with values for different visual outcomes.
+* **Noise scale:** Size of the underlying noise texture, allows you to alter the randomness.
+* **Noise speed:** The speed of the underlying noise texture, allows you to alter the randomness. 
+
 ## Angular velocity random
 
 Defines the starting angular velocity of the individual particles. Values are determined randomly between the **Min** and **Max** value. Requires the [Angular movement Operator](/en/scene/particles/component/operator.html) operator to be added to the particle system.
@@ -115,19 +141,23 @@ Defines the starting angular velocity of the individual particles. Values are de
 Will generate the particles in a circle around a control point, for example the mouse cursor.
 
 * **Count:** Defines the number of spawn points around the control point.
-* **Bounds:** The `X` value describes the start point and `Y` the end point. Valid values range from `0.00` to `1.00`. For example, if you set `X` to `0.0` and `Y` to `0.5`, the particles will spawn in the first half of the circle between the control points.
+* **Modify count with layer settings:** When enabled, changes to the **Count** property on the particle system layer will affect the particle count.
+* **Restart with periodic emission:** Restart the circle when **periodic emission** cycle is reached (see emitter settings).
+* **Bounds:** Describes the start and end point of the circle, a full circle will go from `0.00` to `1.00`. For example, if you set `Start` to `0.0` and `End` to `0.5`, the particles will spawn in the first half of the circle around the control point.
 * **Axis:** The axis along which the particles spawn, mainly relevant in a 3D context.
 * **Speed min:** The minimum velocity with which particles are created.
 * **Speed max:** The maximum velocity with which particles are created.
 * **Orientation:** When set to **Repeat**, the particles will spawn in a full loop around the control point. When set to **Mirror**, the particle spawn point will move back and forth in the same loop.
-* **Control point:** The control point to which this initializer is bound to. Values `0` - `7`.
+* **Control point:** The control point to which this initializer is bound to. Values `0` - `7`. **Make sure to also bind your emitter to the same control point, otherwise the size of the circle will change depending on the distance to the control point.**
 
 ## Position between control points
 
 Will generate the particles between two a control points.
 
 * **Count:** Defines the number of spawn points around the control point.
-* **Bounds:** The `X` value describes the start point and `Y` the end point. Valid values range from `0.00` to `1.00`. For example, if you set `X` to `0.5` and `Y` to `1.0`, the particles will spawn in the second half between the two control points.
+* **Modify count with layer settings:** Restart the path between control points when **periodic emission** cycle is reached (see emitter settings).
+* **Restart with periodic emission:** Restart the circle when **periodic emission** cycle is reached (see emitter settings).
+* **Bounds:** Describes the start and end point of the line between control points. Valid values range from `0.00` to `1.00`. For example, if you set `Start` to `0.5` and `End` to `1.0`, the particles will spawn in the second half between the two control points.
 * **Orientation:** When set to **Repeat**, the particles will spawn in a line from the start control point to the end control point. When set to **Mirror**, the particles spawn point will bounce back and forth between the start and end control point.
 * **Control point start:** The first control point to which this initializer is bound to. Values `0` - `7`.
 * **Control point end:** The second control point to which this initializer is bound to. Values `0` - `7`.
@@ -137,3 +167,42 @@ Will generate the particles between two a control points.
 * **Enable arc:** When enabled, the path between the control points is drawn in an arc.
     * **Arc amount:** The size of the arc.
     * **Arc direction:** The direction in which the arc bends.
+
+## Remap initial value
+
+A relatively complex initializer that allows for a great level of custom particle behavior. It allows you to take an input value - including global values like the current time of day or the current runtime of the wallpaper - and gives you the ability to utilize them by modifying certain particle properties with them.
+
+Since this is an *Initializer*, the changes are applied at the time of the particle creation, you can also use this feature as an *Operator* if you would like these changes to occur continuously after the creation of individual particles.
+
+* **Input:** The input value that is used as a starting point.
+* **Clamp input value:** If enabled, values will be reduced to the range that you define for the input range below, otherwise values can exceed the provided range.
+* **Output:** The output value that is used as a starting point.
+* **Clamp output value:** If enabled, values will be reduced to the range that you define for the output range below, otherwise values can exceed the provided range.
+* **Operation:** Controls what is done with the input and output value. **Assign** will overwrite the existing output value. **Multiply** multiplies the output and input value. **Add** sums up the input and output value. **Subtract** subtracts the input value from the existing output value.
+* **Transform function:** Allows you to add a wave or noise to the operation to get recurring 
+
+### Input & Output options
+
+Each input and each output option will generate its own sub-options further down below the options list. These will typically let you define a value range. They may also include additional options, such as a control point, if relevant to their action.
+
+Choosing the correct input and output range is critical, as the value range must make sense for the specific property. See the examples below to get an idea of how to use this feature.
+
+::: details Click to view example: Input: Distance to control point - Output: Size
+
+If you want to spawn smaller particles near a control point, you would choose **Distance to control point** as an **Input** value and you would set **Size** as an **Output** value.
+
+For **Operation**, we use **Multiply**, alternatively you could also use **Assign** to have full control over the particle sizes. This becomes relevant in the output range further down below.
+
+Next, you need to define the scale of input values. In our emitter, we have defined that particles spawn in a distance between `0` to `500`. Accordingly, we set the **Input range min** to `0` and the **Input range max** to `500` to cover the full range. Internally, this range will be normalized to `0.0` to `1.0` (representing 0% - 100%).
+
+The **Output range min** and **Output range max** represent the new **Size** of the particles. If you set the **Operation** to **Multiply**, then the original size is multiplied by the normalized input value. A sensible **minimum** output may be `0.1` for example, so the size of particle closest to the control point will be multiplied by `0.1`. By setting the maximum output range to `2.0`, particles farthest away will have their size multiplied by `2.0`.
+
+![Remap initial value](/img/particles/remap_initializer.jpg)
+
+:::
+
+# Inherit value from event
+
+This initializer allows you to copy a value from a parent particle system onto the child. This is useful if the parent particle has a dynamic property that you want to match on the child particle. For example, a red rocket flying into the air explodes with a red explosion.
+
+* **Input:** The value you want to copy from the parent particle.

@@ -8,11 +8,32 @@ Operators act on the particles over time after they have been spawned. Other com
 
 [[toc]]
 
+## Operator blending
+
+Many operators have a section regarding **operator blending**. This optional functionality allows you to start and stop the specific operator during specific points in a single particle's lifetime. All values are provided in a range of `0.00` to `1.00` where `0.00` represents the spawn time of particle while `1.00` represents the last frame of a particle. In other words, it is a scale that represents 0% to 100% of a single particle's lifetime in percent (not in seconds!).
+
+* **Blend-in start:** Time at which the operator's action should start fading in.
+* **Blend-in end:** Time at which the operator's action should finish fading in. After this point, the operator is working in full effect.
+* **Blend-out start:** Time at which the operator should begin to unwind.
+* **Blend-out end:** Time at which the operator fully stops working.
+
+### Operator Blending Example
+
+Take the following setup for any supported operator:
+
+* **Blend-in start:** `0.2`
+* **Blend-in end:** `0.4`
+* **Blend-out start:** `0.6`
+* **Blend-out end:** `0.8`
+
+This means that the operator starts working at **20%** of a particle's lifetime. At **40%** of the particle's lifetime, the operator is working in full effect. At **60%** of the particle lifecycle, the operator starts to wind down again. Finally, at **80%** the operator comes to a full stop. The particle lives on for the remaining 20% without the operator.
+
 ## Movement
 
 Introduces movement to your particles. Use it in conjunction with **Initializers** such as **Velocity random** or on its own.
 
 * **Gravity:** The direction which particles travel on each axis.
+* **Worldspace:** When enabled, movement occurs in the worldspace. Especially noticeable when the particle system is rotating for example. Not to be confused with the **Worldspace** option in the [General](/en/scene/particles/component/general.html#worldspace) particle system settings.
 * **Drag:** Slows down particles over time. You can also enter a negative value to accelerate particles over time.
 
 ## Angular movement
@@ -34,7 +55,6 @@ If your particle has a lifetime of 5 seconds and you enter a *fade-in time* of `
 
 The fade-in always starts at the time of the particle creation and the fade-out always ends when the lifetime of the particle ends.
 :::
-
 
 ## Size change
 
@@ -84,8 +104,10 @@ The **start value** transition always starts at the time of the particle creatio
 
 ## Oscillate position
 
-* **Mask:** 
-* **Frequency min:** 
+Creates a regular positional movement per particle that oscillates with different parameters per particle.
+
+* **Mask:** Allows you to create a bias for specific axes.
+* **Frequency min:** The minimum number of oscillations per particle lifetime.
 * **Frequency max:** 
 * **Scale min:** 
 * **Scale max:**
