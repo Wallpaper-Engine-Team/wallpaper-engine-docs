@@ -6,6 +6,12 @@ prev: ../introduction.md
 
 Control points are reference points that you can use to interact with the particle system from a certain point in your wallpaper. For example, you can turn the mouse cursor into a control point and let the particles react to mouse cursor movement. You can also create particle around or in between two control points.
 
+Each particle system has 8 control points that you can use, numbered from `0` to `7`.
+
+::: warning Special Case: Control Point 0
+**Control point 0** is always tied to the origin position of the particle system. If you want to use a control point and move it around dynamically (by attaching it to the mouse cursor, for example), you need to use control point 1 or higher.
+:::
+
 <video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
   <source src="/videos/particle_control_point.mp4" type="video/mp4">
   Your browser does not support the video tag.

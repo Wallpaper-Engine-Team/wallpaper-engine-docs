@@ -30,7 +30,11 @@ This means that the operator starts working at **20%** of a particle's lifetime.
 
 ## Movement
 
-Introduces movement to your particles. Use it in conjunction with **Initializers** such as **Velocity random** or on its own.
+Introduces movement to your particles. Use it in conjunction with **Initializers** such as **Velocity random** or other operators.
+
+::: danger Please note
+If this operator is missing from your particle system, your particles will not move at all.
+:::
 
 * **Gravity:** The direction which particles travel on each axis.
 * **Worldspace:** When enabled, movement occurs in the worldspace. Especially noticeable when the particle system is rotating for example. Not to be confused with the **Worldspace** option in the [General](/en/scene/particles/component/general.html#worldspace) particle system settings.
@@ -104,57 +108,91 @@ The **start value** transition always starts at the time of the particle creatio
 
 ## Oscillate position
 
-Creates a regular positional movement per particle that oscillates with different parameters per particle.
+Creates a regular positional movement per particle that oscillates with different parameters per particle. Particles choose a random frequency, scale and phase value in the provided range.
 
 * **Mask:** Allows you to create a bias for specific axes.
 * **Frequency min:** The minimum number of oscillations per particle lifetime.
-* **Frequency max:** 
-* **Scale min:** 
-* **Scale max:**
-* **Phase min:**
-* **Phase max:**
+* **Frequency max:** The maximum number of oscillations per particle lifetime.
+* **Scale min:** The minimum scale of the movement (baseline is `1.00`).
+* **Scale max:** The maximum scale of the movement (baseline is `1.00`).
+* **Phase min:** Phase adds an offset to the particles. This is the minimum that is added. Recommended value: `0.00`
+* **Phase max:** Phase adds an offset to the particles. This is the maximum that is added. Recommended value: `6.28` (2 * π)
 
 ## Oscillate alpha
 
-* **Frequency min:** 
-* **Frequency max:** 
-* **Scale min:** 
-* **Scale max:**
-* **Phase min:**
-* **Phase max:**
+Regularly changes the transparency with different parameters per particle. Particles choose a random frequency, scale and phase value in the provided range.
 
-**Operator blending**
-
-**Blend-in start:**
-**Blend-in end:**
-**Blend-out start:**
-**Blend-out end:**
+* **Frequency min:** The minimum number of oscillations per particle lifetime.
+* **Frequency max:** The maximum number of oscillations per particle lifetime.
+* **Scale min:** The minimum alpha value that is used in the animation (`0.00` - `1.00`).
+* **Scale max:** The maximum alpha value that is used in the animation (`0.00` - `1.00`).
+* **Phase min:** Phase adds an offset to the particles. This is the minimum that is added. Recommended value: `0.00`
+* **Phase max:** Phase adds an offset to the particles. This is the maximum that is added. Recommended value: `6.28` (2 * π)
 
 ## Oscillate size
 
-* **Frequency min:** 
-* **Frequency max:** 
-* **Scale min:** 
-* **Scale max:**
-* **Phase min:**
-* **Phase max:**
+Regularly changes the size with different parameters per particle. Particles choose a random frequency, scale and phase value in the provided range.
+
+* **Frequency min:** The minimum number of oscillations per particle lifetime.
+* **Frequency max:** The maximum number of oscillations per particle lifetime.
+* **Scale min:** The minimum size value that is used in the animation (baseline is `1.00`).
+* **Scale max:** The maximum size value that is used in the animation (baseline is `1.00`).
+* **Phase min:** Phase adds an offset to the particles. This is the minimum that is added. Recommended value: `0.00`
+* **Phase max:** Phase adds an offset to the particles. This is the maximum that is added. Recommended value: `6.28` (2 * π)
 
 ## Control point force
 
-* **Offset:** Lets you adjust the position of the force relative to the control point.
+Either pulls or pushes particles when near a control point with the provided distances and strength.
+
+::: tip Let particles react to the mouse cursor
+To make this particle system react to the mouse cursor, first set the **control point** option to `1` (or higher). Please note: This is not possible with control point `0`.
+
+Next, select the control point you chose in the **Control Points** section of the particle system and enable the **Lock to pointer** option. Now the particle system will react to the mouse cursor.
+:::
+
+* **Offset:** Lets you adjust the position of the force relative to the selected control point.
 * **Scale:** The strength of the force. Positive values pull particles to the control point. Negative values push particles away.
-* **Threshold:** The maximum distance of the force..
+* **Distance:** The maximum distance of the force..
 * **Control point:** The control point index that this operator works with. Valid numbers: `0` - `7`.
+* **Reduce velocity near center:** Reduces the attraction rate towards the control point.
+* **Delete particles in center:** Adds additional **Deletion threshold option** that lets you define how close particles can come to the center of the control point before they get deleted. Triggers the **death** event on deletion.
+
+## Maintain distance to control point
+
+This operator places particles in a circle around a provided control point.
+
+* **Control point:** The control point index that this operator works with. Valid numbers: `0` - `7`.
+* **Distance:** The distance to the control point.
+* **Variable strength:** Factor on how strong the position should be enforced. Valid range is `0.00` - `1.00`.
+
+## Maintain distance between control points
+
+This operator distributes particles between two control points.
+
+* **Control point start:** The first control point that is used to determine the particle position. Valid numbers: `0` - `7`.
+* **Control point end:** The first control point that is used to determine the particle position. Valid numbers: `0` - `7`.
+
+## Reduce movement near control point
+
+The operator reduces the movement speed of particles in its range. Negative reduction values result in a speeding up of particles.
+
+* **Control point:** The control point index that this operator works with. Valid numbers: `0` - `7`.
+* **Distance inner:** The inner circle of the force, here the **Reduction inner** value applies.
+* **Distance outer:** The outer circle of the force, here the **Reduction outer** value applies.
+* **Reduction inner:** The speed reduction within the inner circle of the operator. Negative values result in increased speeds.
+* **Reduction outer:** The speed reduction within the outer circle of the operator. Negative values result in increased speeds.
 
 ## Turbulence
 
-* **Timescale:** 
-* **Mask:** 
-* **Scale:** 
-* **Speed min:**
-* **Speed max:**
-* **Phase min:**
-* **Phase max:**
+Introduces turbulent movements with random noise to the particles.
+
+* **Noise speed:** Alters the speed of the underlying noise mask, you can adjust this to change the randomness.
+* **Noise scale:** Alters the size of the underlying noise mask, you can adjust this to change the randomness.
+* **Mask:** Lets you adjust the scale of the turbulence on the specific axes.
+* **Speed min:** The minimum turbulence speed.
+* **Speed max:** The maximum turbulence speed.
+* **Phase min:** Phase adds an offset to the particles. This is the minimum that is added. Recommended value: `0.00`
+* **Phase max:** Phase adds an offset to the particles. This is the maximum that is added. Maximum value: `6.28` (2 * π)
 
 **Audio response**
 
@@ -166,16 +204,30 @@ The audio response feature adds a factor to the **Phase** values of the particle
 * **Frequency min:** The **lowest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 0 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
 * **Frequency max:** The **highest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 1 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
 
-
 ## Vortex
 
-* **Offset:** 
-* **Axis:** 
-* **Distance inner:**
-* **Speed inner:**
-* **Speed outer:**
-* **Infinite axis:**
-* **Control point:**
+Spins particles around in a vortex. Has two modes: Standard vortex and ring-shaped.
+
+* **Axis:** Lets you define the axis of the vortex movement.
+* **Ring shape:** When enabled, switches the vortex to a ring shape, meaning the center is hollow and unaffected by any forces while the ring itself has a width in which forces are acted upon.
+
+**Ring shape:**
+* **Ring radius:** The radius of the ring.
+* **Ring width:** The width of the ring.
+* **Ring pull distance:** The distance at which the ring attracts outside particles.
+* **Ring pull force:**  The strength at which the ring attracts particles.
+
+**Standard vortex:**
+* **Distance inner:** The inner distance of the vortex.
+* **Distance outer:** The outer distance of the vortex.
+
+**Shared settings:**
+* **Speed inner:** The speed of particles within the inner distance.
+* **Speed outer:** The speed of particles within the outer distance.
+* **Infinite axis:** When enabled, the influence range becomes cylinder-shaped instead of a sphere.
+* **Control point:** The control point index around which the vortex is centered. Valid numbers: `0` - `7`. Control point `0` represents the origin of the particle system.
+* **Maintain distance to center:** When enabled, particles will be attracted to the center of the vortex instead of whirling them away.
+* **Center force:** The strength at which particles are pulled into the center of the vortex.
 
 **Audio response**
 
@@ -186,3 +238,55 @@ The audio response feature ties the particle speed to audio playback, causing th
 * **Bounds:** The bounds control at what points the audio response starts and stops. If the audio bounds are configured to be 0 and 1, then the audio effect will slowly fade. A more sudden effect can be achieved by making the bounds more narrow. For example, if you set the audio bounds to 0.8 and 1, the audio responsiveness will only take effect for volume levels between 0.8 and 1 which makes the audio effect more sudden and limits it to the upper range of volume levels.
 * **Frequency min:** The **lowest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 0 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
 * **Frequency max:** The **highest** audio frequency that the effect reacts to. The values go from 0 to 15, where 0 is bass sounds and 15 higher frequency treble sounds. For example, set this to 1 if you want the pulse effect to only react to the beat of music being played (as the beat is usually reflected by lower bass frequencies).
+
+## Boids
+
+Simulate the flocking behavior of birds and other group movements. Particles will start to form groups for their movements.
+
+* **Neighbor threshold:** This setting defines the radius around a particle that it considers its local neighborhood. Only other particles within this distance will influence its behavior for alignment and cohesion.
+* **Separation threshold:** This is the distance within which a particle will actively try to move away from its neighbors to avoid collision.
+* **Separation factor:** A higher value will cause particles to steer away from each other more forcefully, resulting in a more spread-out flock.
+* **Cohesion factor:** A higher cohesion factor will result in a tighter, more densely packed flock as the particles will have a stronger urge to stay together.
+* **Alignment factor:** This determines how much a particle will try to match the velocity of its neighbors. A higher alignment factor will cause particles to align their movement paths more quickly and uniformly, leading to a more organized and synchronized flock movement.
+* **Clamp speed:** When enabled, particle speed is limited.
+* **Max speed:** The maximum speed of particles.
+
+## Cap velocity
+
+Lets you set an upper limit for the speed of particles. With the use of **Operator blending** (see the top of this page), this option can be introduced or removed during a particle's lifetime.
+
+* **Max speed:** The maximum speed for each individual particle.
+
+## Remap value
+
+A relatively complex operator that allows for a great level of custom particle behavior. It allows you to take an input value - including global values like the current time of day or the current runtime of the wallpaper - and gives you the ability to utilize them by modifying certain particle properties with them.
+
+Since this is an *Operator*, the changes are continuously applied to all particles which makes it relatively performance-intensive. You can also use this feature as an *Initializer* to only apply this logic at the time of the particle creation.
+
+* **Input:** The input value that is used for the remapping operation.
+* **Clamp input value:** If enabled, values will be reduced to the range that you define for the input range below, otherwise values can exceed the provided range.
+* **Output:** The output value that is being changed with the remap operation.
+* **Clamp output value:** If enabled, values will be reduced to the range that you define for the output range below, otherwise values can exceed the provided range.
+* **Operation:** Controls what is done with the input and output value. **Assign** will overwrite the existing output value. **Multiply** multiplies the output and input value. **Add** sums up the input and output value. **Subtract** subtracts the input value from the existing output value.
+* **Transform function:** Allows you to add a wave or noise to the operation.
+
+::: details Click to view example: Input: Speed - Remap Output: Size
+
+This is just one example of nearly infinite combinations that can be made to showcase the remap operator. You can combine any input and output values in creative ways.
+
+In this example, we want to increase the size of particles whenever they increase their speed. We first choose **Speed** as an **Input** value. Since we want to modify the size of particles, we set **Size** as an **Output** value.
+
+For **Operation**, we use **Multiply**, alternatively you could also use **Assign** to have full control over the particle sizes. This becomes relevant in the output range further down below.
+
+Next, you need to define the scale of input values. In our case, particles can be at a complete standstill at a speed of `0` and they can reach up to a speed of `500`. Accordingly, we set the **Input range min** to `0` and the **Input range max** to `500` to cover the full range. Internally, this range will be normalized to `0.0` to `1.0` (representing 0% - 100%).
+
+The **Output range min** and **Output range max** represent the new **Size** of the particles. If you set the **Operation** to **Multiply**, then the original size is multiplied by the normalized input value. A sensible **minimum** output may be `0.1` for example, so the size of particle closest to the control point will be multiplied by `0.1`. By setting the maximum output range to `2.0`, particles farthest away will have their size multiplied by `2.0`.
+
+The resulting behavior can be seen here, where particles are pushed by a **control point force**. When they increase their speed, they also increase in size, and when they slow back down, they also shrink back down:
+
+<video width="100%" controls loop>
+  <source src="/videos/particle_operator_remap.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+:::
+

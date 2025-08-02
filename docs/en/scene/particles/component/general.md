@@ -89,14 +89,23 @@ Perspective rendering is relevant in 3D contexts. For 3D-based wallpapers, this 
 
 ### Disable color overrides
 
+Disables all color overrides that are applied to the layer.
+
 ### Disable count overrides
+
+Disables all count overrides that are applied to the layer.
 
 ### Disable lifetime overrides
 
+Disables all lifetime overrides that are applied to the layer.
+
 ### Disable size overrides
+
+Disables all size overrides that are applied to the layer.
 
 ### Disable speed overrides
 
+Disables all speed overrides that are applied to the layer.
 
 
 ### Sprite sheet - Animation mode

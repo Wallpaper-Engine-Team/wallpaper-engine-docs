@@ -18,3 +18,5 @@ Each child particle system has the following options:
 * **Probability:** The chance at which the child particle system is spawned when the event condition is met. `0.00` represents a 0% chance and `1.00` a 100% chance.
 * **Set control points:** When enabled, the child particle system will use the control points of the parent particle system. Allows you to use control points of the parent within a child particle system.
     * **Control point start index:** The control point index which starts to override the child particle system control points. For example, if you set this value to `5`, then control points 5, 6 and 7 will be copied to the child particle system and the rest will remain independent.
+
+You can also use the ["inherit value from event" initializer](/en/scene/particles/component/initializer.html#inherit-value-from-event) to copy certain parent particle properties onto their children. This is useful whenever you have dynamic properties that you want to carry over onto children (color, size or opacity, for example).

@@ -89,13 +89,13 @@ An advanced initializer for particle speeds. Can be used whenever you want to cr
 * **Speed min:** The minimum speed with which particles spawn.
 * **Speed max:** The maximum speed with which particles spawn.
 * **Phase min:** Phase adds an offset to the particles. This is the minimum that is added. You can set this down to `0.0`.
-* **Phase max:** The maximum phase value, we recommend values up to `5.0`. If both **Phase min** and **Phase max** are set to `0.0`, particles will spawn in a perfect line.
+* **Phase max:** The maximum phase value, we recommend values up to `6.28` (2 * π). If both **Phase min** and **Phase max** are set to `0.0`, particles will spawn in a perfect line.
 * **Forward:** The forward direction of the turbulence. A value of `X: 0 / Y: 1 / Z: 0` would cause the forward direction to be upwards.
 * **Normal:** Changes the normal vector, mainly relevant for 3D scenes if you want the particles to go along another axis. Cannot be equal to the **Forward** vector. For 2D scenes, you can set this untouched at `X: 0 / Y: 0 / Z: 1`.
 
 **Audio response**
 
-The audio response feature adds a factor to the **Phase** values of the particles, introducing random outbreaks of particles. Make sure that your **Phase min** and **Phase max** options are configured in a sensible range, such as `1.00` to `5.00`, as this feature has no effect on particles with a `0.00` phase.
+The audio response feature adds a factor to the **Phase** values of the particles, introducing random outbreaks of particles. Make sure that your **Phase min** and **Phase max** options are configured in a sensible range, such as `0.00` to `6.28` (2 * π).
 
 * **Mode:** To enable the audio response feature, first configure the mode. Set this option to **Center** to make the particles respond to all audio being played. Set it to **Left** or **Right** to limit the audio response to the left or right audio channel only.
 * **Exponent:** Exponential power of the audio response to bias the response towards lower or higher values. By increasing this value, you will reduce how strongly low audio volume will affect the pulse effect.
@@ -174,12 +174,12 @@ A relatively complex initializer that allows for a great level of custom particl
 
 Since this is an *Initializer*, the changes are applied at the time of the particle creation, you can also use this feature as an *Operator* if you would like these changes to occur continuously after the creation of individual particles.
 
-* **Input:** The input value that is used as a starting point.
+* **Input:** The input value that is used for the remapping operation.
 * **Clamp input value:** If enabled, values will be reduced to the range that you define for the input range below, otherwise values can exceed the provided range.
-* **Output:** The output value that is used as a starting point.
+* **Output:** The output value that is being changed with the remap operation.
 * **Clamp output value:** If enabled, values will be reduced to the range that you define for the output range below, otherwise values can exceed the provided range.
 * **Operation:** Controls what is done with the input and output value. **Assign** will overwrite the existing output value. **Multiply** multiplies the output and input value. **Add** sums up the input and output value. **Subtract** subtracts the input value from the existing output value.
-* **Transform function:** Allows you to add a wave or noise to the operation to get recurring 
+* **Transform function:** Allows you to add a wave or noise to the operation.
 
 ### Input & Output options
 
@@ -187,9 +187,11 @@ Each input and each output option will generate its own sub-options further down
 
 Choosing the correct input and output range is critical, as the value range must make sense for the specific property. See the examples below to get an idea of how to use this feature.
 
-::: details Click to view example: Input: Distance to control point - Output: Size
+::: details Click to view example: Input: Distance to control point - Remap Output: Size
 
-If you want to spawn smaller particles near a control point, you would choose **Distance to control point** as an **Input** value and you would set **Size** as an **Output** value.
+This is just one example of nearly infinite combinations that can be made to showcase the remap initializer. You can combine any input and output values in creative ways.
+
+In this example, we want to spawn smaller particles near a control point. We first choose **Distance to control point** as an **Input** value and since we want to modify the size of particles, we set **Size** as an **Output** value.
 
 For **Operation**, we use **Multiply**, alternatively you could also use **Assign** to have full control over the particle sizes. This becomes relevant in the output range further down below.
 
@@ -201,7 +203,7 @@ The **Output range min** and **Output range max** represent the new **Size** of 
 
 :::
 
-# Inherit value from event
+## Inherit value from event
 
 This initializer allows you to copy a value from a parent particle system onto the child. This is useful if the parent particle has a dynamic property that you want to match on the child particle. For example, a red rocket flying into the air explodes with a red explosion.
 
