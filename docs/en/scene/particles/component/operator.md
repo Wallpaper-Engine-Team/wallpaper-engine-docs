@@ -290,3 +290,52 @@ The resulting behavior can be seen here, where particles are pushed by a **contr
 </video>
 :::
 
+## Inherit value from event
+
+This operator allows you to copy a value from a parent particle system onto the child. This is useful if the parent particle has a perpetually changing dynamic property that you want to match on the child particle. In many cases, you can also optimize this and use the **Initializer** with the same name, since this operator constantly checks for changes in the parent which can be costly on performance.
+
+## Collision Operators
+
+There are 5 operators that allow you to introduce some form of collision for your particle system:
+
+* **Collision plane:** Collides particles along an infinite line.
+* **Collision quad:** Collides particles along a limited line from one side.
+* **Collision sphere:** Collides particles against a spherical object.
+* **Collision bounds:** Collides particles against the outlines of the wallpaper.
+* **Collision model:** Collides particles against a 3D model or a puppet warp model.
+
+There are four **collision behaviors** shared across these operators:
+
+* **Bounce:** Particles will bounce off when the collision occurs. Bounce strength can be tweaked using the **Bounce factor** option.
+* **Slide:** Particles will continue to slide along the object when colliding.
+* **Stop:** Instantly stops any particle movement when colliding.
+* **Delete:** Particles will be deleted when they collide with the object. Triggers the **death** event on the particle, allowing you to spawn child particles for example.
+
+Additionally, some operators also have these shared options:
+
+* **Lock to control point:** When enabled, you can choose a control point that this operator is attached to. Valid numbers: `0` - `7`.
+* **Stop rotation on collision:** When enabled, any rotation will be stopped once the collision occurs. Useful for falling objects that are supposed to rest on the collision object.
+
+### Collision plane
+
+* **Plane:** The axis on which this plane exists, you can combine multiple axes to create diagonal lines, for example.
+* **Distance:** An offset to the original axis.
+
+### Collision sphere
+
+* **Origin:** The relative position of the sphere.
+* **Radius:** The radius of the sphere.
+
+### Collision bounds
+
+This operator has no further options than the standard ones described above. It will automatically use the outlines of the wallpaper as a bounding box that particles cannot escape.
+
+### Collision quad
+
+* **Origin:** The relative position of the sphere.
+* **Plane:** The axis on which this plane exists, you can combine multiple axes to create diagonal lines, for example. Since the collision only occurs from one side, you can use `-1` to switch the side that you want to use.
+* **Forward:** The forward vector is only relevant in a 3D context, leave it as X: `0`, Y: `0`, Z: `1` in a 2D wallpaper.
+
+### Collision model
+
+No further options than the standard ones described above. However, you need to select either a puppet warp layer or a 3D model layer and drag and drop it into the **Layer connection** section that appears when selecting the particle system in the asset list, otherwise the operator will have no effect.
