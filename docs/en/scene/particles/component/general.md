@@ -77,11 +77,15 @@ Controls the maximum number of particles allowed to be spawned. This directly co
 
 ### Start Time
 
-Will pre-simulate the particle system for a certain amount of time when it is created. This is helpful to avoid the screen from looking empty, it will kick off the system as if it has already been running for the configured time. The higher this number is, the longer it will take to simulate, since it is based on real-time simulation.
+Will pre-simulate the particle system for a certain amount of time when it is created. This is helpful to avoid the screen from looking empty, it will kick off the system as if it has already been running for the configured time (in seconds). The higher this number is, the longer it will take to simulate, since it is based on a real-time simulation.
 
 ### Worldspace
 
-If this is enabled, the particles will ignore the position, scale and rotation of the particle system after they have been created. This can be useful if you want to attach a particle system to another object - the particles that were spawned are not going to be dragged along with the object they were created from.
+If this option is enabled, particles will ignore the position and rotation of the particle system after they have been created. This means spawned particles will ignore the position of the particle system and instead only rely on their own position.
+
+This can be useful if you want to attach a particle system to another object, animate the particle system position / rotation with a timeline animation or via SceneScript.
+
+**Please note:** Keep in mind that the **Gravity** option in the **Movement** operator is affected by this option and might lead to movement behavior that you are not intending. Do **not** purely rely on the **Gravity** option to create motion.
 
 ### Perspective rendering
 

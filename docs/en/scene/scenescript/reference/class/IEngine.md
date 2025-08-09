@@ -92,7 +92,42 @@ Returns an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) objec
 
 ### registerAsset(file: String): IAssetHandle
 
-If you create any layers dynamically with SceneScript, use function this to mark an asset as being used by your wallpaper. This is important for releasing a wallpaper to the Workshop, as only used or marked assets will be included in the scene archive that is generated.
+If you create any layers dynamically with SceneScript using the [createLayer()](/en/scene/scenescript/reference/class/IScene.html#createlayer-configuration-string-object-iassethandle-ilayer) function, `registerAsset` is used to mark an asset as being used by your wallpaper. This is important for releasing a wallpaper to the Workshop, as Wallpaper Engine will otherwise not be able to determine that the asset is actually being used and it will not be included when publishing the wallpaper to the Steam Workshop.
+
+You can use this function in the following use-cases:
+
+1. **Image layers:** If you want to include an image layer, make sure to register the image layer config file which can be found in the `model` directory. Do not include any files from the `materials` directory, this is the wrong approach. **Please note:** Video textures are not compatible with this functionality.
+2. **Particle Systems:** Include your particle system's `.json` config file from the `particles` directory of your project here. Custom materials from your particle config will also be automatically included, there is no need to register them separately.
+3. **3D models:** Register the `.json` config file from the `models` directory here. In case you are only using a single `.mdl` file, you can also register just this one.
+4. **Sounds:** Directly registers a sound file (`.mp3` or `.wav`) in the `sounds` directory.
+5. **Fonts:** Directly registers a font file from the `fonts` directory. Can be used in dynamically-created text layers.
+
+#### Example:
+
+If you want to register a texture or any other asset, first make sure that it is properly placed in your project directory. You either need to create it in your current project and then delete the layer again or you copy-paste all the necessary files from another project.
+
+In the case of textures, your entry point is the texture config file in the `models` directory. This file typically looks like this, with a path to the texture in the `materials`:
+
+```json
+{
+	"autosize" : true,
+	"material" : "materials/customtexture.json"
+}
+```
+
+Reference the texture config file from `models` directory in the `registerAsset` call, do not register any of the actual files in the `materials` directory:
+
+```js
+let customTexture = engine.registerAsset('models/customtexture.json');
+```
+
+The return value is an [IAssetHandle](/en/scene/scenescript/reference/class/IAssetHandle) which you can use as a parameter in the [thisScene.createLayer()](/en/scene/scenescript/reference/class/IScene.html#createlayer-configuration-string-object-iassethandle-ilayer) call:
+
+```js
+let dynamicLayer = thisScene.createLayer(customTexture);
+```
+
+The return value of this chain is a new image layer that you can configure like any other layer.
 
 ::: warning Please note
 Make sure to only use hard-coded strings for the `file` parameter. Using dynamic or concatenated strings will break the wallpaper on Android. For example:
@@ -100,13 +135,13 @@ Make sure to only use hard-coded strings for the `file` parameter. Using dynamic
 **OK:**
 
 ```js
-engine.registerAsset('/somepath/somefile.abc');
+engine.registerAsset('somepath/somefile.abc');
 ```
 
 **NOT OK:**
 
 ```js
-engine.registerAsset('/somepath/' + 'somefile.abc')
+engine.registerAsset('somepath/' + 'somefile.abc')
 ```
 :::
 

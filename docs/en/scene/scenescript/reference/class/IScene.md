@@ -106,7 +106,42 @@ Remove a layer by index, name or reference. The layer will actually be removed i
 
 ### createLayer(configuration: String|Object|IAssetHandle): ILayer
 
-Creates a new layer and returns a reference to it. The configuration can simply be a path to the asset relative to the project, a custom object just like in the `scene.json` file itself with any overrides you want or an [IAssetHandle](/scene/scenescript/reference/class/IAssetHandle) returned by `engine.registerAsset()`.
+Creates a new layer based on the input values and returns a reference to it.
+
+There are two recommended ways to create a layer:
+
+#### Supplying an asset handle
+
+You can supply an [IAssetHandle](/en/scene/scenescript/reference/class/IAssetHandle) created by [engine.registerAsset()](/en/scene/scenescript/reference/class/IEngine.html#registerasset-file-string-iassethandle) as a parameter. This will create the appropriate layer type, especially useful for simple image layers or pre-configured particle systems.
+
+#### Creating a layer object
+
+You can create an object that includes all the features of the layer that you want to configure. If you are unsure what options exist, you can always look at any `scene.json` and find any existing layers there for reference.
+
+The following example would be a dynamically-created `Text` layer. Wallpaper Engine identifies this as a text layer simply by the fact that the `text` object member exists.
+
+To further exemplify the possibilities, we also load a custom font file via `registerAsset` and then supply it as a variable to the object:
+
+```js
+'use strict';
+
+const customFont = engine.registerAsset("fonts/MyCustomFont.ttf");
+let customTextLayer;
+
+export function init() {
+    const textLayerData = {
+        "text": "This is a text layer!",
+        "font": customFont,
+        "color": "1.00000 0 0",
+        "maxwidth": 500.0,
+        "origin": "960 540 0",
+        "padding": 10,
+        "pointsize": 32.0,
+        "scale": "1 1 1"
+};
+    customTextLayer = thisScene.createLayer(textLayerData);
+}
+```
 
 ### sortLayer(layer: String|Number|ILayer, index: Number): Boolean
 

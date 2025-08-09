@@ -12,6 +12,7 @@ The following user property types are available in Wallpaper Engine. Click on an
 * [**Combo**](/en/scene/userproperties/combo.html) (`combo`): A dropdown selector where each element has a text and a hidden value
 * [**Text**](/en/scene/userproperties/text.html) (`textinput`): A text input field
 * [**Texture**](/en/scene/userproperties/texture.html) (`texture`): Allows users to replace a texture with a custom image or video
+* [**Texture**](/en/scene/userproperties/usershortcut.html) (`usershortcut`): **Advanced:** Allows users to define a system shortcut (to a file, folder, web page or console command) that can be triggered via a SceneScript click event
 
 Properties will be shown on the right-hand side when a wallpaper is selected:
 

@@ -36,7 +36,7 @@ Introduces movement to your particles. Use it in conjunction with **Initializers
 If this operator is missing from your particle system, your particles will not move at all.
 :::
 
-* **Gravity:** The direction which particles travel on each axis.
+* **Gravity:** A gravity setting that pulls particles in a certain direction. Should not be solely used for directional movements, use any velocity-related **Initializer** or **Operator** instead.
 * **Worldspace:** When enabled, movement occurs in the worldspace. Especially noticeable when the particle system is rotating for example. Not to be confused with the **Worldspace** option in the [General](/en/scene/particles/component/general.html#worldspace) particle system settings.
 * **Drag:** Slows down particles over time. You can also enter a negative value to accelerate particles over time.
 
