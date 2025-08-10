@@ -26,6 +26,10 @@ Wallpaper Engine offers 8 control points per particle system, these are numbered
 * **Offset:** The (relative) position of the control point.
 * **Lock to pointer:** If enabled, the control point becomes locked to the mouse cursor.
 * **Worldspace:** If enabled, the control point can be configured independently from the particle system. Useful if you want to place the control point in a fixed position somewhere in your wallpaper instead of having it relative to the particle system.
+* **Copy from parent:** Copies the position of a control point in the parent particle system.
+  * **Parent control point index:** The control point in the parent particle system to copy (`0` - `7`)
+* **Raw value:** Disables adjusting the parent control point values into the coordinate space of the child particle system and just copies the raw control point values.
+* **Hide gizmo from editor:** Control points show a draggable element in the editor window. By enabling this option, this control element will be hidden to clean up the editor space and to prevent accidental misplacement of the control point.
 
 Once a control point is assigned, a dragable gizmo will become visible in the editor as shown in the sample video above. You can also animate the control point position by assigning a timeline animation and SceneScript logic.
 
