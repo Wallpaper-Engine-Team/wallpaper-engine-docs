@@ -43,8 +43,7 @@ A number of global variables exist that are predefined by Wallpaper Engine. All 
 * **g_Color4** (`vec4`): Generic color and alpha multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
 * **g_ParallaxPosition** (`vec2`): Normalized parallax offset of current layer.
 
-
-### View
+### Transformation
 * **g_EyePosition** (`vec3`): Position of camera in worldspace.
 * **g_ViewForward** (`vec3`): Normalized forward direction in worldspace.
 * **g_ViewRight** (`vec3`): Normalized right direction in worldspace.
@@ -64,6 +63,7 @@ Since effects may need to be pre-rendered into a texture, there are additional e
 This is useful, for example, to project the cursor position into the UV coordinates of an effect, which is used by the cursor ripple effect. Or to create the world space position from inside an effect to compute lighting.
 
 **g_Effect Matrices**: These are copies of the matrices applied to the layer object.
+
 **g_EffectTexture Matrices**: These are copies of the matrices applied to the layer object, but scaled by the texture resolution.
 
 * **g_EffectModelMatrix** (`mat4x4`): Outer layer model matrix, even valid during effect shader rendering.
@@ -89,7 +89,7 @@ These parameters exist for 8 samplers, 0 until 7, just replace the 0 in the midd
 
 ## Shader Texture Sampling
 
-You can add additional texture sampler to your effect. They can be hidden and linked to internal render targets or default texture, you can make them visible and allow users to import a texture or you can make them paintable and allow users to paint an opacity mask or a flow map in the editor.
+You can add additional texture samplers to your effect. They can be hidden and linked to internal render targets or a default texture, you can make them visible and allow users to import a texture or you can make them paintable and allow users to paint an opacity mask or a flow map in the editor.
 
 ### Define New Texture
 ```glsl
