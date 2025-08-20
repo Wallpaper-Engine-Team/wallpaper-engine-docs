@@ -114,7 +114,7 @@ uniform sampler2D g_Texture0; // { "material": "texturekey", "label": "Texture n
 To declare a hidden texture, add the option **"hidden"** and set it to **true**. Additionally you want to specify a default texture or render target. In this example the stock noise texture is used.
 
 ### Visible Texture
-A visible texture can be changed by the user.
+A visible texture that can be changed by the user.
 ```glsl
 uniform sampler2D g_Texture0; // {"material": "texturekey", "label": "Texture name in editor", "default": "util/white" }
 ```
@@ -164,6 +164,24 @@ vec2 flowMask = (flowColors.rg - vec2(0.498, 0.498)) * 2.0;
 ```
 This is necessary because the integer idle flow color is `127, 127`.
 :::
+
+### Optional Visible Texture
+An optional texture that can be set by the user. When this texture is not set, the custom preprocessor toggle will not be added, allowing you to optimize the shader code and only read from the texture, if the user has set one. This is used for most **mask** textures of the stock effects, you can also use this with paintable textures.
+```glsl
+uniform sampler2D g_Texture0; // {"material": "texturekey", "label": "Texture name in editor", "combo":"MASK" }
+```
+* **g_Texture0**: The sampler number. Should be a sampler between 0 and 7.
+* **"material" : "texturekey"**: A unique key to allow overwriting and identifying the texture easily, just needs to be a unique name.
+* **"label" : "Texture name in editor"**: The name for the texture that will be shown in the editor if it's not hidden.
+* **"combo" : "MASK"**: The preprocessor toggle which will be added only if the user has defined a texture.
+
+In your shader, surround all texture reads from this optional texture with **#if MASK / #endif** like this:
+
+```glsl
+#if MASK
+	albedo.a *= texSample2D(g_Texture0, v_TexCoord.xy).r;
+#endif
+```
 
 ## Shader User Variables
 
