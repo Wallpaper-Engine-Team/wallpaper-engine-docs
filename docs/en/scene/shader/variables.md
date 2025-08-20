@@ -43,7 +43,7 @@ A number of global variables exist that are predefined by Wallpaper Engine. All 
 * **g_Color4** (`vec4`): Generic color and alpha multiplier, should only be used for objects that set this value right before drawing, like the base image layer shader.
 * **g_ParallaxPosition** (`vec2`): Normalized parallax offset of current layer.
 
-### Transformation
+### View
 * **g_EyePosition** (`vec3`): Position of camera in worldspace.
 * **g_ViewForward** (`vec3`): Normalized forward direction in worldspace.
 * **g_ViewRight** (`vec3`): Normalized right direction in worldspace.
