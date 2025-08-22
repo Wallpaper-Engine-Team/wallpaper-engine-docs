@@ -98,6 +98,7 @@ function getSceneSidebar(locale, overviewGroup, gettingStartedGroup, effectsGrou
 				locale + 'scene/userproperties/combo',
 				locale + 'scene/userproperties/text',
 				locale + 'scene/userproperties/texture',
+				locale + 'scene/userproperties/usershortcut',
 				locale + 'scene/userproperties/texturevariant',
 			]
 		},

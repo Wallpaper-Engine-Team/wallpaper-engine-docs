@@ -61,7 +61,7 @@ The number of particles that spawn per second. The maximum number of particles i
 
 ### Instantaneous
 
-The number of particles which are created instantly when the particle system is created. Further particles will be spawned according to the configuration of the particle system. Keep the overall maximum number of particles in mind, you can configure this in the **System** settings of the particle system.
+The number of particles which are created instantly when the particle system is created. If you set a value here while **Rate** is set to `0`, the particle system will only spawn particles once and then cease to exist, making it especially useful for child particle systems and one-time uses of particles.
 
 ### Duration
 

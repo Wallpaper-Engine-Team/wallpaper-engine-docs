@@ -4,11 +4,7 @@ prev: ../../reference.md
 
 # SceneScript Event applyGeneralSettings
 
-This event allows you to access various Wallpaper Engine settings and utilize them in some way in your wallpaper. The most useful option is the `language` key, as it allows you to access the current Wallpaper Engine user interface language. You can adjust on-screen text or date formatting to fit your users preferences.
-
-::: danger Before you get started
-Please respect users' wishes for their app setup. Do not place text elements in your wallpaper to ask users to change their app settings. Wallpapers should work on any setup.
-:::
+This event allows you to access the Wallpaper Engine general settings and utilize them in your wallpaper. This primarily allows you to access the `language` key, providing you to access the current Wallpaper Engine user interface language. You can adjust on-screen text, date formatting or perform other localizations to fit your users preferences.
 
 This event function will be called under two circumstances:
 
@@ -21,18 +17,15 @@ export function applyGeneralSettings(generalSettings) {
 }
 ```
 
-The parameter `applyGeneralSettings` will contain certain setting keys. You can access properties via `applyGeneralSettings.keyname`, where `keyname` is the option key that you want to access.
+The parameter `applyGeneralSettings` will contain the language key. You can access properties via `applyGeneralSettings.keyname`, where `keyname` is the option key that you want to access.
 
  ::: warning Important
-  After the initial wallpaper load event, the parameters will only contain settings with changes. For this reason, it is crucial that you check which value is being sent with the current event. We recommend using the `hasOwnProperty()` function for this. See the language sample below as an example.
+  After the initial wallpaper load event, the parameters will only contain settings with changes. For this reason, it is crucial that you check which value is being sent with the current event. We recommend using the `hasOwnProperty()` function for this. See the language sample below as an example. **In the future, more values may become available in this function, so it is absolutely crucial that you add this check, otherwise your wallpaper might break with a future update.**
 :::
 
+## Language-specific behavior
 
-## Supported General Settings
-
-The event supports the following settings and their corresponding keys:
-
-* `language`: The current language key (string).
+You can access the `language` key to customize behavior and introduce some basic translations and localizations to your wallpaper.
 
 ::: details Click here to view the full language list
 
@@ -75,20 +68,6 @@ These are all language codes that are currently supported by Wallpaper Engine:
 * `zh-chs`: Chinese (Simplified)
 * `zh-cht`: Chinese (Traditional)
 :::
-
-* `fps`: The max FPS setting (int).
-* `iconopacity`: The current icon opacity setting (int).
-* `mediaintegration`: Enable Media integration setting (bool).
-* `msaa`: Anti-aliasing setting (string). Possible values: `none`, `x2`, `x4`, `x8`.
-* `postprocessing`: The post-processing quality setting (string). Possible values: `disabled`, `enabled`, `ultra`, `displayhdr`.
-* `reflection`: The reflection option (bool).
-* `shadows`: The shadow quality setting. Possible values: `disabled`, `low`, `medium`, `high`, `ultra`.
-* `volumetrics`: The volumetrics quality setting. Possible values: `disabled`, `low`, `medium`, `high`, `ultra`.
-* `konami`: Checks if the **k0n4m1** achievement easter egg has been unlocked on the current system (bool).
-
-## Language-specific behavior
-
-One especially useful key is the `language` key, as it allows you to customize behavior and introduce some basic translations and localizations to your wallpaper.
 
 If you want to focus on a specific language, a simple `applyGeneralSettings` event might look like this, just replace `en-us` with the language key of your choice:
 

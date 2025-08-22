@@ -82,6 +82,26 @@ Returns true if the screen uses a landscape resolution.
 
 You can use this to check whether the script is currently running inside the editor or not.
 
+### openUserShortcut(userPropertyName: String): Boolean
+
+To be used in conjunction with the [User Shortcut Property](/en/scene/userproperties/usershortcut.html), allows you to open a specific user-defined shortcut. Can only be used in the [cursor events](/en/scene/scenescript/reference/event/cursor.html) `cursorClick`, `cursorUp` and `cursorDown`:
+
+```js
+/**
+ * @param {CursorEvent} event
+ */
+export function cursorClick(event) {
+	// you can run a *single* command in one click/up/down CursorEvent, other events are blocked
+	engine.openUserShortcut("user_property_key_here");
+}
+```
+
+Returns `true` when a shortcut was successfully called, returns `false` if no action has been performed.
+
+::: warning Please note
+You can only call this function once per user click. If you call multiple `openUserShortcut` functions within the same click, a SceneScript error will be thrown.
+:::
+
 ### registerAudioBuffers(resolution: Number): AudioBuffers
 
 Registers your script with the audio responsive system in Wallpaper Engine and get access to the current audio volume levels of the user. The `resolution` parameter is required and defines in how many parts the audio spectrum is subdivided. To conserve memory and performance, you should always stick to the lowest number that you actually need.
