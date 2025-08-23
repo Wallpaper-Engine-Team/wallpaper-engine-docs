@@ -57,20 +57,25 @@ A number of global variables exist that are predefined by Wallpaper Engine. All 
 * **g_ModelViewProjectionMatrix** (`mat4x4`): Premultiplied model view projection matrix.
 * **g_ModelViewProjectionMatrixInverse** (`mat4x4`): Premultiplied inverse of model view projection matrix.
 
-### Effect Matrices
-Since effects may need to be pre-rendered into a texture, there are additional effect matrices available to read the model, view and projection matrices that are used by the actual layer.
+### Effect and Layer Matrices
+Since effects may need to be pre-rendered into a texture, there are additional effect matrices available to read the model, view and projection matrices that are used by the actual layer. When effects are not directly rendered into the backbuffer, they use different geometry and are in their own *effect space*.
 
 This is useful, for example, to project the cursor position into the UV coordinates of an effect, which is used by the cursor ripple effect. Or to create the world space position from inside an effect to compute lighting.
 
-**g_Effect Matrices**: These are copies of the matrices applied to the layer object.
+**g_Effect Matrices**: These transform between the various spaces of the layer to the effect space.
 
 **g_EffectTexture Matrices**: These are copies of the matrices applied to the layer object, but scaled by the texture resolution.
+
+**g_Layer Matrices**: These are copies of the matrices applied to the layer object.
 
 * **g_EffectModelMatrix** (`mat4x4`): Matrix you can use to transform an effect vertex position into world space and vice versa.
 * **g_EffectModelViewProjectionMatrix** (`mat4x4`): Matrix you can use to transform an effect vertex position into world view projection space and vice versa.
 * **g_EffectModelViewProjectionMatrixInverse** (`mat4x4`): Inverse of g_EffectModelViewProjectionMatrix.
+
 * **g_EffectTextureProjectionMatrix** (`mat4x4`): Matrix you can use to transform an effect vertex position into texture projection space and vice versa.
 * **g_EffectTextureProjectionMatrixInverse** (`mat4x4`): Inverse of g_EffectTextureProjectionMatrix.
+
+* **g_LayerModelMatrix** (`mat4x4`): Matrix you can use to transform between layer local space and world space.
 
 ### Texture
 * **g_Texture0Resolution** (`vec4`): Contains information about the texture bound to sampler 0. XY are the physical size in pixels of the texture, while ZW are the ''mapped'' size (for textures padded with black to the next power of two, the mapped size is smaller than the actual size).
