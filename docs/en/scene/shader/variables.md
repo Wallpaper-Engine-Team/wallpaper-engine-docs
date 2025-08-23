@@ -66,10 +66,10 @@ This is useful, for example, to project the cursor position into the UV coordina
 
 **g_EffectTexture Matrices**: These are copies of the matrices applied to the layer object, but scaled by the texture resolution.
 
-* **g_EffectModelMatrix** (`mat4x4`): Outer layer model matrix, even valid during effect shader rendering.
-* **g_EffectModelViewProjectionMatrix** (`mat4x4`): Outer layer model view projection matrix, even valid during effect shader rendering.
+* **g_EffectModelMatrix** (`mat4x4`): Matrix you can use to transform an effect vertex position into world space and vice versa.
+* **g_EffectModelViewProjectionMatrix** (`mat4x4`): Matrix you can use to transform an effect vertex position into world view projection space and vice versa.
 * **g_EffectModelViewProjectionMatrixInverse** (`mat4x4`): Inverse of g_EffectModelViewProjectionMatrix.
-* **g_EffectTextureProjectionMatrix** (`mat4x4`): Outer layer model view projection matrix, scaled into UV range, even valid during effect shader rendering.
+* **g_EffectTextureProjectionMatrix** (`mat4x4`): Matrix you can use to transform an effect vertex position into texture projection space and vice versa.
 * **g_EffectTextureProjectionMatrixInverse** (`mat4x4`): Inverse of g_EffectTextureProjectionMatrix.
 
 ### Texture
