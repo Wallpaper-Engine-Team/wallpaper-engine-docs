@@ -10,7 +10,11 @@ You can assign child particle systems to an existing particle system which can r
 
 Each child particle system has the following options:
 
-* **Type:** The condition under which the child particle system is spawned.
+* **Type:** The condition under which the child particle system is spawned:
+    * **Static:** The child particle system will be statically spawned at the particle system origin.
+    * **Event follow:** The child particle system will follow individual particles.
+    * **Event spawn:** The child particle system is spawned alongside particles.
+    * **Event death:** The child particle system is spawned when a particle reaches the end of its lifetime.
 * **Offset:** The position offset at which child particle systems are spawned at.
 * **Angles:** The angle at which child particle systems are spawned.
 * **Scale:** The scale at which child particle systems are spawned.

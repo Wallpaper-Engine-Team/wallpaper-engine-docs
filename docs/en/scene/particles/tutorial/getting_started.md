@@ -181,14 +181,11 @@ If you now hover over the previewed particle system in the particle editor, you 
 
 ## Child Particle Systems (Advanced)
 
-Child particle systems are very much optional and not needed for many particle system, we still cover it here with a simple example so that you get a rough idea of what they allow you to do. Child particle systems allow you to attach additional particle systems to your individual particles. You can choose between four types:
+Child particle systems are very much optional and not needed for many particle system, we still cover it here with a simple example so that you get a rough idea of what they allow you to do. Child particle systems allow you to attach additional particle systems to your individual particles.
 
-* **Static:** The child particle system will be statically spawned at the particle system origin.
-* **Event follow:** The child particle system will follow individual particles.
-* **Event spawn:** The child particle system is spawned alongside particles.
-* **Event death:** The child particle system is spawned when a particle reaches the end of its lifetime.
+In this tutorial, we will exemplify this using the **Event death** child particle system type, meaning we want to spawn a new particle system whenever a particle fades away. In our case, we want to create a very simple explosion, though child particle systems can be as complex as their parents. You can also use multiple child particle systems for more advanced visual effects.
 
-In this tutorial, we will exemplify this using the **Event death** type, meaning we want to spawn a new particle system whenever a particle fades away. In our case, we want to create a very simple explosion, though child particle systems can be as complex as their parents. You can also use multiple child particle systems for more advanced visual effects.
+For a full list of all child particle system options, take a look at the reference guide for the [Child Particle System](/en/scene/particles/component/children.html) component.
 
 The following video shows all the steps that will be described next. We recommend watching the video and reading the description to get an understanding of what is being done.
 
