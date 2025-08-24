@@ -4,12 +4,19 @@ Wallpaper Engine features a **particle systems editor** that allows you to creat
 
 Particle systems consist of a large number of small images to build certain effects like fire, rain or moving objects like fallen leaves. You can control the image rendered on the sprites, how they are created and how they move. You can even interact with them using your mouse and they can also be made audio-responsive.
 
-<video width="80%" style="margin: 0 auto;display: block;" controls loop autoplay>
+<video width="65%" style="margin: 0 auto;display: block;" controls loop autoplay>
   <source src="/videos/particle_system_editor.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 Wallpaper Engine allows you to build upon existing particle systems that come pre-installed in the editor or start completely new particle systems from the ground up. In this documentation, we explain how particle systems are built and which components make up a particle system, we will show-case this with a few examples.
+
+## Getting Started with the Particle Editor
+
+In the section below, you can find an overview of all the components that make up a particle system if you want to look into the specifics of a component. To get started with the editor, we recommend working through the **Getting Started** tutorial which introduces you to all the components with a sample particle project:
+
+* [**Getting Started with Particle Systems**](/en/scene/particles/tutorial/getting_started.html)
+
 
 ## Particle Systems Components
 
