@@ -15,4 +15,8 @@ If you have never worked with SceneScript before, we recommend that you check ou
 | [Data persistence with local storage](/scene/scenescript/tutorial/localstorage) | Learn how to store data across wallpaper changes and even system restarts with the local storage functionality. |
 
 
-**More tutorials coming soon, we are currently finalizing this section!**
+## SceneScript reference
+
+The tutorials only scratch the surface of what is possible with SceneScript since SceneScript is all about implementing your own ideas. Take a look our SceneScript reference to see all SceneScript features that you can utilize:
+
+* [**SceneScript Language Reference**](/scene/scenescript/reference)
