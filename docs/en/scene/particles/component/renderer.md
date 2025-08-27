@@ -20,20 +20,22 @@ Each renderer comes with two standard options:
 
 This is the **default** renderer that is relevant in most cases. It simply renders your particles to your screen with the configured orientation.
 
-<video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
+<video width="70%" style="margin:0 auto;display:block;" controls loop autoplay>
   <source src="/videos/particle_renderer_sprite.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ## Sprite Trail Renderer
 
-This renderer will stretch your particles depending on their velocity.
+This renderer will position the particles in the direction that they are moving. Additionally, it will stretch your particles depending on their velocity.
 
 * **Length:** The length is multiplied with speed and determines the ideal length of the particle.
 * **Max Length:** The maximum length a particle can reach at very high velocities.
 * **Min Length:** The minimum length a particle can reach at low velocities.
 
-<video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
+If you want to have objects that are facing in a direction that they are moving but do not stretch their shape, simply set **Length**, **Max Length**, **Min Length** to `1`. See the following example where the space ships always face the direction they are moving without getting stretched:
+
+<video width="70%" style="margin:0 auto;display:block;" controls loop autoplay>
   <source src="/videos/particle_renderer_sprite_trail.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -47,7 +49,7 @@ This renderer draws a line between each particle that is spawned.
 * **UV smoothing:** Recommended to be enabled, reduces flickering in many cases. Only has an effect when lifetime of all particles is exactly the same (see **Initializer** for this), otherwise it is automatically disabled. No effect when *UV scrolling* is enabled.
 * **UV scrolling:** When enabled, the texture moves along the particles. Good for any type of stream (for example water).
 
-<video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
+<video width="70%" style="margin:0 auto;display:block;" controls loop autoplay>
   <source src="/videos/particle_renderer_rope.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -62,7 +64,7 @@ This renderer draws a line along the path of each particle. It is relatively exp
 * **UV scale:** Changes how often the texture is repeated. Make sure clamping is disabled when importing the texture, otherwise the particle will be cut off.
 * **UV scrolling:** When enabled, the texture moves along the particles. Good for any type of stream (for example water).
 
-<video width="90%" style="margin:0 auto;display:block;" controls loop autoplay>
+<video width="70%" style="margin:0 auto;display:block;" controls loop autoplay>
   <source src="/videos/particle_renderer_rope_trail.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
