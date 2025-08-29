@@ -54,6 +54,10 @@ This renderer draws a line between each particle that is spawned.
   Your browser does not support the video tag.
 </video>
 
+::: Tip
+If your particle system tends to spawn particles on top of each other, make sure to enable the option **Limit to one per frame** in the emitter component of particle system to avoid artifacts in the rope renderer.
+:::
+
 ## Rope Trail Renderer
 
 This renderer draws a line along the path of each particle. It is relatively expensive but allows you to draw smooth lines along your particles, which may be useful in complex movement scenarios such as the vortex example in the video below.

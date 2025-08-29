@@ -81,6 +81,10 @@ Allows you to add delay the start of the particle emitter by a given number of s
 
 When enabled, the emitter only spawns one particle per frame. This means that the FPS limit configured by the user may have an impact on the number of particles.
 
+::: Tip
+This option may be needed when using the **Rope** renderer. If your effect will spawn multiple particles during a single frame on top of each other, it will create artifacts in the rope effect, and you may avoid that by limiting the particle spawn rate based on the FPS.
+:::
+
 ### Random periodic emission
 
 When enabled, the emitter will periodically stop and restart the emission of new particles. It can be further tweaked with the following settings:
