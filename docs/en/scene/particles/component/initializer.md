@@ -14,29 +14,29 @@ Defines how long the particles are rendered. Values are determined randomly betw
 
 * **Min:** The minimum lifetime in seconds.
 * **Max:** The maximum lifetime in seconds.
-* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value towards `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
 Keep in mind that for high lifetimes, particles will stop spawning once the maximum number of particles has been reached. You can adjust the particle limit by changing the **Max count** option in the [General](/en/scene/particles/component/general.html#max-count) particle settings.
 
 ## Size random
 
-Defines how the size of the particles. Values are determined randomly between the **Min** and **Max** value. If you always want a fixed size, set **Min** and **Max** to the same value.
+Defines the size of the particles. Values are determined randomly between the **Min** and **Max** value. If you always want a fixed size, set **Min** and **Max** to the same value.
 
 * **Min:** The minimum size.
 * **Max:** The maximum size.
-* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value towards `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
 ## Color random
 
-Defines how the color of the particles. Values are determined randomly between the **Min** and **Max** value. If you always want a fixed color, you can change the overall particle system color in the properties list of the particle system instead.
+Defines the color of the particles. Values are determined randomly between the **Min** and **Max** value. If you always want a fixed color, you can change the overall particle system color in the properties list of the particle system instead.
 
 * **Min:** The primary color.
 * **Max:** The secondary color.
-* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value towards `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
 ## HSV color random
 
-Allows you to apply colors to your particles based on HSV, essentially allowing you to select the hue, saturation and brightness (value) to your particles, allowing for a different range of colors than the standard `Color random` initializer.
+Allows you to apply colors to your particles based on HSV, essentially allowing you to select the hue, saturation and brightness (value) for your particles, allowing for a different range of colors than the standard `Color random` initializer.
 
 * **Hue min:** The starting range of the hue color space.
 * **Hue max:** The end range of the hue color space.
@@ -53,15 +53,15 @@ Allows you to define up to ten colors which are randomly applied to particles at
 * **Colors:** The number of colors you want to define.
 * **Hue noise:** Introduces randomness to the hue of particles (values from `0.00` to `1.00`).
 * **Saturation noise:** Introduces randomness to the saturation of particles (values from `0.00` to `1.00`).
-* **Value noise:** Introduces randomness to the absolute color value of particles (values from `0.00` to `1.00`).
+* **Value noise:** Introduces randomness to the brightness of particles (values from `0.00` to `1.00`).
 
 ## Alpha random
 
-Defines how the opacity of the particles. Values are determined randomly between the **Min** and **Max** value.
+Defines the opacity of the particles. Values are determined randomly between the **Min** and **Max** value.
 
 * **Min:** The minimum opacity.
 * **Max:** The maximum opacity.
-* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value towards `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
 ## Velocity random
 
@@ -69,7 +69,7 @@ Defines the starting speed of the individual particles. Values are determined ra
 
 * **Min:** The minimum speed in the given direction.
 * **Max:** The maximum speed in the given direction.
-* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value towards `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
 ## Inherit control point velocity
 
@@ -81,7 +81,7 @@ Allows you to apply the movement speed and direction of a control point to newly
 
 ## Turbulent velocity random
 
-An advanced initializer for particle speeds. Can be used whenever you want to create the appearance of random gusts of wind, for example in a smoke stream. In your **Emitter**, set the **Distance Min** and **Distance Max** values both to `0`, otherwise this initializer might not render in a sensible way.
+An advanced initializer for particle speeds. Can be used whenever you want to create the appearance of random gusts of wind, for example in a smoke stream. In your **Emitter**, you can set the **Distance Min** and **Distance Max** values both to `0` to see the behavior of this emitter more clearly.
 
 * **Scale:** Changes the range of the turbulence. A value of `1.00` means the turbulence moves in all directions, `0.00` means it only moves into the **Forward** direction in a perfect line and a value of `2.00` means that it can wind over itself.
 * **Noise speed:** The speed of the turbulent noise. Try sticking to low values like `0.1` for smoke-like effects.
@@ -105,11 +105,11 @@ The audio response feature adds a factor to the **Phase** values of the particle
 
 ## Rotation random
 
-Defines how the starting rotation of the particles. Values are determined randomly between the **Min** and **Max** value.
+Defines the starting rotation of the particles. Values are determined randomly between the **Min** and **Max** value. Only relevant for the **Sprite** renderer.
 
 * **Min:** The minimum rotation.
 * **Max:** The maximum rotation.
-* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value towards `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
 ## Position offset random
 
@@ -130,11 +130,11 @@ For example: By setting `X` to `-1`, all `X` values will be negative, meaning th
 
 ## Angular velocity random
 
-Defines the starting angular velocity of the individual particles. Values are determined randomly between the **Min** and **Max** value. Requires the [Angular movement Operator](/en/scene/particles/component/operator.html) operator to be added to the particle system.
+Defines the starting angular velocity of the individual particles. Values are determined randomly between the **Min** and **Max** value. Requires the [Angular movement Operator](/en/scene/particles/component/operator.html) operator to be added to the particle system. Only relevant for the **Sprite** renderer.
 
 * **Min:** The minimum angular velocity on the given axis.
 * **Max:** The maximum angular velocity on the given axis.
-* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value of `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
+* **Exponent:** A bias towards the minimum and maximum value. A value of `1` represents a balance between both **Max** and **Min**. A value towards `0` represents a bias towards **Max**, values of `2` and higher represent a bias towards **Min**.
 
 ## Position around control point
 
