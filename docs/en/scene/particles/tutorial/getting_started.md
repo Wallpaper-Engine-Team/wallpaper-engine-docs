@@ -19,7 +19,7 @@ There are two ways to get started with a particle system:
 2. Use an existing particle system asset as a starting point
     * Alternatively, you can add any existing particle system as a starting point. Click on **Add asset** on the left-hand side of the editor and select any particle-based asset to the wallpaper. Most standard assets are really just particle systems, for example, the **Fireflies** asset might be a suitable starting point for this tutorial. After adding it to your wallpaper, select the layer in the editor and on the right-hand side, click on the **Edit** button in the particle system section.
 
-In this tutorial, we will use the first option of starting with a blank particle system template. You should now see the following particle template with the white circular objects floating around:
+In this tutorial, we will use the first option of starting with a blank particle system template. You should now see the following particle template with the white particles floating around:
 
 <video width="70%" style="margin: 0 auto;display: block;" controls>
   <source src="/videos/particle_getting_started_overview.mp4" type="video/mp4">
@@ -40,7 +40,7 @@ We will start by setting a new texture for our particles. Wallpaper Engine allow
 
 * [**Particle System Sprite Sheets**](/en/scene/particles/tutorial/spritesheet.html)
 
-In this tutorial, we will keep it simple and just change the texture to another prepackaged texture. In the **Material** section, click on the **Browse** button next to the **Albedo** texture and select an alternative texture for your particle system. We choose `halo_4.text` but you may choose any other texture or import your own texture by dragging it into the particle editor window.
+In this tutorial, we will keep it simple and just change the texture to another prepackaged texture. In the **Material** section, click on the **Browse** button next to the **Albedo** texture and select an alternative texture for your particle system. We choose `halo_4.tex` but you may choose any other texture or import your own texture by dragging it into the particle editor window.
 
 <video width="70%" style="margin: 0 auto;display: block;" controls>
   <source src="/videos/particle_getting_started_albedo.mp4" type="video/mp4">
@@ -211,6 +211,10 @@ You will be presented with the standard sample particle system just like before.
     * We remove the **Color random** initializer since we will implement a replacement for it in the next step.
     * We leave the **Size random** initializer untouched for now, it will be handled in the next step as well.
 
+::: tip Please note
+Setting **Max count** to a representative value like `1` in this case is very important for event based child particles. This option directly controls how much memory is required by the particle system, so reducing this value to what you actually need will ensure that having a lot of child particle systems will not degrade wallpaper performance.
+:::
+
 After performing these changes, you will now have a white pulsing blip particle system. The editor previews this as fast pulses but the preview essentially just recreates the entire particle system constantly due to the use of the **Instantaneous** in the **Emitter**.
 
 What is missing is any relation to the parent particles, so we want to add the **Inherit initial value from event** initializer three times to our child particle system. This will copy a value from the parent particle and makes it available to the child particle system. Add this initializer three times and configure one of each initializers with these settings:
@@ -218,6 +222,10 @@ What is missing is any relation to the parent particles, so we want to add the *
 * **Set color:** Copies the exact color of the parent particles so that our explosion matches the parent particles exactly.
 * **Set velocity:** Copies the movement speed and direction of the parent particles so that the explosion does not occur at a standstill. (Do note that any operators like turbulences are not copied, for a perfect child particle system you would probably want to add the turbulence operator to the child particle system as well.)
 * **Multiply size:** Multiplies the size of the parent particle times the size of this particle. This ensures that our explosion is relative to the size of the parent particle. Since our parent particle system has differently sized particles, this helps to ensure that explosions do not seem comically huge or small relative to each particle. Since this is a multiplication, make sure to adjust the **Size random** initializer of this child particle system. In our case, we set the **Size min** and **Size max** values to `2` in the **Size random initializer**. This means the explosion is twice as large as the parent particle.
+
+::: tip Please note
+The **Inherit initial value from event** allows you to create more dynamic relations between a parent and a child particle system, but it comes with a performance cost. If you don't absolutely need to copy any attributes like the particle velocity or color from the parent particle, avoid using this initializer and just use basic initializers to configure your child particle effect.
+:::
 
 ### Assigning the child particle
 

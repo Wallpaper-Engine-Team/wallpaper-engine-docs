@@ -18,21 +18,19 @@ Cuts off all alpha channel values outside of the defined range based on the prov
 * **Cutout end:** The new end value of the opacity. Must be higher than **Cutout start value**.
 * **Cutout opacity:** The desired target opacity for the particles which is applied after the range has been readjusted.
 
-To further exemplify: Initially, the full opacity range is always between `0.0` and `1.0`. By setting the **cutout start** to `0.2` and the **cutout end** to `0.8`, all alpha values outside of this range are discarded. In the next step, all values inside the defined range are re-arranged to the full range of `0.0` to `1.0`. Finally, the **cutout opacity** is applied to fine-tune the desired output opacity of the particles.
+To further exemplify: Initially, the full opacity range is always between `0.0` and `1.0`. By setting the **cutout start** to `0.2` and the **cutout end** to `0.8`, all alpha values outside of this range are discarded. In the next step, all values inside the defined range are re-arranged to the full range of `0.0` to `1.0`. Finally, the **cutout opacity** is applied to fine-tune the desired output opacity of the particles. Keep in mind that this is being affected by the per-particle alpha value, so it allows you to effectively usw the texture alpha channel as a ramp with your given cutout interval.
 
 ### Lighting
 
-Enables real-time lighting using [light sources](/en/scene/lighting/introduction.html) for the particle system.
+Enables real-time lighting using [light sources](/en/scene/lighting/introduction.html) for the particle system. When enabled, you can also add a normal map to the particle system that will determine the lighting.
 
 #### Double-sided lighting
 
-When enabled, both sides of the particle will render the lights. Should be left disabled unless particles are rotated to show their backside.
+When enabled, both sides of the particle will render the lights. This is mostly useful for 3D wallpapers.
 
 ### Refract
 
-When enabled, you can add an additional normal map which Wallpaper Engine uses to add a refraction effect to your particles.
-
-This refract particle stays in place and is animated with *Particle Operator Size Change* and *Particle Operator Alpha Fade*. The material is set to translucent blending using the white image for the albedo texture. 
+When enabled, you can add a normal map which Wallpaper Engine uses to add a refraction effect to your particles.
 
 ### Textures
 
@@ -42,7 +40,7 @@ The main texture used by this particle system. You can also import a sprite shee
 
 #### Normal Map Texture
 
-**Optional.** This texture is only visible when you enable the **Refract** option. You can import a normal map here which Wallpaper Engine will use for a refraction effect.
+**Optional.** This texture is only visible when you enable the **Refract** or **Lighting** option. You can import a normal map here which Wallpaper Engine will use for a refraction or lighting effect.
 
 ### Shader Settings
 
@@ -89,7 +87,7 @@ This can be useful if you want to attach a particle system to another object, an
 
 ### Perspective rendering
 
-Perspective rendering is relevant in 3D contexts. For 3D-based wallpapers, this option is always on. In 2D scenes, you can optionally turn it on in case you are working with 3D models.
+Perspective rendering is relevant in 3D contexts. For 3D-based wallpapers, this option is always on. In 2D scenes, you can optionally turn it on to add depth to the particle system. This can be very impactful, you can compare the **Snow perspective** and **Snow flat** assets to see what this option can do.
 
 ### Disable color overrides
 
