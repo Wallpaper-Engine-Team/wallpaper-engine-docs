@@ -44,15 +44,15 @@ If this operator is missing from your particle system, your particles will not m
 
 Adds an angular movement to your particles, causing them to turn around the specified axes. Required by the **Angular velocity random** initializer.
 
-* **Force:** The direction in which the particles should turn.
+* **Force:** The direction in which the particles should accelerate along each frame.
 * **Drag:** Slows down particles angular movement over time. You can also enter a negative value to accelerate particles angular movements over time.
 
 ## Alpha fade
 
 Causes particles to fade in when created and fade out before their lifetime ends. Values are entered relative to the lifetime of the particle.
 
-* **Fade-in time:** The time percentage until the fade-in is completed. Valid range: `0.00` - `1.00`
-* **Fade-out time:** The time percentage at which the fade-out starts. Valid range: `0.00` - `1.00`
+* **Fade-in time:** The time percentage until the fade-in is completed. Valid range: `0.00` - `1.00`.
+* **Fade-out time:** The time percentage at which the fade-out starts. Valid range: `0.00` - `1.00`.
 
 ::: details Click here to learn more about the value range
 If your particle has a lifetime of 5 seconds and you enter a *fade-in time* of `0.2`, the particles will fade in for 1 second (5 seconds * 0.2). Entering a *fade-out time* of `0.7` means the particles will start fading out after 3.5 (5 seconds * 0.7 = 3.5 seconds).
@@ -64,15 +64,13 @@ The fade-in always starts at the time of the particle creation and the fade-out 
 
 Changes the size of the particles relative to their lifetime.
 
-* **Start value:** The particle scale which is reached when the **Start time** is reached.
-* **End value:** The particle scale which is reached when the **End time** is reached.
-* **Start time:** The time percentage at which the **start value** should be reached. Valid range: `0.00` - `1.00`
-* **End time:** The time percentage at which the **start value** should be reached. The particle will start transitioning here after the start time has been reached. Valid range: `0.00` - `1.00`
+* **Start value:** The particle scale which is applied before the **Start time** is reached.
+* **End value:** The particle scale which is applied when the **End time** is reached.
+* **Start time:** The time percentage at which the transition between the **start value** and **end value** begins. Valid range: `0.00` - `1.00`.
+* **End time:** The time percentage at which the **end value** should be reached. The particle will start transitioning towards here after the start time has been reached. Valid range: `0.00` - `1.00`.
 
 ::: details Click here to learn more about the start time and end time value range
-If your particle has a lifetime of 5 seconds and you enter a *start time* of `0.2`, the particles will reach the **start value** after 1 second (5 seconds * 0.2). Entering an *end time* of `0.7` means the particles will start resizing after the start time has been reached until it reaches the end time at 3.5 seconds (5 seconds * 0.7 = 3.5 seconds).
-
-The **start value** transition always starts at the time of the particle creation until the **start time**. The **end value** transition always starts after the **start time** has been reached until the **end time**.
+If your particle has a lifetime of 5 seconds and you enter a *start time* of `0.2`, the particles will start transitiong from the **start value** towards the **end value** after 1 second (5 seconds * 0.2). Entering an *end time* of `0.7` means the particles will start resizing after the start time has been reached until it reaches the end time at 3.5 seconds (5 seconds * 0.7 = 3.5 seconds).
 :::
 
 
@@ -80,30 +78,26 @@ The **start value** transition always starts at the time of the particle creatio
 
 Changes the color of the particles relative to their lifetime.
 
-* **Start value:** The particle color which is reached when the **Start time** is reached.
-* **End value:** The particle color which is reached when the **End time** is reached.
-* **Start time:** The time percentage at which the **start value** should be reached. Valid range: `0.00` - `1.00`
-* **End time:** The time percentage at which the **start value** should be reached. The particle will start transitioning here after the start time has been reached. Valid range: `0.00` - `1.00`
+* **Start value:** The particle color which is applied before the **Start time** is reached.
+* **End value:** The particle color which is applied when the **End time** is reached.
+* **Start time:** The time percentage at which the transition between the **start value** and **end value** begins. Valid range: `0.00` - `1.00`.
+* **End time:** The time percentage at which the **start value** should be reached. The particle will start transitioning here after the start time has been reached. Valid range: `0.00` - `1.00`.
 
 ::: details Click here to learn more about the start time and end time value range
-If your particle has a lifetime of 5 seconds and you enter a *start time* of `0.2`, the particles will reach the **start value** after 1 second (5 seconds * 0.2). Entering an *end time* of `0.7` means the particles will start recoloring after the start time has been reached until it reaches the end time at 3.5 seconds (5 seconds * 0.7 = 3.5 seconds).
-
-The **start value** transition always starts at the time of the particle creation until the **start time**. The **end value** transition always starts after the **start time** has been reached until the **end time**.
+If your particle has a lifetime of 5 seconds and you enter a *start time* of `0.2`, the particles will start transitiong from the **start value** towards the **end value** after 1 second (5 seconds * 0.2). Entering an *end time* of `0.7` means the particles will start recoloring after the start time has been reached until it reaches the end time at 3.5 seconds (5 seconds * 0.7 = 3.5 seconds).
 :::
 
 ## Alpha change
 
 Changes the opacity of the particles relative to their lifetime.
 
-* **Start value:** The particle opacity which is reached when the **Start time** is reached. Valid range: `0.00` - `1.00`
-* **End value:** The particle opacity which is reached when the **End time** is reached. Valid range: `0.00` - `1.00`
-* **Start time:** The time percentage at which the **start value** should be reached. Valid range: `0.00` - `1.00`
-* **End time:** The time percentage at which the **start value** should be reached. The particle will start transitioning here after the start time has been reached. Valid range: `0.00` - `1.00`
+* **Start value:** The particle opacity which is applied before the **Start time** is reached. Valid range: `0.00` - `1.00`.
+* **End value:** The particle opacity which is applied when the **End time** is reached. Valid range: `0.00` - `1.00`.
+* **Start time:** The time percentage at which the transition between the **start value** and **end value** begins. Valid range: `0.00` - `1.00`.
+* **End time:** The time percentage at which the **start value** should be reached. The particle will start transitioning here after the start time has been reached. Valid range: `0.00` - `1.00`.
 
 ::: details Click here to learn more about the start time and end time value range
-If your particle has a lifetime of 5 seconds and you enter a *start time* of `0.2`, the particles will reach the **start value** after 1 second (5 seconds * 0.2). Entering an *end time* of `0.7` means the particles will start changing their opacity after the start time has been reached until it reaches the end time at 3.5 seconds (5 seconds * 0.7 = 3.5 seconds).
-
-The **start value** transition always starts at the time of the particle creation until the **start time**. The **end value** transition always starts after the **start time** has been reached until the **end time**.
+If your particle has a lifetime of 5 seconds and you enter a *start time* of `0.2`, the particles will start transitiong from the **start value** towards the **end value** after 1 second (5 seconds * 0.2). Entering an *end time* of `0.7` means the particles will start changing their opacity after the start time has been reached until it reaches the end time at 3.5 seconds (5 seconds * 0.7 = 3.5 seconds).
 :::
 
 ## Oscillate position
@@ -152,7 +146,7 @@ Next, select the control point you chose in the **Control Points** section of th
 
 * **Offset:** Lets you adjust the position of the force relative to the selected control point.
 * **Scale:** The strength of the force. Positive values pull particles to the control point. Negative values push particles away.
-* **Distance:** The maximum distance of the force..
+* **Distance:** The maximum distance of the force.
 * **Control point:** The control point index that this operator works with. Valid numbers: `0` - `7`.
 * **Reduce velocity near center:** Reduces the attraction rate towards the control point.
 * **Delete particles in center:** Adds additional **Deletion threshold option** that lets you define how close particles can come to the center of the control point before they get deleted. Triggers the **death** event on deletion.
@@ -318,12 +312,12 @@ Additionally, some operators also have these shared options:
 
 ### Collision plane
 
-* **Plane:** The axis on which this plane exists, you can combine multiple axes to create diagonal lines, for example.
-* **Distance:** An offset to the original axis.
+* **Plane:** The axis orthogonal to the plane. You can combine multiple components to create a diagonal plane, for example.
+* **Distance:** The offset along the orthogonal plane axis to define the final position of the plane.
 
 ### Collision sphere
 
-* **Origin:** The relative position of the sphere.
+* **Origin:** The position of the sphere within the particle system.
 * **Radius:** The radius of the sphere.
 
 ### Collision bounds
@@ -332,10 +326,12 @@ This operator has no further options than the standard ones described above. It 
 
 ### Collision quad
 
-* **Origin:** The relative position of the sphere.
-* **Plane:** The axis on which this plane exists, you can combine multiple axes to create diagonal lines, for example. Since the collision only occurs from one side, you can use `-1` to switch the side that you want to use.
-* **Forward:** The forward vector is only relevant in a 3D context, leave it as X: `0`, Y: `0`, Z: `1` in a 2D wallpaper.
+* **Origin:** The position of the quad within the particle system.
+* **Plane:** The axis orthogonal to the plane. You can combine multiple components to create a diagonal plane, for example. Since the collision only occurs from one side, you can use `-1` to switch the side that you want to use.
+* **Forward:** The forward vector of the plane to define its rotation around the orthogonal plane axis. The forward vector is only relevant in a 3D context, leave it as X: `0`, Y: `0`, Z: `1` in a 2D wallpaper.
 
 ### Collision model
+
+Forms collision capsules around the bones of a single puppet warp or 3D model. Can become very expensive if a lot of bones are used by the model.
 
 No further options than the standard ones described above. However, you need to select either a puppet warp layer or a 3D model layer and drag and drop it into the **Layer connection** section that appears when selecting the particle system in the asset list, otherwise the operator will have no effect.
