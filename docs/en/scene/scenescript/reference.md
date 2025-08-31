@@ -29,7 +29,7 @@ SceneScript uses an event system that allows you to run specific code whenever c
 | [destroy](/en/scene/scenescript/reference/event/destroy.html) | This event function will be called just before the object it belongs to gets destroyed. |
 | [resizeScreen](/en/scene/scenescript/reference/event/resizeScreen.html) | This function will be called every time the wallpaper resizes because of a change to the current resolution. |
 | [applyUserProperties](/en/scene/scenescript/reference/event/applyUserProperties.html) | Contains up-to-date values for user properties. This event function will be called once initially when the wallpaper is loaded and whenever any user properties are being adjusted by the user. |
-| [applyGeneralSettings](/en/scene/scenescript/reference/event/applyGeneralSettings.html) | Contains general app settings (like language or FPS limit, for example). This event function will be called once initially when the wallpaper is loaded and whenever any general app settings are adjusted by the user. |
+| [applyGeneralSettings](/en/scene/scenescript/reference/event/applyGeneralSettings.html) | Contains general app settings (currently only language). This event function will be called once initially when the wallpaper is loaded and whenever any general app settings are adjusted by the user. |
 | [cursorEnter](/en/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor enters the bounds of the object. |
 | [cursorLeave](/en/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor leaves the bounds of the object. |
 | [cursorMove](/en/scene/scenescript/reference/event/cursor.html) | This event function will be called when the cursor has been moved. |

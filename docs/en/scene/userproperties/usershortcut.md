@@ -65,6 +65,10 @@ As you can see, we are registering the cursor click event on this element which 
 
 To test this basic version, confirm your SceneScript code by clicking **OK**. Next, preview the wallpaper on your desktop by clicking on **File** in the editor, followed by **Apply wallpaper**. You can now configure the user shortcut property like any user on the right-hand side in the standard Wallpaper Engine window and verify that your click event works. When clicking on your element, your shortcut should now work.
 
+::: warning Select `Disable click propagation`
+Make sure to select the option for `Disable click propagation` on the layer you want to use this event on. If you have multiple layers with this event which overlap, you may end up attempting to open multiple shortcuts in a single frame and Wallpaper Engine will stop script execution as a result. You have to ensure to only open a single shortcut when a user clicks with the mouse.
+:::
+
 ### 4. Optional: Adding the user shortcut icon to your wallpaper
 
 In our example, we also want the icon of the user shortcut to be represented on our clickable elements. This is completely optional, you can also choose to fully rely on your own images instead for design reasons.
@@ -73,7 +77,7 @@ To bind the user shortcut icon to your layer, select the layer and on the right-
 
 When applying your wallpaper to the desktop and after assigning a user shortcut, it will now render the icon of your shortcut within the layer.
 
-Make sure to make your layer square and not larger than `180 x 180 pixels`, since this is the highest icon resolution you can expect in many scenarios.
+Make sure to make your layer square and not larger than `256 x 256 pixels`, since this is the highest icon resolution you can expect in many scenarios.
 
 ### 5. Optional: Hiding the clickable element when unused
 

@@ -84,7 +84,7 @@ You can use this to check whether the script is currently running inside the edi
 
 ### openUserShortcut(userPropertyName: String): Boolean
 
-To be used in conjunction with the [User Shortcut Property](/en/scene/userproperties/usershortcut.html), allows you to open a specific user-defined shortcut. Can only be used in the [cursor events](/en/scene/scenescript/reference/event/cursor.html) `cursorClick`, `cursorUp` and `cursorDown`:
+To be used in conjunction with the [User Shortcut Property](/en/scene/userproperties/usershortcut.html), allows you to open a specific user-defined shortcut. Can only be used once per frame in the [cursor events](/en/scene/scenescript/reference/event/cursor.html) `cursorClick`, `cursorUp` and `cursorDown`:
 
 ```js
 /**
@@ -114,43 +114,43 @@ Returns an [AudioBuffers](/scene/scenescript/reference/class/AudioBuffers) objec
 
 If you create any layers dynamically with SceneScript using the [createLayer()](/en/scene/scenescript/reference/class/IScene.html#createlayer-configuration-string-object-iassethandle-ilayer) function, `registerAsset` is used to mark an asset as being used by your wallpaper. This is important for releasing a wallpaper to the Workshop, as Wallpaper Engine will otherwise not be able to determine that the asset is actually being used and it will not be included when publishing the wallpaper to the Steam Workshop.
 
-You can use this function in the following use-cases:
+You can use this function in the following use cases:
 
-1. **Image layers:** If you want to include an image layer, make sure to register the image layer config file which can be found in the `model` directory. Do not include any files from the `materials` directory, this is the wrong approach. **Please note:** Video textures are not compatible with this functionality.
+1. **Image layers:** If you want to include an image layer, make sure to register the image layer config file which can be found in the `model` directory. Do not include any files from the `materials` directory.
 2. **Particle Systems:** Include your particle system's `.json` config file from the `particles` directory of your project here. Custom materials from your particle config will also be automatically included, there is no need to register them separately.
-3. **3D models:** Register the `.json` config file from the `models` directory here. In case you are only using a single `.mdl` file, you can also register just this one.
+3. **3D models:** Register the `.json` config file from the `models` directory here. In case you are only using a single `.mdl` file, you can also register just this one. Textures and materials used by the model are included automatically.
 4. **Sounds:** Directly registers a sound file (`.mp3` or `.wav`) in the `sounds` directory.
-5. **Fonts:** Directly registers a font file from the `fonts` directory. Can be used in dynamically-created text layers.
+5. **Fonts:** Directly registers a font file from the `fonts` directory. Can be used in dynamically created text layers.
 
 #### Example:
 
-If you want to register a texture or any other asset, first make sure that it is properly placed in your project directory. You either need to create it in your current project and then delete the layer again or you copy-paste all the necessary files from another project.
+If you want to register an image or any other asset, first make sure that it is properly placed in your project directory. You either need to create it in your current project and then delete the layer again or you copy-paste all the necessary files from another project.
 
-In the case of textures, your entry point is the texture config file in the `models` directory. This file typically looks like this, with a path to the texture in the `materials`:
+In the case of image layers, your entry point is the image model config file in the `models` directory. This file typically looks like this, with a path to the image material in the `materials` directory:
 
 ```json
 {
 	"autosize" : true,
-	"material" : "materials/customtexture.json"
+	"material" : "materials/myimagematerial.json"
 }
 ```
 
-Reference the texture config file from `models` directory in the `registerAsset` call, do not register any of the actual files in the `materials` directory:
+Reference the image model config file from `models` directory in the `registerAsset` call, do not register any of the actual files in the `materials` directory:
 
 ```js
-let customTexture = engine.registerAsset('models/customtexture.json');
+let customImage = engine.registerAsset('models/myimage.json');
 ```
 
 The return value is an [IAssetHandle](/en/scene/scenescript/reference/class/IAssetHandle) which you can use as a parameter in the [thisScene.createLayer()](/en/scene/scenescript/reference/class/IScene.html#createlayer-configuration-string-object-iassethandle-ilayer) call:
 
 ```js
-let dynamicLayer = thisScene.createLayer(customTexture);
+let dynamicLayer = thisScene.createLayer(customImage);
 ```
 
 The return value of this chain is a new image layer that you can configure like any other layer.
 
 ::: warning Please note
-Make sure to only use hard-coded strings for the `file` parameter. Using dynamic or concatenated strings will break the wallpaper on Android. For example:
+Make sure to only use hard-coded strings for the `file` parameter. Using dynamic or concatenated strings will break the wallpaper while exporting to Android. For example:
 
 **OK:**
 
