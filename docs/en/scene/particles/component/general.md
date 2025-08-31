@@ -18,7 +18,7 @@ Cuts off all alpha channel values outside of the defined range based on the prov
 * **Cutout end:** The new end value of the opacity. Must be higher than **Cutout start value**.
 * **Cutout opacity:** The desired target opacity for the particles which is applied after the range has been readjusted.
 
-To further exemplify: Initially, the full opacity range is always between `0.0` and `1.0`. By setting the **cutout start** to `0.2` and the **cutout end** to `0.8`, all alpha values outside of this range are discarded. In the next step, all values inside the defined range are re-arranged to the full range of `0.0` to `1.0`. Finally, the **cutout opacity** is applied to fine-tune the desired output opacity of the particles. Keep in mind that this is being affected by the per-particle alpha value, so it allows you to effectively usw the texture alpha channel as a ramp with your given cutout interval.
+To further exemplify: Initially, the full opacity range is always between `0.0` and `1.0`. By setting the **cutout start** to `0.2` and the **cutout end** to `0.8`, all alpha values outside of this range are discarded. In the next step, all values inside the defined range are re-arranged to the full range of `0.0` to `1.0`. Finally, the **cutout opacity** is applied to fine-tune the desired output opacity of the particles. Keep in mind that this is being affected by the per-particle alpha value, so it allows you to effectively use the texture alpha channel as a ramp with your given cutout interval.
 
 ### Lighting
 

@@ -17,6 +17,10 @@ In the section below, you can find an overview of all the components that make u
 
 * [**Getting Started with Particle Systems**](/en/scene/particles/tutorial/getting_started.html)
 
+While particle systems are also a good use-case for sprite sheets, allowing you to either create animated particles sequences or to use multiple textures within one particle system. If you want to learn more about how to utilize sprite sheets, take a look at our sprite sheet tutorial:
+
+* [**Particle System Sprite Sheets**](/en/scene/particles/tutorial/spritesheet.html)
+
 
 ## Particle Systems Components
 
