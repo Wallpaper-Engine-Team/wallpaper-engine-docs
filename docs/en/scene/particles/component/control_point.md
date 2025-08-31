@@ -37,10 +37,18 @@ Once a control point is assigned, a dragable gizmo will become visible in the ed
 
 There are multiple particle system components that allow you to utilize control points. You will find control points in the following particle system components:
 
+#### Emitters
+* **Sphere random and box random:** Spawns particles in a sphere or box shape based on a control points position.
+
 #### Initializers
-* **Position around control point:** Spawns particles around a control point.
-* **Position between control points:** Spawns particles between two control points.
+* **Inherit control point velocity:** Applies a control points velocity to a particle.
+* **Position around control point:** Places particles around a control point.
+* **Position between control points:** Places particles between two control points.
 
 #### Operators
-* **Control Point Force:** Acts upon articles with a force, allowing you to push or pull particles when they come near the control point. When the control point is bound to the mouse cursor, allows you to push particles away.
-* **Vortex**: Creates a vortex movement which you can lock to a control point to position the vortex independently from the rest of the particle system.
+* **Control point force:** Acts upon articles with a force, allowing you to push or pull particles when they come near the control point. When the control point is bound to the mouse cursor, allows you to push particles away.
+* **Vortex:** Creates a vortex movement which you can lock to a control point to position the vortex independently from the rest of the particle system.
+* **Maintain distance to control point:** Keeps the distance between a particle and a control point constant.
+* **Maintain distance between control points:** Keeps the relative distance between a particle and two control points constant.
+* **Reduce movement near control point:** Slows particles near a control point down.
+* **Collision operators:** Collision shapes can be attached to control points.
