@@ -31,7 +31,7 @@ The second type of particle sheet consists randomized particles, where each part
 
 ![Space Ships](/img/assets/space_ships_spritesheet.png)
 
-The final result may look like this where sprite sheets move along the screen:
+The final result may look like the following sample recording, where the individual space ships move along the screen:
 
 <video width="75%" style="margin: 0 auto;display: block;" controls autoplay loop>
   <source src="/videos/particle_sprite_sheet_random_preview.mp4" type="video/mp4">
